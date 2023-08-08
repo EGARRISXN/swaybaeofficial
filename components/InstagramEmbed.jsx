@@ -14,7 +14,7 @@ export default function InstagramEmbed() {
   }, []);
 
   return (
-    <div className="bg-base-200 rounded-lg shadow-2xl pl-3 pr-3 pt-4 pb-1 shadow-purple-500/50 ">
+    <div className="card bg-base-200 px-3 pt-3 w-full shadow-xl shadow-purple-500/50 ">
       <blockquote
         className="instagram-media"
         title="sway_baetv on Instagram"

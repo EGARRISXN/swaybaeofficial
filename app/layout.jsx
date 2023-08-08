@@ -1,4 +1,4 @@
-import { Inter, Roboto_Mono } from "next/font/google";
+import { Julius_Sans_One, Fugaz_One } from "next/font/google";
 import { Providers } from "./providers";
 import { Suspense } from "react";
 import Loading from "./loading";
@@ -9,15 +9,18 @@ import "react-toastify/dist/ReactToastify.css";
 import "../styles/globals.css";
 import Image from "next/image";
 
-const inter = Inter({
+const fugaz_one = Fugaz_One({
   subsets: ["latin"],
   display: "swap",
-  variable: "--font-inter",
+  variable: "--font-fugaz-one",
+  weight: "400",
 });
-const roboto_mono = Roboto_Mono({
+
+const julius_sans_one = Julius_Sans_One({
   subsets: ["latin"],
   display: "swap",
-  variable: "--font-roboto-mono",
+  variable: "--font-julius-sans-one",
+  weight: "400",
 });
 
 export const metadata = {
@@ -47,7 +50,6 @@ export const metadata = {
       "swaybae, sway_bae, sway, bae, swaybae.net, swaybae.com, baesquad, bae_squad, swaybae twitch, swaybae twitter, swaybae youtube, swaybae discord, swaybae instagram, swaybae tiktok, swaybae merch, swaybae store, swaybae shop, swaybae gaming",
     ],
     viewport: "width=device-width, initial-scale=1.0",
-    colorScheme: "dark",
   },
 };
 
@@ -55,9 +57,9 @@ export default function RootLayout({ children }) {
   return (
     <html
       lang="en"
-      data-theme="mytheme"
-      className={`${inter.variable} ${roboto_mono.variable}`}
-      suppressHydrationWarning
+      data-theme="synthwave"
+      className={`${fugaz_one.variable} ${julius_sans_one.variable}`}
+      suppressHydrationWarning={true}
     >
       <head>
         <title>{metadata.title}</title>
@@ -81,17 +83,17 @@ export default function RootLayout({ children }) {
         />
       </head>
 
-      <body className="to-black-900 relative h-full w-full bg-gradient-to-br from-purple-900 bg-cover bg-fixed bg-no-repeat">
-        <Image
-          src="/images/background.jpg"
+      <body className="relative h-full w-full bg-gradient-to-r from-base-300 via-pink-400 to-black-300 bg-cover bg-fixed bg-no-repeat">
+        {/* <Image
+          src="/images/11.jpg"
           alt="SwayBae Logo"
           quality={100}
-          fill
+          fill="fill"
           className="absolute object-cover mix-blend-overlay "
           priority
-        />
+        /> */}
 
-        <main className="backdrop-brightness-50">
+        <main className="backdrop-brightness-75">
           <Providers>
             <Navbar />
             <Suspense fallback={<Loading />}>{children}</Suspense>

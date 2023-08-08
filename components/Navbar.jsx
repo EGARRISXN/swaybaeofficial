@@ -9,7 +9,7 @@ import MyLogo from "../public/images/logowhite.png";
 const Nav = () => {
   const [isOpen, setOpen] = useState(false);
   const { resolvedTheme, setTheme } = useTheme();
-  const isDarkMode = resolvedTheme === "dark";
+  const isDarkMode = resolvedTheme === "synthwave";
 
   const toggleDropdown = () => {
     setOpen(!isOpen);
@@ -24,11 +24,11 @@ const Nav = () => {
   };
 
   const toggleTheme = () => {
-    setTheme(isDarkMode ? "mytheme" : "dark");
+    setTheme(isDarkMode ? "cupcake" : "synthwave");
   };
 
   return (
-    <nav className="navbar rounded-2xl px-6 py-2 lg:shadow-2xl">
+    <nav className="navbar rounded-2xl mt-3 container bg-base-200 px-6 shadow-2xl shadow-purple-500/50">
       <div className="navbar-start text-secondary">
         <div className="dropdown">
           <button
@@ -160,7 +160,7 @@ const Nav = () => {
       <div className="navbar-end">
         <label
           tabIndex={0}
-          className={`swap swap-rotate btn-xs ${isDarkMode ? "dark" : ""}`}
+          className={`swap swap-rotate btn-xs ${isDarkMode ? "synthwave" : ""}`}
         >
           {/* this hidden checkbox controls the state */}
           <input type="checkbox" onChange={toggleTheme} />
@@ -168,7 +168,7 @@ const Nav = () => {
           {/* sun icon */}
           <svg
             className={`swap-on ${
-              isDarkMode ? "dark-fill" : "mytheme-fill"
+              isDarkMode ? "synthwave-fill" : "cupcake-fill"
             } h-7 w-7`}
             xmlns="http://www.w3.org/2000/svg"
             viewBox="0 0 24 24"
@@ -182,7 +182,7 @@ const Nav = () => {
           {/* moon icon */}
           <svg
             className={`swap-off ${
-              isDarkMode ? "dark-fill" : "mytheme-fill"
+              isDarkMode ? "synthwave-fill" : "cupcake-fill"
             } h-7 w-7`}
             xmlns="http://www.w3.org/2000/svg"
             viewBox="0 0 24 24"

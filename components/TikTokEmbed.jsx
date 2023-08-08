@@ -14,17 +14,17 @@ export default function TikTokEmbed() {
   }, []);
 
   return (
-    <div className="bg-base-200 rounded-lg shadow-xl pl-3 pr-3 pt-5 pb-5 shadow-purple-500/50">
+    <div className="card bg-base-200 px-3 pt-3 pb-1 w-full shadow-xl shadow-purple-500/50">
       <blockquote
-        className="tiktok-embed rounded-sm"
+        className="tiktok-embed rounded-2xl"
         title="@sway_baetv on TikTok"
         cite="https://www.tiktok.com/@sway_baetv"
         data-unique-id="sway_baetv"
         data-embed-type="creator"
         justify-content="center"
         style={{
-          width: 325,
-          height: 365,
+          width: 345,
+          height: 375,
         }}
       >
         <section>

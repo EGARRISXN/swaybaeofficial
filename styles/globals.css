@@ -3,11 +3,13 @@
 @tailwind utilities;
 
 html {
-  font-family: var(--font-inter);
+  font-family: var(--font-julius-sans-one);
+  font: bold 1rem var(--font-julius-sans-one);
 }
  
 h1 {
-  font-family: var(--font-roboto-mono);
+  font-family: var(--font-fugaz-one);
+  font: bold 2.5rem var(--font-fugaz-one);
 }
 
 main {
@@ -83,9 +85,3 @@ main {
 .tiktok-embed {
 margin: 0 !important;
 }
-
-
-
-/* ------------- */
-/* Spotify Embed */
-/* ------------- */
