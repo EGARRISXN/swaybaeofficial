@@ -1,7 +1,7 @@
 "use client";
 import { useEffect } from "react";
 
-const InstagramEmbed = () => {
+export default function InstagramEmbed() {
   useEffect(() => {
     const script = document.createElement("script");
     script.src = "//www.instagram.com/embed.js";
@@ -14,9 +14,10 @@ const InstagramEmbed = () => {
   }, []);
 
   return (
-    <div className="bg-base-100">
+    <div className="bg-base-200 rounded-lg shadow-2xl pl-3 pr-3 pt-4 pb-1 shadow-purple-500/50 ">
       <blockquote
         className="instagram-media"
+        title="sway_baetv on Instagram"
         data-instgrm-permalink="https://www.instagram.com/sway_baetv/?utm_source=ig_embed&utm_campaign=loading"
         data-instgrm-version="14"
       >
@@ -84,6 +85,4 @@ const InstagramEmbed = () => {
       </blockquote>
     </div>
   );
-};
-
-export default InstagramEmbed;
+}

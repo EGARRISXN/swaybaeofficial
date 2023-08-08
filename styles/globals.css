@@ -76,12 +76,16 @@ main {
 
 
 
-/* ---------------- */
-/* Instagram Embed */
-/* ---------------- */
+/* ------------ */
+/* TikTok Embed */
+/* ------------ */
+
+.tiktok-embed {
+margin: 0 !important;
+}
 
 
-  /* iframe.instagram-media {
-      -webkit-overflow-scrolling: yes !important;
-      overflow-y: scroll !important;
-  }     */
+
+/* ------------- */
+/* Spotify Embed */
+/* ------------- */

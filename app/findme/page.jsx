@@ -1,13 +1,14 @@
 import { YouTubeCarousel } from "../../components/YouTubeCarousel";
 import { YouTubeCarousel2 } from "../../components/YouTubeCarousel2";
-import DiscordContainer from "../../components/DiscordContainer";
-import InstagramContainer from "../../components/InstagramContainer";
-import SpotifyContainer from "../../components/SpotifyContainer";
+import SpotifyEmbed from "../../components/SpotifyEmbed";
+import DiscordEmbed from "../../components/DiscordEmbed";
+import InstagramEmbed from "../../components/InstagramEmbed";
+import TikTokEmbed from "../../components/TikTokEmbed";
 
 export default function FindMe() {
   return (
     <main>
-      <div className="container flex flex-col items-center justify-center">
+      <div className="flex flex-col items-center justify-center">
         <div className="p-8 hidden md:block">
           <YouTubeCarousel />
         </div>
@@ -15,13 +16,16 @@ export default function FindMe() {
           <YouTubeCarousel2 />
         </div>
         <div className="p-8">
-          <DiscordContainer />
+          <SpotifyEmbed />
         </div>
         <div className="p-8">
-          <InstagramContainer />
+          <DiscordEmbed />
         </div>
         <div className="p-8">
-          <SpotifyContainer />
+          <InstagramEmbed />
+        </div>
+        <div className="p-8">
+          <TikTokEmbed />
         </div>
       </div>
     </main>

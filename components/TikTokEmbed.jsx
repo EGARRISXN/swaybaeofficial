@@ -1,3 +1,4 @@
+"use client";
 import { useEffect } from "react";
 
 export default function TikTokEmbed() {
@@ -13,13 +14,18 @@ export default function TikTokEmbed() {
   }, []);
 
   return (
-    <div className="">
+    <div className="bg-base-200 rounded-lg shadow-xl pl-3 pr-3 pt-5 pb-5 shadow-purple-500/50">
       <blockquote
-        className="tiktok-embed rounded-2xl box-shadow-2xl justify-start"
+        className="tiktok-embed rounded-sm"
+        title="@sway_baetv on TikTok"
         cite="https://www.tiktok.com/@sway_baetv"
         data-unique-id="sway_baetv"
         data-embed-type="creator"
-        style={{ justifyContent: "start", width: "300px", height: "352px" }}
+        justify-content="center"
+        style={{
+          width: 325,
+          height: 365,
+        }}
       >
         <section>
           <a
