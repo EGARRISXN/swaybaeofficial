@@ -2,6 +2,7 @@
 
 import { initializeApp } from "firebase/app";
 import { getAnalytics } from "firebase/analytics";
+import { getFirestore, collection, getDocs } from "firebase/firestore";
 
 const firebaseConfig = {
   apiKey: process.env.NEXT_PUBLIC_FIREBASE_API_KEY,
@@ -16,18 +17,13 @@ const firebaseConfig = {
 export const app = initializeApp(firebaseConfig);
 // Initialize Firebase Analytics
 export const analytics = getAnalytics(app);
-
-
+// Initialize Firebase Firestore
+export const db = getFirestore(app);
 
 // import { getAuth } from "firebase/auth";
-// import { getFirestore } from "firebase/firestore";
-
-
 
 // Initialize Firebase Authentication
 // export const auth = getAuth(app);
-// Initialize Firebase Firestore
-// export const db = getFirestore(app);
 
 // GREAT VIDEO ON ADDING DATA TO DATABASE
 // https://www.youtube.com/watch?v=uikATllLdRc
