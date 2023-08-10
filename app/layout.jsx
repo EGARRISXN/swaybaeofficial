@@ -1,25 +1,25 @@
-import { Julius_Sans_One, Fugaz_One } from "next/font/google";
 import { Providers } from "./providers";
 import { Suspense } from "react";
+import { ToastContainer } from "react-toastify";
+import { Poppins, Lobster } from "next/font/google";
 import Loading from "./loading";
 import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
-import { ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import "../styles/globals.css";
 import Image from "next/image";
 
-const fugaz_one = Fugaz_One({
+const lobster = Lobster({
   subsets: ["latin"],
   display: "swap",
-  variable: "--font-fugaz-one",
+  variable: "--font-lobster",
   weight: "400",
 });
 
-const julius_sans_one = Julius_Sans_One({
+const poppins = Poppins({
   subsets: ["latin"],
   display: "swap",
-  variable: "--font-julius-sans-one",
+  variable: "--font-poppins",
   weight: "400",
 });
 
@@ -57,8 +57,8 @@ export default function RootLayout({ children }) {
   return (
     <html
       lang="en"
-      data-theme="synthwave"
-      className={`${fugaz_one.variable} ${julius_sans_one.variable}`}
+      data-theme="myLight"
+      className={`${lobster.variable} ${poppins.variable}`}
       suppressHydrationWarning={true}
     >
       <head>

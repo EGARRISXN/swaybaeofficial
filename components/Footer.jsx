@@ -14,8 +14,8 @@ const Footer = () => {
   return (
     <div className="relative bottom-0 xl:px-20 lg:px-12 sm:px-6 px-4 py-4 mt-4">
       <div className="flex flex-col items-center justify-center">
-        <div className="animate-pulse flex items-center gap-x-4">
-          {/* <Link href="https://www.twitch.tv/sway_bae" passHref>
+        {/* <div className="animate-pulse flex items-center gap-x-4">
+          <Link href="https://www.twitch.tv/sway_bae" passHref>
             <SvgTwitch className="cursor-pointer hover:text-secondary" />
           </Link>
           <Link href="https://discord.com/invite/7jKWvX2pfW" passHref>
@@ -39,14 +39,14 @@ const Footer = () => {
           </Link>
           <Link href="https://www.patreon.com/" passHref>
             <SvgPatreon className="cursor-pointer hover:text-secondary" />
-          </Link> */}
-        </div>
+          </Link>
+        </div> */}
         <div className="flex items-center mt-2">
-          <p className="text-base leading-4 bg-gradient-to-r from-primary via-urgent to-secondary bg-clip-text text-transparent">
+          <p className="text-base leading-4 bg-gradient-to-l from-primary via-accent to-secondary bg-clip-text text-transparent">
             2023 <span className="font-semibold">Swaybae</span>
           </p>
           <div className=" border-l border-secondary pl-2 ml-2">
-            <p className=" text-base leading-4 bg-gradient-to-r from-primary via-urgent to-secondary bg-clip-text text-transparent">
+            <p className=" text-base leading-4 bg-gradient-to-l from-primary via-accent to-secondary bg-clip-text text-transparent">
               Inc. All rights reserved
             </p>
           </div>

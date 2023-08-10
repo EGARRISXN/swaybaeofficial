@@ -9,7 +9,7 @@ import MyLogo from "../public/images/logowhite.png";
 const Nav = () => {
   const [isOpen, setOpen] = useState(false);
   const { resolvedTheme, setTheme } = useTheme();
-  const isDarkMode = resolvedTheme === "synthwave";
+  const isDarkMode = resolvedTheme === "myDark";
 
   const toggleDropdown = () => {
     setOpen(!isOpen);
@@ -24,11 +24,11 @@ const Nav = () => {
   };
 
   const toggleTheme = () => {
-    setTheme(isDarkMode ? "cupcake" : "synthwave");
+    setTheme(isDarkMode ? "myLight" : "myDark");
   };
 
   return (
-    <nav className="navbar rounded-2xl mt-3 container bg-base-200 px-6 shadow-2xl shadow-purple-500/50">
+    <nav className="navbar rounded-b-xl bg-base-200 px-6 shadow-2xl shadow-purple-500/50">
       <div className="navbar-start text-secondary">
         <div className="dropdown">
           <button
@@ -37,7 +37,7 @@ const Nav = () => {
             onClick={toggleDropdown}
             aria-label="Toggle Menu"
             style={{
-              padding: "12px", // Adjust padding for tap/click area
+              padding: "12px",
             }}
           >
             <Hamburger size={24} toggled={isOpen} toggle={toggleDropdown} />
@@ -45,7 +45,7 @@ const Nav = () => {
           {isOpen && (
             <ul
               tabIndex={0}
-              className="dropdown-content menu menu-sm z-[1] mt-3 w-52 rounded-xl bg-base-100 p-2 text-secondary shadow-xl"
+              className="dropdown-content menu menu-sm z-[1] mt-3 w-52 rounded-xl bg-base-200 p-2 text-secondary shadow-xl"
               onKeyDown={(e) => {
                 if (e.key === "Escape") {
                   closeDropdown();
@@ -94,7 +94,7 @@ const Nav = () => {
             </ul>
           )}
         </div>
-        <div className=" hidden animate-pulse lg:flex">
+        <div className=" hidden lg:flex">
           <Link href="/">
             <Image src={MyLogo} width={80} height={40} alt="Logo" priority />
           </Link>
@@ -105,7 +105,7 @@ const Nav = () => {
           <li>
             <Link
               href="/aboutme"
-              className="via-urgent bg-gradient-to-l from-primary to-secondary bg-clip-text text-transparent"
+              className="bg-gradient-to-r from-secondary to-primary bg-clip-text text-transparent"
             >
               About Me!
             </Link>
@@ -113,7 +113,7 @@ const Nav = () => {
           <li>
             <Link
               href="/findme"
-              className=" via-urgent bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent "
+              className=" bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent "
             >
               Where To Find Me
             </Link>
@@ -121,7 +121,7 @@ const Nav = () => {
           <li>
             <Link
               href="/merch"
-              className=" via-urgent bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent "
+              className=" bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent "
             >
               Merch
             </Link>
@@ -129,7 +129,7 @@ const Nav = () => {
           <li>
             <Link
               href="/mediakit"
-              className=" via-urgent bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent "
+              className=" bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent "
             >
               Media Kit
             </Link>
@@ -137,7 +137,7 @@ const Nav = () => {
           <li>
             <Link
               href="/inquire"
-              className=" via-urgent bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent "
+              className=" bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent "
             >
               Business Inquiries
             </Link>
@@ -145,14 +145,14 @@ const Nav = () => {
           <li>
             <Link
               href="/subathon"
-              className=" via-urgent bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent "
+              className=" bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent "
             >
               Subathon!
             </Link>
           </li>
         </ul>
       </div>
-      <div className="flex animate-pulse items-center justify-center lg:hidden">
+      <div className="flex items-center justify-center lg:hidden">
         <Link href="/">
           <Image src={MyLogo} width={100} height={50} alt="Logo" />
         </Link>
@@ -160,7 +160,7 @@ const Nav = () => {
       <div className="navbar-end">
         <label
           tabIndex={0}
-          className={`swap swap-rotate btn-xs ${isDarkMode ? "synthwave" : ""}`}
+          className={`swap swap-rotate btn-xs ${isDarkMode ? "myDark" : ""}`}
         >
           {/* this hidden checkbox controls the state */}
           <input type="checkbox" onChange={toggleTheme} />
@@ -168,7 +168,7 @@ const Nav = () => {
           {/* sun icon */}
           <svg
             className={`swap-on ${
-              isDarkMode ? "synthwave-fill" : "cupcake-fill"
+              isDarkMode ? "myDark-fill" : "myLight-fill"
             } h-7 w-7`}
             xmlns="http://www.w3.org/2000/svg"
             viewBox="0 0 24 24"
@@ -182,7 +182,7 @@ const Nav = () => {
           {/* moon icon */}
           <svg
             className={`swap-off ${
-              isDarkMode ? "synthwave-fill" : "cupcake-fill"
+              isDarkMode ? "myDark-fill" : "myLight-fill"
             } h-7 w-7`}
             xmlns="http://www.w3.org/2000/svg"
             viewBox="0 0 24 24"

@@ -30,7 +30,7 @@ export default function VideoPlayer({ vnum }) {
       className="latestVideoEmbed rounded-md box-shadow-2xl"
       width="500"
       height="300"
-      allowFullScreen
+      allowFullScreen={true}
       src={videoSrc}
     ></iframe>
   );
