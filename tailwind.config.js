@@ -9,6 +9,7 @@ module.exports = {
 
   theme: {
     screens: {
+      xs: "320px",
       sm: "640px",
       md: "768px",
       lg: "1024px",
@@ -92,26 +93,15 @@ module.exports = {
     themes: [
       {
         myLight: {
-          primary: "#38bdf8",
-          "primary-focus": "#0284c7",
-          "primary-content": "#f9fafb",
-          secondary: "#fe5bac",
-          "secondary-focus": "#ec4899",
-          "secondary-content": "#f9fafb",
+          primary: "#b567ad",
+          secondary: "#00ceff",
           accent: "#ffd801",
-          "accent-focus": "#facc15",
-          "accent-content": "#f9fafb",
-          neutral: "#3b424e",
-          "neutral-focus": "#2a2e37",
-          "neutral-content": "#f9fafb",
-          "base-100": "#faf7f5",
-          "base-200": "#ebecf0",
-          "base-300": "#e7e2df",
-          "base-content": "#1e2734",
-          info: "#0022ee",
-          success: "#00f92a",
-          warning: "#e10600",
-          error: "#c8a2c8",
+          neutral: "#ffffff",
+          "base-100": "#444442",
+          info: "#c085df",
+          success: "#ffd801",
+          warning: "#330f5f",
+          error: "#fd509d",
           "--rounded-box": "1rem", // border radius rounded-box utility class, used in card and other large boxes
           "--rounded-btn": "4rem", // border radius rounded-btn utility class, used in buttons and similar element
           "--rounded-badge": "1.9rem", // border radius rounded-badge utility class, used in badges and similar
@@ -125,26 +115,15 @@ module.exports = {
           "--navbar-padding": ".5rem", // navbar vertical padding
         },
         myDark: {
-          primary: "#fe5bac",
-          "primary-focus": "#ec4899",
-          "primary-content": "#f9fafb",
-          secondary: "#38bdf8",
-          "secondary-focus": "#0284c7",
-          "secondary-content": "#f9fafb",
-          accent: "#ffd801",
-          "accent-focus": "#facc15",
-          "accent-content": "#f9fafb",
+          primary: "#00ceff",
+          secondary: "#b567ad",
+          accent: "#418192",
           neutral: "#444442",
-          "neutral-focus": "#1f2937",
-          "neutral-content": "#f9fafb",
-          "base-100": "#3b424e",
-          "base-200": "#2a2e37",
-          "base-300": "#16181d",
-          "base-content": "#ebecf0",
-          success: "#0022ee",
-          info: "#00f92a",
-          warning: "#c8a2c8",
-          error: "#e10600",
+          "base-100": "#ffffff",
+          info: "#330f5f",
+          success: "#fd509d",
+          warning: "#c085df",
+          error: "#ffd801",
           "--rounded-box": "1rem", // border radius rounded-box utility class, used in card and other large boxes
           "--rounded-btn": "4rem", // border radius rounded-btn utility class, used in buttons and similar element
           "--rounded-badge": "1.9rem", // border radius rounded-badge utility class, used in badges and similar

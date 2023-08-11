@@ -1,0 +1,49 @@
+          myDark
+
+          primary: "#00ceff",
+          "primary-focus": "#0284c7",
+          "primary-content": "#f9fafb",
+          secondary: "#b567ad",
+          "secondary-focus": "#ec4899",
+          "secondary-content": "#f9fafb",
+          accent: "#418192",
+          "accent-focus": "#facc15",
+          "accent-content": "#f9fafb",
+          neutral: "#444442",
+          "neutral-focus": "#1f2937",
+          "neutral-content": "#f9fafb",
+          "base-100": "#ffffff",
+          "base-200": "#2a2e37",
+          "base-300": "#16181d",
+          "base-content": "#ebecf0",
+          info: "#330f5f",
+          success: "#fd509d",
+          warning: "#c085df",
+          error: "#ffd801",
+
+
+
+
+
+          myLight
+
+          primary: "#38bdf8",
+          "primary-focus": "#0284c7",
+          "primary-content": "#f9fafb",
+          secondary: "#fe5bac",
+          "secondary-focus": "#ec4899",
+          "secondary-content": "#f9fafb",
+          accent: "#ffd801",
+          "accent-focus": "#facc15",
+          "accent-content": "#f9fafb",
+          neutral: "#3b424e",
+          "neutral-focus": "#2a2e37",
+          "neutral-content": "#f9fafb",
+          "base-100": "#faf7f5",
+          "base-200": "#ebecf0",
+          "base-300": "#e7e2df",
+          "base-content": "#1e2734",
+          info: "#0022ee",
+          success: "#00f92a",
+          warning: "#e10600",
+          error: "#c8a2c8",

@@ -57,7 +57,7 @@ export default function RootLayout({ children }) {
   return (
     <html
       lang="en"
-      data-theme="myLight"
+      data-theme="myDark"
       className={`${lobster.variable} ${poppins.variable}`}
       suppressHydrationWarning={true}
     >
