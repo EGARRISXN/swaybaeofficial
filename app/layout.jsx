@@ -93,7 +93,7 @@ export default function RootLayout({ children }) {
           priority
         /> */}
 
-        <main className="backdrop-brightness-75">
+        <main className="backdrop-brightness-75 px-4">
           <Providers>
             <Navbar />
             <Suspense fallback={<Loading />}>{children}</Suspense>

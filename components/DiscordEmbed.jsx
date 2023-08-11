@@ -1,6 +1,6 @@
 export default function DiscordEmbed() {
   return (
-    <div className="card bg-base-200 p-3 w-full shadow-xl shadow-purple-500/50 ">
+    <div className="card bg-base-200 p-3 w-full shadow-xl shadow-purple-800/50 ">
       <iframe
         className="discord-embed rounded-md"
         src="https://discord.com/widget?id=530445935767978016&theme=dark"

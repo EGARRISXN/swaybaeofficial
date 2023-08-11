@@ -48,9 +48,10 @@ export default function ContactForm() {
 
   return (
     <form
-      className="bg-base-200 border-base-content border-4 rounded-xl shadow-xl shadow-purple-500/50 p-16 mx-auto"
+      className="bg-base-200 border-base-content border-4 rounded-xl shadow-xl shadow-purple-800/50 px-12 lg:px-16 py-4 lg:py-8 mx-auto"
       onSubmit={handleSubmit}
     >
+      <h1 className="text-4xl text-center mt-1 mb-3 lg:mb-6">Contact me!</h1>
       <div className="w-full flex flex-col mb-4">
         <label className="font-bold" htmlFor="name">
           Name
@@ -62,7 +63,8 @@ export default function ContactForm() {
           required
           value={formData.name}
           onChange={handleInputChange}
-          className="p-4 text-neutral-900 rounded-xl shadow-xl shadow-purple-500/50 "
+          placeholder="Name"
+          className="p-3 lg:p-4 text-neutral-900 rounded-xl shadow-xl shadow-purple-800/50 "
           autoComplete="off"
           name="name"
           id="name"
@@ -79,7 +81,8 @@ export default function ContactForm() {
           required
           value={formData.email}
           onChange={handleInputChange}
-          className="p-4 text-neutral-900 rounded-xl shadow-xl shadow-purple-500/50 "
+          placeholder="Email"
+          className="p-3 lg:p-4 text-neutral-900 rounded-xl shadow-xl shadow-purple-800/50 "
           autoComplete="off"
           name="email"
           id="email"
@@ -96,7 +99,8 @@ export default function ContactForm() {
           required
           value={formData.subject}
           onChange={handleInputChange}
-          className="p-4 text-neutral-900 rounded-xl shadow-xl shadow-purple-500/50 "
+          placeholder="Subject"
+          className="p-3 lg:p-4 text-neutral-900 rounded-xl shadow-xl shadow-purple-800/50 "
           autoComplete="off"
           name="subject"
           id="subject"
@@ -108,22 +112,23 @@ export default function ContactForm() {
         </label>
         <textarea
           type="text"
-          rows={4}
+          rows={3}
           required
           minLength={10}
           maxLength={500}
           value={formData.message}
           onChange={handleInputChange}
+          placeholder="Message"
+          className="w-full p-3 lg:p-4 text-neutral-900 rounded-xl shadow-xl shadow-purple-800/50 "
           name="message"
           id="message"
-          className="w-full p-4 text-neutral-900 rounded-xl shadow-xl shadow-purple-500/50 "
         />
       </div>
       <div className="flex justify-end">
         <button
           type="submit"
           disabled={loading}
-          className=" mt-4 w-40 btn btn-secondary font-bold "
+          className="mt-4 lg:mt-6 w-40 btn btn-secondary font-bold "
         >
           Send Message
         </button>

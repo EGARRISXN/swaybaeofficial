@@ -1,6 +1,6 @@
 export default function SpotifyEmbed() {
   return (
-    <div className="card bg-base-200 p-3 w-full shadow-xl shadow-purple-500/50 ">
+    <div className="card bg-base-200 p-3 w-full shadow-xl shadow-purple-800/50 ">
       <iframe
         className="spotify-embed rounded-2xl"
         title="Spotify playlist by Sway Bae"

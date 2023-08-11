@@ -24,7 +24,7 @@ export const YouTubeCarousel2 = () => {
   }, [emblaApi]);
 
   return (
-    <div className="embla card flex overflow-hidden p-4 bg-base-200 w-full shadow-xl shadow-purple-500/50">
+    <div className="embla card flex overflow-hidden p-4 bg-base-200 w-full shadow-xl shadow-purple-800/50">
       <div className="embla__viewport" ref={emblaRef}>
         <div
           className="embla__container flex h-full space-x-10"

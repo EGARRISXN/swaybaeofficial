@@ -14,7 +14,7 @@ export default function TikTokEmbed() {
   }, []);
 
   return (
-    <div className="card bg-base-200 px-3 pt-3 pb-1 w-full shadow-xl shadow-purple-500/50">
+    <div className="card bg-base-200 px-3 pt-3 pb-1 w-full shadow-xl shadow-purple-800/50">
       <blockquote
         className="tiktok-embed rounded-2xl"
         title="@sway_baetv on TikTok"

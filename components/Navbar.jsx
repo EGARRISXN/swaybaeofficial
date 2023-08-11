@@ -28,7 +28,7 @@ const Nav = () => {
   };
 
   return (
-    <nav className="navbar rounded-b-xl bg-base-200 px-6 shadow-2xl shadow-purple-500/50">
+    <nav className="navbar container mt-4 md:mt-6 rounded-xl bg-base-200 px-6 shadow-2xl shadow-purple-800/50">
       <div className="navbar-start text-secondary">
         <div className="dropdown">
           <button
@@ -205,5 +205,3 @@ const Navbar = () => (
 );
 
 export default Navbar;
-
-// debgug

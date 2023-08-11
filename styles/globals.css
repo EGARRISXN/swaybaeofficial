@@ -35,6 +35,11 @@ h1 {
   font: 2rem var(--font-lobster);
 }
 
+h2 {
+  font-family: var(--font-lobster);
+  font: 1rem var(--font-lobster);
+}
+
 main {
   flex: auto;
   justify-content: center;

@@ -1,4 +1,4 @@
-import { YouTubeCarousel } from "../../components/YouTubeCarousel";
+import { YouTubeCarousel1 } from "../../components/YouTubeCarousel1";
 import { YouTubeCarousel2 } from "../../components/YouTubeCarousel2";
 import SpotifyEmbed from "../../components/SpotifyEmbed";
 import DiscordEmbed from "../../components/DiscordEmbed";
@@ -20,7 +20,7 @@ export default function FindMe() {
         </div>
         <div className="col-start-1 col-end-4 pt-8 hidden md:block col-span-2 ">
           <h1 className="text-center">{} Youtube</h1>
-          <YouTubeCarousel />
+          <YouTubeCarousel1 />
         </div>
         <div className="col-start-1 col-end-4 pt-3 block md:hidden col-span-2 ">
           <h1 className="text-end">{} Youtube</h1>
