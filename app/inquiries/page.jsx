@@ -1,6 +1,6 @@
-import ContactForm from "../../components/ContactForm";
-import ContactList1 from "../../components/ContactList1";
-import ContactList2 from "../../components/ContactList2";
+import ContactForm from "../../components/(inquiries)/ContactForm";
+import ContactList1 from "../../components/(inquiries)/ContactList1";
+import ContactList2 from "../../components/(inquiries)/ContactList2";
 
 export default function Inquiries() {
   return (

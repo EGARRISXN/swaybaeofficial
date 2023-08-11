@@ -1,6 +1,3 @@
-import TikTokEmbed from "../../components/TikTokEmbed";
-import InstagramEmbed from "../../components/InstagramEmbed";
-
 export default function Subathon() {
   return (
     <main>

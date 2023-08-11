@@ -1,10 +1,10 @@
-import { YouTubeCarousel1 } from "../../components/YouTubeCarousel1";
-import { YouTubeCarousel2 } from "../../components/YouTubeCarousel2";
-import SpotifyEmbed from "../../components/SpotifyEmbed";
-import DiscordEmbed from "../../components/DiscordEmbed";
-import InstagramEmbed from "../../components/InstagramEmbed";
-import TikTokEmbed from "../../components/TikTokEmbed";
-import GoogleCalendarEmbed from "../../components/GoogleCalendarEmbed";
+import { YouTubeCarousel1 } from "../../components/(socials)/YouTubeCarousel1";
+import { YouTubeCarousel2 } from "../../components/(socials)/YouTubeCarousel2";
+import SpotifyEmbed from "../../components/(socials)/SpotifyEmbed";
+import DiscordEmbed from "../../components/(socials)/DiscordEmbed";
+import InstagramEmbed from "../../components/(socials)/InstagramEmbed";
+import TikTokEmbed from "../../components/(socials)/TikTokEmbed";
+import GoogleCalendarEmbed from "../../components/(socials)/GoogleCalendarEmbed";
 
 export default function Socials() {
   return (

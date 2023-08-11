@@ -1,6 +1,6 @@
-import TeespringEmbed1 from "../../components/TeespringEmbed1";
-import TeespringEmbed2 from "../../components/TeespringEmbed2";
-import TeespringEmbed3 from "../../components/TeespringEmbed3";
+import TeespringEmbed1 from "../../components/(merch)/TeespringEmbed1";
+import TeespringEmbed2 from "../../components/(merch)/TeespringEmbed2";
+import TeespringEmbed3 from "../../components/(merch)/TeespringEmbed3";
 
 export default function Merch() {
   return (
