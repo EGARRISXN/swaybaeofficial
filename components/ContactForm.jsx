@@ -48,7 +48,7 @@ export default function ContactForm() {
 
   return (
     <form
-      className="bg-base-200 border-base-content border-4 rounded-xl shadow-xl shadow-purple-800/50 px-12 lg:px-16 py-4 lg:py-8 mx-auto"
+      className="bg-base-200 border-base-content border-4 rounded-xl shadow-xl shadow-purple-800/50 px-16 py-4 lg:py-8"
       onSubmit={handleSubmit}
     >
       <h1 className="text-4xl text-center mt-1 mb-3 lg:mb-6">Contact me!</h1>

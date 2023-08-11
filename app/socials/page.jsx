@@ -6,7 +6,7 @@ import InstagramEmbed from "../../components/InstagramEmbed";
 import TikTokEmbed from "../../components/TikTokEmbed";
 import GoogleCalendarEmbed from "../../components/GoogleCalendarEmbed";
 
-export default function FindMe() {
+export default function Socials() {
   return (
     <main>
       <div className="container grid grid-cols-6 gap-2">

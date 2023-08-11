@@ -1,5 +1,5 @@
 "use client";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { Sling as Hamburger } from "hamburger-react";
 import { useTheme, ThemeProvider } from "next-themes";
 import Image from "next/image";
@@ -9,11 +9,27 @@ import Ava from "../public/images/ava.jpg";
 
 const Nav = () => {
   const [isOpen, setOpen] = useState(false);
+  const [clickedOutside, setClickedOutside] = useState(false);
   const { resolvedTheme, setTheme } = useTheme();
   const isDarkMode = resolvedTheme === "myDark";
 
+  const closeDropdownOnOutsideClick = (event) => {
+    if (isOpen && !event.target.closest(".dropdown")) {
+      closeDropdown();
+      setClickedOutside(true);
+    }
+  };
+
+  useEffect(() => {
+    document.addEventListener("click", closeDropdownOnOutsideClick);
+    return () => {
+      document.removeEventListener("click", closeDropdownOnOutsideClick);
+    };
+  }, [isOpen]);
+
   const toggleDropdown = () => {
     setOpen(!isOpen);
+    setClickedOutside(false);
   };
 
   const closeDropdown = () => {
@@ -42,7 +58,7 @@ const Nav = () => {
                 paddingTop: "0.5rem",
               }}
             >
-              <Hamburger size={24} toggled={isOpen} toggle={toggleDropdown} />
+              <Hamburger size={24} toggled={!clickedOutside && isOpen} />
             </button>
             {isOpen && (
               <ul
@@ -105,7 +121,7 @@ const Nav = () => {
                 </li>
                 <li>
                   <Link
-                    href="/inquires"
+                    href="/inquiries"
                     className="bg-gradient-to-tr from-secondary to-primary bg-clip-text text-transparent"
                     onClick={handleLinkClick}
                   >

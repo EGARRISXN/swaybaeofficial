@@ -9,9 +9,9 @@ import {
 
 export default function ContactList1() {
   return (
-    <div className="bg-base-200 border-base-content border-4 rounded-xl shadow-xl shadow-purple-800/50 py-8 px-16 mx-auto">
-      <h2 className="text-2xl text-center  mb-4">Socials</h2>
-      <ul className="mb-3 flex flex-col space-y-2">
+    <div className="bg-base-200 border-base-content border-4 rounded-xl shadow-xl shadow-purple-800/50 py-10 px-16">
+      <h3 className="text-2xl text-center mb-4">Socials</h3>
+      <ul className="mb-4 flex flex-col space-y-2">
         <li className="flex items-center">
           <a
             href="https://www.twitch.tv/sway_bae"
@@ -68,7 +68,7 @@ export default function ContactList1() {
         </li>
       </ul>
       <p className=" text-sm">
-        Feel free to email me directly{" "}
+        Feel free to email me directly <br />
         <span className="text-primary hover:text-primary-focus font-bold">
           <a href="mailto:Sway.Bae9000@gmail.com">Sway.Bae9000@gmail.com</a>
         </span>

@@ -2,7 +2,7 @@ import React from "react";
 import Image from "next/image";
 import Sway from "../../public/images/tpsway.png";
 
-export default function AboutMe() {
+export default function About() {
   return (
     <main className="hero">
       <div className="hero-content flex-col-reverse lg:flex-row">

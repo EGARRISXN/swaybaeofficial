@@ -1,6 +1,6 @@
 export default function TeespringEmbed() {
   return (
-    <div className="text-center border-4 border-base-content bg-white py-4 rounded-xl shadow-xl shadow-purple-800/50">
+    <div className="text-center border-4 border-base-content bg-white pt-4 rounded-xl shadow-xl shadow-purple-800/50">
       <h1 className="text-3xl mb-2 mt-2">Sway&apos;s Swag!</h1>
       <iframe
         className="p-1 bg-white rounded-lg"
