@@ -3,7 +3,7 @@ import nodemailer from "nodemailer";
 export default async function ContactAPI(req, res) {
   const { name, email, subject, message } = req.body;
 
-  const user = process.env.EMAIL_USER;
+  const user = process.env.NEXT_PUBLIC_EMAIL_USER;
 
   const data = {
     name,
@@ -18,7 +18,7 @@ export default async function ContactAPI(req, res) {
     secure: true, //upgrade later with STARTTLS
     auth: {
       user: user,
-      pass: process.env.EMAIL_PASS,
+      pass: process.env.NEXT_PUBLIC_EMAIL_PASS,
     },
   });
 

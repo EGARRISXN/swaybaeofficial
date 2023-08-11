@@ -92,16 +92,16 @@ module.exports = {
   daisyui: {
     themes: [
       {
-        myLight: {
-          primary: "#b567ad",
-          secondary: "#00ceff",
-          accent: "#ffd801",
-          neutral: "#ffffff",
-          "base-100": "#444442",
-          info: "#c085df",
-          success: "#ffd801",
-          warning: "#330f5f",
-          error: "#fd509d",
+        myDark: {
+          primary: "#00ceff",
+          secondary: "#b567ad",
+          accent: "#418192",
+          neutral: "#444442",
+          "base-100": "#ffffff",
+          info: "#330f5f",
+          success: "#fd509d",
+          warning: "#c085df",
+          error: "#ffd801",
           "--rounded-box": "1rem", // border radius rounded-box utility class, used in card and other large boxes
           "--rounded-btn": "4rem", // border radius rounded-btn utility class, used in buttons and similar element
           "--rounded-badge": "1.9rem", // border radius rounded-badge utility class, used in badges and similar
@@ -114,16 +114,16 @@ module.exports = {
           "--tab-radius": "0.5rem", // border radius of tabs
           "--navbar-padding": ".5rem", // navbar vertical padding
         },
-        myDark: {
-          primary: "#00ceff",
-          secondary: "#b567ad",
-          accent: "#418192",
-          neutral: "#444442",
-          "base-100": "#ffffff",
-          info: "#330f5f",
-          success: "#fd509d",
-          warning: "#c085df",
-          error: "#ffd801",
+        myLight: {
+          primary: "#b567ad",
+          secondary: "#00ceff",
+          accent: "#ffd801",
+          neutral: "#ffffff",
+          "base-100": "#444442",
+          info: "#c085df",
+          success: "#ffd801",
+          warning: "#330f5f",
+          error: "#fd509d",
           "--rounded-box": "1rem", // border radius rounded-box utility class, used in card and other large boxes
           "--rounded-btn": "4rem", // border radius rounded-btn utility class, used in buttons and similar element
           "--rounded-badge": "1.9rem", // border radius rounded-badge utility class, used in badges and similar
