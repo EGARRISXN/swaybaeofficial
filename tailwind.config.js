@@ -42,6 +42,7 @@ module.exports = {
       fontFamily: {
         poppins: ["Poppins", "sans-serif"],
         lobster: ["Lobster", "cursive"],
+        neonderthaw: ["Neonderthaw", "cursive"],
       },
       spacing: {
         128: "32rem",

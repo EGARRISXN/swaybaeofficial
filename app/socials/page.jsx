@@ -1,3 +1,5 @@
+"use client";
+import Framer from "../framer";
 import { YouTubeCarousel1 } from "../../components/(socials)/YouTubeCarousel1";
 import { YouTubeCarousel2 } from "../../components/(socials)/YouTubeCarousel2";
 import SpotifyEmbed from "../../components/(socials)/SpotifyEmbed";
@@ -9,7 +11,7 @@ import TwitchEmbed from "../../components/(socials)/TwitchEmbed";
 
 export default function Socials() {
   return (
-    <main>
+    <Framer>
       <div className="container">
         <div className="spot">
           <SpotifyEmbed />
@@ -36,7 +38,7 @@ export default function Socials() {
           <TwitchEmbed />
         </div>
       </div>
-    </main>
+    </Framer>
   );
 }
 

@@ -1,13 +1,16 @@
+"use client";
 import { Providers } from "./providers";
 import { Suspense } from "react";
+import { AnimatePresence } from "framer-motion";
 import { ToastContainer } from "react-toastify";
-import { Poppins, Lobster } from "next/font/google";
+import { Poppins, Lobster, Neonderthaw } from "next/font/google";
 import Loading from "./loading";
 import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
+import UseScrollToTop from "../hooks/useScrollToTop";
 import "react-toastify/dist/ReactToastify.css";
 import "../styles/globals.css";
-import Image from "next/image";
+// import Image from "next/image";
 
 const lobster = Lobster({
   subsets: ["latin"],
@@ -20,6 +23,13 @@ const poppins = Poppins({
   subsets: ["latin"],
   display: "swap",
   variable: "--font-poppins",
+  weight: "400",
+});
+
+const neonderthaw = Neonderthaw({
+  subsets: ["latin"],
+  display: "swap",
+  variable: "--font-neonderthaw",
   weight: "400",
 });
 
@@ -58,7 +68,7 @@ export default function RootLayout({ children }) {
     <html
       lang="en"
       data-theme="myDark"
-      className={`${lobster.variable} ${poppins.variable}`}
+      className={`${lobster.variable} ${poppins.variable} ${neonderthaw.variable}`}
       suppressHydrationWarning={true}
     >
       <head>
@@ -83,8 +93,8 @@ export default function RootLayout({ children }) {
         />
       </head>
 
-      {/* <body className="relative h-full w-full bg-gradient-to-r from-base-300 via-pink-400 to-black-300 bg-cover bg-fixed bg-no-repeat">
-        <Image
+      <body className="relative h-full w-full bg-gradient-to-r from-base-300 via-pink-400 to-black-300 bg-cover bg-fixed bg-no-repeat">
+        {/* <Image
           src="/images/11.jpg"
           alt="SwayBae Logo"
           quality={100}
@@ -93,13 +103,20 @@ export default function RootLayout({ children }) {
           priority
         /> */}
 
-      <body className="relative h-full w-full bg-cover bg-fixed bg-no-repeat">
+        {/* <body className="relative h-full w-full bg-cover bg-fixed bg-no-repeat"> */}
         <main className="backdrop-brightness-75 px-4">
           <Providers>
             <Navbar />
-            <Suspense fallback={<Loading />}>{children}</Suspense>
+            <AnimatePresence
+              mode="wait"
+              initial={false}
+              onExitComplete={() => window.scrollTo(0, 0)}
+            >
+              <Suspense fallback={<Loading />}>{children}</Suspense>
+            </AnimatePresence>
             <ToastContainer />
             <Footer />
+            <UseScrollToTop />
           </Providers>
         </main>
       </body>

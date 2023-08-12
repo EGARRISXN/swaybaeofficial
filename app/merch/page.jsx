@@ -1,10 +1,12 @@
+"use client";
+import Framer from "../framer";
 import TeespringEmbed1 from "../../components/(merch)/TeespringEmbed1";
 import TeespringEmbed2 from "../../components/(merch)/TeespringEmbed2";
 import TeespringEmbed3 from "../../components/(merch)/TeespringEmbed3";
 
 export default function Merch() {
   return (
-    <main>
+    <Framer>
       <div className="container mx-auto flex flex-col items-center justify-center py-16">
         <div className=" hidden lg:block">
           <TeespringEmbed1 />
@@ -16,6 +18,6 @@ export default function Merch() {
           <TeespringEmbed3 />
         </div>
       </div>
-    </main>
+    </Framer>
   );
 }

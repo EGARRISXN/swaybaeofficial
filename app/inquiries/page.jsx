@@ -1,11 +1,23 @@
+"use client";
+import { motion } from "framer-motion";
+import Framer from "../framer";
 import ContactForm from "../../components/(inquiries)/ContactForm";
 import ContactList1 from "../../components/(inquiries)/ContactList1";
 import ContactList2 from "../../components/(inquiries)/ContactList2";
 
 export default function Inquiries() {
   return (
-    <main>
-      <div className="pt-12 md:pt-14 pb-10 xs:pb-16 px-4 justify-center flex flex-col sm:container md:flex-row md:space-x-6 lg:px-16 lg:space-x-8 xl:px-20 xl:space-x-12 2xl:px-24 2xl:space-x-16">
+    <Framer>
+      <motion.div
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
+        transition={{
+          ease: "easeInOut",
+          duration: 0.5,
+          delay: 0.1,
+        }}
+        className="pt-12 md:pt-14 pb-10 xs:pb-16 px-4 justify-center flex flex-col sm:container md:flex-row md:space-x-6 lg:px-16 lg:space-x-8 xl:px-20 xl:space-x-12 2xl:px-24 2xl:space-x-16"
+      >
         <div className=" md:w-1/2 lg:w-1/2 xl:w-3/5 2xl:w-3/5 3xl:w-2/3">
           <ContactForm />
         </div>
@@ -15,7 +27,7 @@ export default function Inquiries() {
         <div className="md:hidden pt-8">
           <ContactList2 />
         </div>
-      </div>
-    </main>
+      </motion.div>
+    </Framer>
   );
 }
