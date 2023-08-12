@@ -1,6 +1,7 @@
-import Link from "next/link";
-import Image from "next/image";
-import LogoWhite from "../public/images/logowhite.png";
+// import Link from "next/link";
+// import Image from "next/image";
+// import LogoWhite from "../public/images/logowhite.png";
+import TwitchEmbed2 from "../components/(socials)/TwitchEmbed2";
 
 export default function Home() {
   return (
@@ -8,7 +9,8 @@ export default function Home() {
       <main className="hero">
         <div className="hero-content flex flex-col items-center">
           <div className="mb-16">
-            <Link href="/">
+            <TwitchEmbed2 />
+            {/* <Link href="/">
               <Image
                 src={LogoWhite}
                 width={400}
@@ -16,7 +18,7 @@ export default function Home() {
                 alt="Logo White"
                 priority
               />
-            </Link>
+            </Link> */}
           </div>
         </div>
       </main>

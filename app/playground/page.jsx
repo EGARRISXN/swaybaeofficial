@@ -1,6 +1,5 @@
 import Image from "next/image";
 import Ava from "../../public/images/ava.jpg";
-import TwitchEmbed from "../../components/(socials)/TwitchEmbed";
 
 export default function Playground() {
   return (
@@ -15,7 +14,8 @@ export default function Playground() {
           <div className="text-sm font-medium text-gray-400">SwayBae#9000</div>
         </div>
       </div>
-      <TwitchEmbed />
+      <br />
+
       <br />
       <br />
       <br />
