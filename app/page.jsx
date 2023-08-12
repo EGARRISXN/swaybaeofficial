@@ -1,7 +1,6 @@
 import Link from "next/link";
 import Image from "next/image";
 import LogoWhite from "../public/images/logowhite.png";
-import TwitchEmbed from "../components/(socials)/TwitchEmbed";
 
 export default function Home() {
   return (
@@ -19,7 +18,6 @@ export default function Home() {
               />
             </Link>
           </div>
-          <TwitchEmbed />
         </div>
       </main>
     </>

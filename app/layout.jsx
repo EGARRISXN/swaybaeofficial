@@ -83,8 +83,8 @@ export default function RootLayout({ children }) {
         />
       </head>
 
-      <body className="relative h-full w-full bg-gradient-to-r from-base-300 via-pink-400 to-black-300 bg-cover bg-fixed bg-no-repeat">
-        {/* <Image
+      {/* <body className="relative h-full w-full bg-gradient-to-r from-base-300 via-pink-400 to-black-300 bg-cover bg-fixed bg-no-repeat">
+        <Image
           src="/images/11.jpg"
           alt="SwayBae Logo"
           quality={100}
@@ -93,6 +93,7 @@ export default function RootLayout({ children }) {
           priority
         /> */}
 
+      <body className="relative h-full w-full bg-cover bg-fixed bg-no-repeat">
         <main className="backdrop-brightness-75 px-4">
           <Providers>
             <Navbar />
