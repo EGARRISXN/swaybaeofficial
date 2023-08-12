@@ -1,6 +1,5 @@
 const Footer = () => {
   return (
-    // <div className="relative bottom-0 xl:px-20 lg:px-12 sm:px-6 px-4 py-4 mt-4">
     <div className="relative flex bottom-0 p-4 items-center justify-center">
       <p className="text-base leading-4 ">
         2023{" "}

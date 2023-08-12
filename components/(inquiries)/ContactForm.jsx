@@ -48,7 +48,7 @@ export default function ContactForm() {
 
   return (
     <form
-      className="bg-base-200 border-base-content border-4 rounded-xl shadow-xl shadow-purple-800/50 px-16 py-4 lg:py-8"
+      className="bg-base-200 border-base-content border-4 rounded-3xl shadow-xl shadow-purple-800/50 px-4 xs:px-8 py-4 lg:px-12 lg:py-8 xl:px-16 xl:py-12 2xl:px-20 2xl:py-16"
       onSubmit={handleSubmit}
     >
       <h1 className="text-4xl text-center mt-1 mb-3 lg:mb-6">Contact me!</h1>
@@ -124,11 +124,11 @@ export default function ContactForm() {
           id="message"
         />
       </div>
-      <div className="flex justify-end">
+      <div className="flex justify-center xs:justify-end">
         <button
           type="submit"
           disabled={loading}
-          className="mt-4 lg:mt-6 w-40 btn btn-secondary font-bold "
+          className="mb-2 lg:mb-0 mt-4 lg:mt-6 w-30 sm:w-40 btn btn-secondary btn-sm xs:btn-md"
         >
           Send Message
         </button>

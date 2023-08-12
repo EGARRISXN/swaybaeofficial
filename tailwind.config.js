@@ -8,8 +8,35 @@ module.exports = {
   darkMode: "class",
 
   theme: {
+    screens: {
+      xs: "360px",
+      sm: "640px",
+      md: "768px",
+      lg: "1024px",
+      xl: "1280px",
+      "2xl": "1420px",
+      "3xl": "1800px",
+    },
     container: {
       center: true,
+      padding: {
+        DEFAULT: "1rem",
+        sm: "2rem",
+        md: "3rem",
+        lg: "4rem",
+        xl: "5rem",
+        "2xl": "6rem",
+        "3xl": "7rem",
+        "4xl": "8rem",
+      },
+      opacity: {
+        0: "0",
+        20: "0.2",
+        40: "0.4",
+        60: "0.6",
+        80: "0.8",
+        100: "1",
+      },
     },
     extend: {
       fontFamily: {
@@ -54,10 +81,20 @@ module.exports = {
         "4/5": "80%",
         "3/4": "75%",
         "2/3": "66.666667%",
+        "3/5": "60%",
         "1/2": "50%",
+        "2/5": "40%",
         "1/3": "33.333333%",
         "1/4": "25%",
         "1/5": "20%",
+      },
+      padding: {
+        DEFAULT: "1rem",
+        sm: "2rem",
+        md: "3rem",
+        lg: "4rem",
+        xl: "5rem",
+        "2xl": "6rem",
       },
     },
   },
