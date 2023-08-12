@@ -1,8 +1,7 @@
 export default function TwitchEmbed() {
   return (
     <iframe
-      src="https://player.twitch.tv/?channel=sway_bae&parent=swaybaeofficial.vercel.app/"
-      frameborder="0"
+      src="https://player.twitch.tv/?channel=sway_bae&parent=swaybaeofficial.vercel.app"
       allowfullscreen="true"
       height="100%"
       width="100%"

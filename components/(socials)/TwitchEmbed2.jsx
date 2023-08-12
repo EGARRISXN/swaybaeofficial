@@ -14,10 +14,10 @@ export default function TwitchEmbed2() {
         width: 854,
         height: 480,
         channel: "sway_bae",
-        parent: "swaybaeofficial.vercel.app/",
+        parent: "locahost",
       };
 
-      const player = new window.Twitch.Player("SamplePlayerDivID", options);
+      const player = new window.Twitch.Player("TwitchPlayerDivID", options);
       player.setVolume(0.5);
     };
 
@@ -26,5 +26,5 @@ export default function TwitchEmbed2() {
     };
   }, []);
 
-  return <div id="SamplePlayerDivID"></div>;
+  return <div id="TwitchPlayerDivID"></div>;
 }
