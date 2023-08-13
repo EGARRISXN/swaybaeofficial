@@ -1,4 +1,3 @@
-"use client";
 import Animation from "../components/Animation";
 import NeonSway from "../components/NeonSway";
 

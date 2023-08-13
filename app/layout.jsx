@@ -1,8 +1,5 @@
-"use client";
 import "../styles/globals.css";
 import "react-toastify/dist/ReactToastify.css";
-import { useState, useEffect } from "react";
-import { usePathname } from "next/navigation";
 import { Poppins, Lobster, Neonderthaw, Vibur } from "next/font/google";
 import { Providers } from "./providers";
 import { Suspense } from "react";
@@ -11,7 +8,6 @@ import Loading from "./loading";
 import Navbar from "../components/Navbar";
 import UseScrollToTop from "../hooks/useScrollToTop";
 import Footer from "../components/Footer";
-import SplashScreen from "../components/SplashScreen";
 
 const vibur = Vibur({
   subsets: ["latin"],
@@ -72,14 +68,6 @@ export const metadata = {
 };
 
 export default function RootLayout({ children }) {
-  const pathname = usePathname();
-  const isHome = pathname === "/";
-  const [isLoading, setIsLoading] = useState(isHome);
-
-  useEffect(() => {
-    if (isLoading) return;
-  }, [isLoading]);
-
   return (
     <html
       lang="en"
@@ -110,19 +98,15 @@ export default function RootLayout({ children }) {
       </head>
 
       <body className="relative bg-gradient-to-r from-base-300 via-pink-400 to-black-300 bg-cover bg-fixed bg-no-repeat">
-        {isLoading && isHome ? (
-          <SplashScreen finishLoading={() => setIsLoading(false)} />
-        ) : (
-          <main className="backdrop-brightness-75 px-4">
-            <Providers>
-              <Navbar />
-              <Suspense fallback={<Loading />}>{children}</Suspense>
-              <UseScrollToTop />
-              <ToastContainer />
-              <Footer />
-            </Providers>
-          </main>
-        )}
+        <main className="backdrop-brightness-75 px-4">
+          <Providers>
+            <Navbar />
+            <Suspense fallback={<Loading />}>{children}</Suspense>
+            <UseScrollToTop />
+            <ToastContainer />
+            <Footer />
+          </Providers>
+        </main>
       </body>
     </html>
   );
