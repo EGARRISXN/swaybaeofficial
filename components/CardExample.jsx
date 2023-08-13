@@ -3,7 +3,7 @@ import Discord from "../public/images/discordblue.jpeg";
 
 export default function CardExample() {
   return (
-    <main className="container  mx-auto">
+    <div className="container mx-auto">
       <div className="card w-96 bg-base-100 shadow-xl">
         <figure>
           <Image
@@ -22,6 +22,6 @@ export default function CardExample() {
           </div>
         </div>
       </div>
-    </main>
+    </div>
   );
 }

@@ -1,28 +1,32 @@
+"use client";
+import Framer from "../../components/framer";
 import ContactForm from "../../components/(inquiries)/ContactForm";
 import ContactList1 from "../../components/(inquiries)/ContactList1";
 import ContactList2 from "../../components/(inquiries)/ContactList2";
 
 export default function Inquiries() {
   return (
-    <div
-      style={{
-        height: "100%",
-        width: "100%",
-        display: "flex",
-        justifyContent: "center",
-        alignItems: "center",
-      }}
-    >
-      <div className=" md:w-1/2 lg:w-1/2 xl:w-3/5 2xl:w-3/5 3xl:w-2/3">
-        <ContactForm />
+    <Framer>
+      <div
+        style={{
+          height: "100%",
+          width: "100%",
+          display: "flex",
+          justifyContent: "center",
+          alignItems: "center",
+        }}
+      >
+        <div className=" md:w-1/2 lg:w-1/2 xl:w-3/5 2xl:w-3/5 3xl:w-2/3">
+          <ContactForm />
+        </div>
+        <div className="hidden md:block md:w-2/5 lg:w-1/3 xl:w-1/4 2xl:w-1/4 3xl:w-1/5">
+          <ContactList1 />
+        </div>
+        <div className="md:hidden pt-8">
+          <ContactList2 />
+        </div>
       </div>
-      <div className="hidden md:block md:w-2/5 lg:w-1/3 xl:w-1/4 2xl:w-1/4 3xl:w-1/5">
-        <ContactList1 />
-      </div>
-      <div className="md:hidden pt-8">
-        <ContactList2 />
-      </div>
-    </div>
+    </Framer>
   );
 }
 

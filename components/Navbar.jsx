@@ -13,27 +13,32 @@ const Nav = () => {
   const { resolvedTheme, setTheme } = useTheme();
   const isDarkMode = resolvedTheme === "myDark";
 
-  const closeDropdownOnOutsideClick = (event) => {
-    if (isOpen && !event.target.closest(".dropdown")) {
-      closeDropdown();
-      setClickedOutside(true);
-    }
+  const closeDropdown = () => {
+    setOpen(false);
   };
 
+  const closeDropdownOnOutsideClick = useCallback(
+    (event) => {
+      // Wrap in useCallback
+      if (isOpen && !event.target.closest(".dropdown")) {
+        closeDropdown();
+        setClickedOutside(true);
+      }
+    },
+    [isOpen]
+  );
+
   useEffect(() => {
-    document.addEventListener("click", closeDropdownOnOutsideClick);
+    const handleOutsideClick = (event) => closeDropdownOnOutsideClick(event);
+    document.addEventListener("click", handleOutsideClick);
     return () => {
-      document.removeEventListener("click", closeDropdownOnOutsideClick);
+      document.removeEventListener("click", handleOutsideClick);
     };
-  }, [isOpen]);
+  }, [closeDropdownOnOutsideClick]);
 
   const toggleDropdown = () => {
     setOpen(!isOpen);
     setClickedOutside(false);
-  };
-
-  const closeDropdown = () => {
-    setOpen(false);
   };
 
   const handleLinkClick = () => {
