@@ -1,24 +1,20 @@
-"use client";
-import Framer from "../framer";
 import AboutMeBio from "../../components/(about)/AboutMeBio";
-import { motion } from "framer-motion";
 
-const About = () => {
+export default function About() {
   return (
-    <Framer>
-      <motion.div
-        initial={{ opacity: 0 }}
-        animate={{ opacity: 1, delay: 1 }}
-        exit={{ opacity: 0 }}
-        className="container mx-auto"
-      >
-        <AboutMeBio />
-      </motion.div>
-    </Framer>
+    <div
+      style={{
+        height: "100%",
+        width: "100%",
+        display: "flex",
+        justifyContent: "center",
+        alignItems: "center",
+      }}
+    >
+      <AboutMeBio />
+    </div>
   );
-};
-
-export default About;
+}
 
 // import Neon2 from "../../components/(about)/Neon2";
 // import AboutText from "../../components/(about)/AboutText";

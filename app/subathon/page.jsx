@@ -1,12 +1,18 @@
-"use client";
-import Framer from "../framer";
+import MediaKitContainer from "../../components/(mediakit)/MediaKitContainer";
 
 export default function Subathon() {
   return (
-    <Framer>
-      <div className="flex flex-row justify-center">
-        <h1>hi</h1>
-      </div>
-    </Framer>
+    <div
+      style={{
+        height: "100%",
+        width: "100%",
+        display: "flex",
+        justifyContent: "center",
+        alignItems: "center",
+      }}
+    >
+      <h1 className="text-6xl animate-pulse pb-6">Under Construction!</h1>
+      <MediaKitContainer />
+    </div>
   );
 }

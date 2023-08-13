@@ -1,44 +1,48 @@
-"use client";
-import Framer from "../framer";
-import { YouTubeCarousel1 } from "../../components/(socials)/YouTubeCarousel1";
-import { YouTubeCarousel2 } from "../../components/(socials)/YouTubeCarousel2";
+// import { YouTubeCarousel1 } from "../../components/(socials)/YouTubeCarousel1";
+// import { YouTubeCarousel2 } from "../../components/(socials)/YouTubeCarousel2";
 import SpotifyEmbed from "../../components/(socials)/SpotifyEmbed";
-import DiscordEmbed from "../../components/(socials)/DiscordEmbed";
-import InstagramEmbed from "../../components/(socials)/InstagramEmbed";
-import TikTokEmbed from "../../components/(socials)/TikTokEmbed";
+// import DiscordEmbed from "../../components/(socials)/DiscordEmbed";
+// import InstagramEmbed from "../../components/(socials)/InstagramEmbed";
+// import TikTokEmbed from "../../components/(socials)/TikTokEmbed";
 import GoogleCalendarEmbed from "../../components/(socials)/GoogleCalendarEmbed";
 import TwitchEmbed from "../../components/(socials)/TwitchEmbed";
 
 export default function Socials() {
   return (
-    <Framer>
-      <div className="container">
-        <div className="spot">
-          <SpotifyEmbed />
-        </div>
-        <div className="goog">
-          <GoogleCalendarEmbed />
-        </div>
-        <div className="yt">
-          <YouTubeCarousel1 />
-        </div>
-        <div className="yt">
-          <YouTubeCarousel2 />
-        </div>
-        <div className="dis">
-          <DiscordEmbed />
-        </div>
-        <div className="tik">
-          <TikTokEmbed />
-        </div>
-        <div className="ig">
-          <InstagramEmbed />
-        </div>
-        <div className="twitch">
-          <TwitchEmbed />
-        </div>
+    <div
+      style={{
+        height: "100%",
+        width: "100%",
+        display: "flex",
+        justifyContent: "center",
+        alignItems: "center",
+      }}
+    >
+      <div className="spot">
+        <SpotifyEmbed />
       </div>
-    </Framer>
+      <div className="goog">
+        <GoogleCalendarEmbed />
+      </div>
+      {/* <div className="yt">
+        <YouTubeCarousel1 />
+      </div>
+      <div className="yt">
+        <YouTubeCarousel2 />
+      </div>
+      <div className="dis">
+        <DiscordEmbed />
+      </div>
+      <div className="tik">
+        <TikTokEmbed />
+      </div>
+      <div className="ig">
+        <InstagramEmbed />
+      </div> */}
+      <div className="twitch">
+        <TwitchEmbed />
+      </div>
+    </div>
   );
 }
 
