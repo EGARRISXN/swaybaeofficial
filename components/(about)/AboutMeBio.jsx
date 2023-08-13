@@ -10,9 +10,9 @@ export default function AboutMeBio() {
 
       <div className="font-general-regular w-full sm:w-3/4 text-left">
         <p className="mb-4 text-ternary-dark dark:text-ternary-light text-lg">
-          Im a Full Time Content Creator as of June 2021. I stream nearly daily
-          on Twitch, with daily uploads on YouTube. You can also find me on
-          TikTok, Twitter, Threads, Facebook, and Instagram!
+          I&apos;m a Full Time Content Creator as of June 2021. I stream nearly
+          daily on Twitch, with daily uploads on YouTube. You can also find me
+          on TikTok, Twitter, Threads, Facebook, and Instagram!
           <br />
           Did I ever imagine this would be my lifestyle, even five years ago?
           Nope.

@@ -3,7 +3,7 @@ import Sway from "../../public/images/biff.jpg";
 
 export default function AboutPhoto() {
   return (
-    <div className="shadow-2xl rounded-2xl shadow-purple-800/50 border-2 border-yellow-300">
+    <div className="shadow-2xl rounded-2xl shadow-purple-800/50">
       <Image
         src={Sway}
         alt="Sway"

@@ -1,7 +1,7 @@
 "use client";
 import { motion } from "framer-motion";
 
-export default function Framer({ children }) {
+export default function Animation({ children }) {
   return (
     <motion.div
       initial={{ x: 300, opacity: 0 }}

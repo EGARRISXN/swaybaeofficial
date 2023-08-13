@@ -1,13 +1,24 @@
-import "react-toastify/dist/ReactToastify.css";
+"use client";
 import "../styles/globals.css";
+import "react-toastify/dist/ReactToastify.css";
+import { useState, useEffect } from "react";
+import { usePathname } from "next/navigation";
+import { Poppins, Lobster, Neonderthaw, Vibur } from "next/font/google";
 import { Providers } from "./providers";
 import { Suspense } from "react";
 import { ToastContainer } from "react-toastify";
-import { Poppins, Lobster, Neonderthaw } from "next/font/google";
 import Loading from "./loading";
 import Navbar from "../components/Navbar";
-import Footer from "../components/Footer";
 import UseScrollToTop from "../hooks/useScrollToTop";
+import Footer from "../components/Footer";
+import SplashScreen from "../components/SplashScreen";
+
+const vibur = Vibur({
+  subsets: ["latin"],
+  display: "swap",
+  variable: "--font-vibur",
+  weight: "400",
+});
 
 const lobster = Lobster({
   subsets: ["latin"],
@@ -61,11 +72,19 @@ export const metadata = {
 };
 
 export default function RootLayout({ children }) {
+  const pathname = usePathname();
+  const isHome = pathname === "/";
+  const [isLoading, setIsLoading] = useState(isHome);
+
+  useEffect(() => {
+    if (isLoading) return;
+  }, [isLoading]);
+
   return (
     <html
       lang="en"
       data-theme="myDark"
-      className={`${lobster.variable} ${poppins.variable} ${neonderthaw.variable}`}
+      className={`${vibur.variable} ${lobster.variable} ${poppins.variable} ${neonderthaw.variable}`}
       suppressHydrationWarning={true}
     >
       <head>
@@ -90,17 +109,20 @@ export default function RootLayout({ children }) {
         />
       </head>
 
-      <body className="relative h-full w-full bg-gradient-to-r from-base-300 via-pink-400 to-black-300 bg-cover bg-fixed bg-no-repeat">
-        {/* <body className="relative h-full w-full bg-cover bg-fixed bg-no-repeat"> */}
-        <main className="backdrop-brightness-75 px-4">
-          <Providers>
-            <Navbar />
-            <Suspense fallback={<Loading />}>{children}</Suspense>
-            <Footer />
-            <UseScrollToTop />
-            <ToastContainer />
-          </Providers>
-        </main>
+      <body className="relative bg-gradient-to-r from-base-300 via-pink-400 to-black-300 bg-cover bg-fixed bg-no-repeat">
+        {isLoading && isHome ? (
+          <SplashScreen finishLoading={() => setIsLoading(false)} />
+        ) : (
+          <main className="backdrop-brightness-75 px-4">
+            <Providers>
+              <Navbar />
+              <Suspense fallback={<Loading />}>{children}</Suspense>
+              <UseScrollToTop />
+              <ToastContainer />
+              <Footer />
+            </Providers>
+          </main>
+        )}
       </body>
     </html>
   );

@@ -10,16 +10,8 @@
 
 html, body {
   margin: 0;
-  padding: 0;
   font-family: var(--font-poppins);
   font: 1rem var(--font-poppins);
-}
-body {
-  width: 100vw;
-  min-height: 100vh;
-  background-color: #000;
-  color: var(--primary);
-  overflow-x: hidden;
 }
 
 h1 {
@@ -31,16 +23,16 @@ h2 {
   font: 4rem var(--font-poppins);
 }
 h3 {
-  font-family: var(--font-neonderthaw);
-  font: 3rem var(--font-neonderthaw);
+  font-family: var(--font-lobster);
+  font: 3rem var(--font-lobster);
 }
 h4 {
-  font-family: var(--font-poppins);
-  font: 2rem var(--font-poppins);
+  font-family: var(--font-neonderthaw);
+  font: 2rem var(--font-neonderthaw);
 }
 h5 {
-  font-family: var(--font-lobster);
-  font: 1rem var(--font-lobster);
+  font-family: var(--font-vibur);
+  font: 1.5rem var(--font-vibur);
 }
 p {
   font-family: var(--font-poppins);
@@ -55,7 +47,6 @@ main {
 }
 
 
-
 /* --------- */
 /* Scrollbar */
 /* --------- */
@@ -67,20 +58,20 @@ main {
 }
 /* Chrome, Edge, and Safari */
 *::-webkit-scrollbar {
-  width: 25px;
+  width: 5px;
 }
 *::-webkit-scrollbar-thumb {
   background: var(--primary);
-  border-radius: 25px;
+  border-radius: 5px;
 }
 *::-webkit-scrollbar-track {
   background-color: var(--secondary);
-  border-radius: 40px;
+  border-radius: 14px;
   border: 3px solid var(--primary);
 }
 *::-webkit-scrollbar-button {
   background-color: var(--primary);
-  border-radius: 25px;
+  border-radius: 5px;
 }
 *::-webkit-scrollbar-button:hover {
   background-color: var(--secondary);
@@ -126,29 +117,32 @@ main {
 
 
 
-/* ------ */
-/* Button */
-/* ------ */
+/* ------------- */
+/* About Me Font */
+/* ------------- */
 
-@keyframes buttonStroke {
-  0% {
-    transform: scaleX(8) scaleY(1.5) rotate(0deg);
-    opacity: 1;
-  }
-  to {
-    transform: scaleX(8) scaleY(1.5) rotate(1turn);
-    opacity: 1;
-  }
+.neon2-wrapper {
+  position: relative;
+  padding: 7rem 0 7rem 0;
 }
-.animate-buttonStroke {
-  animation: buttonStroke 7s linear infinite;
-}
-.will-change-transform {
-  will-change: transform;
-}
-.bg-buttonConicGradient {
-  background-image: conic-gradient(transparent 135deg, #8b5cf6 180deg, transparent 255deg),
-    conic-gradient(transparent -45deg, #d946ef 0deg, transparent 75deg);
+
+.neon2 {
+  font-family: var(--font-lobster);
+  letter-spacing: 3px;
+  text-shadow: 0 0 10px rgba(255, 255, 255, 0.8), 0 0 20px rgba(255, 255, 255, 0.8),
+    0 0 30px rgba(255, 255, 255, 0.8), 0 0 40px rgba(173, 216, 230, 0.8);
+  color: #fff;
+  text-shadow:
+  .1vw 0vw .25vw #04fff2, .2vw 0vw .25vw #04fff2, .4vw 0vw .25vw #04fff2, 
+
+  .1vw 0vw   0vw #f25757, .2vw 0vw   0vw #f25757, .4vw 0vw   0vw #f25757,
+  .1vw 0vw  .1vw #f25757, .2vw 0vw  .1vw #f25757, .4vw 0vw  .1vw #f25757,
+  .1vw 0vw   2vw #f25757, .2vw 0vw   2vw #f25757, .4vw 0vw   2vw #f25757, 
+
+  .1vw 0vw   1vw #ff126d, .2vw 0vw   1vw #ff126d, .4vw 0vw   5vw #ff126d, 
+  .1vw 0vw   5vw #ff126d, .2vw 0vw  20vw #ff126d, .4vw 0vw  10vw #ff126d,
+  .1vw 0vw  10vw #ff126d, .2vw 0vw  30vw #ff126d, .4vw 0vw  10vw #ff126d;
+  padding: 0 3.5rem 0 3.5rem;
 }
 
 
@@ -175,67 +169,3 @@ main {
 @-webkit-keyframes slide-in-bottom{0%{-webkit-transform:translateY(1000px);transform:translateY(1000px);opacity:0}100%{-webkit-transform:translateY(0);transform:translateY(0);opacity:1}}@keyframes slide-in-bottom{0%{-webkit-transform:translateY(1000px);transform:translateY(1000px);opacity:0}100%{-webkit-transform:translateY(0);transform:translateY(0);opacity:1}}
 @-webkit-keyframes bounce-top{0%{-webkit-transform:translateY(-45px);transform:translateY(-45px);-webkit-animation-timing-function:ease-in;animation-timing-function:ease-in;opacity:1}24%{opacity:1}40%{-webkit-transform:translateY(-24px);transform:translateY(-24px);-webkit-animation-timing-function:ease-in;animation-timing-function:ease-in}65%{-webkit-transform:translateY(-12px);transform:translateY(-12px);-webkit-animation-timing-function:ease-in;animation-timing-function:ease-in}82%{-webkit-transform:translateY(-6px);transform:translateY(-6px);-webkit-animation-timing-function:ease-in;animation-timing-function:ease-in}93%{-webkit-transform:translateY(-4px);transform:translateY(-4px);-webkit-animation-timing-function:ease-in;animation-timing-function:ease-in}25%,55%,75%,87%{-webkit-transform:translateY(0);transform:translateY(0);-webkit-animation-timing-function:ease-out;animation-timing-function:ease-out}100%{-webkit-transform:translateY(0);transform:translateY(0);-webkit-animation-timing-function:ease-out;animation-timing-function:ease-out;opacity:1}}@keyframes bounce-top{0%{-webkit-transform:translateY(-45px);transform:translateY(-45px);-webkit-animation-timing-function:ease-in;animation-timing-function:ease-in;opacity:1}24%{opacity:1}40%{-webkit-transform:translateY(-24px);transform:translateY(-24px);-webkit-animation-timing-function:ease-in;animation-timing-function:ease-in}65%{-webkit-transform:translateY(-12px);transform:translateY(-12px);-webkit-animation-timing-function:ease-in;animation-timing-function:ease-in}82%{-webkit-transform:translateY(-6px);transform:translateY(-6px);-webkit-animation-timing-function:ease-in;animation-timing-function:ease-in}93%{-webkit-transform:translateY(-4px);transform:translateY(-4px);-webkit-animation-timing-function:ease-in;animation-timing-function:ease-in}25%,55%,75%,87%{-webkit-transform:translateY(0);transform:translateY(0);-webkit-animation-timing-function:ease-out;animation-timing-function:ease-out}100%{-webkit-transform:translateY(0);transform:translateY(0);-webkit-animation-timing-function:ease-out;animation-timing-function:ease-out;opacity:1}}
 @-webkit-keyframes fade-in{0%{opacity:0}100%{opacity:1}}@keyframes fade-in{0%{opacity:0}100%{opacity:1}}
-
-
-
-/* ------------- */
-/* About Me Font */
-/* ------------- */
-
-
-.neon-wrapper {
-  box-shadow:
-  0 0 0.1vw  0.4vw #fff,   
-  0 0 0.4vw  0.6vw #0ff, 
-  0 0   4vw  0.4vw #0ff,
-
-  inset 0 0 1.5vw  0.4vw #0ff,
-  inset 0 0 0.4vw  0.2vw #0ff,
-  inset 0 0 0.5vw  0.2vw #fff;
-  border-radius: 1.5rem;
-}
-
-.neon {
-  font-size: 6rem;
-  text-align: center;
-  color: #fff;
-  text-shadow:
-    0 0 5px #fff,
-    0 0 10px #fff,
-    0 0 20px #fff,
-    0 0 40px #0ff,
-    0 0 80px #0ff,
-    0 0 90px #0ff,
-    0 0 100px #0ff,
-    0 0 150px #0ff;
-}
-
-.neon2-wrapper {
-  box-shadow:
-  0 0 0.1vw  0.4vw #fff7f7,   
-  0 0 0.4vw  0.6vw #e97272, 
-  0 0   4vw  0.4vw #e50b0b,
-
-  inset 0 0 1.5vw  0.4vw #e50b0b,
-  inset 0 0 0.4vw  0.2vw #e97272,
-  inset 0 0 0.5vw  0.2vw #fff7f7;
-  border-radius: 1.5rem;
-}
-
-.neon2 {
-  font-size: 6rem;
-  text-align: center;
-  color: #fff;
-  text-shadow:
-  .1vw 0vw .25vw #ffd8d8, .2vw 0vw .25vw #ffd8d8, .4vw 0vw .25vw #ffd8d8, 
-
-  .1vw 0vw   0vw #f25757, .2vw 0vw   0vw #f25757, .4vw 0vw   0vw #f25757,
-  .1vw 0vw  .1vw #f25757, .2vw 0vw  .1vw #f25757, .4vw 0vw  .1vw #f25757,
-  .1vw 0vw   2vw #f25757, .2vw 0vw   2vw #f25757, .4vw 0vw   2vw #f25757, 
-
-  .1vw 0vw   1vw #e50b0b, .2vw 0vw   1vw #e50b0b, .4vw 0vw   5vw #e50b0b, 
-  .1vw 0vw   5vw #e50b0b, .2vw 0vw  20vw #e50b0b, .4vw 0vw  10vw #e50b0b,
-  .1vw 0vw  10vw #e50b0b, .2vw 0vw  30vw #e50b0b, .4vw 0vw  10vw #e50b0b;
-
-  padding: 0 3.5rem 0 3.5rem;
-}

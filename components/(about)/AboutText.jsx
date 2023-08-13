@@ -1,10 +1,10 @@
 export default function AboutText() {
   return (
-    <div className="shadow-2xl rounded-2xl shadow-purple-800/50 border-2 border-yellow-300">
+    <div className="shadow-2xl rounded-2xl shadow-purple-800/50 s">
       <p>
-        Im a Full Time Content Creator as of June 2021. I stream nearly daily on
-        Twitch, with daily uploads on YouTube. You can also find me on TikTok,
-        Twitter, Threads, Facebook, and Instagram!
+        I&apos;ma Full Time Content Creator as of June 2021. I stream nearly
+        daily on Twitch, with daily uploads on YouTube. You can also find me on
+        TikTok, Twitter, Threads, Facebook, and Instagram!
       </p>
       <p>
         Did I ever imagine this would be my lifestyle, even five years ago?

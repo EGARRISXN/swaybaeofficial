@@ -1,22 +1,21 @@
 "use client";
-import Framer from "../../components/Framer";
-import Neon2 from "../../components/(about)/Neon2";
-import AboutText from "../../components/(about)/AboutText";
+import Animation from "../../components/Animation";
 import AboutPhoto from "../../components/(about)/AboutPhoto";
+import NeonCard from "../../components/(neon)/NeonCard";
 
 export default function About() {
   return (
-    <Framer>
-      <div className="container border-2 border-yellow-300 justify-center flex">
-        {/* <Neon /> */}
-        <div className="flex flex-col border-2 border-yellow-300">
-          <Neon2 />
-          <AboutText />
+    <Animation>
+      <main>
+        <div className="container justify-center flex">
+          <div className="flex flex-col">
+            <NeonCard />
+          </div>
+          <div className="flex flex-col">
+            <AboutPhoto />
+          </div>
         </div>
-        <div className="flex flex-col border-2 border-yellow-300">
-          <AboutPhoto />
-        </div>
-      </div>
-    </Framer>
+      </main>
+    </Animation>
   );
 }
