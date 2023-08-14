@@ -9,10 +9,12 @@ export default function Neon2() {
   };
   return (
     <div
-      className="neon2-wrapper animate-pulse shadow-purple-800/50 py-16 text-center mt-[-240px] lg:mt-[-120px]"
+      className=" neon2-wrapper animate-pulse shadow-purple-800/50 py-16 text-center mt-[-240px] lg:mt-[-120px]"
       style={neonTextStyles}
     >
-      <h3 className="neon2 text-6xl animate-pulse">Welcome!</h3>
+      <h3 className="neon2 text-6xl justify-center items-center animate-pulse">
+        Welcome!
+      </h3>
     </div>
   );
 }

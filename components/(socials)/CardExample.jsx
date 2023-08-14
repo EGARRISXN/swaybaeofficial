@@ -1,5 +1,5 @@
 import Image from "next/image";
-import Discord from "../public/images/discordblue.jpeg";
+import Discord from "../../public/images/discordblue.jpeg";
 
 export default function CardExample() {
   return (

@@ -97,6 +97,8 @@ export default function RootLayout({ children }) {
         />
       </head>
 
+      {/* <body className="relative  bg-gradient-to-b from-purple-900 via-pink-400  bg-cover bg-fixed bg-no-repeat"> */}
+
       <body className="relative bg-gradient-to-r from-base-300 via-pink-400 to-black-300 bg-cover bg-fixed bg-no-repeat">
         <main className="backdrop-brightness-75 px-4">
           <Providers>
