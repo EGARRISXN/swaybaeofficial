@@ -45,10 +45,10 @@ const Nav = () => {
   };
 
   return (
-    <div className="md:container 2xl:container">
+    <div className="px-2 md:container opacity-95">
       <nav className="navbar h-4 mt-4 md:mt-6 px-3 md:px-4 py-2 md:py-10 bg-base-200 rounded-full shadow-2xl shadow-purple-800/50">
         <div className="navbar-start text-secondary">
-          <div className="flex ml-2 lg:ml-1  h-8 lg:h-11 w-8 lg:w-11 ring ring-secondary rounded-full ring-offset-base-100 ring-offset-0 shadow-2xl shadow-purple-800/50">
+          <div className="flex ml-2 lg:ml-1 h-8 lg:h-11 w-8 lg:w-11 ring ring-secondary rounded-full ring-offset-base-100 ring-offset-0 shadow-2xl shadow-purple-800/50">
             <Link href="/">
               <Image
                 src={Ava}
@@ -61,8 +61,8 @@ const Nav = () => {
             </Link>
           </div>
         </div>
-        <div className="navbar-center hidden lg:flex">
-          <ul className="menu menu-horizontal space-x-4">
+        <div className="navbar-center hidden md:flex">
+          <ul className="menu menu-horizontal md:text-xs lg:text-lg xl:space-x-3 2xl:text=xl 2xl:space-x-6 3xl:text-xl 3xl:space-x-9">
             <li>
               <Link
                 href="/about"
@@ -74,7 +74,7 @@ const Nav = () => {
             <li>
               <Link
                 href="/socials"
-                className="bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent "
+                className="bg-gradient-to-r from-secondary to-primary bg-clip-text text-transparent "
               >
                 Socials
               </Link>
@@ -82,7 +82,7 @@ const Nav = () => {
             <li>
               <Link
                 href="/merch"
-                className="bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent "
+                className="bg-gradient-to-r from-secondary to-primary bg-clip-text text-transparent "
               >
                 Merch
               </Link>
@@ -90,7 +90,7 @@ const Nav = () => {
             <li>
               <Link
                 href="/mediakit"
-                className="bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent "
+                className="bg-gradient-to-r from-secondary to-primary bg-clip-text text-transparent "
               >
                 Media Kit
               </Link>
@@ -98,7 +98,7 @@ const Nav = () => {
             <li>
               <Link
                 href="/inquiries"
-                className="bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent "
+                className="bg-gradient-to-r from-secondary to-primary bg-clip-text text-transparent "
               >
                 Business Inquiries
               </Link>
@@ -106,13 +106,7 @@ const Nav = () => {
             <li>
               <Link
                 href="/subathon"
-                className="font-bold bg-gradient-to-tr from-accent to-info bg-clip-text text-transparent"
-                style={{
-                  position: "relative",
-                  animation: "glow 2s infinite",
-                  backgroundImage:
-                    "linear-gradient(to right, rgba(181, 103, 173, 0.7), rgba(181, 103, 173, 0.9), rgba(181, 103, 173, 0.7))",
-                }}
+                className="bg-gradient-to-r from-secondary to-primary bg-clip-text text-transparent"
               >
                 Subathon!
               </Link>
@@ -122,7 +116,7 @@ const Nav = () => {
         <div className="dropdown" style={{ position: "relative" }}>
           <button
             tabIndex={0}
-            className="lg:hidden"
+            className="md:hidden"
             onClick={toggleDropdown}
             aria-label="Toggle Menu"
             style={{
@@ -134,7 +128,7 @@ const Nav = () => {
           {isOpen && (
             <ul
               tabIndex={0}
-              className="dropdown-content menu menu-sm p-1 mt-1 z-[1] w-40 rounded-xl bg-base-200 text-secondary shadow-xl"
+              className="dropdown-content menu menu-sm p-0 z-[1] w-40 rounded-b-3xl bg-base-200 text-secondary shadow-b-2xl shadow-b-purple-800/50"
               onKeyDown={(e) => {
                 if (e.key === "Escape") {
                   closeDropdown();

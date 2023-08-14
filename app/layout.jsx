@@ -5,9 +5,9 @@ import { Providers } from "./providers";
 import { Suspense } from "react";
 import { ToastContainer } from "react-toastify";
 import Loading from "./loading";
-import Navbar from "../components/Navbar";
 import UseScrollToTop from "../hooks/useScrollToTop";
-import Footer from "../components/Footer";
+import Image from "next/image";
+import ComingSoon from "../public/images/himom.jpg";
 
 const vibur = Vibur({
   subsets: ["latin"],
@@ -97,16 +97,26 @@ export default function RootLayout({ children }) {
         />
       </head>
 
-      {/* <body className="relative  bg-gradient-to-b from-purple-900 via-pink-400  bg-cover bg-fixed bg-no-repeat"> */}
+      {/* <body className="relative bg-gradient-to-r from-base-300 via-pink-400 to-black-300 bg-cover bg-fixed bg-no-repeat">
 
-      <body className="relative bg-gradient-to-r from-base-300 via-pink-400 to-black-300 bg-cover bg-fixed bg-no-repeat">
-        <main className="backdrop-brightness-75 px-4">
+        <main className="backdrop-brightness-75 px-4"> */}
+
+      <body className="relative bg-gradient-to-bl from-purple-900 via pink-800 to-black-300 bg-cover bg-fixed bg-no-repeat">
+        <Image
+          src={ComingSoon}
+          alt="Coming Soon"
+          quality={100}
+          fill
+          cover
+          className="absolute mix-blend-overlay"
+          priority
+        />
+
+        <main className="backdrop-brightness-100">
           <Providers>
-            <Navbar />
             <Suspense fallback={<Loading />}>{children}</Suspense>
             <UseScrollToTop />
             <ToastContainer />
-            <Footer />
           </Providers>
         </main>
       </body>
