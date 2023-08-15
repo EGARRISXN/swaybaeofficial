@@ -43,7 +43,7 @@ p {
 main {
   flex: auto;
   justify-content: center;
-  height: 100vh;
+  min-height: calc(100vh - 4rem);
   width: 100%;
   overflow-x: hidden;
   padding: 0 !important;
@@ -174,3 +174,10 @@ main {
 @-webkit-keyframes fade-in{0%{opacity:0}100%{opacity:1}}@keyframes fade-in{0%{opacity:0}100%{opacity:1}}
 
 
+/* ----------- */
+/* Sub Table 4 */
+/* ----------- */
+
+.halfboi {
+  height: 50vh !important;
+}

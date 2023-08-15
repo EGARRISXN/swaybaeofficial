@@ -4,6 +4,8 @@ import { Poppins, Lobster, Neonderthaw, Vibur } from "next/font/google";
 import { Providers } from "./providers";
 import { Suspense } from "react";
 import { ToastContainer } from "react-toastify";
+import Navbar from "../components/navbar";
+import Footer from "../components/footer";
 import Loading from "./loading";
 import UseScrollToTop from "../hooks/useScrollToTop";
 import Image from "next/image";
@@ -97,11 +99,9 @@ export default function RootLayout({ children }) {
         />
       </head>
 
-      {/* <body className="relative bg-gradient-to-r from-base-300 via-pink-400 to-black-300 bg-cover bg-fixed bg-no-repeat">
-
-        <main className="backdrop-brightness-75 px-4"> */}
-
-      <body className="relative bg-gradient-to-bl from-purple-900 via pink-800 to-black-300 bg-cover bg-fixed bg-no-repeat">
+      <body className="relative bg-gradient-to-r from-base-300 via-pink-400 to-black-300 bg-cover bg-fixed bg-no-repeat">
+        <main className="backdrop-brightness-75 px-4">
+          {/* <body className="relative bg-gradient-to-bl from-purple-900 via pink-800 to-black-300 bg-cover bg-fixed bg-no-repeat">
         <Image
           src={ComingSoon}
           alt="Coming Soon"
@@ -112,11 +112,13 @@ export default function RootLayout({ children }) {
           priority
         />
 
-        <main className="backdrop-brightness-100">
+        <main className="backdrop-brightness-100"> */}
           <Providers>
+            <Navbar />
             <Suspense fallback={<Loading />}>{children}</Suspense>
             <UseScrollToTop />
             <ToastContainer />
+            <Footer />
           </Providers>
         </main>
       </body>

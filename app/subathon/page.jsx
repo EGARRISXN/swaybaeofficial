@@ -1,24 +1,26 @@
-"use client";
-import { motion } from "framer-motion";
 import Navbar from "../../components/Navbar";
 import Footer from "../../components/Footer";
-import SubPoster from "../../components/SubPoster";
+import SubPoster from "../../components/(subathon)/SubPoster";
+import SubTable1 from "../../components/(subathon)/SubTable1";
+import SubTable2 from "../../components/(subathon)/SubTable2";
+import SubTable3 from "../../components/(subathon)/SubTable3";
+import SubTable4 from "../../components/(subathon)/SubTable4";
 
 export default function Subathon() {
   return (
-    <main className="bg-gradient-to-bl bg-base-300 to-black-300 bg-cover">
-      <Navbar />
-      <div className="flex justify-center">
-        <motion.div
-          className="box"
-          whileHover={{ scale: 1.2 }}
-          whileTap={{ scale: 0.9 }}
-          transition={{ type: "spring", stiffness: 400, damping: 17 }}
-        >
+    <main>
+      <div className="p-4 flex flex-col md:flex-row justify-center flex-grow">
+        <div>
           <SubPoster />
-        </motion.div>
+        </div>
+
+        <div className="halfboi">
+          <SubTable1 />
+          <SubTable2 />
+          <SubTable3 />
+          <SubTable4 />
+        </div>
       </div>
-      <Footer />
     </main>
   );
 }
