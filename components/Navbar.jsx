@@ -45,8 +45,8 @@ const Nav = () => {
   };
 
   return (
-    <div className="px-2 md:container opacity-95">
-      <nav className="navbar h-4 mt-4 md:mt-6 px-3 md:px-4 py-2 md:py-10 bg-base-200 rounded-2xl shadow-2xl shadow-purple-800/50 border-base-content border-4">
+    <div className="opacity-95">
+      <nav className="navbar h-4 px-3 md:px-4 py-2  bg-white-100 md:py-10 shadow-2xl shadow-purple-800/50">
         <div className="navbar-start text-secondary">
           <div className="avatar">
             <div className="flex h-12 w-12 mask mask-squircle">

@@ -1,38 +1,38 @@
 export default function SubTable1() {
   return (
-    <div className="overflow-x-auto bg-base-200  border-base-content rounded-2xl shadow-2xl border-4 shadow-purple-800/50 p-2">
-      <table className="table">
+    <div className="w-140 overflow-x-auto bg-base-200  border-base-content rounded-2xl shadow-2xl border-4 shadow-purple-800/50 p-2">
+      <table className="table table-xs ">
         <thead className="mx-auto">
-          <tr className="bg-base-content table-sm">
-            <td
+          <tr className="bg-base-content table-sm ">
+            <th
               className="text-center rounded-xl text-lg text-base-200"
               colSpan="3"
             >
               2023 UNCAPPED SUBATHON!
-            </td>
+            </th>
           </tr>
-          <tr className="hover table-sm">
-            <td className="text-center text-primary" colSpan="3">
+          <tr className="hover table-sm ">
+            <td className="text-center text-primary underline" colSpan="3">
               Start Date: August 13th, 2023
             </td>
           </tr>
-          <tr className="hover table-sm">
-            <td className="text-center text-primary" colSpan="3">
+          <tr className="hover table-sm ">
+            <td className="text-center text-primary underline" colSpan="3">
               Daily: 11AM - 11PM EST
             </td>
           </tr>
           <tr className="hover table-sm">
-            <td className="text-center text-primary" colSpan="3">
+            <td className="text-center text-primary underline" colSpan="3">
               Stretch Cap 372 hours (31 days)
             </td>
           </tr>
-          <tr className="hover table-sm">
+          <tr className="hover table-sm ">
             <td colSpan="3" className="text-center text-primary">
               - when 372 hours achieved, switch to 24 hours/day -
             </td>
           </tr>
           <tr className="hover table-sm">
-            <td colSpan="3" className="text-center text-primary">
+            <td colSpan="3" className="text-center text-primary underline">
               Starting time on timer: 12 HOURS
             </td>
           </tr>
@@ -40,10 +40,10 @@ export default function SubTable1() {
         <tbody className="body">
           <tr className="hover table-xs">
             <td></td>
-            <td className="text-center text-base-content text-sm">
+            <td className="text-center text-base-content text-sm underline">
               Minutes added
             </td>
-            <td className="text-center text-base-content text-sm">
+            <td className="text-center text-base-content text-sm underline">
               Counts as how many subs?*
             </td>
           </tr>
@@ -73,7 +73,7 @@ export default function SubTable1() {
             <td className="text-primary  text-sm">0.2 (500 bits = 1 sub)</td>
           </tr>
           <tr className="hover table-xs text-base-content">
-            <td colSpan="3" className="text-xs ">
+            <td colSpan="3" className="text-xs underline">
               *to progress sub goals
             </td>
           </tr>

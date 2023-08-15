@@ -11,7 +11,7 @@ import Seven from "../../public/images/7.svg";
 import Eight from "../../public/images/8.svg";
 import Nine from "../../public/images/9.svg";
 import Ten from "../../public/images/10.svg";
-// import Eleven from "../../public/images/11.svg";
+import Eleven from "../../public/images/11.svg";
 import Twelve from "../../public/images/12.svg";
 import Thirteen from "../../public/images/13.svg";
 import Fourteen from "../../public/images/14.svg";
@@ -55,8 +55,7 @@ export default function SubPoster() {
     { src: Eight, alt: "8", link: "https://www.twitch.tv/videos/1899221362" },
     { src: Nine, alt: "9", link: "https://www.twitch.tv/videos/1899223254" },
     { src: Ten, alt: "10", link: "https://www.twitch.tv/videos/1899225322" },
-    // { src: Eleven, alt: "11" },
-    { src: Twelve, alt: "12" },
+    { src: Eleven, alt: "11" },
     { src: Thirteen, alt: "13" },
     { src: Fourteen, alt: "14" },
     { src: Fifteen, alt: "15" },
@@ -93,7 +92,7 @@ export default function SubPoster() {
   const secondGroup = images.slice(20);
 
   return (
-    <div className="bg-white border-base-content border-4 rounded-2xl pt-2 pb-4 shadow-2xl shadow-purple-800/50 justify-center items-center mx-auto">
+    <div className="w-140 bg-white border-base-content border-4 rounded-2xl p-2 shadow-2xl mb-2 shadow-purple-800/50 justify-center items-center">
       <div className="justify-center items-center mx-auto">
         <Link href="https://www.twitch.tv/sway_bae">
           <Image
@@ -106,7 +105,7 @@ export default function SubPoster() {
         </Link>
       </div>
       <div className="grid grid-cols-1 sm:grid-cols-2 gap-2 justify-center items-center mx-auto">
-        <div className="flex flex-col mx-auto">
+        <div className="flex flex-col mx-auto ">
           {firstGroup.map((image, index) =>
             image.link ? (
               <Link href={image.link} key={index}>
@@ -158,52 +157,3 @@ export default function SubPoster() {
     </div>
   );
 }
-
-// export default function SubPoster() {
-//   return (
-//     <div className="border-2 bg-white border-yellow">
-//       <Image src={Title} width={1000} height={500} alt="Title" />
-//       <Image src={One} width={1000} height={200} alt="1" />
-//       <Image src={Two} width={1000} height={200} alt="2" />
-//       <Image src={Three} width={1000} height={200} alt="3" />
-//       <Image src={Four} width={1000} height={200} alt="4" />
-//       <Image src={Five} width={1000} height={200} alt="5" />
-//       <Image src={Six} width={1000} height={200} alt="6" />
-//       <Image src={Seven} width={1000} height={200} alt="7" />
-//       <Image src={Eight} width={1000} height={200} alt="8" />
-//       <Image src={Nine} width={1000} height={200} alt="9" />
-//       <Image src={Ten} width={1000} height={200} alt="10" />
-//       <Image src={Eleven} width={1000} height={200} alt="11" />
-//       <Image src={Twelve} width={1000} height={200} alt="12" />
-//       <Image src={Thirteen} width={1000} height={200} alt="13" />
-//       <Image src={Fourteen} width={1000} height={200} alt="14" />
-//       <Image src={Fifteen} width={1000} height={200} alt="15" />
-//       <Image src={Sixteen} width={1000} height={200} alt="16" />
-//       <Image src={Seventeen} width={1000} height={200} alt="17" />
-//       <Image src={Eighteen} width={1000} height={200} alt="18" />
-//       <Image src={Nineteen} width={1000} height={200} alt="19" />
-//       <Image src={Twenty} width={1000} height={200} alt="20" />
-//       <Image src={TwentyOne} width={1000} height={200} alt="21" />
-//       <Image src={TwentyTwo} width={1000} height={200} alt="22" />
-//       <Image src={TwentyThree} width={1000} height={200} alt="23" />
-//       <Image src={TwentyFour} width={1000} height={200} alt="24" />
-//       <Image src={TwentyFive} width={1000} height={200} alt="25" />
-//       <Image src={TwentySix} width={1000} height={200} alt="26" />
-//       <Image src={TwentySeven} width={1000} height={200} alt="27" />
-//       <Image src={TwentyEight} width={1000} height={200} alt="28" />
-//       <Image src={TwentyNine} width={1000} height={200} alt="29" />
-//       <Image src={Thirty} width={1000} height={200} alt="30" />
-//       <Image src={ThirtyOne} width={1000} height={200} alt="31" />
-//       <Image src={ThirtyTwo} width={1000} height={200} alt="32" />
-//       <Image src={ThirtyThree} width={1000} height={200} alt="33" />
-//       <Image src={ThirtyFour} width={1000} height={200} alt="34" />
-//       <Image src={ThirtyFive} width={1000} height={200} alt="35" />
-//       <Image src={ThirtySix} width={1000} height={200} alt="36" />
-//       <Image src={ThirtySeven} width={1000} height={200} alt="37" />
-//       <Image src={ThirtyEight} width={1000} height={200} alt="38" />
-//       <Image src={ThirtyNine} width={1000} height={200} alt="39" />
-//       <Image src={Forty} width={1000} height={200} alt="40" />
-//       <Image src={FortyOne} width={1000} height={200} alt="41" />
-//     </div>
-//   );
-// }

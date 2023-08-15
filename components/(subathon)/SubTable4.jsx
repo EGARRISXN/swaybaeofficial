@@ -1,7 +1,7 @@
 export default function SubTable4() {
   return (
-    <div className="halfboi overflow-x-auto bg-base-200 border-base-content rounded-2xl shadow-2xl border-4 shadow-purple-800/50 p-2">
-      <table className="table">
+    <div className=" w-140 h-140 overflow-y-auto overflow-x-auto bg-base-200 border-base-content rounded-2xl shadow-2xl border-4 shadow-purple-800/50 p-2">
+      <table className="table table-xs">
         <thead className="mx-auto">
           <tr className=" table-sm bg-base-content">
             <td className="text-lg rounded-l-xl  text-base-200">Solo Games</td>
@@ -34,7 +34,7 @@ export default function SubTable4() {
           </tr>
           <tr className="hover table-xs">
             <td className="text-secondary text-xs">
-              Hooked on you: A Dead By...
+              Hooked on you: A Dead By Daylight Dating Sim
             </td>
             <td className="text-primary  text-xs">
               Hearthstone Private Lobbies
@@ -45,7 +45,7 @@ export default function SubTable4() {
             <td className="text-secondary text-xs">I Am Fish</td>
             <td className="text-primary  text-xs">Skribbl.io</td>
             <td className="text-secondary text-xs">
-              Keep Talking and Nobody...
+              Keep Talking and Nobody Explodes
             </td>
           </tr>
           <tr className="hover table-xs">
@@ -87,7 +87,7 @@ export default function SubTable4() {
           </tr>
           <tr className="hover table-xs">
             <td className="text-secondary text-xs">
-              The Henry Stickmin Col...
+              The Henry Stickmin Collection
             </td>
           </tr>
           <tr className="hover table-xs">

@@ -1,7 +1,7 @@
 export default function SubTable3() {
   return (
-    <div className="overflow-x-auto  bg-base-200  border-base-content rounded-2xl shadow-2xl border-4 shadow-purple-800/50 p-2">
-      <table className="table">
+    <div className="w-140 overflow-x-auto bg-base-200 border-base-content rounded-2xl shadow-2xl border-4 shadow-purple-800/50 p-2">
+      <table className="table table-xs ">
         <thead className="mx-auto">
           <tr className="table-sm bg-base-content">
             <td className="text-lg rounded-l-xl text-base-200">
@@ -11,42 +11,41 @@ export default function SubTable3() {
           </tr>
         </thead>
         <tbody className="body">
-          <tr className="hover table-xs text-xs">
-            <td className="text-secondary text-xs">Top Overall Contributor</td>
-            <td className="text-primary text-xs">
+          <tr className="hover table-xs text-xs ">
+            <td className="text-secondary">Top Contributor</td>
+            <td className="text-primary ">
               Join me in game for a future stream and/or gaming off stream
             </td>
           </tr>
           <tr className="hover table-xs text-xs">
-            <td className="text-secondary text-xs">200 Gifted</td>
+            <td className="text-secondary text-xs">200 Gifted Subs</td>
             <td className="text-primary text-xs">
               Special personalized gift shipped to you
             </td>
           </tr>
           <tr className="hover table-xs text-xs">
-            <td className="text-secondary text-xs">150 Gifted</td>
+            <td className="text-secondary text-xs">150 Gifted Subs</td>
             <td className="text-primary text-xs">
               Personalized chat command (cannot break TOS/channel rules)
             </td>
           </tr>
           <tr className="hover table-xs text-xs">
-            <td className="text-secondary text-xs">100 Gifted</td>
+            <td className="text-secondary text-xs">100 Gifted Subs</td>
             <td className="text-primary text-xs">
               Get to pick what I play for part of the day (from my collection)
             </td>
           </tr>
 
           <tr className="hover table-xs text-xs">
-            <td className="text-secondary text-xs">75 Gifted</td>
+            <td className="text-secondary text-xs">75 Gifted Subs</td>
             <td className="text-primary text-xs">
-              Have a character created for you in the next game I play
+              Have a character created for you in upcoming game I play
             </td>
           </tr>
           <tr className="hover table-xs text-xs">
-            <td className="text-secondary text-xs">50 Gifted</td>
+            <td className="text-secondary text-xs">50 Gifted Subs</td>
             <td className="text-primary text-xs">
-              Get your username on a balloon in the background until Subathon
-              ends
+              Get username on a balloon in background until Subathon ends
             </td>
           </tr>
         </tbody>

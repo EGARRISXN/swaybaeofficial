@@ -107,7 +107,7 @@ export default function ContactForm() {
         />
       </div>
       <div>
-        <label className="font-bold" htmlFor="message">
+        <label className="font-bold " htmlFor="message">
           Message
         </label>
         <textarea
@@ -128,7 +128,7 @@ export default function ContactForm() {
         <button
           type="submit"
           disabled={loading}
-          className="mb-2 lg:mb-0 mt-4 lg:mt-6 w-30 sm:w-40 btn btn-secondary btn-sm xs:btn-md"
+          className="mb-2 lg:mb-0 mt-4 lg:mt-6 w-30 sm:w-40 btn btn-secondary btn-sm xs:btn-md "
         >
           Send Message
         </button>
