@@ -220,12 +220,14 @@ const Nav = () => {
         <div className="navbar-end">
           <label
             tabIndex={0}
-            className={`swap swap-rotate btn-xs ${isDarkMode ? "myDark" : ""}`}
+            className={`swap swap-rotate btn-xs ${
+              isDarkMode ? "myLight" : "myDark"
+            }`}
           >
             <input type="checkbox" onChange={toggleTheme} />
             <svg
               className={`swap-on ${
-                isDarkMode ? "myDark-fill" : "myLight-fill"
+                isDarkMode ? "myLight-fill" : "myDark-fill"
               } h-8 w-8`}
               xmlns="http://www.w3.org/2000/svg"
               viewBox="0 0 24 24"
@@ -237,7 +239,7 @@ const Nav = () => {
             </svg>
             <svg
               className={`swap-off ${
-                isDarkMode ? "myDark-fill" : "myLight-fill"
+                isDarkMode ? "myLight-fill" : "myDark-fill"
               } h-8 w-8`}
               xmlns="http://www.w3.org/2000/svg"
               viewBox="0 0 24 24"

@@ -107,7 +107,7 @@ export default function RootLayout({ children }) {
           alt="Coming Soon"
           quality={100}
           fill
-          cover
+          cover="true"
           className="absolute mix-blend-overlay"
           priority
         />

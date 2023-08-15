@@ -13,8 +13,9 @@ import Footer from "../../components/Footer";
 export default function Socials() {
   return (
     <Animation>
-      <Navbar />
       <main>
+        <Navbar />
+        <div className="flex flex-col h-screen justify-center items-center p-0"></div>
         {/* <div className="container flex flex-row space-x-16 justify-center mt-16">
           <div>
             <TwitchEmbed />
@@ -23,8 +24,8 @@ export default function Socials() {
             <SpotifyEmbed />
           </div>
         </div> */}
+        <Footer />
       </main>
-      <Footer />
     </Animation>
   );
 }

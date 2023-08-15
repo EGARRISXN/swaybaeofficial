@@ -5,9 +5,11 @@ import Footer from "../components/Footer";
 export default function Home() {
   return (
     <Animation>
-      <Navbar />
-      <main></main>
-      <Footer />
+      <main>
+        <Navbar />
+        <div className="flex h-screen w-full justify-center items-center p-0"></div>
+        <Footer />
+      </main>
     </Animation>
   );
 }
