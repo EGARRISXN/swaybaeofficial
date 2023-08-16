@@ -10,7 +10,7 @@ import {
 export default function ContactList2() {
   return (
     <div className="bg-base-200 text-center border-base-content border-4 rounded-3xl shadow-xl shadow-purple-800/50 py-4">
-      <h2 className="text-2xl mb-4">Socials</h2>
+      <h3 className="text-2xl mb-4">Socials</h3>
       <div className="flex justify-center space-x-6">
         <a
           href="https://www.twitch.tv/sway_bae"

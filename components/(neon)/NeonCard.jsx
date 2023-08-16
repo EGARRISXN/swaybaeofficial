@@ -9,8 +9,8 @@ export default function NeonCard() {
   };
 
   return (
-    <div className="bg-base-200 rounded-3xl shadow-2xl p-6 md:p-8  shadow-purple-800/50">
-      <h1 className="text-2xl md:text-3xl font-bold text-primary-focus mb-2">
+    <div className="bg-base-200 rounded-3xl border-base-300 border-1 shadow-2xl p-6 md:p-8 2xl:p-10 shadow-purple-800/50">
+      <h1 className="text-3xl md:text-4xl font-bold text-primary-focus mb-3">
         I&apos;m Sway!
       </h1>
       <hr className="hr-lines border-secondary my-2" />
@@ -80,7 +80,6 @@ export default function NeonCard() {
             <br />
             xoxo,
             <br />
-            <br />
             Sway Bae
           </p>
         )}
@@ -90,7 +89,7 @@ export default function NeonCard() {
       <div className="flex justify-end mt-4">
         {" "}
         <button
-          className="btn btn-secondary btn-sm xs:btn-md mb-2 w-30 sm:w-40"
+          className="btn btn-secondary btn-md mb-2 w-40"
           onClick={toggleReadMoreLess}
         >
           {isShowMore ? "Read Less" : "Read More"}

@@ -1,5 +1,3 @@
-const colors = require("tailwindcss/colors"); // Import the colors module
-
 module.exports = {
   content: [
     "./app/**/*.{js,ts,jsx,tsx,mdx}",
@@ -17,9 +15,14 @@ module.exports = {
       lg: "1024px",
       xl: "1280px",
       "2xl": "1420px",
-      "3xl": "1800px",
+      "3xl": "1920px",
     },
     extend: {
+      backgroundImage: {
+        "gradient-radial": "radial-gradient(var(--tw-gradient-stops))",
+        "gradient-conic":
+          "conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))",
+      },
       fontFamily: {
         poppins: ["Poppins", "sans-serif"],
         lobster: ["Lobster", "cursive"],
@@ -110,7 +113,8 @@ module.exports = {
           secondary: "#b567ad",
           accent: "#418192",
           neutral: "#444442",
-          "base-100": "#ffffff",
+          "base-100": "#fff",
+          "base-content": "#000",
           info: "#330f5f",
           success: "#fd509d",
           warning: "#c085df",
@@ -132,7 +136,8 @@ module.exports = {
           secondary: "#00ceff",
           accent: "#ffd801",
           neutral: "#ffffff",
-          "base-100": "#444442",
+          "base-100": "#000",
+          "base-content": "#fff",
           info: "#c085df",
           success: "#ffd801",
           warning: "#330f5f",

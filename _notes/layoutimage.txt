@@ -1,0 +1,11 @@
+      <body className="relative bg-gradient-to-bl from-purple-900 via pink-800 to-black-300 bg-cover bg-fixed bg-no-repeat">
+      <Image
+      src={ComingSoon}
+      alt="Coming Soon"
+      quality={100}
+      fill
+      cover="true"
+      className="absolute mix-blend-overlay"
+      priority
+      />
+      <main className="backdrop-brightness-100">

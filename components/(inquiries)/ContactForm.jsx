@@ -51,7 +51,9 @@ export default function ContactForm() {
       className="bg-base-200 border-base-content border-4 rounded-3xl shadow-xl shadow-purple-800/50 px-4 xs:px-8 py-4 lg:px-12 lg:py-8 xl:px-16 xl:py-12 2xl:px-20 2xl:py-16"
       onSubmit={handleSubmit}
     >
-      <h1 className="text-4xl text-center mt-1 mb-3 lg:mb-6">Contact me!</h1>
+      <h1 className="text-4xl lg:text-5xl xl:text-6xl 2xl:text-6xl 3xl:text-7xl text-center mt-4 lg:mt-2 xl:mt-2 2xl:mt-0 3xl:mt-0 mb-6 lg:mb-8 xl:mb-12 2xl:mb-14 3xl:mb-14">
+        Contact me!
+      </h1>
       <div className="w-full flex flex-col mb-4">
         <label className="font-bold" htmlFor="name">
           Name
@@ -128,7 +130,7 @@ export default function ContactForm() {
         <button
           type="submit"
           disabled={loading}
-          className="mb-2 lg:mb-0 mt-4 lg:mt-6 w-30 sm:w-40 btn btn-secondary btn-sm xs:btn-md "
+          className="btn btn-md btn-secondary mb-4 mt-6 xl:mt-8 3x:mt-10 w-40 xl:w-44 3xl:w-48 3xl:btn-lg"
         >
           Send Message
         </button>

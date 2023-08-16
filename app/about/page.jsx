@@ -6,14 +6,12 @@ export default function About() {
   return (
     <Animation>
       <main>
-        <div className=" container flex justify-center items-center ">
-          <div className="flex flex-col my-10 md:flex-row space-y-6 px-0 md:px-10 md:space-y-0 md:space-x-12">
-            <div className="x">
-              <NeonCard />
-            </div>
-            <div className="x">
-              <AboutPhoto />
-            </div>
+        <div className="flex flex-col justify-center my-16 md:flex-row space-y-6 px-4 md:px-16 md:space-y-0 md:space-x-8 lg:px-20 lg:space-x-10 xl:px-24 xl:space-x-12 2xl:px-28 2xl:space-x-14 3xl:px-32 3xl:space-x-16">
+          <div className="x">
+            <NeonCard />
+          </div>
+          <div className="x">
+            <AboutPhoto />
           </div>
         </div>
       </main>

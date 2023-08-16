@@ -5,13 +5,11 @@ export default function MediaKit() {
   return (
     <Animation>
       <main>
-        <div className="container flex flex-col items-center justify-center  pb-16 lg:pb-0 pt-16">
-          <div>
-            <h1 className="text-6xl animate-pulse text-center pb-6">
-              Under Construction!
-            </h1>
-            <MediaKitContainer />
-          </div>
+        <div className="flex flex-col items-center justify-center mt-16 mx-4 sm:mx-16">
+          <h1 className="text-4xl animate-pulse text-center pb-6">
+            Under Construction!
+          </h1>
+          <MediaKitContainer />
         </div>
       </main>
     </Animation>

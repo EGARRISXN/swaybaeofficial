@@ -34,6 +34,7 @@ const Nav = () => {
 
   const closeDropdown = () => {
     setOpen(false);
+    setClickedOutside(false);
   };
 
   const handleLinkClick = () => {
@@ -45,19 +46,19 @@ const Nav = () => {
   };
 
   return (
-    <div className="opacity-95">
-      <nav className="navbar h-4 px-3 md:px-4 py-2  bg-white-100 md:py-10 shadow-2xl shadow-purple-800/50">
+    <div className="x">
+      <nav className="navbar h-4 px-3 md:px-4 py-2 bg-base-100 md:py-8 rounded-b-2xl shadow-2xl shadow-purple-800/50">
         <div className="navbar-start text-secondary">
           <div className="avatar">
-            <div className="flex h-12 w-12 mask mask-squircle">
+            <div className="flex h-9 w-9 mask mask-squircle">
               <Link href="/">
-                <Image src={Ava} alt="Ava" priority />
+                <Image src={Ava} quality={100} alt="Ava" priority />
               </Link>
             </div>
           </div>
         </div>
         <div className="navbar-center hidden md:flex">
-          <ul className="menu menu-horizontal md:text-xs lg:text-lg xl:space-x-3 2xl:text=xl 2xl:space-x-6 3xl:text-xl 3xl:space-x-9">
+          <ul className="menu menu-horizontal md:text-xs md:space-x-0 lg:text-sm xl-text-lg xl:space-x-4 2xl-text-lg 2xl:space-x-8  3xl:text-xl 3xl:space-x-12">
             <li>
               <Link
                 href="/about"
@@ -123,7 +124,7 @@ const Nav = () => {
           {isOpen && (
             <ul
               tabIndex={0}
-              className="dropdown-content menu menu-sm p-0 z-[1] w-40 rounded-b-3xl bg-base-200 text-secondary shadow-b-2xl shadow-b-purple-800/50"
+              className="dropdown-content menu menu-sm p-0 z-[1] w-40 bg-base-100 text-secondary rounded-b-2xl shadow-2xl shadow-purple-800/50"
               onKeyDown={(e) => {
                 if (e.key === "Escape") {
                   closeDropdown();
@@ -223,7 +224,7 @@ const Nav = () => {
             <svg
               className={`swap-on ${
                 isDarkMode ? "myLight-fill" : "myDark-fill"
-              } h-8 w-8`}
+              } h-6 w-6`}
               xmlns="http://www.w3.org/2000/svg"
               viewBox="0 0 24 24"
             >
@@ -235,7 +236,7 @@ const Nav = () => {
             <svg
               className={`swap-off ${
                 isDarkMode ? "myLight-fill" : "myDark-fill"
-              } h-8 w-8`}
+              } h-6 w-6`}
               xmlns="http://www.w3.org/2000/svg"
               viewBox="0 0 24 24"
             >

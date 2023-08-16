@@ -11,9 +11,3 @@ export default function Loading() {
     </main>
   );
 }
-
-// await wait(2000);
-
-// export async function wait(ms) {
-//   return new Promise((resolve) => setTimeout(resolve, ms));
-// }

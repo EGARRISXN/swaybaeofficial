@@ -6,8 +6,11 @@ import SubTable4 from "../../components/(subathon)/SubTable4";
 
 export default function Subathon() {
   return (
-    <main className="subathon">
-      <SubPoster />
+    <main className="flex flex-col mx-auto">
+      <div className="flex p-4">
+        <SubPoster />
+      </div>
+
       <SubTable1 />
       <SubTable2 />
       <SubTable3 />
