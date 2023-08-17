@@ -48,13 +48,14 @@ export default function ContactForm() {
 
   return (
     <form
-      className="bg-base-200 border-base-content border-4 rounded-3xl shadow-xl shadow-purple-800/50 px-4 xs:px-8 py-4 lg:px-12 lg:py-8 xl:px-16 xl:py-12 2xl:px-20 2xl:py-16"
+      className="bg-base-200 border-base-content border-l-4 border-t-4 rounded-3xl shadow-2xl shadow-purple-800/50 px-4 xs:px-8 py-4 lg:px-12 lg:py-8 xl:px-16 xl:py-12 2xl:px-20 2xl:py-16"
       onSubmit={handleSubmit}
     >
-      <h1 className="text-4xl lg:text-5xl xl:text-6xl 2xl:text-6xl 3xl:text-7xl text-center mt-4 lg:mt-2 xl:mt-0 mb-6 lg:mb-8 xl:mb-10 2xl:mb-12 3xl:mb-14 hover:text-info">
+      <h1 className="text-4xl lg:text-5xl xl:text-6xl 2xl:text-6xl 3xl:text-7xl mt-4 lg:mt-2 xl:mt-0 mb-4 hover:text-info">
         Contact Me!
       </h1>
-      <div className="w-full flex flex-col mb-4">
+      <hr className="hr-lines border-secondary my-2" />
+      <div className="w-full flex flex-col mt-4 mb-4">
         <label className="font-bold" htmlFor="name">
           Name
         </label>
@@ -126,11 +127,12 @@ export default function ContactForm() {
           id="message"
         />
       </div>
+      <hr className="my-6 border-secondary" />
       <div className="flex justify-center xs:justify-end">
         <button
           type="submit"
           disabled={loading}
-          className="btn btn-md btn-secondary mb-4 mt-6 xl:mt-8 3x:mt-10 w-40 xl:w-44 3xl:w-48 3xl:btn-lg"
+          className="btn btn-md btn-secondary mb-4 mt-4 w-40 xl:w-44 3xl:w-48 3xl:btn-lg"
         >
           Send Message
         </button>

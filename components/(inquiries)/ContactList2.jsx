@@ -9,8 +9,9 @@ import {
 
 export default function ContactList2() {
   return (
-    <div className="bg-base-200 text-center border-base-content border-4 rounded-3xl shadow-xl shadow-purple-800/50 py-4">
-      <h3 className="text-2xl mb-4">Socials</h3>
+    <div className="bg-base-200 border-base-content border-l-4 border-t-4 rounded-3xl shadow-xl shadow-purple-800/50 py-4 mb-4">
+      <h3 className="text-2xl mb-4 text-center">Socials</h3>
+      <hr className="my-4 border-secondary" />
       <div className="flex justify-center space-x-6">
         <a
           href="https://www.twitch.tv/sway_bae"
@@ -49,7 +50,8 @@ export default function ContactList2() {
           <BsDiscord size="1.3rem" />
         </a>
       </div>
-      <p className="pt-4 text-sm font-bold">
+      <hr className="my-4 border-secondary" />
+      <p className=" text-sm text-center font-bold">
         Feel free to email me directly
         <br />
         <span className="text-primary hover:text-primary-focus font-bold">

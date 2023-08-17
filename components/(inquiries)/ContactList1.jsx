@@ -9,8 +9,9 @@ import {
 
 export default function ContactList1() {
   return (
-    <div className="bg-base-200 border-base-content border-4 rounded-3xl shadow-xl shadow-purple-800/50 py-8 px-8">
+    <div className="bg-base-200 border-base-content border-l-4 border-t-4 rounded-3xl shadow-2xl shadow-purple-800/50 py-8 px-8">
       <h3 className="text-2xl text-center mb-3">Socials</h3>
+      <hr className="my-4 border-secondary" />
       <ul className="mb-3 flex flex-col space-y-2">
         <li className="flex items-center">
           <a
@@ -67,6 +68,7 @@ export default function ContactList1() {
           </a>
         </li>
       </ul>
+      <hr className="my-4 border-secondary" />
       <p className="text-xs">
         Feel free to email me directly <br />
         <span className="text-primary hover:text-primary-focus font-bold">
