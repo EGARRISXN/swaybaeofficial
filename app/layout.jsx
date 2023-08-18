@@ -7,6 +7,7 @@ import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
 import UseScrollToTop from "../hooks/useScrollToTop";
 import ToastNotifications from "../components/ToastNotifications";
+import { Analytics } from "@vercel/analytics/react";
 
 const vibur = Vibur({
   subsets: ["latin"],
@@ -105,6 +106,7 @@ export default function RootLayout({ children }) {
             <ToastNotifications />
             <Footer />
           </Providers>
+          <Analytics />
         </main>
       </body>
     </html>
