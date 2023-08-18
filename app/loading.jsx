@@ -6,7 +6,7 @@ export default function Loading() {
         <h1 className="text-3xl text-center text-gray-800 opacity-80 p-4">
           Loading...
         </h1>
-        <div className="loader "></div>
+        <div className="loader"></div>
       </div>
     </main>
   );

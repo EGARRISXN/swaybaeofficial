@@ -59,14 +59,30 @@ export default function SubPoster() {
     { src: Thirteen, alt: "13" },
     { src: Fourteen, alt: "14" },
     { src: Fifteen, alt: "15" },
-    { src: Sixteen, alt: "16" },
+    {
+      src: Sixteen,
+      alt: "16",
+      link: "https://www.twitch.tv/videos/1902055115",
+    },
     { src: Seventeen, alt: "17" },
     { src: Eighteen, alt: "18" },
-    { src: Nineteen, alt: "19" },
-    { src: Twenty, alt: "20" },
+    {
+      src: Nineteen,
+      alt: "19",
+      link: "https://www.twitch.tv/videos/1902059583",
+    },
+    { src: Twenty, alt: "20", link: "https://www.twitch.tv/videos/1902055113" },
     { src: TwentyOne, alt: "21" },
-    { src: TwentyTwo, alt: "22" },
-    { src: TwentyThree, alt: "23" },
+    {
+      src: TwentyTwo,
+      alt: "22",
+      link: "https://www.twitch.tv/videos/1902059582",
+    },
+    {
+      src: TwentyThree,
+      alt: "23",
+      link: "https://www.twitch.tv/videos/1902059584",
+    },
     { src: TwentyFour, alt: "24" },
     { src: TwentyFive, alt: "25" },
     { src: TwentySix, alt: "26" },
@@ -138,7 +154,7 @@ export default function SubPoster() {
                   width={300}
                   height={75}
                   alt={image.alt}
-                  className="w-300 h-75"
+                  className="w-300 h-75 hover:scale-110 transition duration-300 ease-in-out"
                 />
               </Link>
             ) : (

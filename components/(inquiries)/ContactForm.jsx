@@ -1,5 +1,6 @@
 "use client";
-import React, { useState } from "react";
+import { useState } from "react";
+import { toast } from "react-toastify";
 
 export default function ContactForm() {
   const [formData, setFormData] = useState({
@@ -37,6 +38,16 @@ export default function ContactForm() {
       setLoading(false);
     }
   };
+
+  const resolveAfter2Seconds = new Promise((resolve) =>
+    setTimeout(resolve, 2000)
+  );
+  const notify = () =>
+    toast.promise(resolveAfter2Seconds, {
+      pending: "Sending message...",
+      success: "Message sent successfully!",
+      error: "Thee was an error sending your message.",
+    });
 
   const handleInputChange = (event) => {
     const { id, value } = event.target;
@@ -131,6 +142,7 @@ export default function ContactForm() {
       <div className="flex justify-center xs:justify-end">
         <button
           type="submit"
+          onClick={notify}
           disabled={loading}
           className="btn btn-md btn-secondary mb-4 mt-4 w-40 xl:w-44 3xl:w-48 3xl:btn-lg"
         >

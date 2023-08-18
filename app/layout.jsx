@@ -2,10 +2,11 @@ import "./globals.css";
 import { Poppins, Lobster, Neonderthaw, Vibur } from "next/font/google";
 import Providers from "./providers";
 import { Suspense } from "react";
+import Loading from "./loading";
 import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
-import Loading from "./loading";
 import UseScrollToTop from "../hooks/useScrollToTop";
+import ToastNotifications from "../components/ToastNotifications";
 
 const vibur = Vibur({
   subsets: ["latin"],
@@ -101,6 +102,7 @@ export default function RootLayout({ children }) {
             <Navbar />
             <Suspense fallback={<Loading />}>{children}</Suspense>
             <UseScrollToTop />
+            <ToastNotifications />
             <Footer />
           </Providers>
         </main>
