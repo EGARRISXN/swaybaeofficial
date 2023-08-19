@@ -8,7 +8,7 @@ export default function Home() {
   return (
     <Animation>
       <main>
-        <div className="flex justify-center  xs:mt-16 xs:pt-16 sm:mt-2 sm:pt-2 md:mt-12 md:pt-12 lg:mt-8 lg:pt-8 xl:mt-10 xl:pt-10 2xl:mt-16 2xl:pt-16">
+        <div className="flex justify-center xs:mt-8 xs:pt-8 sm:pt-6 sm:mt-6 xl:mt-10 xl:pt-10 ">
           <Link href="/subathon">
             <Image
               src={HeroLines}
