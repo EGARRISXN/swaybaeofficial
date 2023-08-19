@@ -2,7 +2,6 @@ import Animation from "../components/Animation";
 import Image from "next/image";
 import Link from "next/link";
 import HeroLines from "../public/images/herolines.png";
-// import HeroNoLines from "../public/images/heronlines.png";
 
 export default function Home() {
   return (
@@ -19,14 +18,6 @@ export default function Home() {
               className="z-10"
             />
           </Link>
-          {/* <Image
-            src={HeroNoLines}
-            width={600}
-            height={400}
-            quality={100}
-            alt="Hero"
-            className="x"
-          /> */}
         </div>
       </main>
     </Animation>

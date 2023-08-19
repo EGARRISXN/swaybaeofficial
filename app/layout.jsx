@@ -39,8 +39,8 @@ const neonderthaw = Neonderthaw({
 
 export const metadata = {
   metadataBase: new URL("https://swaybae.net"),
-  title: "SwayBae | Streaming, Gaming, and More!",
-  description: "Here you will find everything there is to know about Sway!",
+  title: "SwayBae | Streaming, Gaming, & So Much More!",
+  description: "Here you will find everything there is to know about Swaybae!",
   robots: {
     index: true,
     follow: true,
