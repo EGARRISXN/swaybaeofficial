@@ -46,23 +46,21 @@ const Nav = () => {
   };
 
   return (
-    <div className="sticky top-1 px-3 z-[1]">
-      <nav className="navbar mx-auto h-4 px-3 md:px-4 py-2 bg-base-100 md:py-8 rounded-b-3xl shadow-2xl shadow-purple-800/50">
-        <div className="navbar-start text-secondary">
-          <div className="avatar">
-            <div className="flex h-9 w-9 mask mask-squircle">
-              <Link href="/">
-                <Image src={Ava} quality={100} alt="Ava" priority />
-              </Link>
-            </div>
+    <div className="sticky top-1 md:top-2 z-[1] px-4 sm:px-8 md:px-14 lg:px-20 xl:px-24 2xl:px-32 3xl:px-42">
+      <nav className="navbar mx-auto h-4 px-3 py-2 bg-base-100 md:py-6 rounded-b-3xl  shadow-2xl shadow-purple-800/50">
+        <div className="navbar-start">
+          <div className="flex h-9 w-9 mask mask-squircle">
+            <Link href="/">
+              <Image src={Ava} quality={100} alt="Ava" priority />
+            </Link>
           </div>
         </div>
         <div className="navbar-center hidden md:flex">
-          <ul className="menu menu-horizontal md:text-xs md:space-x-0 lg:text-sm xl-text-lg xl:space-x-4 2xl-text-lg 2xl:space-x-8  3xl:text-xl 3xl:space-x-12">
+          <ul className="menu menu-horizontal md:text-xs md:space-x-0 lg:text-sm lg:space-x-0 xl:space-x-3 2xl-text-lg 2xl:space-x-5 3xl:text-xl 3xl:space-x-12">
             <li>
               <Link
                 href="/about"
-                className="bg-gradient-to-r from-secondary to-primary bg-clip-text text-transparent"
+                className="bg-gradient-to-r from-secondary to-primary bg-clip-text hover:text-transparent"
               >
                 About
               </Link>
@@ -70,7 +68,7 @@ const Nav = () => {
             <li>
               <Link
                 href="/socials"
-                className="bg-gradient-to-r from-secondary to-primary bg-clip-text text-transparent "
+                className="bg-gradient-to-r from-secondary to-primary bg-clip-text hover:text-transparent "
               >
                 Socials
               </Link>
@@ -78,7 +76,7 @@ const Nav = () => {
             <li>
               <Link
                 href="/merch"
-                className="bg-gradient-to-r from-secondary to-primary bg-clip-text text-transparent "
+                className="bg-gradient-to-r from-secondary to-primary bg-clip-text hover:text-transparent "
               >
                 Merch
               </Link>
@@ -86,7 +84,7 @@ const Nav = () => {
             <li>
               <Link
                 href="/mediakit"
-                className="bg-gradient-to-r from-secondary to-primary bg-clip-text text-transparent "
+                className="bg-gradient-to-r from-secondary to-primary bg-clip-text hover:text-transparent "
               >
                 Media Kit
               </Link>
@@ -94,7 +92,7 @@ const Nav = () => {
             <li>
               <Link
                 href="/inquiries"
-                className="bg-gradient-to-r from-secondary to-primary bg-clip-text text-transparent "
+                className="bg-gradient-to-r from-secondary to-primary bg-clip-text hover:text-transparent "
               >
                 Business Inquiries
               </Link>
@@ -102,7 +100,7 @@ const Nav = () => {
             <li>
               <Link
                 href="/subathon"
-                className="bg-gradient-to-r from-secondary to-primary bg-clip-text text-transparent"
+                className="bg-gradient-to-r from-secondary to-primary bg-clip-text hover:text-transparent animate-pulse"
               >
                 Subathon!
               </Link>
@@ -124,7 +122,7 @@ const Nav = () => {
           {isOpen && (
             <ul
               tabIndex={0}
-              className="dropdown-content menu menu-sm p-0 z-[1] w-40 bg-base-100 text-secondary rounded-b-2xl shadow-2xl shadow-purple-800/50"
+              className="dropdown-content menu menu-sm p-1 z-[1] w-40 bg-base-100 text-secondary rounded-b-2xl shadow-2xl shadow-purple-800/50"
               onKeyDown={(e) => {
                 if (e.key === "Escape") {
                   closeDropdown();
@@ -143,17 +141,17 @@ const Nav = () => {
             >
               <li>
                 <Link
-                  href="/"
-                  className="bg-gradient-to-tr from-secondary to-primary bg-clip-text text-transparent align-center justify-center text-center"
+                  href="/subathon"
+                  className="animate-pulse mx-auto"
                   onClick={handleLinkClick}
                 >
-                  Home
+                  Subathon!
                 </Link>
               </li>
               <li>
                 <Link
                   href="/about"
-                  className="bg-gradient-to-tr from-secondary to-primary bg-clip-text text-transparent align-center justify-center text-center"
+                  className="bg-gradient-to-tr from-secondary to-primary bg-clip-text text-transparent mx-auto"
                   onClick={handleLinkClick}
                 >
                   About
@@ -162,7 +160,7 @@ const Nav = () => {
               <li>
                 <Link
                   href="/socials"
-                  className="bg-gradient-to-tr from-secondary to-primary bg-clip-text text-transparent align-center justify-center text-center"
+                  className="bg-gradient-to-tr from-secondary to-primary bg-clip-text text-transparent mx-auto"
                   onClick={handleLinkClick}
                 >
                   Socials
@@ -171,7 +169,7 @@ const Nav = () => {
               <li>
                 <Link
                   href="/merch"
-                  className="bg-gradient-to-tr from-secondary to-primary bg-clip-text text-transparent align-center justify-center text-center"
+                  className="bg-gradient-to-tr from-secondary to-primary bg-clip-text text-transparent mx-auto"
                   onClick={handleLinkClick}
                 >
                   Merch
@@ -180,7 +178,7 @@ const Nav = () => {
               <li>
                 <Link
                   href="/mediakit"
-                  className="bg-gradient-to-tr from-secondary to-primary bg-clip-text text-transparent align-center justify-center text-center"
+                  className="bg-gradient-to-tr from-secondary to-primary bg-clip-text text-transparent mx-auto"
                   onClick={handleLinkClick}
                 >
                   Media Kit
@@ -189,25 +187,10 @@ const Nav = () => {
               <li>
                 <Link
                   href="/inquiries"
-                  className="bg-gradient-to-tr from-secondary to-primary bg-clip-text text-transparent align-center justify-center text-center"
+                  className="bg-gradient-to-tr from-secondary to-primary bg-clip-text text-transparent mx-auto"
                   onClick={handleLinkClick}
                 >
                   Business Inquiries
-                </Link>
-              </li>
-              <li>
-                <Link
-                  href="/subathon"
-                  className="font-bold bg-gradient-to-tr from-accent to-info bg-clip-text text-transparent align-center justify-center text-center"
-                  style={{
-                    position: "relative",
-                    animation: "glow 2s infinite",
-                    backgroundImage:
-                      "linear-gradient(to right, rgba(181, 103, 173, 0.7), rgba(181, 103, 173, 0.9), rgba(181, 103, 173, 0.7))",
-                  }}
-                  onClick={handleLinkClick}
-                >
-                  Subathon!
                 </Link>
               </li>
             </ul>
@@ -253,7 +236,7 @@ const Nav = () => {
 };
 
 const Navbar = () => (
-  <ThemeProvider>
+  <ThemeProvider defaultTheme="mydark">
     <Nav />
   </ThemeProvider>
 );
