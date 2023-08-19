@@ -46,8 +46,8 @@ const Nav = () => {
   };
 
   return (
-    <div className="sticky top-1 md:top-2 z-[1] px-4 sm:px-8 md:px-14 lg:px-20 xl:px-24 2xl:px-32 3xl:px-42">
-      <nav className="navbar mx-auto h-4 px-3 py-2 bg-base-100 md:py-6 rounded-b-3xl  shadow-xl shadow-purple-800/50">
+    <div className="sticky top-1 z-[1] px-2 sm:px-8 md:px-14 lg:px-20 xl:px-24 2xl:px-32 3xl:px-42">
+      <nav className="navbar h-4 px-3 py-3 bg-base-100 rounded-b-3xl  shadow-xl shadow-purple-800/50">
         <div className="navbar-start">
           <div className="flex h-9 w-9 mask mask-squircle">
             <Link href="/">

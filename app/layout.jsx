@@ -97,7 +97,7 @@ export default function RootLayout({ children }) {
         />
       </head>
 
-      <body className="relative bg-gradient-to-r bg-base-100 bg-cover bg-fixed bg-no-repeat">
+      <body className="relative bg-gradient-to-r from-base-100 to-base-150 bg-cover bg-fixed bg-no-repeat">
         <main className="backdrop-blur">
           <Providers>
             <Navbar />
