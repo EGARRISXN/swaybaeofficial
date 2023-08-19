@@ -1,6 +1,6 @@
 import Animation from "../../components/Animation";
 import AboutPhoto from "../../components/(about)/AboutPhoto";
-import NeonCard from "../../components/(neon)/NeonCard";
+import NeonCard from "../../components/(about)/AboutCard";
 
 export default function About() {
   return (

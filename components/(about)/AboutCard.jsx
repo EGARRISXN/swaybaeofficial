@@ -9,7 +9,7 @@ export default function NeonCard() {
   };
 
   return (
-    <div className="bg-base-200 rounded-l-3xl rounded-br-3xl border-base-300 border-1 shadow-2xl p-6 md:p-8 2xl:p-10 shadow-purple-800/50">
+    <div className="bg-base-200 rounded-l-3xl rounded-br-3xl border-base-content border-l-4 border-b-4 shadow-2xl p-6 md:p-8 2xl:p-10 shadow-purple-800/50">
       <h1 className="text-3xl md:text-4xl font-bold text-primary-focus mb-3">
         I&apos;m Sway!
       </h1>

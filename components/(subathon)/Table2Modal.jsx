@@ -13,8 +13,8 @@ export default function Table2Modal() {
   };
 
   return (
-    <div className="overflow-x-auto shadow-lg rounded-br-2xl hover:bg-warning shadow-purple-800/50 p-2">
-      <button onClick={toggleModal} className="btn-sm">
+    <div className="overflow-x-auto  my-1 border-b-2 border-base-content  shadow-lg rounded-br-2xl hover:bg-warning shadow-purple-800/50 p-2">
+      <button onClick={toggleModal} className="btn-sm hover:font-semibold">
         Reoccuring Sub Goals
       </button>
 
