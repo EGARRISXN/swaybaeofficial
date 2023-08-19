@@ -16,7 +16,7 @@ export default function Socials() {
           <div className="block md:hidden">
             <MediaKitContainer />
           </div>
-          <div className="card p-3 hidden md:block bg-base-200 rounded-xl border-4  border-base-content shadow-xl shadow-purple-800/50 ">
+          <div className="card p-4 hidden md:block bg-base-200 rounded-2xl border-4 border-base-content shadow-xl shadow-purple-800/50 ">
             <TwitchEmbed />
           </div>
         </div>

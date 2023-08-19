@@ -14,7 +14,7 @@ export default function TwitchEmbed() {
         width: 400, // width of video player
         height: 300, // height of video player
         channel: "sway_bae",
-        parent: "swaybaeofficial.vercel.app",
+        parent: "swaybae.net",
       };
 
       const player = new window.Twitch.Player("TwitchPlayerDivID", options);
