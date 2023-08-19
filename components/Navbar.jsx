@@ -47,15 +47,15 @@ const Nav = () => {
 
   return (
     <div className="sticky top-1 z-[1] px-2 sm:px-8 md:px-14 lg:px-20 xl:px-24 2xl:px-32 3xl:px-42">
-      <nav className="navbar h-4 px-3 py-3 bg-base-100 rounded-b-3xl  shadow-xl shadow-purple-800/50">
-        <div className="navbar-start">
-          <div className="flex h-9 w-9 mask mask-squircle">
+      <nav className="navbar h-3 px-3 bg-base-100 rounded-b-3xl shadow-xl shadow-purple-800/50">
+        <div className="navbar-start flex px-1">
+          <div className="flex h-8 w-8 mask mask-squircle">
             <Link href="/">
               <Image src={Ava} quality={100} alt="Ava" priority />
             </Link>
           </div>
         </div>
-        <div className="navbar-center hidden md:flex">
+        <div className="navbar-center hidden md:flex mx-auto px-1">
           <ul className="menu menu-horizontal md:text-xs md:space-x-0 lg:text-sm lg:space-x-0 xl:space-x-3 2xl-text-lg 2xl:space-x-5 3xl:text-xl 3xl:space-x-12">
             <li>
               <Link
@@ -196,7 +196,7 @@ const Nav = () => {
             </ul>
           )}
         </div>
-        <div className="navbar-end">
+        <div className="navbar-end flex">
           <label
             tabIndex={0}
             className={`swap swap-rotate btn-xs ${

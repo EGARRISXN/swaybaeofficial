@@ -7,7 +7,7 @@ import SubPoster from "../../components/(subathon)/SubPoster";
 export default function Subathon() {
   return (
     <main>
-      <div className="flex flex-col lg:flex-row justify-center content-center mx-auto py-16 xl:py-24">
+      <div className="flex flex-col  lg:flex-row justify-center content-center mx-auto py-16 xl:py-24">
         <p className="text-2xl font-semibold text-center pb-10 md:hidden">
           More Details Below!
         </p>
@@ -19,12 +19,12 @@ export default function Subathon() {
             or click a checkmark for a clip!
           </p>
         </div>
-        <div className="flex flex-col px-4 pb-4 py-10">
+        <div className="flex flex-col px-6 md:px-12 my-4">
           <Table1Modal />
           <Table2Modal />
           <Table3Modal />
           <Table4Modal />
-          <p className="p-4 py-6 text-bolder text-sm text-primary hover:text-primary-focus text-center justify-center xs:hidden md:block">
+          <p className="px-1 py-4 text-bolder text-sm text-primary hover:text-primary-focus xs:hidden md:block">
             *Click the title to be redirected
             <br />
             or click a checkmark for a clip!

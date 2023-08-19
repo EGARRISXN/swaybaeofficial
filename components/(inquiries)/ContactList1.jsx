@@ -10,7 +10,7 @@ import {
 export default function ContactList1() {
   return (
     <div className="bg-base-200 border-base-content border-r-4 border-b-4 rounded-3xl shadow-xl shadow-purple-800/50 py-8 px-8">
-      <h3 className="text-2xl text-center mb-3">Socials</h3>
+      <h3 className="text-2xl text-center hover:text-info">Socials</h3>
       <hr className="my-4 border-secondary" />
       <ul className="mb-3 flex flex-col space-y-2">
         <li className="flex items-center">
@@ -69,9 +69,9 @@ export default function ContactList1() {
         </li>
       </ul>
       <hr className="my-4 border-secondary" />
-      <p className="text-xs">
+      <p className="text-xs text-center">
         Feel free to email me directly <br />
-        <span className="text-primary hover:text-primary-focus font-bold">
+        <span className=" text-primary hover:text-primary-focus font-bold">
           <a href="mailto:Sway.Bae9000@gmail.com">Sway.Bae9000@gmail.com</a>
         </span>
       </p>

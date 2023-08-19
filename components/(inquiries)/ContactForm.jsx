@@ -62,7 +62,7 @@ export default function ContactForm() {
       className="bg-base-200 border-base-content border-r-4 border-b-4 rounded-3xl shadow-xl shadow-purple-800/50 px-4 xs:px-8 py-4 lg:px-12 lg:py-8 xl:px-16 xl:py-12 2xl:px-20 2xl:py-16"
       onSubmit={handleSubmit}
     >
-      <h1 className="text-4xl lg:text-5xl xl:text-6xl 2xl:text-6xl 3xl:text-7xl mt-4 lg:mt-2 xl:mt-0 mb-4 hover:text-info">
+      <h1 className="text-4xl lg:text-5xl mt-4 lg:mt-2 xl:mt-0 mb-4 hover:text-info">
         Contact Me!
       </h1>
       <hr className="hr-lines border-secondary my-2" />
@@ -96,7 +96,9 @@ export default function ContactForm() {
           value={formData.email}
           onChange={handleInputChange}
           placeholder="Email"
-          className="p-3 lg:p-4 text-neutral-900 rounded-xl shadow-xl shadow-purple-800/50 "
+          className="p-3 lg:p-4 text-neutral-900 rounded-xl shadow-xl shadow-purple-800/50       disabled:bg-slate-50 disabled:text-slate-500 disabled:border-slate-200 disabled:shadow-none
+          invalid:border-pink-500 invalid:text-pink-600
+          focus:invalid:border-pink-500 focus:invalid:ring-pink-500"
           autoComplete="off"
           name="email"
           id="email"

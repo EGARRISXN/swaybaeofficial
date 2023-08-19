@@ -131,7 +131,7 @@ export default function SubPoster() {
   const secondGroup = images.slice(20);
 
   return (
-    <div className=" bg-white rounded-3xl shadow-xl p-3 shadow-purple-800/50 border-b-4 border-r-4 border-base-content">
+    <div className=" bg-white rounded-3xl shadow-xl p-3 shadow-purple-800/50  border-base-content">
       <div className="justify-center">
         <Link href="https://www.twitch.tv/sway_bae">
           <Image
@@ -139,7 +139,7 @@ export default function SubPoster() {
             width={560}
             height={300}
             alt="Title"
-            className="w-560 h-300 hover:scale-110  transition duration-300 ease-in-out"
+            className="w-560 h-300 hover:scale-110 mx-auto transition duration-300 ease-in-out"
           />
         </Link>
       </div>
