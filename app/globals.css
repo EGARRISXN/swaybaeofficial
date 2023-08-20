@@ -28,12 +28,12 @@ h3 {
   font: 3rem var(--font-lobster);
 }
 h4 {
-  font-family: var(--font-neonderthaw);
-  font: 2rem var(--font-neonderthaw);
+  font-family: var(--font-poppins);
+  font: 2rem var(--font-poppins);
 }
 h5 {
-  font-family: var(--font-vibur);
-  font: 1.5rem var(--font-vibur);
+  font-family: var(--font-lobster);
+  font: 1rem var(--font-lobster);
 }
 p {
   font-family: var(--font-poppins);

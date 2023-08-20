@@ -18,15 +18,14 @@ module.exports = {
       "3xl": "1920px",
     },
     extend: {
-      backgroundImage: {
-        "gradient-radial": "radial-gradient(var(--tw-gradient-stops))",
-        "gradient-conic":
-          "conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))",
-      },
+      // backgroundImage: {
+      //   "gradient-radial": "radial-gradient(var(--tw-gradient-stops))",
+      //   "gradient-conic":
+      //     "conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))",
+      // },
       fontFamily: {
         poppins: ["Poppins", "sans-serif"],
         lobster: ["Lobster", "cursive"],
-        neonderthaw: ["Neonderthaw", "cursive"],
       },
       height: {
         100: "25rem",
@@ -53,6 +52,15 @@ module.exports = {
         184: "46rem",
         188: "47rem",
         192: "48rem",
+        "4/5": "80%",
+        "3/4": "75%",
+        "2/3": "66.666667%",
+        "3/5": "60%",
+        "1/2": "50%",
+        "2/5": "40%",
+        "1/3": "33.333333%",
+        "1/4": "25%",
+        "1/5": "20%",
       },
       width: {
         100: "25rem",

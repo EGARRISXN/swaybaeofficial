@@ -9,13 +9,6 @@ import UseScrollToTop from "../hooks/useScrollToTop";
 import ToastNotifications from "../components/ToastNotifications";
 import { Analytics } from "@vercel/analytics/react";
 
-const vibur = Vibur({
-  subsets: ["latin"],
-  display: "swap",
-  variable: "--font-vibur",
-  weight: "400",
-});
-
 const lobster = Lobster({
   subsets: ["latin"],
   display: "swap",
@@ -27,13 +20,6 @@ const poppins = Poppins({
   subsets: ["latin"],
   display: "swap",
   variable: "--font-poppins",
-  weight: "400",
-});
-
-const neonderthaw = Neonderthaw({
-  subsets: ["latin"],
-  display: "swap",
-  variable: "--font-neonderthaw",
   weight: "400",
 });
 
@@ -72,7 +58,7 @@ export default function RootLayout({ children }) {
     <html
       lang="en"
       data-theme="myDark"
-      className={`${vibur.variable} ${lobster.variable} ${poppins.variable} ${neonderthaw.variable}`}
+      className={` ${lobster.variable} ${poppins.variable} `}
       suppressHydrationWarning={true}
     >
       <head>
