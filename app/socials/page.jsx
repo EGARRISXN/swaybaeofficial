@@ -1,5 +1,5 @@
 import Animation from "../../components/Animation";
-import TwitchEmbed from "../../components/(socials)/TwitchEmbed";
+
 import MediaKitContainer from "../../components/(mediakit)/MediaKitContainer";
 
 export default function Socials() {
@@ -10,15 +10,8 @@ export default function Socials() {
           <h1 className="text-4xl animate-pulse text-center pb-6 ">
             Under Construction!
           </h1>
-          <p className="text-xs text-primary hidden md:block">
-            *Checkout my Subathon in the meantime*
-          </p>
-          <div className="block md:hidden">
-            <MediaKitContainer />
-          </div>
-          <div className="card p-4 hidden md:block bg-base-200 rounded-2xl border-4 border-base-content shadow-xl shadow-purple-800/50 ">
-            <TwitchEmbed />
-          </div>
+
+          <MediaKitContainer />
         </div>
       </main>
     </Animation>

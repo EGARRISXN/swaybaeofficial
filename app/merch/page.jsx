@@ -8,7 +8,7 @@ export default function Merch() {
   return (
     <Animation>
       <main>
-        <div className="container mx-auto flex flex-col items-center justify-center py-16 ">
+        <div className="container mx-auto flex flex-col items-center justify-center py-20 ">
           <div className=" hidden lg:block rounded-3xl shadow-2xl shadow-purple-800/5">
             <TeespringEmbed1 />
           </div>

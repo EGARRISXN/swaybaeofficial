@@ -2,14 +2,18 @@ import Link from "next/link";
 
 export default function NotFound() {
   return (
-    <div className="not-found-container">
-      <div className="container flex justify-center">
-        <h2>Not Found</h2>
-        <p>Could not find requested resource</p>
-        <p>
-          <Link href="/">Go Home</Link>
-        </p>
+    <main className="flex text-center items-center">
+      <div className="pb-40">
+        <hr />
+        <h1>404 Page</h1>
+        <p className="text-primary">This is embarrasing...</p>
+        <Link href="/">
+          <button className="btn-sm rounded-3xl btn-secondary text-base-content mb-4">
+            Go Home
+          </button>
+        </Link>
+        <hr />
       </div>
-    </div>
+    </main>
   );
 }

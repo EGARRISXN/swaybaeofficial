@@ -7,7 +7,7 @@ import SubPoster from "../../components/(subathon)/SubPoster";
 export default function Subathon() {
   return (
     <main>
-      <div className="flex flex-col  lg:flex-row justify-center content-center mx-auto py-16 xl:py-24">
+      <div className="flex flex-col lg:flex-row justify-center content-center mx-auto py-16 xl:py-24">
         <p className="text-2xl font-semibold text-center pb-10 md:hidden">
           More Details Below!
         </p>
