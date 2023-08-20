@@ -115,7 +115,11 @@ export default function SubPoster() {
       alt: "28",
       link: "https://www.twitch.tv/videos/1903089039",
     },
-    { src: TwentyNine, alt: "29" },
+    {
+      src: TwentyNine,
+      alt: "29",
+      link: "https://www.twitch.tv/videos/1903447744",
+    },
     { src: Thirty, alt: "30" },
     { src: ThirtyOne, alt: "31" },
     { src: ThirtyTwo, alt: "32" },
