@@ -1,9 +1,11 @@
-import Animation from "../../components/Animation";
+// import Animation from "../../components/Animation";
+import { Transition } from "../../components/Transition";
 import MediaKitContainer from "../../components/(mediakit)/MediaKitContainer";
 
 export default function MediaKit() {
   return (
-    <Animation>
+    // <Animation>
+    <Transition>
       <main>
         <div className="flex flex-col items-center justify-center mt-16 mx-4 sm:mx-16">
           <h1 className="text-4xl animate-pulse text-center pb-6">
@@ -12,6 +14,7 @@ export default function MediaKit() {
           <MediaKitContainer />
         </div>
       </main>
-    </Animation>
+    </Transition>
+    // </Animation>
   );
 }

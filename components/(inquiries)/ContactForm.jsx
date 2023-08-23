@@ -59,7 +59,7 @@ export default function ContactForm() {
 
   return (
     <form
-      className="bg-base-200 border-base-content border-r-4 border-b-4 rounded-3xl shadow-xl shadow-purple-800/50 px-4 xs:px-8 py-4 lg:px-12 lg:py-8 xl:px-16 xl:py-12 2xl:px-20 2xl:py-16"
+      className="bg-base-200 border-base-content border-r-4 border-b-4 rounded-3xl shadow-xl shadow-purple-800/50 px-4 xs:px-8 pt-4 pb-4 lg:px-12 lg:pt-8 xl:px-16 xl:pt-12 2xl:px-20"
       onSubmit={handleSubmit}
     >
       <h1 className="text-4xl lg:text-5xl mt-4 lg:mt-2 xl:mt-0 mb-4 hover:text-info">
@@ -146,7 +146,7 @@ export default function ContactForm() {
           type="submit"
           onClick={notify}
           disabled={loading}
-          className="btn btn-md btn-secondary mb-4 mt-4 w-40 xl:w-44 3xl:w-48 3xl:btn-lg"
+          className="btn btn-md btn-secondary mb-4 mt-2 w-40 xl:w-44 3xl:w-48 3xl:btn-lg"
         >
           Send Message
         </button>

@@ -4,7 +4,7 @@ import { Sling as Hamburger } from "hamburger-react";
 import { useTheme, ThemeProvider } from "next-themes";
 import Image from "next/image";
 import Link from "next/link";
-import Ava from "../public/images/ava.jpg";
+import Ava from "../public/images/avatar.png";
 
 const Nav = () => {
   const [isOpen, setOpen] = useState(false);
@@ -99,10 +99,10 @@ const Nav = () => {
             </li>
             <li>
               <Link
-                href="/subathon"
-                className="bg-gradient-to-r from-secondary to-primary bg-clip-text hover:text-transparent animate-pulse"
+                href="/subathon2023"
+                className="bg-gradient-to-r from-secondary to-primary bg-clip-text hover:text-transparent "
               >
-                Subathon!
+                Subathon 2023
               </Link>
             </li>
           </ul>
@@ -141,11 +141,11 @@ const Nav = () => {
             >
               <li>
                 <Link
-                  href="/subathon"
-                  className="animate-pulse mx-auto"
+                  href="/subathon2023"
+                  className="bg-gradient-to-tr from-secondary to-primary bg-clip-text text-transparent mx-auto"
                   onClick={handleLinkClick}
                 >
-                  Subathon!
+                  Subathon 2023
                 </Link>
               </li>
               <li>

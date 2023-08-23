@@ -1,12 +1,14 @@
 "use client";
-import Animation from "../../components/Animation";
+// import Animation from "../../components/Animation";
+import { Transition } from "../../components/Transition";
 import TeespringEmbed1 from "../../components/(merch)/TeespringEmbed1";
 import TeespringEmbed2 from "../../components/(merch)/TeespringEmbed2";
 import TeespringEmbed3 from "../../components/(merch)/TeespringEmbed3";
 
 export default function Merch() {
   return (
-    <Animation>
+    // <Animation>
+    <Transition>
       <main>
         <div className="container mx-auto flex flex-col items-center justify-center py-20 ">
           <div className=" hidden lg:block rounded-3xl shadow-2xl shadow-purple-800/5">
@@ -20,6 +22,7 @@ export default function Merch() {
           </div>
         </div>
       </main>
-    </Animation>
+    </Transition>
+    // </Animation>
   );
 }
