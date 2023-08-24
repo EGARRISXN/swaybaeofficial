@@ -51,7 +51,7 @@ export default function ContactList2() {
         </a>
       </div>
       <hr className="my-4 border-secondary" />
-      <p className=" text-sm text-center font-bold">
+      <p className=" text-sm text-center font-bold hover:text-lg">
         Feel free to email me directly
         <br />
         <span className="text-primary hover:text-primary-focus font-bold">

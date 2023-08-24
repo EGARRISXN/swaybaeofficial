@@ -69,9 +69,9 @@ export default function ContactList1() {
         </li>
       </ul>
       <hr className="my-4 border-secondary" />
-      <p className="text-xs text-center">
+      <p className="text-xs text-center hover:text-sm hover:font-semibold">
         Feel free to email me directly <br />
-        <span className=" text-primary hover:text-primary-focus font-bold">
+        <span className="text-primary hover:text-primary-focus ">
           <a href="mailto:Sway.Bae9000@gmail.com">Sway.Bae9000@gmail.com</a>
         </span>
       </p>

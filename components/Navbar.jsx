@@ -1,12 +1,23 @@
 "use client";
 import { useState, useEffect } from "react";
+import { usePathname } from "next/navigation";
 import { Sling as Hamburger } from "hamburger-react";
 import { useTheme, ThemeProvider } from "next-themes";
 import Image from "next/image";
 import Link from "next/link";
 import Ava from "../public/images/avatar.png";
 
+const links = [
+  { href: "/about", label: "About" },
+  { href: "/socials", label: "Socials" },
+  { href: "/merch", label: "Merch" },
+  { href: "/mediakit", label: "Media Kit" },
+  { href: "/inquiries", label: "Business Inquiries" },
+  { href: "/subathon2023", label: "Subathon 2023" },
+];
+
 const Nav = () => {
+  const path = usePathname();
   const [isOpen, setOpen] = useState(false);
   const [clickedOutside, setClickedOutside] = useState(false);
   const { resolvedTheme, setTheme } = useTheme();
@@ -46,7 +57,7 @@ const Nav = () => {
   };
 
   return (
-    <div className="sticky top-1 z-[1] px-2 sm:px-8 md:px-14 lg:px-20 xl:px-24 2xl:px-32 3xl:px-42">
+    <header className="relative top-1 z-[1] px-2 sm:px-8 md:px-14 lg:px-20 xl:px-24 2xl:px-32 3xl:px-42">
       <nav className="navbar h-3 px-3 bg-base-100 rounded-b-3xl shadow-xl shadow-purple-800/50">
         <div className="navbar-start flex px-1">
           <div className="flex h-8 w-8 mask mask-squircle">
@@ -57,54 +68,16 @@ const Nav = () => {
         </div>
         <div className="navbar-center hidden md:flex mx-auto px-1">
           <ul className="menu menu-horizontal md:text-xs md:space-x-0 lg:text-sm lg:space-x-0 xl:space-x-3 2xl-text-lg 2xl:space-x-5 3xl:text-xl 3xl:space-x-12">
-            <li>
-              <Link
-                href="/about"
-                className="bg-gradient-to-r from-secondary to-primary bg-clip-text hover:text-transparent"
-              >
-                About
-              </Link>
-            </li>
-            <li>
-              <Link
-                href="/socials"
-                className="bg-gradient-to-r from-secondary to-primary bg-clip-text hover:text-transparent "
-              >
-                Socials
-              </Link>
-            </li>
-            <li>
-              <Link
-                href="/merch"
-                className="bg-gradient-to-r from-secondary to-primary bg-clip-text hover:text-transparent "
-              >
-                Merch
-              </Link>
-            </li>
-            <li>
-              <Link
-                href="/mediakit"
-                className="bg-gradient-to-r from-secondary to-primary bg-clip-text hover:text-transparent "
-              >
-                Media Kit
-              </Link>
-            </li>
-            <li>
-              <Link
-                href="/inquiries"
-                className="bg-gradient-to-r from-secondary to-primary bg-clip-text hover:text-transparent "
-              >
-                Business Inquiries
-              </Link>
-            </li>
-            <li>
-              <Link
-                href="/subathon2023"
-                className="bg-gradient-to-r from-secondary to-primary bg-clip-text hover:text-transparent "
-              >
-                Subathon 2023
-              </Link>
-            </li>
+            {links.map((link) => (
+              <li key={link.href}>
+                <Link
+                  href={link.href}
+                  className="relative bg-base-content bg-clip-text hover:text-lg hover:text-primary "
+                >
+                  {link.label}
+                </Link>
+              </li>
+            ))}
           </ul>
         </div>
         <div className="dropdown" style={{ position: "relative" }}>
@@ -122,7 +95,7 @@ const Nav = () => {
           {isOpen && (
             <ul
               tabIndex={0}
-              className="dropdown-content menu menu-sm p-1 z-[1] w-40 bg-base-100 text-secondary rounded-b-2xl shadow-2xl shadow-purple-800/50"
+              className="dropdown-content menu menu-sm p-1 z-[1] w-60 bg-base-100 text-base-content rounded-b-2xl shadow-2xl shadow-purple-800/50"
               onKeyDown={(e) => {
                 if (e.key === "Escape") {
                   closeDropdown();
@@ -133,66 +106,23 @@ const Nav = () => {
               }}
               style={{
                 position: "absolute",
-                top: "100%", // Place the dropdown below the button
-                left: "50%", // Center horizontally within the parent container
+                top: "100%",
+                left: "50%",
                 transform: "translateX(-50%)",
-                minWidth: "100%", // Ensure the dropdown spans the width of the parent
+                minWidth: "100%",
               }}
             >
-              <li>
-                <Link
-                  href="/subathon2023"
-                  className="bg-gradient-to-tr from-secondary to-primary bg-clip-text text-transparent mx-auto"
-                  onClick={handleLinkClick}
-                >
-                  Subathon 2023
-                </Link>
-              </li>
-              <li>
-                <Link
-                  href="/about"
-                  className="bg-gradient-to-tr from-secondary to-primary bg-clip-text text-transparent mx-auto"
-                  onClick={handleLinkClick}
-                >
-                  About
-                </Link>
-              </li>
-              <li>
-                <Link
-                  href="/socials"
-                  className="bg-gradient-to-tr from-secondary to-primary bg-clip-text text-transparent mx-auto"
-                  onClick={handleLinkClick}
-                >
-                  Socials
-                </Link>
-              </li>
-              <li>
-                <Link
-                  href="/merch"
-                  className="bg-gradient-to-tr from-secondary to-primary bg-clip-text text-transparent mx-auto"
-                  onClick={handleLinkClick}
-                >
-                  Merch
-                </Link>
-              </li>
-              <li>
-                <Link
-                  href="/mediakit"
-                  className="bg-gradient-to-tr from-secondary to-primary bg-clip-text text-transparent mx-auto"
-                  onClick={handleLinkClick}
-                >
-                  Media Kit
-                </Link>
-              </li>
-              <li>
-                <Link
-                  href="/inquiries"
-                  className="bg-gradient-to-tr from-secondary to-primary bg-clip-text text-transparent mx-auto"
-                  onClick={handleLinkClick}
-                >
-                  Business Inquiries
-                </Link>
-              </li>
+              {links.map((link) => (
+                <li key={link.href}>
+                  <Link
+                    href={link.href}
+                    className="relative justify-center bg-base-content bg-clip-text hover:text-lg hover:text-primary"
+                    onClick={handleLinkClick}
+                  >
+                    {link.label}
+                  </Link>
+                </li>
+              ))}
             </ul>
           )}
         </div>
@@ -231,7 +161,7 @@ const Nav = () => {
           </label>
         </div>
       </nav>
-    </div>
+    </header>
   );
 };
 
