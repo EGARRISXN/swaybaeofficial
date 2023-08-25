@@ -32,7 +32,7 @@ export default function Table4Modal() {
             <div className="modal-content py-4 text-left px-6">
               <div className="flex justify-between items-center pb-3">
                 <button
-                  className="modal-close justify-center btn btn-sm btn-primary cursor-pointer z-50 flex items-center mx-auto"
+                  className="mt-20 modal-close justify-center btn btn-sm btn-primary cursor-pointer z-50 flex items-center mx-auto"
                   onClick={closeModal}
                   style={{ top: "-1rem" }}
                 >

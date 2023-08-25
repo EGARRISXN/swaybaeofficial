@@ -1,4 +1,4 @@
-import Carousel from "./Carousel";
+import SocialCarousel from "../components/(socials)/SocialCarousel";
 
 export default function Socials() {
   return (
@@ -8,8 +8,8 @@ export default function Socials() {
           Socials
         </p>
         <br />
-        <div className="border-[6px] rounded-3xl bg-base-200 px-6 shadow-xl border-base-content shadow-purple-800/50 my-16 mx-16">
-          <Carousel />
+        <div className="justify-center bg-base-200 mt-16 xs:mx-2 sm:mx-16 px-1 border-[6px] rounded-3xl shadow-xl border-base-content shadow-purple-800/50">
+          <SocialCarousel />
         </div>
       </div>
     </div>

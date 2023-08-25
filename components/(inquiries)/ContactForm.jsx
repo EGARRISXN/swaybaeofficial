@@ -141,7 +141,7 @@ export default function ContactForm() {
         />
       </div>
       <hr className="my-6 border-secondary" />
-      <div className="flex justify-center xs:justify-end">
+      <div className="flex justify-end">
         <button
           type="submit"
           onClick={notify}

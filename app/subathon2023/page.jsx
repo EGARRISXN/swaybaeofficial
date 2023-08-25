@@ -4,7 +4,9 @@ import Subathon from "../../components/Subathon";
 export default function SubathonPage() {
   return (
     <Transition>
-      <Subathon />
+      <main className="mt-2">
+        <Subathon />
+      </main>
     </Transition>
   );
 }

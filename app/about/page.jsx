@@ -4,7 +4,9 @@ import About from "../../components/About";
 export default function AboutPage() {
   return (
     <Transition>
-      <About />
+      <main className="mt-2">
+        <About />
+      </main>
     </Transition>
   );
 }

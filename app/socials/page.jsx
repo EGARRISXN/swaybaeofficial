@@ -4,7 +4,9 @@ import Socials from "../../components/Socials";
 export default function SocialsPage() {
   return (
     <Transition>
-      <Socials />
+      <main className="mt-2">
+        <Socials />
+      </main>
     </Transition>
   );
 }

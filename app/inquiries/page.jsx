@@ -4,7 +4,9 @@ import Inquiries from "../../components/Inquiries";
 export default function InquiriesPage() {
   return (
     <Transition>
-      <Inquiries />
+      <main className="mt-2">
+        <Inquiries />
+      </main>
     </Transition>
   );
 }

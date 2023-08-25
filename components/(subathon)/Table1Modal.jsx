@@ -28,11 +28,11 @@ export default function Table1Modal() {
             onClick={closeModal}
           ></div>
 
-          <div className="model-container-slide modal-container max-w-lg w-11/12 sm:w-10/12 md:w-8/12 lg:w-6/12 xl:w-4/12  rounded-lg shadow-lg z-50">
+          <div className="model-container-slide modal-container max-w-lg w-11/12 sm:w-10/12 md:w-8/12 lg:w-6/12 xl:w-4/12 rounded-lg shadow-lg z-50">
             <div className="modal-content py-4 text-left px-6">
               <div className="flex justify-between items-center pb-3">
                 <button
-                  className="modal-close justify-center btn btn-sm btn-primary cursor-pointer z-50 flex itenms-center mx-auto"
+                  className="mt-20 modal-close justify-center btn btn-sm btn-primary cursor-pointer z-50 flex items-center mx-auto"
                   onClick={closeModal}
                   style={{ top: "-1rem" }}
                 >

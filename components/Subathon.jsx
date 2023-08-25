@@ -12,6 +12,7 @@ export default function Subathon2023() {
         <p className="container mx-auto uppercase text-xl tracking-widest font-bold-200 text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-pink-600">
           Subathon
         </p>
+        <br />
         <div className="flex flex-col lg:flex-row justify-center content-center mx-auto my-16">
           <p className="text-2xl font-semibold text-center pb-10 md:hidden">
             More Details Below!

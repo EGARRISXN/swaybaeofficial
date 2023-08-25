@@ -40,7 +40,7 @@ export default function ContactList2() {
           <BsTiktok size="1.3rem" />
         </a>
         <a
-          href="https://www.instagram.com/sway_baetv/"
+          href="https://www.instagram.com/sway_baetv"
           className="hover:text-secondary"
         >
           <BsInstagram size="1.3rem" />

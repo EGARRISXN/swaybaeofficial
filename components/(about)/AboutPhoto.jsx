@@ -10,7 +10,7 @@ export default function AboutPhoto() {
         alt="Sway"
         width="full"
         height="full"
-        className="w-full xs:h-[360px] sm:h-full rounded-3xl shadow-xl shadow-purple-800/50"
+        className="w-full h-full rounded-3xl shadow-xl shadow-purple-800/50"
         priority
       />
     </div>
