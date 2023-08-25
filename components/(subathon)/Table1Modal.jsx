@@ -13,7 +13,7 @@ export default function Table1Modal() {
   };
 
   return (
-    <div className="overflow-x-auto my-1 border-b-2 border-base-content shadow-lg rounded-br-2xl hover:bg-warning shadow-purple-800/50">
+    <div className="overflow-x-auto my-1 border-[6px] border-base-content bg-white text-black font-bold shadow-lg rounded-br-2xl hover:bg-warning shadow-purple-800/50">
       <button
         onClick={toggleModal}
         className="btn-lg hover:text-primary hover:font-semibold"

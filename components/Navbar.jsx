@@ -11,8 +11,8 @@ const links = [
   { href: "/about", label: "About" },
   { href: "/socials", label: "Socials" },
   { href: "/merch", label: "Merch" },
-  { href: "/mediakit", label: "Media Kit" },
   { href: "/inquiries", label: "Business Inquiries" },
+  { href: "/mediakit", label: "Media Kit" },
   { href: "/subathon2023", label: "Subathon 2023" },
 ];
 
@@ -57,22 +57,22 @@ const Nav = () => {
   };
 
   return (
-    <header className="relative top-1 z-[1] px-2 sm:px-8 md:px-14 lg:px-20 xl:px-24 2xl:px-32 3xl:px-42">
-      <nav className="navbar h-3 px-3 bg-base-100 rounded-b-3xl shadow-xl shadow-purple-800/50">
+    <header className="fixed w-full h-2 top-0 z-[100] px-2 sm:px-8 md:px-14 2xl:px-36 3xl:px-42">
+      <nav className="relative navbar bg-base-200 rounded-b-3xl shadow-xl shadow-purple-800/50">
         <div className="navbar-start flex px-1">
-          <div className="flex h-8 w-8 mask mask-squircle">
+          <div className="flex h-10 w-10 mask mask-squircle">
             <Link href="/">
               <Image src={Ava} quality={100} alt="Ava" priority />
             </Link>
           </div>
         </div>
         <div className="navbar-center hidden md:flex mx-auto px-1">
-          <ul className="menu menu-horizontal md:text-xs md:space-x-0 lg:text-sm lg:space-x-0 xl:space-x-3 2xl-text-lg 2xl:space-x-5 3xl:text-xl 3xl:space-x-12">
+          <ul className="menu menu-horizontal md:text-sm md:space-x-0 lg:text-[16px] lg:space-x-0 xl:space-x-3 2xl-text-lg 2xl:space-x-5 3xl:text-xl 3xl:space-x-12">
             {links.map((link) => (
               <li key={link.href}>
                 <Link
                   href={link.href}
-                  className="relative bg-base-content bg-clip-text hover:text-lg hover:text-primary "
+                  className="relative bg-base-200 bg-clip-text hover:text-primary hover:underline"
                 >
                   {link.label}
                 </Link>
@@ -95,7 +95,7 @@ const Nav = () => {
           {isOpen && (
             <ul
               tabIndex={0}
-              className="dropdown-content menu menu-sm p-1 z-[1] w-60 bg-base-100 text-base-content rounded-b-2xl shadow-2xl shadow-purple-800/50"
+              className="dropdown-content menu menu-sm p-1 z-[100] w-60 bg-base-200 text-base-content rounded-b-2xl shadow-2xl shadow-purple-800/50"
               onKeyDown={(e) => {
                 if (e.key === "Escape") {
                   closeDropdown();
@@ -116,7 +116,7 @@ const Nav = () => {
                 <li key={link.href}>
                   <Link
                     href={link.href}
-                    className="relative justify-center bg-base-content bg-clip-text hover:text-lg hover:text-primary"
+                    className="relative justify-center bg-base-200  bg-clip-text  hover:underline hover:text-secondary"
                     onClick={handleLinkClick}
                   >
                     {link.label}
@@ -137,7 +137,7 @@ const Nav = () => {
             <svg
               className={`swap-on ${
                 isDarkMode ? "myLight-fill" : "myDark-fill"
-              } h-6 w-6`}
+              } h-8 w-8`}
               xmlns="http://www.w3.org/2000/svg"
               viewBox="0 0 24 24"
             >
@@ -149,7 +149,7 @@ const Nav = () => {
             <svg
               className={`swap-off ${
                 isDarkMode ? "myLight-fill" : "myDark-fill"
-              } h-6 w-6`}
+              } h-8 w-8`}
               xmlns="http://www.w3.org/2000/svg"
               viewBox="0 0 24 24"
             >

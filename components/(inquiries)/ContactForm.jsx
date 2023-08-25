@@ -59,7 +59,7 @@ export default function ContactForm() {
 
   return (
     <form
-      className="bg-base-200 border-base-content border-r-4 border-b-4 rounded-3xl shadow-xl shadow-purple-800/50 px-4 xs:px-8 pt-4 pb-4 lg:px-12 lg:pt-8 xl:px-16 xl:pt-12 2xl:px-20"
+      className="bg-base-200 border-base-content border-[6px] rounded-3xl shadow-xl shadow-purple-800/50 px-4 xs:px-8 pt-4 pb-4 lg:px-12 lg:pt-8 xl:px-16 xl:pt-12 2xl:px-20"
       onSubmit={handleSubmit}
     >
       <h1 className="text-4xl lg:text-5xl mt-4 lg:mt-2 xl:mt-0 mb-4 hover:text-info">
@@ -78,8 +78,8 @@ export default function ContactForm() {
           value={formData.name}
           onChange={handleInputChange}
           placeholder="Name"
-          className="p-3 lg:p-4 text-neutral-900 rounded-xl shadow-xl shadow-purple-800/50 "
-          autoComplete="off"
+          className="p-3 text-neutral-900 rounded-xl shadow-xl shadow-purple-800/50 "
+          autoComplete="on"
           name="name"
           id="name"
         />
@@ -96,10 +96,10 @@ export default function ContactForm() {
           value={formData.email}
           onChange={handleInputChange}
           placeholder="Email"
-          className="p-3 lg:p-4 text-neutral-900 rounded-xl shadow-xl shadow-purple-800/50       disabled:bg-slate-50 disabled:text-slate-500 disabled:border-slate-200 disabled:shadow-none
+          className="p-3 text-neutral-900 rounded-xl shadow-xl shadow-purple-800/50       disabled:bg-slate-50 disabled:text-slate-500 disabled:border-slate-200 disabled:shadow-none
           invalid:border-pink-500 invalid:text-pink-600
           focus:invalid:border-pink-500 focus:invalid:ring-pink-500"
-          autoComplete="off"
+          autoComplete="on"
           name="email"
           id="email"
         />
@@ -116,8 +116,8 @@ export default function ContactForm() {
           value={formData.subject}
           onChange={handleInputChange}
           placeholder="Subject"
-          className="p-3 lg:p-4 text-neutral-900 rounded-xl shadow-xl shadow-purple-800/50 "
-          autoComplete="off"
+          className="p-3 text-neutral-900 rounded-xl shadow-xl shadow-purple-800/50 "
+          autoComplete="on"
           name="subject"
           id="subject"
         />
@@ -135,7 +135,7 @@ export default function ContactForm() {
           value={formData.message}
           onChange={handleInputChange}
           placeholder="Message"
-          className="w-full p-3 lg:p-4 text-neutral-900 rounded-xl shadow-xl shadow-purple-800/50 "
+          className="w-full p-3 text-neutral-900 rounded-xl shadow-xl shadow-purple-800/50 "
           name="message"
           id="message"
         />
@@ -146,7 +146,7 @@ export default function ContactForm() {
           type="submit"
           onClick={notify}
           disabled={loading}
-          className="btn btn-md btn-secondary mb-4 mt-2 w-40 xl:w-44 3xl:w-48 3xl:btn-lg"
+          className="btn btn-md btn-secondary mb-4 mt-2 w-36 2xl:w-44 3xl:w-48 3xl:btn-lg p-3 hover:scale-105 ease-in duration-300 shadow-xl shadow-gray-400 rounded-3xl bg-gradient-to-r from-purple-400 to-pink-600 text-white"
         >
           Send Message
         </button>

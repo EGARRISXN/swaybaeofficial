@@ -25,13 +25,13 @@ export const YouTubeCarousel2 = () => {
 
   return (
     <div
-      className="embla card flex overflow-hidden p-4 w-full"
-      style={{ width: 380 }}
+      className="card flex px-4 overflow-hidden items-center w-full border-[6px] border-base-content rounded-2xl shadow-xl shadow-purple-800/50"
+      style={{ width: 1024 }}
     >
       <div className="embla__viewport" ref={emblaRef}>
         <div
           className="embla__container flex h-full space-x-10"
-          style={{ width: 360 }}
+          style={{ width: 720 }}
         >
           <div className="embla__slide flex h-full w-full">
             <YouTubeEmbed2 vnum={0} />

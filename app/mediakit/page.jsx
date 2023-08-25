@@ -1,17 +1,10 @@
 import { Transition } from "../../components/Transition";
-import MediaKitContainer from "../../components/(mediakit)/MediaKitContainer";
+import MediaKit from "../../components/MediaKit";
 
-export default function MediaKit() {
+export default function MediaKitPage() {
   return (
     <Transition>
-      <main>
-        <div className="flex flex-col items-center justify-center mt-16 mx-4 sm:mx-16">
-          <h1 className="text-4xl animate-pulse text-center pb-6">
-            Under Construction!
-          </h1>
-          <MediaKitContainer />
-        </div>
-      </main>
+      <MediaKit />
     </Transition>
   );
 }

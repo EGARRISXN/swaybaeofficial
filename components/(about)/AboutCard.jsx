@@ -1,7 +1,7 @@
 "use client";
 import { useState } from "react";
 
-export default function NeonCard() {
+export default function AboutCard() {
   const [isShowMore, setIsShowMore] = useState(false);
 
   const toggleReadMoreLess = () => {
@@ -9,7 +9,7 @@ export default function NeonCard() {
   };
 
   return (
-    <div className="bg-base-200 rounded-3xl xs:mt-12 sm:mt-0 border-base-content border-r-4 border-b-4 shadow-xl p-6 md:p-8 lg:p-10 2xl:p-12 shadow-purple-800/50">
+    <div className="bg-base-200 rounded-3xl xs:mt-12 sm:mt-0 border-base-content border-[6px] shadow-xl p-6 md:p-8 lg:p-10 2xl:p-12 shadow-purple-800/50">
       <h1 className="text-4xl lg:text-5xl text-primary mb-4">I&apos;m Sway!</h1>
       <hr className="hr-lines border-secondary my-2" />
       <p className="text-base-content mt-4">
@@ -90,7 +90,7 @@ export default function NeonCard() {
       <br />
       <div className="flex justify-end mt-4">
         <button
-          className="btn btn-secondary btn-md mb-2 w-40"
+          className="uppercase text-sm p-3 mb-4 w-36 hover:scale-105 ease-in duration-300 shadow-xl shadow-gray-400 rounded-3xl bg-gradient-to-r from-purple-400 to-pink-600 text-white"
           onClick={toggleReadMoreLess}
         >
           {isShowMore ? "Read Less" : "Read More"}

@@ -1,13 +1,11 @@
-import "./globals.css";
+import { Analytics } from "@vercel/analytics/react";
 import { Poppins, Lobster, Neonderthaw, Vibur } from "next/font/google";
 import Providers from "./providers";
-import { Suspense } from "react";
-import Loading from "./loading";
 import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
 import UseScrollToTop from "../hooks/useScrollToTop";
 import ToastNotifications from "../components/ToastNotifications";
-import { Analytics } from "@vercel/analytics/react";
+import "./globals.css";
 
 const lobster = Lobster({
   subsets: ["latin"],
@@ -30,14 +28,13 @@ export const metadata = {
   robots: {
     index: true,
     follow: true,
-    noarchive: true,
-    nosnippet: false,
-    noimageindex: true,
-    nocache: true,
-    notranslate: false,
-    maxSnippet: -1,
-    maxImagePreview: "standard",
-    maxVideoPreview: "standard",
+    googleBot: {
+      index: true,
+      follow: true,
+      "max-video-preview": -1,
+      "max-image-preview": "large",
+      "max-snippet": -1,
+    },
   },
   openGraph: {
     type: "website",
@@ -83,17 +80,17 @@ export default function RootLayout({ children }) {
         />
       </head>
 
-      <body className="relative bg-gradient-to-r from-base-100 to-base-150 bg-cover bg-fixed bg-no-repeat">
-        <main className="backdrop-blur">
-          <Providers>
-            <Navbar />
-            <Suspense fallback={<Loading />}>{children}</Suspense>
+      <body className="relative bg-gradient-to-b from-base-100 to-base-200 bg-cover bg-fixed bg-no-repeat">
+        <Providers>
+          <Navbar />
+          <main className=" backdrop-brightness-100">
+            <Analytics />
+            {children}
             <UseScrollToTop />
             <ToastNotifications />
             <Footer />
-          </Providers>
-          <Analytics />
-        </main>
+          </main>
+        </Providers>
       </body>
     </html>
   );

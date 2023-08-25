@@ -1,24 +1,24 @@
 import { Transition } from "../components/Transition";
-import Image from "next/image";
-import Link from "next/link";
-import TheBG from "../public/images/thebg.png";
+import Hero from "../components/Hero";
+import About from "../components/About";
+import Socials from "../components/Socials";
+import Merch from "../components/Merch";
+import Inquiries from "../components/Inquiries";
 
 export default function Home() {
   return (
     <Transition>
-      <main className="flex justify-center items-center">
-        <div className="pb-40 sm:pt-6 sm:pb-10">
-          <Link href="/about">
-            <Image
-              src={TheBG}
-              width={600}
-              height={400}
-              quality={100}
-              alt="Hero"
-              className="z-50 "
-            />
-          </Link>
-        </div>
+      <main className="flex flex-col">
+        <Hero />
+        <hr className="container mx-auto border-2 border-purple-800/50" />
+        <About />
+        <hr className="container mx-auto border-2 border-purple-800/50" />
+        <Socials />
+        <hr className="container mx-auto border-2 border-purple-800/50" />
+        <Merch />
+        <hr className="container mx-auto border-2 border-purple-800/50" />
+        <Inquiries />
+        <hr className="container mx-auto border-2 border-purple-800/50" />
       </main>
     </Transition>
   );

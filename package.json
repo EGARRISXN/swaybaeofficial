@@ -16,7 +16,7 @@
     "embla-carousel-react": "^8.0.0-rc11",
     "framer-motion": "^10.15.1",
     "hamburger-react": "^2.5.0",
-    "next": "^13.4.12",
+    "next": "^13.4.19",
     "next-themes": "^0.2.1",
     "nextjs": "0.0.3",
     "nodemailer": "^6.9.4",

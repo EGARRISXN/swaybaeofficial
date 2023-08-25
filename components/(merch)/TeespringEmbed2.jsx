@@ -1,6 +1,6 @@
 export default function TeespringEmbed() {
   return (
-    <div className="text-center border-8 text-base-content border-base-content bg-base-200 mt-4 pt-2 rounded-2xl shadow-xl shadow-purple-800/50">
+    <div className="text-center text-base-content border-base-content bg-base-200 border-[6px] rounded-2xl shadow-xl shadow-purple-800/50">
       <h1 className="text-4xl mb-6 mt-2">Offical Swaybae Merchandise</h1>
       <iframe
         className="rounded-b-lg shadow-xl shadow-purple-800/50"
@@ -9,7 +9,7 @@ export default function TeespringEmbed() {
         allowFullScreen={true}
         loading="lazy"
         style={{
-          width: 640,
+          width: 768,
           height: 740,
         }}
       ></iframe>
