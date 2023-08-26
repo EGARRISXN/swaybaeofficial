@@ -57,8 +57,8 @@ const Nav = () => {
   };
 
   return (
-    <header className="fixed w-full h-2 top-0 z-[100] px-2 sm:px-8 md:px-14 2xl:px-28 3xl:px-80">
-      <nav className="relative navbar bg-base-200 rounded-b-3xl shadow-xl shadow-purple-800/50">
+    <header className="fixed w-full h-3 top-0 z-[100] xs:px-2 sm:px-6 md:px-12 lg:px-16 2xl:px-28 3xl:px-80">
+      <nav className="relative navbar xs:py-0 lg:py-3 bg-base-200 rounded-b-3xl shadow-xl shadow-purple-800/50">
         <div className="navbar-start flex px-1">
           <div className="flex h-10 w-10 mask mask-squircle">
             <Link href="/">
@@ -66,7 +66,7 @@ const Nav = () => {
             </Link>
           </div>
         </div>
-        <div className="navbar-center hidden md:flex mx-auto md:px-0 px-1">
+        <div className="navbar-center hidden lg:flex mx-auto md:px-0 px-1">
           <ul className="menu menu-horizontal md:text-xs md:space-x-[-4px] lg:text-[16px] lg:space-x-0 xl:space-x-3 2xl-text-lg 2xl:space-x-5 3xl:text-xl 3xl:space-x-12">
             {links.map((link) => (
               <li key={link.href}>
@@ -83,7 +83,7 @@ const Nav = () => {
         <div className="dropdown" style={{ position: "relative" }}>
           <button
             tabIndex={0}
-            className="md:hidden"
+            className="lg:hidden"
             onClick={toggleDropdown}
             aria-label="Toggle Menu"
             style={{

@@ -1,16 +1,16 @@
 import Image from "next/image";
 import SwayMerch from "../../public/images/SwayMerch.svg";
 
-export default function TeespringEmbed() {
+export default function TeespringEmbed1() {
   return (
-    <div className="text-center justify-center items-center text-base-content border-base-content bg-black border-[8px] rounded-2xl shadow-2xl shadow-purple-800/50">
+    <div className="bg-base-content p-2 rounded-2xl shadow-2xl shadow-purple-800/50 ">
       <Image
         src={SwayMerch}
         alt="Merch"
-        width={740}
-        height={100}
+        width={600}
+        height={150}
         quality={100}
-        className="mx-auto justify-center rounded-t-md"
+        className="mx-auto justify-center rounded-t-lg"
       />
       <iframe
         className="rounded-b-lg shadow-2xl shadow-purple-800/50"
@@ -19,7 +19,7 @@ export default function TeespringEmbed() {
         allowFullScreen={true}
         loading="lazy"
         style={{
-          width: 740,
+          width: 600,
           height: 740,
         }}
       ></iframe>
