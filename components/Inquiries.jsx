@@ -8,9 +8,11 @@ export default function Inquiries() {
   return (
     <div id="inquiries" className="w-full">
       <div className="max-w-[1240px] mx-auto px-2 py-16">
-        <p className="container mx-auto uppercase text-xl tracking-widest font-bold-200 text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-pink-600">
-          Inquiries
-        </p>
+        <div className="container mx-auto flex">
+          <p className="uppercase text-xl tracking-widest font-bold-200 text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-pink-600">
+            Inquiries
+          </p>
+        </div>
         <br />
         <div className="flex flex-col md:flex-row justify-center mx-auto mt-16 xs:px-2 sm:px-10 md:px-12 lg:px-16 xl:px-20 2xl:px-8 3xl:px-8 md:space-x-8 lg:space-x-10">
           <div className="md:w-3/5 lg:w-2/3 xl:w-2/3 2xl:w-3/4 3xl:w-3/4 rounded-3xl shadow-purple-800/50">

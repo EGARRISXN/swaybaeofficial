@@ -27,8 +27,8 @@ export default function VideoPlayer({ vnum }) {
 
   return (
     <iframe
-      className="latestVideoEmbed rounded-2xl box-shadow-2xl"
-      width="550"
+      className="latestVideoEmbed rounded-3xl shadow-2xl"
+      width="350"
       height="365"
       allowFullScreen={true}
       src={videoSrc}

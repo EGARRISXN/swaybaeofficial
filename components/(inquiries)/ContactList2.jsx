@@ -9,7 +9,7 @@ import {
 
 export default function ContactList2() {
   return (
-    <div className="bg-base-200 border-base-content mt-12 border-[6px] rounded-3xl shadow-xl shadow-purple-800/50 py-4">
+    <div className="bg-base-200 border-base-content mt-12 border-[8px] rounded-3xl shadow-xl shadow-purple-800/50 py-4">
       <h3 className="text-2xl mb-4 text-center hover:text-info">
         Let&apos; s Connect!
       </h3>

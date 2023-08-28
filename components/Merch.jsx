@@ -9,9 +9,11 @@ export default function Merch() {
   return (
     <div id="merch" className="w-full">
       <div className="max-w-[1240px] mx-auto py-16">
-        <p className="container mx-auto uppercase text-xl tracking-widest font-bold-200 text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-pink-600">
-          Merch
-        </p>
+        <div className="container mx-auto flex">
+          <p className="uppercase text-xl tracking-widest font-bold-200 text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-pink-600">
+            Merch
+          </p>
+        </div>
         <br />
         <div className="flex justify-center mt-16">
           <motion.div

@@ -20,7 +20,7 @@ export default function SocialCarousel() {
   };
 
   return (
-    <div className="relative mx-auto justify-center items-center border-[6px]border-base-content">
+    <div className="relative mx-auto justify-center items-center">
       <div className="absolute right-0 top-0">
         <button
           onClick={scrollLeft}
@@ -37,21 +37,21 @@ export default function SocialCarousel() {
       </div>
       <div
         id="content"
-        className="carousel h-[500px] px-2 space-x-3 flex items-center justify-start scroll-smooth scrollbar-hide"
+        className="carousel h-[500px] px-3 space-x-10 flex items-center justify-start scroll-smooth scrollbar-hide"
       >
         <motion.div
           initial={{ opacity: 0 }}
           whileInView={{ y: [-50, 0], opacity: 1 }}
           transition={{ duration: 1 }}
         >
-          <div className="card bg-base-200 my-2 border-[6px] border-base-content rounded-3xl shadow-lg shadow-purple-800/50">
+          <div className="card bg-base-200 border-[6px] border-base-content rounded-3xl shadow-lg shadow-purple-800/50">
             <figure>
               <Image
                 src={TwitchCard}
-                alt="Social Media"
+                alt="Twitch"
                 width={350}
                 height={350}
-                className="x"
+                className="hover:scale-125 ease-in duration-300"
               />
             </figure>
             <div className="card-body">
@@ -59,7 +59,7 @@ export default function SocialCarousel() {
               <p>@sway_bae</p>
               <div className="card-actions justify-end">
                 <Link href="https://www.twitch.tv/sway_bae">
-                  <button className="btn btn-md btn-secondary mb-4 my-2 w-36 2xl:w-44 3xl:w-48 3xl:btn-lg p-3 hover:scale-105 ease-in duration-300 shadow-xl shadow-gray-400 rounded-3xl bg-gradient-to-r from-purple-400 to-pink-600 text-white">
+                  <button className="btn btn-md btn-secondary mb-4 w-36 2xl:w-44 3xl:w-48 3xl:btn-lg p-3 hover:scale-125 ease-in duration-300 shadow-xl shadow-gray-400 rounded-3xl bg-gradient-to-r from-purple-400 to-pink-600 text-white">
                     Streaming Now
                   </button>
                 </Link>
@@ -73,14 +73,14 @@ export default function SocialCarousel() {
           whileInView={{ y: [50, 0], opacity: 1 }}
           transition={{ duration: 1 }}
         >
-          <div className="card bg-base-200 my-2 border-[6px] border-base-content rounded-3xl shadow-lg shadow-purple-800/50">
+          <div className="card bg-base-200 border-[6px] border-base-content rounded-3xl shadow-lg shadow-purple-800/50">
             <figure>
               <Image
                 src={TikTokCard}
-                alt="Social Media"
+                alt="TikTok"
                 width={350}
                 height={350}
-                className="x"
+                className="hover:scale-125 ease-in duration-300"
               />
             </figure>
             <div className="card-body">
@@ -88,7 +88,7 @@ export default function SocialCarousel() {
               <p>@sway_baetv</p>
               <div className="card-actions justify-end">
                 <Link href="https://www.tiktok.com/@sway_baetv">
-                  <button className="btn btn-md btn-secondary mb-4 my-2 w-36 2xl:w-44 3xl:w-48 3xl:btn-lg p-3 hover:scale-105 ease-in duration-300 shadow-xl shadow-gray-400 rounded-3xl bg-gradient-to-r from-purple-400 to-pink-600 text-white">
+                  <button className="btn btn-md btn-secondary mb-4 w-36 2xl:w-44 3xl:w-48 3xl:btn-lg p-3 hover:scale-125 ease-in duration-300 shadow-xl shadow-gray-400 rounded-3xl bg-gradient-to-r from-purple-400 to-pink-600 text-white">
                     Follow Along
                   </button>
                 </Link>
@@ -102,14 +102,14 @@ export default function SocialCarousel() {
           whileInView={{ y: [-50, 0], opacity: 1 }}
           transition={{ duration: 1 }}
         >
-          <div className="card bg-base-200 my-2 border-[6px] border-base-content rounded-3xl shadow-lg shadow-purple-800/50">
+          <div className="card bg-base-200 border-[6px] border-base-content rounded-3xl shadow-lg shadow-purple-800/50">
             <figure>
               <Image
                 src={TwitterCard}
-                alt="Social Media"
+                alt="Twitter"
                 width={350}
                 height={350}
-                className="x"
+                className="hover:scale-125 ease-in duration-300 "
               />
             </figure>
             <div className="card-body">
@@ -117,7 +117,7 @@ export default function SocialCarousel() {
               <p>@sway_baetv</p>
               <div className="card-actions justify-end">
                 <Link href="https://twitter.com/sway_baetv">
-                  <button className="btn btn-md btn-secondary mb-4 my-2 w-36 2xl:w-44 3xl:w-48 3xl:btn-lg p-3 hover:scale-105 ease-in duration-300 shadow-xl shadow-gray-400 rounded-3xl bg-gradient-to-r from-purple-400 to-pink-600 text-white">
+                  <button className="btn btn-md btn-secondary mb-4 w-36 2xl:w-44 3xl:w-48 3xl:btn-lg p-3 hover:scale-125 ease-in duration-300 shadow-xl shadow-gray-400 rounded-3xl bg-gradient-to-r from-purple-400 to-pink-600 text-white">
                     Stay Informed
                   </button>
                 </Link>
@@ -131,14 +131,14 @@ export default function SocialCarousel() {
           whileInView={{ y: [50, 0], opacity: 1 }}
           transition={{ duration: 1 }}
         >
-          <div className="card bg-base-200 my-2 border-[6px] border-base-content rounded-3xl shadow-lg shadow-purple-800/50">
+          <div className="card bg-base-200 border-[6px] border-base-content rounded-3xl shadow-lg shadow-purple-800/50">
             <figure>
               <Image
                 src={InstagramCard}
-                alt="Social Media"
+                alt="Instagram"
                 width={350}
                 height={350}
-                className="x"
+                className="hover:scale-125 ease-in duration-300 "
               />
             </figure>
             <div className="card-body">
@@ -146,7 +146,7 @@ export default function SocialCarousel() {
               <p>@sway_baetv</p>
               <div className="card-actions justify-end">
                 <Link href="https://www.instagram.com/sway_baetv">
-                  <button className="btn btn-md btn-secondary mb-4 my-2 w-36 2xl:w-44 3xl:w-48 3xl:btn-lg p-3 hover:scale-105 ease-in duration-300 shadow-xl shadow-gray-400 rounded-3xl bg-gradient-to-r from-purple-400 to-pink-600 text-white">
+                  <button className="btn btn-md btn-secondary mb-4 w-36 2xl:w-44 3xl:w-48 3xl:btn-lg p-3 hover:scale-125 ease-in duration-300 shadow-xl shadow-gray-400 rounded-3xl bg-gradient-to-r from-purple-400 to-pink-600 text-white">
                     Picture it
                   </button>
                 </Link>
@@ -160,14 +160,14 @@ export default function SocialCarousel() {
           whileInView={{ y: [-50, 0], opacity: 1 }}
           transition={{ duration: 1 }}
         >
-          <div className="card bg-base-200 my-2 border-[6px] border-base-content rounded-3xl shadow-lg shadow-purple-800/50">
+          <div className="card bg-base-200 border-[6px] border-base-content rounded-3xl shadow-lg shadow-purple-800/50">
             <figure>
               <Image
                 src={DiscordCard}
-                alt="Social Media"
+                alt="Discord"
                 width={350}
                 height={350}
-                className="x"
+                className="hover:scale-125 ease-in duration-300 "
               />
             </figure>
             <div className="card-body">
@@ -175,7 +175,7 @@ export default function SocialCarousel() {
               <p>@sway_bae</p>
               <div className="card-actions justify-end">
                 <Link href="https://discord.com/invite/K73uN9k">
-                  <button className="btn btn-md btn-secondary mb-4 my-2 w-36 2xl:w-44 3xl:w-48 3xl:btn-lg p-3 hover:scale-105 ease-in duration-300 shadow-xl shadow-gray-400 rounded-3xl bg-gradient-to-r from-purple-400 to-pink-600 text-white">
+                  <button className="btn btn-md btn-secondary mb-4 w-36 2xl:w-44 3xl:w-48 3xl:btn-lg p-3 hover:scale-125 ease-in duration-300 shadow-xl shadow-gray-400 rounded-3xl bg-gradient-to-r from-purple-400 to-pink-600 text-white">
                     Come Hang
                   </button>
                 </Link>
@@ -189,22 +189,22 @@ export default function SocialCarousel() {
           whileInView={{ y: [50, 0], opacity: 1 }}
           transition={{ duration: 1 }}
         >
-          <div className="card bg-base-200 my-2 border-[6px] border-base-content rounded-3xl shadow-lg shadow-purple-800/50">
+          <div className="card bg-base-200 border-[6px] border-base-content rounded-3xl shadow-lg shadow-purple-800/50">
             <figure>
               <Image
                 src={YoutubeCard}
-                alt="Social Media"
+                alt="YouTube"
                 width={350}
                 height={350}
-                className="x"
+                className="hover:scale-125 ease-in duration-300 "
               />
             </figure>
             <div className="card-body">
-              <h1 className="card-title text-3xl">Youtube</h1>
+              <h1 className="card-title text-3xl">YouTube</h1>
               <p>@swaybaetv</p>
               <div className="card-actions justify-end">
                 <Link href="https://m.youtube.com/channel/UCbpQhE5NYQ05pSp_DJJQxCA">
-                  <button className="btn btn-md btn-secondary mb-4 my-2 w-36 2xl:w-44 3xl:w-48 3xl:btn-lg p-3 hover:scale-105 ease-in duration-300 shadow-xl shadow-gray-400 rounded-3xl bg-gradient-to-r from-purple-400 to-pink-600 text-white">
+                  <button className="btn btn-md btn-secondary mb-4 w-36 2xl:w-44 3xl:w-48 3xl:btn-lg p-3 hover:scale-125 ease-in duration-300 shadow-xl shadow-gray-400 rounded-3xl bg-gradient-to-r from-purple-400 to-pink-600 text-white">
                     Watch This
                   </button>
                 </Link>
@@ -218,14 +218,14 @@ export default function SocialCarousel() {
           whileInView={{ y: [-50, 0], opacity: 1 }}
           transition={{ duration: 1 }}
         >
-          <div className="card bg-base-200 my-2 border-[6px] border-base-content rounded-3xl shadow-lg shadow-purple-800/50">
+          <div className="card bg-base-200 border-[6px] border-base-content rounded-3xl shadow-lg shadow-purple-800/50">
             <figure>
               <Image
                 src={SpotifyCard}
-                alt="Social Media"
+                alt="Spotify"
                 width={350}
                 height={350}
-                className="x"
+                className="hover:scale-125 ease-in duration-300 "
               />
             </figure>
             <div className="card-body">
@@ -233,7 +233,7 @@ export default function SocialCarousel() {
               <p>@Sway Bae</p>
               <div className="card-actions justify-end">
                 <Link href="https://open.spotify.com/user/31ozjeaf4ddidr2rgqunryvetrmq">
-                  <button className="btn btn-md btn-secondary mb-4 my-2 w-36 2xl:w-44 3xl:w-48 3xl:btn-lg p-3 hover:scale-105 ease-in duration-300 shadow-xl shadow-gray-400 rounded-3xl bg-gradient-to-r from-purple-400 to-pink-600 text-white">
+                  <button className="btn btn-md btn-secondary mb-4 w-36 2xl:w-44 3xl:w-48 3xl:btn-lg p-3 hover:scale-125 ease-in duration-300 shadow-xl shadow-gray-400 rounded-3xl bg-gradient-to-r from-purple-400 to-pink-600 text-white">
                     Listen Up
                   </button>
                 </Link>
