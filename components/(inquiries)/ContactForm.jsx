@@ -1,6 +1,7 @@
 "use client";
 import { useState } from "react";
 import { toast } from "react-toastify";
+import UniversalButton from "../../utils/UniversalButton";
 
 export default function ContactForm() {
   const [formData, setFormData] = useState({
@@ -142,14 +143,9 @@ export default function ContactForm() {
       </div>
       <hr className="my-6 border-secondary" />
       <div className="flex justify-end">
-        <button
-          type="submit"
-          onClick={notify}
-          disabled={loading}
-          className="btn btn-md btn-secondary mb-4 mt-2 w-36 2xl:w-44 3xl:w-48 3xl:btn-lg p-3 hover:scale-105 ease-in duration-300 shadow-xl shadow-gray-400 rounded-3xl bg-gradient-to-r from-purple-400 to-pink-600 text-white"
-        >
+        <UniversalButton type="submit" onClick={notify} disabled={loading}>
           Send Message
-        </button>
+        </UniversalButton>
       </div>
     </form>
   );

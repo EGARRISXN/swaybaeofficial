@@ -1,4 +1,5 @@
 import Link from "next/link";
+import UniversalButton from "../../utils/UniversalButton";
 
 export default function MediaKitContainer() {
   return (
@@ -9,9 +10,7 @@ export default function MediaKitContainer() {
       <hr className="hr-lines border-secondary my-2" />
       <div className="card-actions justify-end">
         <Link href="/about">
-          <button className="uppercase text-sm p-3 my-4 w-36 hover:scale-105 ease-in duration-300 shadow-xl shadow-gray-400 rounded-3xl bg-gradient-to-r from-purple-400 to-pink-600 text-white">
-            Let&#39;s Go!
-          </button>
+          <UniversalButton>Let&#39;s Go!</UniversalButton>
         </Link>
       </div>
     </div>

@@ -1,7 +1,6 @@
 "use client";
 import ContactForm from "../components/(inquiries)/ContactForm";
-import ContactList1 from "../components/(inquiries)/ContactList1";
-import ContactList2 from "../components/(inquiries)/ContactList2";
+import ContactSocials from "../components/(inquiries)/ContactSocials";
 import { motion } from "framer-motion";
 
 export default function Inquiries() {
@@ -24,14 +23,13 @@ export default function Inquiries() {
               <ContactForm />
             </motion.div>
           </div>
-
           <div className="hidden md:block md:w-2/5 lg:w-1/3 xl:w-1/3 2xl:w-1/4 3xl:w-1/4 rounded-3xl shadow-purple-800/50">
             <motion.div
               initial={{ opacity: 0 }}
               whileInView={{ y: [-50, 0], opacity: 1 }}
               transition={{ duration: 1 }}
             >
-              <ContactList1 />
+              <ContactSocials />
             </motion.div>
           </div>
           <div className="md:hidden rounded-3xl shadow-purple-800/50">
@@ -40,7 +38,7 @@ export default function Inquiries() {
               whileInView={{ y: [-50, 0], opacity: 1 }}
               transition={{ duration: 1 }}
             >
-              <ContactList2 />
+              <ContactSocials mobileStyle />
             </motion.div>
           </div>
         </div>

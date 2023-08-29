@@ -3,9 +3,9 @@ import { Poppins, Lobster, Neonderthaw, Vibur } from "next/font/google";
 import Providers from "./providers";
 import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
-import UseScrollToTop from "../hooks/useScrollToTop";
-import ToastNotifications from "../components/ToastNotifications";
-import "./globals.css";
+import UseScrollToTop from "../utils/useScrollToTop";
+import ToastNotifications from "../utils/ToastNotifications";
+import "../styles/globals.css";
 
 const lobster = Lobster({
   subsets: ["latin"],

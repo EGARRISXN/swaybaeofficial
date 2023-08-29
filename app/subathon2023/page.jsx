@@ -1,4 +1,4 @@
-import { Transition } from "../../components/Transition";
+import { Transition } from "../../utils/Transition";
 import Subathon from "../../components/Subathon";
 
 export default function SubathonPage() {

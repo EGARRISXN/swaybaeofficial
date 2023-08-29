@@ -1,4 +1,4 @@
-import { Transition } from "../../components/Transition";
+import { Transition } from "../../utils/Transition";
 import About from "../../components/About";
 
 export default function AboutPage() {

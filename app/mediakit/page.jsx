@@ -1,4 +1,4 @@
-import { Transition } from "../../components/Transition";
+import { Transition } from "../../utils/Transition";
 import MediaKit from "../../components/MediaKit";
 
 export default function MediaKitPage() {

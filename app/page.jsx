@@ -1,4 +1,4 @@
-import { Transition } from "../components/Transition";
+import { Transition } from "../utils/Transition";
 import Hero from "../components/Hero";
 import About from "../components/About";
 import Socials from "../components/Socials";

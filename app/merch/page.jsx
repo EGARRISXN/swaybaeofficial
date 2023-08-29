@@ -1,4 +1,4 @@
-import { Transition } from "../../components/Transition";
+import { Transition } from "../../utils/Transition";
 import Merch from "../../components/Merch";
 
 export default function MerchPage() {

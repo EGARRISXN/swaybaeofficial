@@ -1,4 +1,4 @@
-import { Transition } from "../../components/Transition";
+import { Transition } from "../../utils/Transition";
 import Inquiries from "../../components/Inquiries";
 
 export default function InquiriesPage() {

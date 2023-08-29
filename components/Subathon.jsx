@@ -1,4 +1,3 @@
-import { Transition } from "../components/Transition";
 import Table1Modal from "../components/(subathon)/Table1Modal";
 import Table2Modal from "../components/(subathon)/Table2Modal";
 import Table3Modal from "../components/(subathon)/Table3Modal";

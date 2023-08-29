@@ -1,4 +1,4 @@
-import { Transition } from "../../components/Transition";
+import { Transition } from "../../utils/Transition";
 import Socials from "../../components/Socials";
 
 export default function SocialsPage() {
