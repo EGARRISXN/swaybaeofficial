@@ -94,7 +94,7 @@ export default function SocialCarousel() {
       </div>
       <div
         id="content"
-        className="carousel h-[500px] px-3 space-x-10 flex items-center justify-start scroll-smooth scrollbar-hide"
+        className="carousel h-[500px] px-4 space-x-6 flex items-center justify-start scroll-smooth scrollbar-hide rounded-3xl shadow-lg shadow-purple-800/50"
       >
         {socialMediaData.map((data, index) => (
           <SocialCard key={index} {...data} />

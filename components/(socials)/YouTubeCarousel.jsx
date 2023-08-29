@@ -1,10 +1,10 @@
 "use client";
 import { useEffect, useCallback } from "react";
 import useEmblaCarousel from "embla-carousel-react";
-import YouTubeEmbed3 from "./YouTubeEmbed3";
+import YouTubeEmbed from "./YouTubeEmbed";
 import { FiChevronRight, FiChevronLeft } from "react-icons/fi";
 
-export default function NewYoutubeCarousel() {
+export default function YoutubeCarousel() {
   const [emblaRef, emblaApi] = useEmblaCarousel({
     align: "center",
     draggable: true,
@@ -25,7 +25,7 @@ export default function NewYoutubeCarousel() {
   }, [emblaApi]);
 
   return (
-    <div className="relative px-4 flex border-[6px] rounded-3xl border-base-content shadow-purple-800/50">
+    <div className="relative mx-auto justify-center">
       <div className="absolute right-0 top-0">
         <button
           onClick={scrollPrev}
@@ -41,28 +41,27 @@ export default function NewYoutubeCarousel() {
         </button>
       </div>
       <div
-        className="embla__viewport carousel h-[500px] items-center justify-start scroll-smooth scrollbar-hide"
+        className="embla__viewport carousel h-[500px]  items-center justify-start scroll-smooth scrollbar-hide  rounded-3xl shadow-lg shadow-purple-800/50"
         ref={emblaRef}
-        style={{ width: 355 }}
       >
         <div
-          className="embla__container flex space-x-4 px-2"
-          style={{ width: 355 }}
+          className="embla__container flex space-x-4 mx-2"
+          style={{ width: 550 }}
         >
           <div className="embla__slide w-full  shadow-purple-800/50">
-            <YouTubeEmbed3 vnum={0} />
+            <YouTubeEmbed vnum={0} />
           </div>
           <div className="embla__slide w-full  shadow-purple-800/50">
-            <YouTubeEmbed3 vnum={1} />
+            <YouTubeEmbed vnum={1} />
           </div>
           <div className="embla__slide w-full  shadow-purple-800/50">
-            <YouTubeEmbed3 vnum={2} />
+            <YouTubeEmbed vnum={2} />
           </div>
           <div className="embla__slide w-full  shadow-purple-800/50">
-            <YouTubeEmbed3 vnum={3} />
+            <YouTubeEmbed vnum={3} />
           </div>
           <div className="embla__slide w-full  shadow-purple-800/50">
-            <YouTubeEmbed3 vnum={4} />
+            <YouTubeEmbed vnum={4} />
           </div>
         </div>
       </div>

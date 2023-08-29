@@ -9,8 +9,6 @@
     "lint": "next lint"
   },
   "dependencies": {
-    "@tailwindcss/aspect-ratio": "^0.4.2",
-    "@tailwindcss/container-queries": "^0.1.1",
     "@vercel/analytics": "^1.0.2",
     "animejs": "^3.2.1",
     "autoprefixer": "10.4.14",
@@ -32,6 +30,8 @@
   },
   "devDependencies": {
     "@svgr/webpack": "^8.0.1",
+    "@tailwindcss/aspect-ratio": "^0.4.2",
+    "@tailwindcss/container-queries": "^0.1.1",
     "@tailwindcss/typography": "^0.5.9",
     "daisyui": "3.2.1",
     "eslint": "^8.47.0",

@@ -18,7 +18,7 @@ export default function SocialCard({
       whileInView={{ y: [-50, 0], opacity: 1 }}
       transition={{ duration: 1 }}
     >
-      <div className="card p-4 bg-base-200 border-[6px] border-base-content rounded-3xl shadow-lg shadow-purple-800/50">
+      <div className="card h-[350px] w-[300px] p-4 bg-base-200 border-[6px] border-base-content rounded-3xl shadow-lg shadow-purple-800/50">
         <figure>
           <Image
             src={imageSrc}

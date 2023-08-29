@@ -1,7 +1,7 @@
 import Image from "next/image";
 import SwayMerch from "../../public/images/SwayMerch.svg";
 
-export default function TeespringEmbed1() {
+export default function TeespringEmbed4() {
   return (
     <div className="bg-base-content p-2 rounded-2xl shadow-2xl shadow-purple-800/50 ">
       <Image

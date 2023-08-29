@@ -2,7 +2,7 @@
 import TeespringEmbed1 from "../components/(merch)/TeespringEmbed1";
 import TeespringEmbed2 from "../components/(merch)/TeespringEmbed2";
 import TeespringEmbed4 from "../components/(merch)/TeespringEmbed4";
-import TeespringEmbed3 from "../components/(merch)/TeespringEmbed3";
+import TeespringEmbed44 from "../components/(merch)/TeespringEmbed44";
 import { motion } from "framer-motion";
 
 export default function Merch() {
@@ -56,7 +56,7 @@ export default function Merch() {
             className="shadow-2xl shadow-purple-800/50"
           >
             <div className="block sm:hidden rounded-3xl shadow-xl shadow-purple-800/50">
-              <TeespringEmbed3 />
+              <TeespringEmbed44 />
             </div>
           </motion.div>
         </div>
