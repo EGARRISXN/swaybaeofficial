@@ -60,7 +60,7 @@ export default function ContactForm() {
 
   return (
     <form
-      className="bg-base-200 border-base-content border-[8px] rounded-3xl shadow-xl shadow-purple-800/50 px-4 xs:px-8 pt-4 pb-4 lg:px-12 lg:pt-8 xl:px-16 xl:pt-12 2xl:px-20"
+      className="bg-base-200 border-base-content border-[8px] rounded-xl shadow-xl shadow-purple-800/50 px-4 xs:px-8 pt-4 pb-4 lg:px-12 lg:pt-8 xl:px-16 xl:pt-12 2xl:px-20"
       onSubmit={handleSubmit}
     >
       <h1 className="text-4xl lg:text-5xl mt-4 lg:mt-2 xl:mt-0 mb-4 hover:text-info">

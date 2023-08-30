@@ -95,7 +95,7 @@ const Nav = () => {
           {isOpen && (
             <ul
               tabIndex={0}
-              className="dropdown-content menu menu-sm p-1 z-[100] w-60 bg-base-200 text-base-content rounded-b-2xl shadow-2xl shadow-purple-800/50"
+              className="dropdown-content menu menu-sm p-1 z-[100] w-60 bg-base-200 text-base-content rounded-b-2xl shadow-xl shadow-purple-800/50"
               onKeyDown={(e) => {
                 if (e.key === "Escape") {
                   closeDropdown();

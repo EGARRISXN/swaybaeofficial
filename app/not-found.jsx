@@ -8,7 +8,7 @@ export default function NotFound() {
         <h1>404 Page</h1>
         <p className="text-primary">This is embarrasing...</p>
         <Link href="/">
-          <button className="btn-sm rounded-3xl btn-secondary text-base-content mb-4">
+          <button className="btn-sm rounded-xl btn-secondary text-base-content mb-4">
             Go Home
           </button>
         </Link>

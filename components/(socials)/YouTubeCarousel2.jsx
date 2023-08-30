@@ -41,7 +41,7 @@ export default function YoutubeCarousel2() {
         </button>
       </div>
       <div
-        className="embla__viewport flex carousel h-[500px]  items-center justify-start scroll-smooth scrollbar-hide rounded-3xl shadow-lg shadow-purple-800/50"
+        className="embla__viewport flex carousel h-[500px]  items-center justify-start scroll-smooth scrollbar-hide rounded-xl shadow-lg shadow-purple-800/50"
         ref={emblaRef}
       >
         <div

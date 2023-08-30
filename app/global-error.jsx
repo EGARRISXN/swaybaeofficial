@@ -9,7 +9,7 @@ export default function GlobalError({ error, reset }) {
               <h2>Something went wrong!</h2>
               <button
                 onClick={() => reset()}
-                className="btn-sml rounded-3xl btn-secondary text-base-content mb-4"
+                className="btn-sml rounded-xl btn-secondary text-base-content mb-4"
               >
                 Try again
               </button>

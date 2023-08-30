@@ -1,6 +1,5 @@
 "use client";
 import { useState } from "react";
-import UniversalButton from "../../utils/UniversalButton";
 
 export default function AboutCard() {
   const [isShowMore, setIsShowMore] = useState(false);
@@ -90,9 +89,12 @@ export default function AboutCard() {
       </p>
       <br />
       <div className="flex justify-end">
-        <UniversalButton onClick={toggleReadMoreLess}>
+        <button
+          className="btn btn-md btn-secondary mb-4 w-36 2xl:w-44 3xl:w-48 3xl:btn-lg p-3 hover:scale-125 ease-in duration-300 shadow-xl shadow-gray-400 rounded-xl bg-gradient-to-r from-purple-400 to-pink-600 text-white"
+          onClick={toggleReadMoreLess}
+        >
           {isShowMore ? "Read Less" : "Read More"}
-        </UniversalButton>
+        </button>
       </div>
       <hr className="my-4 border-secondary" />
     </div>

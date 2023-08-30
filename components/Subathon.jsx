@@ -8,7 +8,7 @@ export default function Subathon2023() {
   return (
     <div id="merch" className="w-full">
       <div className="max-w-[1240px] mx-auto px-2 py-16">
-        <div className="container mx-auto flex">
+        <div className="container mx-auto flex mt-2">
           <p className="uppercase text-xl tracking-widest font-bold-200 text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-pink-600">
             Subathon
           </p>
@@ -18,7 +18,7 @@ export default function Subathon2023() {
           <p className="text-2xl font-semibold text-center pb-10 md:hidden">
             More Details Below!
           </p>
-          <div className="flex flex-col xs:px-4 sm:mr-4 rounded-3xl">
+          <div className="flex flex-col xs:px-4 sm:mr-4 rounded-xl">
             <SubPoster />
             <p className="p-4 font-semibold text-sm text-secondary hover:text-primary text-center justify-center md:hidden">
               **Click the title to be redirected

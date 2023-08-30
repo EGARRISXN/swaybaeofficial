@@ -47,7 +47,7 @@ export default function Table2Modal() {
                   </svg>
                 </button>
               </div>
-              <div className="w-full overflow-x-auto bg-base-200 border-base-content rounded-2xl shadow-2xl border-4 shadow-purple-800/50 p-2">
+              <div className="w-full overflow-x-auto bg-base-200 border-base-content rounded-xl shadow-xl border-4 shadow-purple-800/50 p-2">
                 <div className="table-responsive">
                   <table className="table table-xs">
                     <thead className="mx-auto">

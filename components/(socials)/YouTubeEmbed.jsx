@@ -26,12 +26,14 @@ export default function VideoPlayer({ vnum }) {
   }, [vnum]);
 
   return (
-    <iframe
-      className="latestVideoEmbed rounded-2xl shadow-2xl"
-      width="550"
-      height="350"
-      allowFullScreen={true}
-      src={videoSrc}
-    ></iframe>
+    <div className="aspect-h-9 aspect-w-16 rounded-2xl shadow-xl shadow-purple-800/50 border-[8px] text-center border-base-content">
+      <iframe
+        className="latestVideoEmbed rounded-lg shadow-lg"
+        src={videoSrc}
+        allowFullScreen={true}
+        width="100%"
+        height="100%"
+      ></iframe>
+    </div>
   );
 }

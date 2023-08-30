@@ -45,7 +45,7 @@ export default function ContactSocials({ mobileStyle }) {
     <div
       className={`bg-base-200 border-base-content ${
         mobileStyle ? "mt-12" : ""
-      } border-[8px] rounded-3xl shadow-xl shadow-purple-800/50 ${
+      } border-[8px] rounded-xl shadow-xl shadow-purple-800/50 ${
         mobileStyle ? "py-4" : "py-8"
       } px-6`}
     >

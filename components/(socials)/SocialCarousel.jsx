@@ -23,7 +23,7 @@ export default function SocialCarousel() {
       alt: "Twitch",
       title: "Twitch",
       username: "@sway_bae",
-      linkText: "Streaming Now",
+      linkText: "Stream",
       linkUrl: "https://www.twitch.tv/sway_bae",
     },
     {
@@ -31,7 +31,7 @@ export default function SocialCarousel() {
       alt: "TikTok",
       title: "TikTok",
       username: "@sway_baetv",
-      linkText: "Follow Along",
+      linkText: "Follow",
       linkUrl: "https://www.tiktok.com/@sway_baetv",
     },
     {
@@ -39,7 +39,7 @@ export default function SocialCarousel() {
       alt: "Twitter",
       title: "Twitter",
       username: "@sway_baetv",
-      linkText: "Stay Informed",
+      linkText: "Tweet",
       linkUrl: "https://twitter.com/sway_baetv",
     },
     {
@@ -47,7 +47,7 @@ export default function SocialCarousel() {
       alt: "Instagram",
       title: "Instagram",
       username: "@sway_baetv",
-      linkText: "Picture it",
+      linkText: "Picture",
       linkUrl: "https://www.instagram.com/sway_baetv",
     },
     {
@@ -55,7 +55,7 @@ export default function SocialCarousel() {
       alt: "Discord",
       title: "Discord",
       username: "@sway_bae",
-      linkText: "Come Hang",
+      linkText: "Hang",
       linkUrl: "https://discord.com/invite/K73uN9k",
     },
     {
@@ -63,21 +63,21 @@ export default function SocialCarousel() {
       alt: "YouTube",
       title: "YouTube",
       username: "@swaybaetv",
-      linkText: "Watch This",
+      linkText: "Watch",
       linkUrl: "https://m.youtube.com/channel/UCbpQhE5NYQ05pSp_DJJQxCA",
     },
     {
       imageSrc: SpotifyCard,
       alt: "Spotify",
       title: "Spotify",
-      username: "@Sway Bae",
-      linkText: "Listen Up",
+      username: "@Swaybae",
+      linkText: "Listen",
       linkUrl: "https://open.spotify.com/user/31ozjeaf4ddidr2rgqunryvetrmq",
     },
   ];
 
   return (
-    <div className="relative mx-auto justify-center items-center">
+    <div className="relative mx-auto">
       <div className="absolute right-0 top-0">
         <button
           onClick={scrollLeft}
@@ -94,7 +94,7 @@ export default function SocialCarousel() {
       </div>
       <div
         id="content"
-        className="carousel h-[500px] px-4 space-x-6 flex items-center justify-start scroll-smooth scrollbar-hide rounded-3xl shadow-lg shadow-purple-800/50"
+        className="carousel flex sm:justify-start gap-8 sm:gap-16 scroll-smooth scrollbar-hide rounded-xl"
       >
         {socialMediaData.map((data, index) => (
           <SocialCard key={index} {...data} />

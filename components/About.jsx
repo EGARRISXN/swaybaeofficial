@@ -7,7 +7,7 @@ export default function About() {
   return (
     <div id="about" className="w-full">
       <div className="max-w-[1240px] mx-auto px-2 py-16">
-        <div className="container mx-auto flex">
+        <div className="container mx-auto flex mt-2">
           <p className="uppercase text-xl tracking-widest font-bold-200 text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-pink-600">
             About
           </p>

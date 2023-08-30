@@ -1,8 +1,5 @@
-"use client";
 import Link from "next/link";
 import Image from "next/image";
-import { motion } from "framer-motion";
-import UniversalButton from "../../utils/UniversalButton";
 
 export default function SocialCard({
   imageSrc,
@@ -13,31 +10,31 @@ export default function SocialCard({
   linkUrl,
 }) {
   return (
-    <motion.div
-      initial={{ opacity: 0 }}
-      whileInView={{ y: [-50, 0], opacity: 1 }}
-      transition={{ duration: 1 }}
-    >
-      <div className="card h-[350px] w-[300px] p-4 bg-base-200 border-[6px] border-base-content rounded-3xl shadow-lg shadow-purple-800/50">
-        <figure>
+    <div className="card flex mx-auto text-center p-4 h-full w-full mt-16 bg-base-content border-[8px] text-base-200 border-info rounded-2xl">
+      <figure>
+        <Link href={linkUrl}>
           <Image
             src={imageSrc}
             alt={alt}
-            width={350}
-            height={350}
-            className="hover:scale-125 ease-in duration-300"
+            width="100%"
+            height="100%"
+            className="hover:scale-125 ease-in duration-300 rounded-t-sm"
           />
-        </figure>
-        <div className="card-body p-4">
-          <h1 className="card-title text-3xl">{title}</h1>
-          <p>{username}</p>
-          <div className="card-actions flex justify-end">
-            <Link href={linkUrl}>
-              <UniversalButton>{linkText}</UniversalButton>
-            </Link>
-          </div>
+        </Link>
+      </figure>
+      <div className="card-body">
+        <h1 className="card-title text-xl text-center justify-center">
+          {title}
+        </h1>
+        <p>{username}</p>
+        <div className="card-actions justify-center">
+          <Link href={linkUrl}>
+            <button className="btn btn-secondary w-32 h-10 hover:scale-110 ease-in duration-300 shadow-xl shadow-gray-400 rounded-xl bg-gradient-to-r from-purple-400 to-pink-600 text-white">
+              {linkText}
+            </button>
+          </Link>
         </div>
       </div>
-    </motion.div>
+    </div>
   );
 }

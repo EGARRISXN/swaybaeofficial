@@ -14,9 +14,9 @@ export default function InstagramEmbed() {
   }, []);
 
   return (
-    <div className="ig ">
+    <div className="aspect-w-9 aspect-h-16">
       <blockquote
-        className="instagram-media"
+        className="instagram-media rounded-2xl shadow-2xl shadow-purple-800/50"
         title="sway_baetv on Instagram"
         data-instgrm-permalink="https://www.instagram.com/sway_baetv/?utm_source=ig_embed&utm_campaign=loading"
         data-instgrm-version="14"

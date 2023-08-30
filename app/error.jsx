@@ -14,7 +14,7 @@ export default function Error({ error, reset }) {
         <p className="text-primary">This is embarrasing...</p>
         <button
           onClick={reset}
-          className="btn-sm rounded-3xl btn-secondary text-base-content mb-4 mt-2"
+          className="btn-sm rounded-xl btn-secondary text-base-content mb-4 mt-2"
         >
           Retry
         </button>
