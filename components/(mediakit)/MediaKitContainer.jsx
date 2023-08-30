@@ -9,7 +9,7 @@ export default function MediaKitContainer() {
       <p>In the meantime, go checkout the rest of the site!</p>
       <hr className="hr-lines border-secondary my-2" />
       <div className="card-actions justify-end">
-        <Link href="/about">
+        <Link href="/inquiries">
           <UniversalButton>Let&#39;s Go!</UniversalButton>
         </Link>
       </div>

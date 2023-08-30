@@ -9,10 +9,10 @@ export default function AboutCard() {
   };
 
   return (
-    <div className="bg-base-200 rounded-3xl xs:mt-12 sm:mt-0 border-base-content border-[8px] shadow-xl p-6 md:p-8 lg:p-10 2xl:p-12 shadow-purple-800/50">
+    <div className="bg-base-content border-info text-base-200 rounded-3xl xs:mt-12 sm:mt-0  border-[8px] shadow-xl p-6 md:p-8 lg:p-10 2xl:p-12 shadow-purple-800/50">
       <h1 className="text-4xl lg:text-5xl text-primary mb-4">I&apos;m Sway!</h1>
       <hr className="hr-lines border-secondary my-2" />
-      <p className="text-base-content mt-4">
+      <p className="mt-4">
         I&apos;m a Full-Time Content Creator as of June 2021. I stream nearly
         daily on Twitch, with daily uploads on YouTube.
         <br />

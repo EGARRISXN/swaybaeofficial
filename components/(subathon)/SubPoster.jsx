@@ -12,7 +12,6 @@ import Eight from "../../public/images/8.svg";
 import Nine from "../../public/images/9.svg";
 import Ten from "../../public/images/10.svg";
 import Eleven from "../../public/images/11.svg";
-import Twelve from "../../public/images/12.svg";
 import Thirteen from "../../public/images/13.svg";
 import Fourteen from "../../public/images/14.svg";
 import Fifteen from "../../public/images/15.svg";
@@ -30,18 +29,6 @@ import TwentySix from "../../public/images/26.svg";
 import TwentySeven from "../../public/images/27.svg";
 import TwentyEight from "../../public/images/28.svg";
 import TwentyNine from "../../public/images/29.svg";
-import Thirty from "../../public/images/30.svg";
-import ThirtyOne from "../../public/images/31.svg";
-import ThirtyTwo from "../../public/images/32.svg";
-import ThirtyThree from "../../public/images/33.svg";
-import ThirtyFour from "../../public/images/34.svg";
-import ThirtyFive from "../../public/images/35.svg";
-import ThirtySix from "../../public/images/36.svg";
-import ThirtySeven from "../../public/images/37.svg";
-import ThirtyEight from "../../public/images/38.svg";
-import ThirtyNine from "../../public/images/39.svg";
-import Forty from "../../public/images/40.svg";
-import FortyOne from "../../public/images/41.svg";
 
 export default function SubPoster() {
   const images = [
@@ -56,6 +43,7 @@ export default function SubPoster() {
     { src: Nine, alt: "9", link: "https://www.twitch.tv/videos/1899223254" },
     { src: Ten, alt: "10", link: "https://www.twitch.tv/videos/1899225322" },
     { src: Eleven, alt: "11" },
+
     {
       src: Thirteen,
       alt: "13",
@@ -120,26 +108,14 @@ export default function SubPoster() {
       alt: "29",
       link: "https://www.twitch.tv/videos/1903447744",
     },
-    { src: Thirty, alt: "30" },
-    { src: ThirtyOne, alt: "31" },
-    { src: ThirtyTwo, alt: "32" },
-    { src: ThirtyThree, alt: "33" },
-    { src: ThirtyFour, alt: "34" },
-    { src: ThirtyFive, alt: "35" },
-    { src: ThirtySix, alt: "36" },
-    { src: ThirtySeven, alt: "37" },
-    { src: ThirtyEight, alt: "38" },
-    { src: ThirtyNine, alt: "39" },
-    { src: Forty, alt: "40" },
-    { src: FortyOne, alt: "41" },
   ];
 
   // Split the images into two groups
-  const firstGroup = images.slice(0, 20);
-  const secondGroup = images.slice(20);
+  const firstGroup = images.slice(0, 14);
+  const secondGroup = images.slice(14);
 
   return (
-    <div className=" bg-white rounded-xl shadow-xl p-2 shadow-purple-800/50  border-base-content border-[6px]">
+    <div className="bg-white rounded-xl shadow-xl p-2 shadow-purple-800/50  border-base-content border-[8px]">
       <div className="justify-center">
         <Link href="https://www.twitch.tv/sway_bae">
           <Image

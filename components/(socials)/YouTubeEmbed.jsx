@@ -26,13 +26,13 @@ export default function VideoPlayer({ vnum }) {
   }, [vnum]);
 
   return (
-    <div className="aspect-h-9 aspect-w-16 rounded-2xl shadow-xl shadow-purple-800/50 border-[8px] text-center border-base-content">
+    <div className="aspect-h-9 aspect-w-16 rounded-2xl  border-[10px] border-base-content shadow-2xl shadow-purple-800/50">
       <iframe
-        className="latestVideoEmbed rounded-lg shadow-lg"
         src={videoSrc}
         allowFullScreen={true}
         width="100%"
         height="100%"
+        className="latestVideoEmbed rounded-xl"
       ></iframe>
     </div>
   );

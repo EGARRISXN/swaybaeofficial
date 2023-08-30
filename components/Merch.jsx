@@ -13,15 +13,14 @@ export default function Merch() {
           </p>
         </div>
         <br />
-        <div className="flex justify-center mx-4 sm:mx-auto mt-16">
+
+        <div className="flex justify-center mx-4 sm:mx-auto mt-16 shadow-purple-800/50">
           <motion.div
             initial={{ x: 0, opacity: 0 }}
             whileInView={{ x: [250, 0], opacity: 1 }}
             transition={{ duration: 1 }}
           >
-            <div className="rounded-2xl shadow-2xl shadow-purple-800/50">
-              <TeespringEmbed1 />
-            </div>
+            <TeespringEmbed1 />
           </motion.div>
         </div>
       </div>

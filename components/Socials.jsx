@@ -4,9 +4,8 @@ import SpotifyEmbed from "../components/(socials)/SpotifyEmbed";
 import SocialCarousel from "../components/(socials)/SocialCarousel";
 import GoogleCalendarEmbed from "../components/(socials)/GoogleCalendarEmbed";
 import TwitchEmbed from "../components/(socials)/TwitchEmbed";
-import YoutubeContainer from "../components/(socials)/YouTubeContainer";
-import TikTokEmbed from "../components/(socials)/TikTokEmbed";
-// import { motion } from "framer-motion";
+import YoutubeEmbed from "../components/(socials)/YouTubeEmbed";
+import { motion } from "framer-motion";
 
 export default function Socials() {
   return (
@@ -23,38 +22,33 @@ export default function Socials() {
 
         <br />
 
-        <div className="mx-auto xs:mt-0 sm:mt-6 space-y-4 xs:px-2 sm:px-10 md:px-12 lg:px-16 xl:px-20 2xl:px-8 3xl:px-8">
-          <div className="x">
+        <div className="mx-4 sm:mx-auto xs:mt-0 sm:mt-6 space-y-4 xs:px-2 sm:px-10 md:px-12 lg:px-16 xl:px-20 2xl:px-8 3xl:px-8">
+          <div>
             <SocialCarousel />
           </div>
 
           <br />
 
-          <div className="grid grid-row-2 lg:grid-cols-2 gap-8 mx-auto">
-            <div className="rounded-2xl shadow-2xl shadow-purple-800/50">
+          <div className="flex justify-center shadow-purple-800/50">
+            <motion.div
+              initial={{ x: 0, opacity: 0 }}
+              whileInView={{ x: [250, 0], opacity: 1 }}
+              transition={{ duration: 1 }}
+            >
               <GoogleCalendarEmbed />
-            </div>
-
-            <div className="rounded-2xl shadow-2xl shadow-purple-800/50">
-              <TwitchEmbed />
-            </div>
+            </motion.div>
           </div>
 
           <br />
 
-          <div className="rounded-2xl shadow-2xl shadow-purple-800/50">
-            <YoutubeContainer />
+          <div className="grid grid-col-1 sm:grid-cols-2 mx-auto gap-16">
+            <div className="rounded-2xl">
+              <YoutubeEmbed vnum={0} />
+            </div>
+            <div className="rounded-2xl">
+              <TwitchEmbed />
+            </div>
           </div>
-
-          {/* <div className="grid grid-cols-1  sm:grid-cols-2">
-            <div className="grid-1 ">
-              <YoutubeContainer />
-            </div>
-
-            <div className="grid-1">
-              <TikTokEmbed />
-            </div>
-          </div> */}
         </div>
       </div>
     </div>

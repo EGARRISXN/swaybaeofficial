@@ -3,23 +3,14 @@ import TwitchHeader from "../../public/images/twitchheader.svg";
 
 export default function TwitchEmbed() {
   return (
-    <div className="border-[10px] bg-black rounded-md  border-base-content shadow-2xl shadow-purple-800/50">
-      <Image
-        src={TwitchHeader}
-        quality={100}
-        alt="Merch"
-        width="100%"
+    <div className="aspect-w-16 aspect-h-9 rounded-2xl border-[10px] border-base-content shadow-2xl shadow-purple-800/50">
+      <iframe
+        src="https://player.twitch.tv/?sway_bae&parent=swaybae.net&muted=true"
+        allowFullScreen="true"
         height="100%"
-      />
-      <div className="aspect-w-16 aspect-h-9">
-        <iframe
-          src="https://player.twitch.tv/?sway_bae&parent=swaybae.net&muted=true"
-          height="100%"
-          width="100%"
-          allowFullScreen="true"
-          className="rounded-b-sm"
-        ></iframe>
-      </div>
+        width="100%"
+        className="rounded-xl"
+      ></iframe>
     </div>
   );
 }

@@ -43,13 +43,13 @@ export default function ContactSocials({ mobileStyle }) {
 
   return (
     <div
-      className={`bg-base-200 border-base-content ${
+      className={`bg-base-content border-info text-base-200 ${
         mobileStyle ? "mt-12" : ""
       } border-[8px] rounded-xl shadow-xl shadow-purple-800/50 ${
         mobileStyle ? "py-4" : "py-8"
       } px-6`}
     >
-      <h3 className="text-2xl mb-4 text-center hover:text-info">
+      <h3 className="text-2xl mb-4 text-center hover:text-primary">
         Let&apos; s Connect!
       </h3>
       <hr className="my-4 border-secondary" />

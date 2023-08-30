@@ -1,7 +1,6 @@
 "use client";
 import { useEffect } from "react";
 import Image from "next/image";
-import CalendarHeader from "../../public/images/CalendarHeader.svg";
 
 export default function TikTokEmbed() {
   useEffect(() => {
@@ -17,14 +16,6 @@ export default function TikTokEmbed() {
 
   return (
     <div className="border-[10px] border-base-content rounded-2xl shadow-2xl shadow-purple-800/50 items-center h-1/3">
-      <Image
-        src={CalendarHeader}
-        quality={100}
-        alt="Merch"
-        width="100%"
-        height="100%"
-        className="w-fullrounded-t-md  bg-black"
-      />
       <div className="aspect-w-7 aspect-h-16">
         <blockquote
           className="tiktok-embed rounded-2xl shadow-2xl shadow-purple-800/50 "
