@@ -1,6 +1,5 @@
 "use client";
 import { useEffect } from "react";
-import Image from "next/image";
 
 export default function TikTokEmbed() {
   useEffect(() => {
@@ -15,27 +14,13 @@ export default function TikTokEmbed() {
   }, []);
 
   return (
-    <div className="border-[10px] border-base-content rounded-2xl shadow-2xl shadow-purple-800/50 items-center h-1/3">
-      <div className="aspect-w-7 aspect-h-16">
+    <div className="max-w-xl mx-auto my-6">
+      <div className="aspect-w-16 aspect-h-9">
         <blockquote
-          className="tiktok-embed rounded-2xl shadow-2xl shadow-purple-800/50 "
-          title="@sway_baetv on TikTok"
-          cite="https://www.tiktok.com/@sway_baetv"
-          data-unique-id="sway_baetv"
-          data-embed-type="creator"
-          width="100%"
-          height="100%"
-        >
-          <section>
-            <a
-              target="_blank"
-              href="https://www.tiktok.com/@sway_baetv?refer=creator_embed"
-              className="text-blue-500 underline"
-            >
-              @sway_baetv
-            </a>
-          </section>
-        </blockquote>
+          className="tiktok-embed"
+          data-video-id="sway_baetv"
+          data-lang="en"
+        ></blockquote>
       </div>
     </div>
   );

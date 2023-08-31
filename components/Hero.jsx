@@ -1,7 +1,7 @@
 "use client";
 import Image from "next/image";
 import Link from "next/link";
-import HeroPng from "../public/images/FINALLOGO.png";
+import HeroLogo from "../public/images/herologo.png";
 import { motion } from "framer-motion";
 
 export default function Hero() {
@@ -14,13 +14,14 @@ export default function Hero() {
           exit={{ opacity: 0, y: 15 }}
           transition={{ delay: 0.25 }}
         >
-          <div className="flex mx-auto justify-center items-center mt-40 mb-40 sm:mt-10 sm:mb-10 md:mt-8 md:mb-8 lg:mt-8 lg:mb-8 xl:mt-8 xl:mb-8 2xl:mt-8 2xl:mb-8 3xl:mt-16 3xl:mb-16">
+          <div className="flex justify-center items-center mt-40 mb-40 sm:mt-10 sm:mb-10 md:mt-8 md:mb-8 lg:mt-8 lg:mb-8 xl:mt-8 xl:mb-8 2xl:mt-8 2xl:mb-8 3xl:mt-16 3xl:mb-16">
             <Link href="/">
               <Image
-                src={HeroPng}
-                width={900}
-                height={600}
+                src={HeroLogo}
                 quality={100}
+                priority
+                width="900px"
+                height="600px"
                 alt="Hero"
                 className="z-100"
               />

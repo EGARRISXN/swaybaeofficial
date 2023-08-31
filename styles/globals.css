@@ -117,15 +117,6 @@ main {
 }
 
 
-/* ------------ */
-/* TikTok Embed */
-/* ------------ */
-
-.tiktok-embed {
-  margin: 0 !important;
-  }
-
-
 
 /* ---------- */
 /* Transition */
@@ -170,7 +161,3 @@ main {
 .lg\:modal-container-full {
   right: 0; /* Slide in from the right on large screens and larger */
 }
-
-
-
-
