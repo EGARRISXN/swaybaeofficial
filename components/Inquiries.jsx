@@ -13,7 +13,7 @@ export default function Inquiries() {
           </p>
         </div>
         <br />
-        <div className="flex flex-col md:flex-row justify-center mt-16 xs:px-2 sm:px-10 md:px-12 lg:px-16 xl:px-20 2xl:px-8 3xl:px-8 md:space-x-8 lg:space-x-10">
+        <div className="flex flex-col md:flex-row mx-auto justify-center mt-16 xs:px-2 sm:px-10 md:px-12 lg:px-16 xl:px-20 2xl:px-8 3xl:px-8 md:space-x-8 lg:space-x-10">
           <div className="md:w-3/5 lg:w-2/3 xl:w-2/3 2xl:w-3/4 3xl:w-3/4 rounded-xl">
             <motion.div
               initial={{ opacity: 0 }}

@@ -78,7 +78,7 @@ export default function SocialCarousel() {
 
   return (
     <div className="relative mx-auto">
-      <div className="absolute right-0 top-0">
+      <div className="absolute top-0 right-0">
         <button
           onClick={scrollLeft}
           className="p-2 m-2 rounded-full bg-transparent border-secondary border-4"
@@ -94,7 +94,7 @@ export default function SocialCarousel() {
       </div>
       <div
         id="content"
-        className="carousel flex sm:justify-start gap-8 sm:gap-16 scroll-smooth scrollbar-hide rounded-xl"
+        className="carousel flex sm:justify-start gap-8 px-2 sm:gap-16 scroll-smooth scrollbar-hide rounded-xl"
       >
         {socialMediaData.map((data, index) => (
           <SocialCard key={index} {...data} />

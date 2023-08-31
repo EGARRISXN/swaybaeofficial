@@ -10,9 +10,9 @@ export default function TeespringEmbed1() {
         alt="Merch"
         width="100%"
         height="100%"
-        className="w-full rounded-t-sm bg-info"
+        className="w-full rounded-t-sm bg-black"
       />
-      <div className="aspect-w-30 aspect-h-22">
+      <div className="aspect-w-22 aspect-h-30 sm:aspect-w-30 sm:aspect-h-22">
         <iframe
           src="https://embed.creator-spring.com/widget?slug=sway-baes-merch-store&per=6&bg=ffffff&txtcolor=000000&currency=&page="
           title="The Official Merch Store for Swaybae!"

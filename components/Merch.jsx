@@ -14,7 +14,7 @@ export default function Merch() {
         </div>
         <br />
 
-        <div className="flex justify-center mt-16 shadow-purple-800/50">
+        <div className="flex mx-auto justify-center mt-16 xs:px-2">
           <motion.div
             initial={{ x: 0, opacity: 0 }}
             whileInView={{ x: [-250, 0], opacity: 1 }}

@@ -15,7 +15,7 @@ export default function Socials() {
             Socials
           </p>
 
-          <div className="mt-16 sm:mt-0 rounded-xl">
+          <div className="mt-16 sm:mt-0">
             <motion.div
               initial={{ x: 0, opacity: 0 }}
               whileInView={{ x: [50, 0], opacity: 1 }}
@@ -25,10 +25,8 @@ export default function Socials() {
             </motion.div>
           </div>
         </div>
-
         <br />
-
-        <div className="mx-4 sm:mx-auto xs:mt-0 sm:mt-6 xs:px-2 sm:px-10 md:px-12 lg:px-16 xl:px-20 2xl:px-8 3xl:px-8">
+        <div className="mx-auto xs:mt-0 sm:mt-0 xs:px-2 sm:px-10 md:px-12 lg:px-16 xl:px-20 2xl:px-8 3xl:px-8">
           <motion.div
             initial={{ opacity: 0 }}
             whileInView={{ y: [-50, 0], opacity: 1 }}
@@ -36,10 +34,8 @@ export default function Socials() {
           >
             <SocialCarousel />
           </motion.div>
-
           <br />
-
-          <div className="grid justify-center shadow-purple-800/50">
+          <div className="grid justify-center shadow-purple-800/50 mx-auto mt-6 sm:mt-10">
             <motion.div
               initial={{ x: 0, opacity: 0 }}
               whileInView={{ x: [250, 0], opacity: 1 }}
@@ -48,16 +44,17 @@ export default function Socials() {
               <GoogleCalendarEmbed />
             </motion.div>
           </div>
-
           <br />
-
-          <div className="grid grid-col lg:grid-cols-2 mx-auto gap-10">
+          <div className="grid grid-col lg:grid-cols-2 gap-x-10 mx-auto mt-6 sm:mt-10">
             <motion.div
               initial={{ x: 0, opacity: 0 }}
               whileInView={{ x: [-250, 0], opacity: 1 }}
               transition={{ duration: 1 }}
             >
-              <div className="hidden sm:block rounded-2xl border-[6px] border-info shadow-xl shadow-purple-800/50">
+              <p className="hidden sm:block text-center font-semibold text-accent">
+                Live Twitch Stream
+              </p>
+              <div className="hidden sm:block rounded-2xl shadow-xl shadow-purple-800/50">
                 <TwitchEmbed />
               </div>
             </motion.div>
@@ -66,7 +63,10 @@ export default function Socials() {
               whileInView={{ x: [250, 0], opacity: 1 }}
               transition={{ duration: 1 }}
             >
-              <div className="rounded-2xl border-[6px] border-info shadow-xl shadow-purple-800/50">
+              <p className="text-center font-semibold text-accent">
+                Latest YouTube Video
+              </p>
+              <div className="rounded-2xl shadow-xl shadow-purple-800/50">
                 <YoutubeEmbed vnum={0} />
               </div>
             </motion.div>

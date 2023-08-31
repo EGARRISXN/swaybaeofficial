@@ -20,8 +20,8 @@ export default function Hero() {
                 src={HeroLogo}
                 quality={100}
                 priority
-                width="900px"
-                height="600px"
+                width={900}
+                height={600}
                 alt="Hero"
                 className="z-100"
               />

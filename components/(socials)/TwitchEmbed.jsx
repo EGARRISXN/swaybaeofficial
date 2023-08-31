@@ -15,6 +15,8 @@ export default function TwitchEmbed() {
         height: "100%",
         channel: "sway_bae",
         parent: "swaybae.net",
+        loading: "lazy",
+        allowFullScreen: true,
       };
 
       const player = new window.Twitch.Player("TwitchPlayerDivID", options);
@@ -27,7 +29,7 @@ export default function TwitchEmbed() {
   }, []);
 
   return (
-    <div className="aspect-h-9 aspect-w-16 border-[6px] border-info border-2xl shadow-2xl shadow-purple-800/50">
+    <div className="aspect-h-9 aspect-w-16 border-[10px] border-info bg-info border-2xl shadow-2xl rounded-2xl shadow-purple-800/50">
       <div id="TwitchPlayerDivID"></div>
     </div>
   );
