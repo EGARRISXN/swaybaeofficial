@@ -17,7 +17,7 @@ export default function Merch() {
         <div className="flex mx-auto justify-center mt-16 xs:px-2">
           <motion.div
             initial={{ x: 0, opacity: 0 }}
-            whileInView={{ x: [-250, 0], opacity: 1 }}
+            whileInView={{ x: [250, 0], opacity: 1 }}
             transition={{ duration: 1 }}
           >
             <TeespringEmbed1 />

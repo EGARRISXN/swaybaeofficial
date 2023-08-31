@@ -8,7 +8,7 @@ import Inquiries from "../components/Inquiries";
 export default function Home() {
   return (
     <Transition>
-      <main className="flex flex-col">
+      <main className="flex flex-col px-1">
         <Hero />
         <hr className="container mx-auto border-2 border-purple-800/50" />
         <About />

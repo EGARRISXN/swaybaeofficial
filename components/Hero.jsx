@@ -1,8 +1,8 @@
 "use client";
-import Image from "next/image";
-import Link from "next/link";
-import HeroLogo from "../public/images/herologo.png";
 import { motion } from "framer-motion";
+import Link from "next/link";
+import Image from "next/image";
+import HeroLogo from "../public/images/herologo.png";
 
 export default function Hero() {
   return (
@@ -19,11 +19,10 @@ export default function Hero() {
               <Image
                 src={HeroLogo}
                 quality={100}
-                priority
                 width={900}
                 height={600}
                 alt="Hero"
-                className="z-100"
+                priority
               />
             </Link>
           </div>

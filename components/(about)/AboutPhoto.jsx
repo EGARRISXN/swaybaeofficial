@@ -8,8 +8,8 @@ export default function AboutPhoto() {
         src={Sway}
         quality={100}
         alt="Sway"
-        width="full"
-        height="full"
+        width="100%"
+        height="100%"
         className="w-full h-full rounded-xl shadow-xl shadow-purple-800/50"
         priority
       />

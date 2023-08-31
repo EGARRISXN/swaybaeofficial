@@ -50,6 +50,9 @@ module.exports = {
         poppins: ["Poppins", "sans-serif"],
         lobster: ["Lobster", "cursive"],
       },
+      fontSize: {
+        XXL: "13rem",
+      },
       height: {
         "4/5": "80%",
         "3/4": "75%",

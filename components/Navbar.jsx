@@ -3,8 +3,8 @@ import { useState, useEffect } from "react";
 import { usePathname } from "next/navigation";
 import { Sling as Hamburger } from "hamburger-react";
 import { useTheme, ThemeProvider } from "next-themes";
-import Image from "next/image";
 import Link from "next/link";
+import Image from "next/image";
 import Ava from "../public/images/avatar.png";
 
 const links = [
@@ -62,7 +62,14 @@ const Nav = () => {
         <div className="navbar-start flex px-1">
           <div className="flex h-10 w-10 mask mask-squircle">
             <Link href="/">
-              <Image src={Ava} quality={100} alt="Ava" priority />
+              <Image
+                src={Ava}
+                quality={100}
+                alt="Logo"
+                height="100%"
+                width="100%"
+                priority
+              />
             </Link>
           </div>
         </div>

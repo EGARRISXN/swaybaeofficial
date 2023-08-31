@@ -1,10 +1,10 @@
 "use client";
+import { motion } from "framer-motion";
 import SpotifyEmbed from "../components/(socials)/SpotifyEmbed";
 import SocialCarousel from "../components/(socials)/SocialCarousel";
 import GoogleCalendarEmbed from "../components/(socials)/GoogleCalendarEmbed";
 import TwitchEmbed from "../components/(socials)/TwitchEmbed";
 import YoutubeEmbed from "../components/(socials)/YouTubeEmbed";
-import { motion } from "framer-motion";
 
 export default function Socials() {
   return (
@@ -16,29 +16,17 @@ export default function Socials() {
           </p>
 
           <div className="mt-16 sm:mt-0">
-            <motion.div
-              initial={{ x: 0, opacity: 0 }}
-              whileInView={{ x: [50, 0], opacity: 1 }}
-              transition={{ duration: 1 }}
-            >
-              <SpotifyEmbed />
-            </motion.div>
+            <SpotifyEmbed />
           </div>
         </div>
         <br />
         <div className="mx-auto xs:mt-0 sm:mt-0 xs:px-2 sm:px-10 md:px-12 lg:px-16 xl:px-20 2xl:px-8 3xl:px-8">
-          <motion.div
-            initial={{ opacity: 0 }}
-            whileInView={{ y: [-50, 0], opacity: 1 }}
-            transition={{ duration: 1 }}
-          >
-            <SocialCarousel />
-          </motion.div>
+          <SocialCarousel />
           <br />
           <div className="grid justify-center shadow-purple-800/50 mx-auto mt-6 sm:mt-10">
             <motion.div
               initial={{ x: 0, opacity: 0 }}
-              whileInView={{ x: [250, 0], opacity: 1 }}
+              whileInView={{ x: [-250, 0], opacity: 1 }}
               transition={{ duration: 1 }}
             >
               <GoogleCalendarEmbed />

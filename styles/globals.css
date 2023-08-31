@@ -139,25 +139,10 @@ main {
 }
 
 
-/* --------------- */
-/* Subathon Modals */
-/* --------------- */
+/* --------- */
+/* Subathon  */
+/* --------- */
 
-.modal-container-slide {
-  position: fixed;
-  top: 0;
-  right: -100%; /* Start off-screen */
-  bottom: 0;
-  width: 100%;
-  max-width: 100%;
-  transition: right 0.3s ease-in-out;
-  z-index: 1000;
-}
-
-.md\:modal-container-full {
-  right: 0; /* Slide in from the right on medium screens and larger */
-}
-
-.lg\:modal-container-full {
-  right: 0; /* Slide in from the right on large screens and larger */
+.loadinggg {
+  background-color: #ccc; /* Gray background color */
 }
