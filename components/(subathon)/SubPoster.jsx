@@ -170,7 +170,6 @@ export default function SubPoster() {
                 src={image.src}
                 width={300}
                 height={75}
-                placeholder="blur"
                 alt={image.alt}
                 className="w-300 h-75"
               />

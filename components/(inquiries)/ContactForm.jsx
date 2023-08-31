@@ -79,7 +79,7 @@ export default function ContactForm() {
           value={formData.name}
           onChange={handleInputChange}
           placeholder="Name"
-          className="p-3 text-neutral-900 rounded-xl shadow-xl shadow-purple-800/50 "
+          className="p-3 text-neutral-900 rounded-xl border-2 shadow-xl shadow-purple-800/50 "
           autoComplete="on"
           name="name"
           id="name"
@@ -97,8 +97,8 @@ export default function ContactForm() {
           value={formData.email}
           onChange={handleInputChange}
           placeholder="Email"
-          className="p-3 text-neutral-900 rounded-xl shadow-xl shadow-purple-800/50       disabled:bg-slate-50 disabled:text-slate-500 disabled:border-slate-200 disabled:shadow-none
-          invalid:border-pink-500 invalid:text-pink-600
+          className="p-3 text-neutral-900 rounded-xl border-2 shadow-xl shadow-purple-800/50 disabled:bg-slate-50 disabled:text-slate-500 disabled:border-slate-200 disabled:shadow-none
+           invalid:text-pink-600
           focus:invalid:border-pink-500 focus:invalid:ring-pink-500"
           autoComplete="on"
           name="email"
@@ -117,7 +117,7 @@ export default function ContactForm() {
           value={formData.subject}
           onChange={handleInputChange}
           placeholder="Subject"
-          className="p-3 text-neutral-900 rounded-xl shadow-xl shadow-purple-800/50 "
+          className="p-3 text-neutral-900 rounded-xl border-2 shadow-xl shadow-purple-800/50 "
           autoComplete="on"
           name="subject"
           id="subject"
@@ -136,7 +136,7 @@ export default function ContactForm() {
           value={formData.message}
           onChange={handleInputChange}
           placeholder="Message"
-          className="w-full p-3 text-neutral-900 rounded-xl shadow-xl shadow-purple-800/50 "
+          className="w-full p-3 text-neutral-900 rounded-xl border-2 shadow-xl shadow-purple-800/50 "
           name="message"
           id="message"
         />
