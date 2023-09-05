@@ -23,8 +23,8 @@ const poppins = Poppins({
 
 export const metadata = {
   metadataBase: new URL("https://swaybae.net"),
-  title: "SwayBae | Streaming, Gaming, & So Much More!",
-  description: "Here you will find everything there is to know about Swaybae!",
+  title: "Sway Bae | Streaming, Gaming, & So Much More!",
+  description: "The Official Website for Sway Bae & The Bae Squad!",
   robots: {
     index: true,
     follow: true,
@@ -40,11 +40,11 @@ export const metadata = {
     type: "website",
     locale: "en_US",
     url: "https://www.swaybae.net",
-    title: "SwayBae",
+    title: "Sway Bae",
     description:
-      "Here you will find everything there is to know about Swaybae!",
+      "The Official Website for Sway Bae & The Bae Squad!",
     keywords: [
-      "swaybae, sway_bae, sway, bae, swaybae.net, swaybae.com, baesquad, bae_squad, swaybae twitch, swaybae twitter, swaybae youtube, swaybae discord, swaybae instagram, swaybae tiktok, swaybae merch, swaybae store, swaybae shop, swaybae gaming",
+      "sway bae, swaybae, sway_bae, swaybaetv, sway, bae, swaybae.net, swaybae.com, thebaesquad, the bae squad, baesquad, bae_squad, sway bae twitch, sway bae twitter, sway bae youtube, sway bae discord, sway bae instagram, sway bae tiktok, sway bae merch, sway bae store, sway bae shop, sway bae gaming, hearthstone, blizzard, streamer, stream, twitch, twitch streamer, twitch.tv, twitch.tv/sway_bae",
     ],
     viewport: "width=device-width, initial-scale=1.0",
   },

@@ -6,7 +6,7 @@ import GoogleCalendarEmbed from "../components/(socials)/GoogleCalendarEmbed";
 import TwitchEmbed from "../components/(socials)/TwitchEmbed";
 import YoutubeEmbed from "../components/(socials)/YouTubeEmbed";
 
-export default function Socials() {
+export default function Socials() { 
   return (
     <div id="socials" className="w-full">
       <div className="max-w-[1240px] mx-auto py-16">
@@ -21,12 +21,18 @@ export default function Socials() {
         </div>
         <br />
         <div className="mx-auto xs:mt-0 sm:mt-0 xs:px-2 sm:px-10 md:px-12 lg:px-16 xl:px-20 2xl:px-8 3xl:px-8">
+        <motion.div
+              initial={{ x: 0, opacity: 0 }}
+              whileInView={{ x: [-250, 0], opacity: 1 }}
+              transition={{ duration: 1 }}
+            >
           <SocialCarousel />
+          </motion.div>
           <br />
           <div className="grid justify-center shadow-purple-800/50 mx-auto mt-6 sm:mt-10">
             <motion.div
               initial={{ x: 0, opacity: 0 }}
-              whileInView={{ x: [-250, 0], opacity: 1 }}
+              whileInView={{ x: [250, 0], opacity: 1 }}
               transition={{ duration: 1 }}
             >
               <GoogleCalendarEmbed />
@@ -40,10 +46,10 @@ export default function Socials() {
               transition={{ duration: 1 }}
             >
               <p className="hidden sm:block text-center font-semibold text-accent">
-                Live Twitch Stream
+                Latest Youtube Video
               </p>
               <div className="hidden sm:block rounded-2xl shadow-xl shadow-purple-800/50">
-                <TwitchEmbed />
+              <YoutubeEmbed vnum={0} />
               </div>
             </motion.div>
             <motion.div
@@ -52,10 +58,10 @@ export default function Socials() {
               transition={{ duration: 1 }}
             >
               <p className="text-center font-semibold text-accent">
-                Latest YouTube Video
+              Live Twitch Stream
               </p>
               <div className="rounded-2xl shadow-xl shadow-purple-800/50">
-                <YoutubeEmbed vnum={0} />
+                <TwitchEmbed />
               </div>
             </motion.div>
           </div>
