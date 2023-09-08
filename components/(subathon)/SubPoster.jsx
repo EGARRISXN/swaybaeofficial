@@ -1,34 +1,34 @@
-import Image from "next/image";
-import Link from "next/link";
-import Title from "../../public/images/title.png";
-import One from "../../public/images/1.svg";
-import Two from "../../public/images/2.svg";
-import Three from "../../public/images/3.svg";
-import Four from "../../public/images/4.svg";
-import Five from "../../public/images/5.svg";
-import Six from "../../public/images/6.svg";
-import Seven from "../../public/images/7.svg";
-import Eight from "../../public/images/8.svg";
-import Nine from "../../public/images/9.svg";
-import Ten from "../../public/images/10.svg";
-import Eleven from "../../public/images/11.svg";
-import Thirteen from "../../public/images/13.svg";
-import Fourteen from "../../public/images/14.svg";
-import Fifteen from "../../public/images/15.svg";
-import Sixteen from "../../public/images/16.svg";
-import Seventeen from "../../public/images/17.svg";
-import Eighteen from "../../public/images/18.svg";
-import Nineteen from "../../public/images/19.svg";
-import Twenty from "../../public/images/20.svg";
-import TwentyOne from "../../public/images/21.svg";
-import TwentyTwo from "../../public/images/22.svg";
-import TwentyThree from "../../public/images/23.svg";
-import TwentyFour from "../../public/images/24.svg";
-import TwentyFive from "../../public/images/25.svg";
-import TwentySix from "../../public/images/26.svg";
-import TwentySeven from "../../public/images/27.svg";
-import TwentyEight from "../../public/images/28.svg";
-import TwentyNine from "../../public/images/29.svg";
+import Image from "next/image"
+import Link from "next/link"
+import Title from "../../public/images/title.png"
+import One from "../../public/images/1.svg"
+import Two from "../../public/images/2.svg"
+import Three from "../../public/images/3.svg"
+import Four from "../../public/images/4.svg"
+import Five from "../../public/images/5.svg"
+import Six from "../../public/images/6.svg"
+import Seven from "../../public/images/7.svg"
+import Eight from "../../public/images/8.svg"
+import Nine from "../../public/images/9.svg"
+import Ten from "../../public/images/10.svg"
+import Eleven from "../../public/images/11.svg"
+import Thirteen from "../../public/images/13.svg"
+import Fourteen from "../../public/images/14.svg"
+import Fifteen from "../../public/images/15.svg"
+import Sixteen from "../../public/images/16.svg"
+import Seventeen from "../../public/images/17.svg"
+import Eighteen from "../../public/images/18.svg"
+import Nineteen from "../../public/images/19.svg"
+import Twenty from "../../public/images/20.svg"
+import TwentyOne from "../../public/images/21.svg"
+import TwentyTwo from "../../public/images/22.svg"
+import TwentyThree from "../../public/images/23.svg"
+import TwentyFour from "../../public/images/24.svg"
+import TwentyFive from "../../public/images/25.svg"
+import TwentySix from "../../public/images/26.svg"
+import TwentySeven from "../../public/images/27.svg"
+import TwentyEight from "../../public/images/28.svg"
+import TwentyNine from "../../public/images/29.svg"
 
 export default function SubPoster() {
   const images = [
@@ -108,11 +108,11 @@ export default function SubPoster() {
       alt: "29",
       link: "https://www.twitch.tv/videos/1903447744",
     },
-  ];
+  ]
 
   // Split the images into two groups
-  const firstGroup = images.slice(0, 14);
-  const secondGroup = images.slice(14);
+  const firstGroup = images.slice(0, 14)
+  const secondGroup = images.slice(14)
 
   return (
     <div className="bg-white rounded-xl shadow-xl p-2 shadow-purple-800/50 border-base-content border-[8px]">
@@ -178,5 +178,5 @@ export default function SubPoster() {
         </div>
       </div>
     </div>
-  );
+  )
 }

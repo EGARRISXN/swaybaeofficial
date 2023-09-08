@@ -1,5 +1,5 @@
-import Image from "next/image";
-import SwayMerch from "../../public/images/SwayMerch.svg";
+import Image from "next/image"
+import SwayMerch from "../../public/images/SwayMerch.svg"
 
 export default function TeespringEmbed1() {
   return (
@@ -23,5 +23,5 @@ export default function TeespringEmbed1() {
         ></iframe>
       </div>
     </div>
-  );
+  )
 }

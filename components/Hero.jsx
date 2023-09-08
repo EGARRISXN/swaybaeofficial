@@ -1,12 +1,13 @@
-"use client";
-import { motion } from "framer-motion";
-import Link from "next/link";
-import Image from "next/image";
-import HeroLogo from "../public/images/herologo.png";
+"use client"
+import { motion } from "framer-motion"
+import Link from "next/link"
+import Image from "next/image"
+import HeroLogo from "../public/images/herologo.png"
 
 export default function Hero() {
   return (
     <div id="hero" className="w-full">
+      <h1 className="hidden">Hero</h1>
       <div className="max-w-[1240px] mx-auto xs:py-1 sm:pt-6 sm:pb-4">
         <motion.div
           initial={{ opacity: 0, y: 15 }}
@@ -29,5 +30,5 @@ export default function Hero() {
         </motion.div>
       </div>
     </div>
-  );
+  )
 }

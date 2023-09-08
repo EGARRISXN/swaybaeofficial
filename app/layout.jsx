@@ -1,25 +1,25 @@
-import { Analytics } from "@vercel/analytics/react";
-import { Poppins, Lobster, Neonderthaw, Vibur } from "next/font/google";
-import Providers from "./providers";
-import Navbar from "../components/Navbar";
-import Footer from "../components/Footer";
-import UseScrollToTop from "../utils/useScrollToTop";
-import ToastNotifications from "../utils/ToastNotifications";
-import "../styles/globals.css";
+import { Analytics } from "@vercel/analytics/react"
+import { Poppins, Lobster} from "next/font/google"
+import Providers from "./providers"
+import Navbar from "../components/Navbar"
+import Footer from "../components/Footer"
+import UseScrollToTop from "../utils/useScrollToTop"
+import ToastNotifications from "../utils/ToastNotifications"
+import "../styles/globals.css"
 
 const lobster = Lobster({
   subsets: ["latin"],
   display: "swap",
   variable: "--font-lobster",
   weight: "400",
-});
+})
 
 const poppins = Poppins({
   subsets: ["latin"],
   display: "swap",
   variable: "--font-poppins",
   weight: "400",
-});
+})
 
 export const metadata = {
   metadataBase: new URL("https://swaybae.net"),
@@ -34,8 +34,9 @@ export const metadata = {
       "max-video-preview": -1,
       "max-image-preview": "large",
       "max-snippet": -1,
-    },
+    }
   },
+
   openGraph: {
     type: "website",
     locale: "en_US",
@@ -47,8 +48,8 @@ export const metadata = {
       "sway bae, swaybae, sway_bae, swaybaetv, sway, bae, swaybae.net, swaybae.com, thebaesquad, the bae squad, baesquad, bae_squad, sway bae twitch, sway bae twitter, sway bae youtube, sway bae discord, sway bae instagram, sway bae tiktok, sway bae merch, sway bae store, sway bae shop, sway bae gaming, hearthstone, blizzard, streamer, stream, twitch, twitch streamer, twitch.tv, twitch.tv/sway_bae",
     ],
     viewport: "width=device-width, initial-scale=1.0",
-  },
-};
+  }
+}
 
 export default function RootLayout({ children }) {
   return (
@@ -93,5 +94,5 @@ export default function RootLayout({ children }) {
         </Providers>
       </body>
     </html>
-  );
+  )
 }

@@ -1,9 +1,9 @@
-import nodemailer from "nodemailer";
+import nodemailer from "nodemailer"
 
 export default async function ContactAPI(req, res) {
-  const { name, email, subject, message } = req.body;
+  const { name, email, subject, message } = req.body
 
-  const user = process.env.NEXT_PUBLIC_EMAIL_USER;
+  const user = process.env.NEXT_PUBLIC_EMAIL_USER
 
   const data = {
     name,
@@ -19,8 +19,8 @@ export default async function ContactAPI(req, res) {
     auth: {
       user: user,
       pass: process.env.NEXT_PUBLIC_EMAIL_PASS,
-    },
-  });
+    }
+  })
 
   try {
     const mail = await transporter.sendMail({
@@ -33,13 +33,13 @@ export default async function ContactAPI(req, res) {
         <p>Email: ${email}</p>
         <p>Message: ${message}</p>
         `,
-    });
+    })
 
-    console.log("Message sent:", mail.messageId);
+    console.log("Message sent:", mail.messageId)
 
-    return res.status(200).json({ message: "Success!" });
+    return res.status(200).json({ message: "Success!" })
   } catch (error) {
     console.log("Error sending message:", error);
-    return res.status(500).json({ message: "Could not send email." });
+    return res.status(500).json({ message: "Could not send email." })
   }
 }

@@ -1,12 +1,12 @@
-"use client";
-import { useState } from "react";
+"use client"
+import { useState } from "react"
 
 export default function AboutCard() {
-  const [isShowMore, setIsShowMore] = useState(false);
+  const [isShowMore, setIsShowMore] = useState(false)
 
   const toggleReadMoreLess = () => {
-    setIsShowMore(!isShowMore);
-  };
+    setIsShowMore(!isShowMore)
+  }
 
   return (
     <div className="bg-base-content border-info text-base-200 rounded-3xl xs:mt-12 sm:mt-0  border-[8px] shadow-xl p-6 md:p-8 lg:p-10 2xl:p-12 shadow-purple-800/50">
@@ -98,5 +98,5 @@ export default function AboutCard() {
       </div>
       <hr className="my-4 border-secondary" />
     </div>
-  );
+  )
 }

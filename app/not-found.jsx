@@ -1,7 +1,7 @@
-import Image from "next/image";
-import Link from "next/link";
-import BORK from "../public/images/BORK.gif";
-import UniversalButton from "../utils/UniversalButton";
+import Image from "next/image"
+import Link from "next/link"
+import BORK from "../public/images/BORK.gif"
+import UniversalButton from "../utils/UniversalButton"
 
 export default function NotFound() {
   return (
@@ -24,5 +24,5 @@ export default function NotFound() {
         </Link>
       </div>
     </main>
-  );
+  )
 }

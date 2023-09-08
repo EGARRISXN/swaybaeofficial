@@ -1,21 +1,21 @@
-"use client";
-import { FiChevronRight, FiChevronLeft } from "react-icons/fi";
-import SocialCard from "./SocialCard";
-import DiscordCard from "../../public/images/DiscordCard.png";
-import TwitchCard from "../../public/images/TwitchCard.png";
-import InstagramCard from "../../public/images/InstagramCard.png";
-import TikTokCard from "../../public/images/TikTokCard.png";
-import TwitterCard from "../../public/images/TwitterCard.png";
-import YoutubeCard from "../../public/images/YoutubeCard.png";
-import SpotifyCard from "../../public/images/SpotifyCard.png";
+"use client"
+import { FiChevronRight, FiChevronLeft } from "react-icons/fi"
+import SocialCard from "./SocialCard"
+import DiscordCard from "../../public/images/DiscordCard.png"
+import TwitchCard from "../../public/images/TwitchCard.png"
+import InstagramCard from "../../public/images/InstagramCard.png"
+import TikTokCard from "../../public/images/TikTokCard.png"
+import TwitterCard from "../../public/images/TwitterCard.png"
+import YoutubeCard from "../../public/images/YoutubeCard.png"
+import SpotifyCard from "../../public/images/SpotifyCard.png"
 
 export default function SocialCarousel() {
   const scrollLeft = () => {
-    document.getElementById("content").scrollLeft -= 400;
-  };
+    document.getElementById("content").scrollLeft -= 400
+  }
   const scrollRight = () => {
-    document.getElementById("content").scrollLeft += 400;
-  };
+    document.getElementById("content").scrollLeft += 400
+  }
 
   const socialMediaData = [
     {
@@ -74,7 +74,7 @@ export default function SocialCarousel() {
       linkText: "Listen",
       linkUrl: "https://open.spotify.com/user/31ozjeaf4ddidr2rgqunryvetrmq",
     },
-  ];
+  ]
 
   return (
     <div className="relative mx-auto">
@@ -101,5 +101,5 @@ export default function SocialCarousel() {
         ))}
       </div>
     </div>
-  );
+  )
 }

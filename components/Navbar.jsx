@@ -1,11 +1,11 @@
-"use client";
-import { useState, useEffect } from "react";
-import { usePathname } from "next/navigation";
-import { Sling as Hamburger } from "hamburger-react";
-import { useTheme, ThemeProvider } from "next-themes";
-import Link from "next/link";
-import Image from "next/image";
-import Ava from "../public/images/avatar.png";
+"use client"
+import { useState, useEffect } from "react"
+import { usePathname } from "next/navigation"
+import { Sling as Hamburger } from "hamburger-react"
+import { useTheme, ThemeProvider } from "next-themes"
+import Link from "next/link"
+import Image from "next/image"
+import Ava from "../public/images/avatar.png"
 
 const links = [
   { href: "/about", label: "About" },
@@ -14,47 +14,47 @@ const links = [
   { href: "/inquiries", label: "Business Inquiries" },
   { href: "/mediakit", label: "Media Kit" },
   { href: "/subathon2023", label: "Subathon 2023" },
-];
+]
 
 const Nav = () => {
-  const path = usePathname();
-  const [isOpen, setOpen] = useState(false);
-  const [clickedOutside, setClickedOutside] = useState(false);
-  const { resolvedTheme, setTheme } = useTheme();
-  const isDarkMode = resolvedTheme === "myDark";
+  const path = usePathname()
+  const [isOpen, setOpen] = useState(false)
+  const [clickedOutside, setClickedOutside] = useState(false)
+  const { resolvedTheme, setTheme } = useTheme()
+  const isDarkMode = resolvedTheme === "myDark"
 
   const closeDropdownOnOutsideClick = (event) => {
     if (isOpen && !event.target.closest(".dropdown")) {
-      closeDropdown();
-      setClickedOutside(true);
+      closeDropdown()
+      setClickedOutside(true)
     }
-  };
+  }
 
   useEffect(() => {
-    document.addEventListener("click", closeDropdownOnOutsideClick);
+    document.addEventListener("click", closeDropdownOnOutsideClick)
     return () => {
-      document.removeEventListener("click", closeDropdownOnOutsideClick);
-    };
+      document.removeEventListener("click", closeDropdownOnOutsideClick)
+    }
     // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [isOpen]);
+  }, [isOpen])
 
   const toggleDropdown = () => {
-    setOpen(!isOpen);
-    setClickedOutside(false);
-  };
+    setOpen(!isOpen)
+    setClickedOutside(false)
+  }
 
   const closeDropdown = () => {
-    setOpen(false);
-    setClickedOutside(false);
-  };
+    setOpen(false)
+    setClickedOutside(false)
+  }
 
   const handleLinkClick = () => {
-    closeDropdown();
-  };
+    closeDropdown()
+  }
 
   const toggleTheme = () => {
-    setTheme(isDarkMode ? "myLight" : "myDark");
-  };
+    setTheme(isDarkMode ? "myLight" : "myDark")
+  }
 
   return (
     <header className="fixed w-full h-3 top-0 z-[100] xs:px-2 sm:px-6 md:px-12 lg:px-16 2xl:px-28 3xl:px-80">
@@ -169,13 +169,13 @@ const Nav = () => {
         </div>
       </nav>
     </header>
-  );
-};
+  )
+}
 
 const Navbar = () => (
   <ThemeProvider defaultTheme="mydark">
     <Nav />
   </ThemeProvider>
-);
+)
 
-export default Navbar;
+export default Navbar

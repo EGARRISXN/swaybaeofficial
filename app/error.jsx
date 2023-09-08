@@ -1,13 +1,13 @@
-"use client";
-import { useEffect } from "react";
-import Image from "next/image";
-import BORK from "../public/images/BORK.gif";
-import UniversalButton from "../utils/UniversalButton";
+"use client"
+import { useEffect } from "react"
+import Image from "next/image"
+import BORK from "../public/images/BORK.gif"
+import UniversalButton from "../utils/UniversalButton"
 
 export default function Error({ error, reset }) {
   useEffect(() => {
-    console.log(error);
-  }, [error]);
+    console.log(error)
+  }, [error])
 
   return (
     <main className="flex items-center text-center">
@@ -27,5 +27,5 @@ export default function Error({ error, reset }) {
         <UniversalButton onClick={reset}>Refresh</UniversalButton>
       </div>
     </main>
-  );
+  )
 }

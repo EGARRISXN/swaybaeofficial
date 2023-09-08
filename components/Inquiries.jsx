@@ -1,7 +1,7 @@
-"use client";
-import ContactForm from "../components/(inquiries)/ContactForm";
-import ContactSocials from "../components/(inquiries)/ContactSocials";
-import { motion } from "framer-motion";
+"use client"
+import ContactForm from "../components/(inquiries)/ContactForm"
+import ContactSocials from "../components/(inquiries)/ContactSocials"
+import { motion } from "framer-motion"
 
 export default function Inquiries() {
   return (
@@ -44,5 +44,5 @@ export default function Inquiries() {
         </div>
       </div>
     </div>
-  );
+  )
 }

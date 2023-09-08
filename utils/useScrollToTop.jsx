@@ -1,15 +1,15 @@
-"use client";
-import { useState, useEffect } from "react";
-import { FiChevronUp } from "react-icons/fi";
+"use client"
+import { useState, useEffect } from "react"
+import { FiChevronUp } from "react-icons/fi"
 
 export default function useScrollToTop() {
-  const [showScroll, setShowScroll] = useState(false);
+  const [showScroll, setShowScroll] = useState(false)
 
   function backToTop() {
     window.scrollTo({
       top: 0,
       behavior: "smooth",
-    });
+    })
   }
 
   useEffect(() => {
@@ -19,14 +19,14 @@ export default function useScrollToTop() {
       } else if (showScroll && window.scrollY <= 400) {
         setShowScroll(false);
       }
-    };
+    }
 
-    window.addEventListener("scroll", scrollToTop);
+    window.addEventListener("scroll", scrollToTop)
 
     return function cleanup() {
-      window.removeEventListener("scroll", scrollToTop);
-    };
-  }, [showScroll]);
+      window.removeEventListener("scroll", scrollToTop)
+    }
+  }, [showScroll])
 
   return (
     <>
@@ -45,5 +45,5 @@ export default function useScrollToTop() {
         }}
       />
     </>
-  );
+  )
 }

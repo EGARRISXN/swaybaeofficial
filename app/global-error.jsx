@@ -1,8 +1,8 @@
-"use client";
-import { useEffect } from "react";
-import Image from "next/image";
-import BORK from "../public/images/BORK.gif";
-import UniversalButton from "../utils/UniversalButton";
+"use client"
+import { useEffect } from "react"
+import Image from "next/image"
+import BORK from "../public/images/BORK.gif"
+import UniversalButton from "../utils/UniversalButton"
 
 export default function GlobalError({ error, reset }) {
   return (
@@ -27,5 +27,5 @@ export default function GlobalError({ error, reset }) {
         </main>
       </body>
     </html>
-  );
+  )
 }

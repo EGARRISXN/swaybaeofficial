@@ -1,13 +1,13 @@
-import SubPoster from "../components/(subathon)/SubPoster";
+import SubPoster from "../components/(subathon)/SubPoster"
 
 export default function Subathon2023() {
   return (
     <div id="merch" className="w-full">
       <div className="max-w-[1240px] mx-auto py-16">
         <div className="container mx-auto mt-2">
-          <p className="uppercase text-xl tracking-widest font-bold-200 text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-pink-600">
+          <h1 className="font-poppins uppercase text-xl tracking-widest font-bold-200 text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-pink-600">
             Subathon
-          </p>
+          </h1>
         </div>
         <br />
         <div className="text-center xs:px-0 sm:px-0 pb-4">
@@ -35,5 +35,5 @@ export default function Subathon2023() {
         </div>
       </div>
     </div>
-  );
+  )
 }

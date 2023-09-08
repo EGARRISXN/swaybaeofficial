@@ -5,8 +5,7 @@ import {
   BsDiscord,
   BsTiktok,
   BsInstagram,
-} from "react-icons/bs";
-
+} from "react-icons/bs"
 export default function ContactSocials({ mobileStyle }) {
   const contactList = [
     {
@@ -39,8 +38,7 @@ export default function ContactSocials({ mobileStyle }) {
       icon: <BsDiscord size="1.3rem" />,
       href: "https://discord.com/invite/K73uN9k",
     },
-  ];
-
+  ]
   return (
     <div
       className={`bg-base-content border-info text-base-200 ${
@@ -88,5 +86,4 @@ export default function ContactSocials({ mobileStyle }) {
         </span>
       </p>
     </div>
-  );
-}
+  )}

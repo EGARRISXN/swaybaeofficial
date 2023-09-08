@@ -1,5 +1,5 @@
-import Link from "next/link";
-import UniversalButton from "../../utils/UniversalButton";
+import Link from "next/link"
+import UniversalButton from "../../utils/UniversalButton"
 
 export default function MediaKitContainer() {
   return (
@@ -14,5 +14,5 @@ export default function MediaKitContainer() {
         </Link>
       </div>
     </div>
-  );
+  )
 }

@@ -11,7 +11,7 @@ const Footer = () => {
         <p className="text-base-content leading-4">Inc. All rights reserved</p>
       </div>
     </div>
-  );
-};
+  )
+}
 
-export default Footer;
+export default Footer

@@ -1,7 +1,7 @@
-"use client";
-import { useState } from "react";
-import { toast } from "react-toastify";
-import UniversalButton from "../../utils/UniversalButton";
+"use client"
+import { useState } from "react"
+import { toast } from "react-toastify"
+import UniversalButton from "../../utils/UniversalButton"
 
 export default function ContactForm() {
   const [formData, setFormData] = useState({
@@ -9,13 +9,13 @@ export default function ContactForm() {
     email: "",
     subject: "",
     message: "",
-  });
-  const [loading, setLoading] = useState(false);
+  })
+  const [loading, setLoading] = useState(false)
 
   const handleSubmit = async (event) => {
-    event.preventDefault(); // Prevent default form submission
+    event.preventDefault() // Prevent default form submission
 
-    setLoading(true);
+    setLoading(true)
 
     const response = await fetch("/api/contact", {
       method: "POST",
@@ -23,40 +23,40 @@ export default function ContactForm() {
         "Content-Type": "application/json",
       },
       body: JSON.stringify(formData),
-    });
+    })
 
     if (response.ok) {
-      console.log("Message sent successfully");
-      setLoading(false);
+      console.log("Message sent successfully")
+      setLoading(false)
       setFormData({
         name: "",
         email: "",
         subject: "",
         message: "",
-      });
+      })
     } else {
-      console.log("Error sending message");
-      setLoading(false);
+      console.log("Error sending message")
+      setLoading(false)
     }
-  };
+  }
 
   const resolveAfter2Seconds = new Promise((resolve) =>
     setTimeout(resolve, 2000)
-  );
+  )
   const notify = () =>
     toast.promise(resolveAfter2Seconds, {
       pending: "Sending message...",
       success: "Message sent successfully!",
       error: "Thee was an error sending your message.",
-    });
+    })
 
   const handleInputChange = (event) => {
-    const { id, value } = event.target;
+    const { id, value } = event.target
     setFormData((prevFormData) => ({
       ...prevFormData,
       [id]: value,
-    }));
-  };
+    }))
+  }
 
   return (
     <form
@@ -148,5 +148,5 @@ export default function ContactForm() {
         </UniversalButton>
       </div>
     </form>
-  );
+  )
 }

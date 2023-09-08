@@ -1,7 +1,6 @@
-"use client";
-import PropTypes from "prop-types";
-import { ToastContainer } from "react-toastify";
-import "react-toastify/dist/ReactToastify.css";
+"use client"
+import { ToastContainer } from "react-toastify"
+import "react-toastify/dist/ReactToastify.css"
 
 function ToastNotificationComp(props) {
   return (
@@ -20,6 +19,6 @@ function ToastNotificationComp(props) {
   );
 }
 
-ToastNotificationComp.propTypes = {};
+ToastNotificationComp.propTypes = {}
 
-export default ToastNotificationComp;
+export default ToastNotificationComp
