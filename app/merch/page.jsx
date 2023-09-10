@@ -4,7 +4,7 @@ import Merch from "../../components/Merch"
 export default function MerchPage() {
   return (
     <Transition>
-      <main className="mt-2">
+      <main className="mt-5">
       <h1 className="hidden">Merch</h1>
         <Merch />
       </main>
