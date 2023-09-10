@@ -7,7 +7,7 @@ export default function GoogleCalendarEmbed() {
       <Image
         src={CalendarHeader}
         quality={100}
-        alt="Merch"
+        alt="Calendar"
         width="100%"
         height="100%"
         className="w-full rounded-t-sm bg-black"

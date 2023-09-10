@@ -17,6 +17,7 @@ export default function TwitchEmbed() {
         parent: "swaybae.net",
         loading: "lazy",
         allowFullScreen: true,
+        autoplay: false,
       }
 
       const player = new window.Twitch.Player("TwitchPlayerDivID", options)

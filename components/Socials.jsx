@@ -3,7 +3,7 @@ import { motion } from "framer-motion"
 import SpotifyEmbed from "../components/(socials)/SpotifyEmbed"
 import SocialCarousel from "../components/(socials)/SocialCarousel"
 import GoogleCalendarEmbed from "../components/(socials)/GoogleCalendarEmbed"
-import TwitchEmbed from "../components/(socials)/TwitchEmbed"
+import TwitchEmbed from "../components/(socials)/NewTwitchEmbed"
 import YoutubeEmbed from "../components/(socials)/YouTubeEmbed"
 
 export default function Socials() {
