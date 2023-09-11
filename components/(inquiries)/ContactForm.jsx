@@ -60,14 +60,14 @@ export default function ContactForm() {
 
   return (
     <form
-      className="bg-base-content border-info text-base-200 border-[8px] rounded-xl shadow-xl shadow-purple-800/50 px-4 sm:px-10 pt-4 pb-4 lg:px-12 lg:pt-8 xl:px-16 xl:pt-12 2xl:px-20"
+      className="bg-base-content border-info text-base-200 px-4 sm:px-10 pt-4 pb-4 lg:px-12 lg:pt-8 xl:px-16 xl:pt-12 2xl:px-20 border-[8px] rounded-3xl shadow-xl shadow-purple-800/50"
       onSubmit={handleSubmit}
     >
       <h1 className="text-4xl lg:text-5xl mt-4 lg:mt-2 xl:mt-0 mb-4">
         Contact Me!
       </h1>
       <hr className="hr-lines border-secondary my-2" />
-      <div className="w-full flex flex-col mt-4 mb-4">
+      <div className="w-full flex flex-col my-4">
         <label className="font-bold" htmlFor="name">
           Name
         </label>

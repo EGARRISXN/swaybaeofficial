@@ -1,7 +1,7 @@
 "use client"
+import { motion } from "framer-motion"
 import ContactForm from "../components/(inquiries)/ContactForm"
 import ContactSocials from "../components/(inquiries)/ContactSocials"
-import { motion } from "framer-motion"
 
 export default function Inquiries() {
   return (
@@ -14,7 +14,7 @@ export default function Inquiries() {
         </div>
         <br />
         <div className="flex flex-col md:flex-row mx-auto justify-center mt-16 xs:px-2 sm:px-6 md:px-12 lg:px-16 md:space-x-8">
-          <div className="md:w-3/5 lg:w-2/3 xl:w-2/3 2xl:w-3/4 3xl:w-3/4 rounded-xl">
+          <div className="md:w-3/5 lg:w-2/3 2xl:w-3/4 rounded-xl">
             <motion.div
               initial={{ opacity: 0 }}
               whileInView={{ y: [50, 0], opacity: 1 }}
@@ -23,7 +23,7 @@ export default function Inquiries() {
               <ContactForm />
             </motion.div>
           </div>
-          <div className="hidden md:block md:w-2/5 lg:w-1/3 xl:w-1/3 2xl:w-1/4 3xl:w-1/4 rounded-xl">
+          <div className="hidden md:block md:w-2/5 lg:w-1/3 2xl:w-1/4 rounded-xl">
             <motion.div
               initial={{ opacity: 0 }}
               whileInView={{ y: [-50, 0], opacity: 1 }}

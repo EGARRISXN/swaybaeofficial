@@ -15,13 +15,13 @@ export default function Hero() {
           exit={{ opacity: 0, y: 15 }}
           transition={{ delay: 0.25 }}
         >
-          <div className="flex justify-center mx-auto mt-40 mb-40 sm:mt-10 sm:mb-10 md:mt-8 md:mb-8 lg:mt-8 lg:mb-8 xl:mt-8 xl:mb-8 2xl:mt-8 2xl:mb-8 3xl:mt-16 3xl:mb-16">
+          <div className="flex justify-center mx-auto my-40 sm:my-20 md:my-16 lg:my-10 xl:my-4 4xl:my-16 sm:px-16 md:px-24 lg:px-32 2xl:px-40 3xl:px-48">
             <Link href="/">
               <Image
                 src={HeroLogo}
                 quality={100}
-                width={900}
-                height={600}
+                width={1450}
+                height={900}
                 alt="Hero"
                 priority
               />

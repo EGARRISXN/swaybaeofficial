@@ -14,7 +14,7 @@ export default function About() {
         </div>
         <br />
         <div className="flex flex-col-reverse mx-auto justify-center mt-16 xs:px-2 sm:px-6 md:px-12 lg:px-16 sm:gap-y-12 md:flex-row md:space-x-8">
-          <div className="md:w-3/5 lg:w-2/3 xl:w-2/3 2xl:w-2/3 3xl:w-2/3 shadow-purple-800/50">
+          <div className="md:w-3/5 lg:w-2/3 2xl:w-3/4 shadow-purple-800/50">
             <motion.div
               initial={{ opacity: 0 }}
               whileInView={{ y: [50, 0], opacity: 1 }}
@@ -24,7 +24,7 @@ export default function About() {
             </motion.div>
           </div>
 
-          <div className="md:w-2/5 lg:w-1/3 xl:w-1/3 2xl:w-1/3 3xl:w-1/3 shadow-purple-800/50">
+          <div className="md:w-2/5 lg:w-1/3 2xl:w-1/4 shadow-purple-800/50">
             <motion.div
               initial={{ opacity: 0 }}
               whileInView={{ y: [-50, 0], opacity: 1 }}
