@@ -25,6 +25,12 @@ export const metadata = {
   metadataBase: new URL("https://swaybae.net"),
   title: "Sway Bae | Streaming, Gaming, & So Much More!",
   description: "The Official Website for Sway Bae & The Bae Squad!",
+  referrer: "origin-when-cross-origin",
+  viewport: "width=device-width, initial-scale=1.0, maximumScale: 1,",
+  keywords: [
+    "sway bae, swaybae, sway_bae, swaybaetv, sway, bae, swaybae.net, swaybae.com, thebaesquad, the bae squad, baesquad, bae_squad, sway bae twitch, sway bae twitter, sway bae youtube, sway bae discord, sway bae instagram, sway bae tiktok, sway bae merch, sway bae store, sway bae shop, sway bae gaming, hearthstone, blizzard, streamer, stream, twitch, twitch streamer, twitch.tv, twitch.tv/sway_bae",
+  ],
+  creator: { name: "Ethan Garrison", url: "https://github.com/EGARRISXN" },
   robots: {
     index: true,
     follow: true,
@@ -36,18 +42,17 @@ export const metadata = {
       "max-snippet": -1,
     }
   },
-
   openGraph: {
     type: "website",
     locale: "en_US",
     url: "https://www.swaybae.net",
-    title: "Sway Bae",
+    siteName: "swaybae.net",
+    title: "Sway Bae | Streaming, Gaming, & So Much More!",
     description:
       "The Official Website for Sway Bae & The Bae Squad!",
     keywords: [
       "sway bae, swaybae, sway_bae, swaybaetv, sway, bae, swaybae.net, swaybae.com, thebaesquad, the bae squad, baesquad, bae_squad, sway bae twitch, sway bae twitter, sway bae youtube, sway bae discord, sway bae instagram, sway bae tiktok, sway bae merch, sway bae store, sway bae shop, sway bae gaming, hearthstone, blizzard, streamer, stream, twitch, twitch streamer, twitch.tv, twitch.tv/sway_bae",
     ],
-    viewport: "width=device-width, initial-scale=1.0",
   }
 }
 

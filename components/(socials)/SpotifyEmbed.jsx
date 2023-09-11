@@ -1,8 +1,8 @@
 export default function SpotifyEmbed() {
   return (
-    <div className="rounded-2xl shadow-xl shadow-purple-800/50 ">
+    <div className="rounded-2xl">
       <iframe
-        className="rounded-2xl shadow-xl shadow-purple-800/50"
+        className="rounded-2xl"
         title="Spotify playlist by Sway Bae"
         src="https://open.spotify.com/embed/playlist/6am5YjtzZAOPnmvwbGHDxm?utm_source=generator&theme=0"
         allow="encrypted-media; fullscreen; picture-in-picture"

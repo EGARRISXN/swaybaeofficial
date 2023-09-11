@@ -1,26 +1,18 @@
-"use client"
 import TeespringEmbed1 from "../components/(merch)/TeespringEmbed1"
-import { motion } from "framer-motion"
 
 export default function Merch() {
   return (
     <div id="merch" className="w-full">
-      <div className="max-w-[1240px] mx-auto py-16">
-        <div className="container mx-auto flex mt-2">
+      <div className="max-w-[1420px] mx-auto py-16">
+        <div className="flex pl-2 sm:pl-6 md:pl-16 mt-2">
           <h1 className="font-poppins uppercase text-xl tracking-widest font-bold-200 text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-pink-600">
             Merch
           </h1>
         </div>
         <br />
 
-        <div className="flex mx-auto justify-center mt-16 xs:px-2">
-          <motion.div
-            initial={{ x: 0, opacity: 0 }}
-            whileInView={{ x: [250, 0], opacity: 1 }}
-            transition={{ duration: 1 }}
-          >
+        <div className="mx-auto justify-center mt-16 px-2">
             <TeespringEmbed1 />
-          </motion.div>
         </div>
       </div>
     </div>

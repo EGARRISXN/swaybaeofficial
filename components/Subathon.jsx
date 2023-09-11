@@ -3,8 +3,8 @@ import SubPoster from "../components/(subathon)/SubPoster"
 export default function Subathon2023() {
   return (
     <div id="merch" className="w-full">
-      <div className="max-w-[1240px] mx-auto py-16">
-        <div className="container mx-auto mt-2">
+      <div className="max-w-[1420px] mx-auto py-16">
+      <div className="flex pl-2 sm:pl-6 md:pl-16 mt-2">
           <h1 className="font-poppins uppercase text-xl tracking-widest font-bold-200 text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-pink-600">
             Subathon
           </h1>

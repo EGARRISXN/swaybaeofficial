@@ -8,7 +8,7 @@ export default function Hero() {
   return (
     <div id="hero" className="w-full">
       <h1 className="hidden">Hero</h1>
-      <div className="max-w-[1240px] mx-auto xs:py-1 sm:pt-6 sm:pb-4">
+      <div className="max-w-[1420px] mx-auto xs:py-1 sm:pt-6 sm:pb-4">
         <motion.div
           initial={{ opacity: 0, y: 15 }}
           animate={{ opacity: 1, y: 0 }}
