@@ -17,11 +17,12 @@ export default function TwitchEmbed() {
         parent: "swaybae.net",
         loading: "lazy",
         allow: "fullscreen",
-        autoplay: false,
+        autoplay: "false",
+        muted: "false",
       }
 
       const player = new window.Twitch.Player("TwitchPlayerDivID", options)
-      player.setVolume(0)
+      player.setVolume(0.5)
     }
 
     return () => {
