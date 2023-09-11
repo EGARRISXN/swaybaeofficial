@@ -13,7 +13,7 @@ export default function MediaKit() {
         <h3 className="flex mx-auto justify-center mt-16">
           Under Construction!
         </h3>
-        <div className="flex mx-auto justify-center text-base-content rounded-xl shadow-purple-800/50 mb-16">
+        <div className="flex flex-col mx-auto justify-center text-base-content rounded-xl shadow-purple-800/50 mb-16">
           <MediaKitContainer />
         </div>
       </div>

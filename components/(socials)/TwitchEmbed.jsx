@@ -16,12 +16,12 @@ export default function TwitchEmbed() {
         channel: "sway_bae",
         parent: "swaybae.net",
         loading: "lazy",
-        allowFullScreen: true,
+        allow: "fullscreen",
         autoplay: false,
       }
 
       const player = new window.Twitch.Player("TwitchPlayerDivID", options)
-      player.setVolume(0.5)
+      player.setVolume(0)
     }
 
     return () => {
