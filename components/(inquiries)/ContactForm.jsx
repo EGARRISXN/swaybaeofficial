@@ -63,7 +63,7 @@ export default function ContactForm() {
       className="bg-base-content border-info text-base-200 border-[8px] rounded-xl shadow-xl shadow-purple-800/50 px-4 sm:px-10 pt-4 pb-4 lg:px-12 lg:pt-8 xl:px-16 xl:pt-12 2xl:px-20"
       onSubmit={handleSubmit}
     >
-      <h1 className="text-4xl lg:text-5xl mt-4 lg:mt-2 xl:mt-0 mb-4 hover:text-info">
+      <h1 className="text-4xl lg:text-5xl mt-4 lg:mt-2 xl:mt-0 mb-4">
         Contact Me!
       </h1>
       <hr className="hr-lines border-secondary my-2" />

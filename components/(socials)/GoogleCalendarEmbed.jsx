@@ -1,5 +1,5 @@
 import Image from "next/image"
-import CalendarHeader from "../../public/images/calendarheader.svg"
+import CalendarHeader from "../../public/images/calendarhead.png"
 
 export default function GoogleCalendarEmbed() {
   return (

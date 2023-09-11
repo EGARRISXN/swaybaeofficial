@@ -1,7 +1,7 @@
 "use client"
+import { motion } from "framer-motion"
 import AboutPhoto from "../components/(about)/AboutPhoto"
 import AboutCard from "../components/(about)/AboutCard"
-import { motion } from "framer-motion"
 
 export default function About() {
   return (
@@ -13,7 +13,7 @@ export default function About() {
           </h1>
         </div>
         <br />
-        <div className="flex flex-col-reverse mx-auto justify-center mt-16 xs:px-2 sm:px-6 md:px-12 lg:px-16 xl:px-20 2xl:px-8 3xl:px-8 sm:gap-y-12 md:flex-row md:space-x-8 lg:space-x-10">
+        <div className="flex flex-col-reverse mx-auto justify-center mt-16 xs:px-2 sm:px-6 md:px-12 lg:px-16 sm:gap-y-12 md:flex-row md:space-x-8">
           <div className="md:w-3/5 lg:w-2/3 xl:w-2/3 2xl:w-2/3 3xl:w-2/3 shadow-purple-800/50">
             <motion.div
               initial={{ opacity: 0 }}

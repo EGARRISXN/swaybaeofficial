@@ -15,7 +15,7 @@ export default function Hero() {
           exit={{ opacity: 0, y: 15 }}
           transition={{ delay: 0.25 }}
         >
-          <div className="flex justify-center items-center mt-40 mb-40 sm:mt-10 sm:mb-10 md:mt-8 md:mb-8 lg:mt-8 lg:mb-8 xl:mt-8 xl:mb-8 2xl:mt-8 2xl:mb-8 3xl:mt-16 3xl:mb-16">
+          <div className="flex justify-center mx-auto mt-40 mb-40 sm:mt-10 sm:mb-10 md:mt-8 md:mb-8 lg:mt-8 lg:mb-8 xl:mt-8 xl:mb-8 2xl:mt-8 2xl:mb-8 3xl:mt-16 3xl:mb-16">
             <Link href="/">
               <Image
                 src={HeroLogo}

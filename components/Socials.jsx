@@ -10,7 +10,7 @@ export default function Socials() {
   return (
     <div id="socials" className="w-full">
       <div className="max-w-[1420px] mx-auto py-16">
-        <div className="flex flex-col sm:flex-row px-2 sm:px-6 md:pl-16 md:pr-16 3xl:pr-10 justify-between mt-2">
+        <div className="flex flex-col sm:flex-row px-2 sm:px-6 md:pl-16 md:pr-16 justify-between mt-2">
           <h1 className="font-poppins uppercase text-xl tracking-widest font-bold-200 text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-pink-600">
             Socials
           </h1>
@@ -19,25 +19,20 @@ export default function Socials() {
           </div>
         </div>
         <br />
-
-        <div className="mx-auto xs:px-2 sm:px-10 md:px-12 lg:px-16 xl:px-20 2xl:px-8">
-
+        <div className="mx-auto xs:px-2 sm:px-6 md:px-12 lg:px-16">
         <motion.div
               initial={{ x: 0, opacity: 0 }}
-              whileInView={{ x: [-250, 0], opacity: 1 }}
+              whileInView={{ x: [250, 0], opacity: 1 }}
               transition={{ duration: 1 }}
             >
           <SocialCarousel />
           </motion.div>
           <br />
-
-          <div className="shadow-purple-800/50 mx-auto mt-6 sm:mt-10">
+          <div className="grid mx-auto justify-center mt-6 sm:mt-10 shadow-purple-800/50">
               <GoogleCalendarEmbed />
           </div>
-
           <br />
-
-          <div className="grid grid-col lg:grid-cols-2 gap-x-2 mx-auto mt-6 sm:mt-10">
+          <div className="grid grid-col lg:grid-cols-2 mx-auto lg:space-x-8 mt-6 sm:mt-10">
             <motion.div
               initial={{ x: 0, opacity: 0 }}
               whileInView={{ x: [-250, 0], opacity: 1 }}

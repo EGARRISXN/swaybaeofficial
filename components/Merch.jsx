@@ -1,4 +1,4 @@
-import TeespringEmbed1 from "../components/(merch)/TeespringEmbed1"
+import TeespringEmbed1 from "./(merch)/TeespringEmbed"
 
 export default function Merch() {
   return (
@@ -10,8 +10,7 @@ export default function Merch() {
           </h1>
         </div>
         <br />
-
-        <div className="mx-auto justify-center mt-16 px-2">
+        <div className="grid mx-auto justify-center mt-16 xs:px-2 sm:px-10 md:px-12 lg:px-16">
             <TeespringEmbed1 />
         </div>
       </div>

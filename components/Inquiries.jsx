@@ -8,12 +8,12 @@ export default function Inquiries() {
     <div id="inquiries" className="w-full">
       <div className="max-w-[1420px] mx-auto py-16">
       <div className="flex pl-2 sm:pl-6 md:pl-16 mt-2">
-          <p className="uppercase text-xl tracking-widest font-bold-200 text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-pink-600">
+          <p className="font-poppins uppercase text-xl tracking-widest font-bold-200 text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-pink-600">
             Inquiries
           </p>
         </div>
         <br />
-        <div className="flex flex-col md:flex-row mx-auto justify-center mt-16 xs:px-2 sm:px-10 md:px-12 lg:px-16 xl:px-20 2xl:px-8 3xl:px-8 md:space-x-8 lg:space-x-10">
+        <div className="flex flex-col md:flex-row mx-auto justify-center mt-16 xs:px-2 sm:px-6 md:px-12 lg:px-16 md:space-x-8">
           <div className="md:w-3/5 lg:w-2/3 xl:w-2/3 2xl:w-3/4 3xl:w-3/4 rounded-xl">
             <motion.div
               initial={{ opacity: 0 }}

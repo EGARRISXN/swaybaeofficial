@@ -115,7 +115,7 @@ export default function SubPoster() {
   const secondGroup = images.slice(14)
 
   return (
-    <div className="bg-white rounded-xl shadow-xl p-2 shadow-purple-800/50 border-base-content border-[8px]">
+    <div className="bg-white rounded-xl shadow-xl p-2 shadow-purple-800/50 border-info border-[10px]">
       <div className="justify-center">
         <Link href="https://www.twitch.tv/sway_bae">
           <Image

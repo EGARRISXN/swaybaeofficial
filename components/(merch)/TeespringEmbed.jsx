@@ -1,7 +1,7 @@
 import Image from "next/image"
-import SwayMerch from "../../public/images/SwayMerch.svg"
+import SwayMerch from "../../public/images/merchhead.png"
 
-export default function TeespringEmbed1() {
+export default function TeespringEmbed() {
   return (
     <div className="border-[10px] border-info rounded-xl shadow-xl shadow-purple-800/50">
       <Image
@@ -14,7 +14,7 @@ export default function TeespringEmbed1() {
       />
       <div className="aspect-w-22 aspect-h-30 sm:aspect-w-30 sm:aspect-h-22">
         <iframe
-          src="https://embed.creator-spring.com/widget?slug=sway-baes-merch-store&per=6&bg=ffffff&txtcolor=000000&currency=&page="
+          src="https://embed.creator-spring.com/widget?slug=sway-baes-merch-store&per=12&bg=ffffff&txtcolor=000000&currency=&page="
           title="The Official Merch Store for Swaybae!"
           allowFullScreen
           width="100%"

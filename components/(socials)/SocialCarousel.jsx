@@ -87,14 +87,14 @@ export default function SocialCarousel() {
         </button>
         <button
           onClick={scrollRight}
-          className="p-2 m-2 rounded-full bg-transparentv border-primary border-4"
+          className="p-2 m-2 rounded-full bg-transparent border-primary border-4"
         >
           <FiChevronRight />
         </button>
       </div>
       <div
         id="content"
-        className="carousel flex sm:justify-start gap-8 px-2 sm:gap-16 scroll-smooth scrollbar-hide rounded-xl"
+        className="carousel flex sm:justify-start gap-8 sm:gap-16 scroll-smooth scrollbar-hide rounded-xl"
       >
         {socialMediaData.map((data, index) => (
           <SocialCard key={index} {...data} />

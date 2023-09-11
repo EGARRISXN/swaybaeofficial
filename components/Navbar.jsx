@@ -58,7 +58,7 @@ const Nav = () => {
 
   return (
     <header className="fixed w-full top-0 z-[100] xs:px-2 sm:px-6 md:px-12 lg:px-16 2xl:px-20 3xl:px-36 4xl:px-60">
-      <nav className="relative navbar py-1 bg-base-200 rounded-b-3xl shadow-xl shadow-purple-800/50">
+      <nav className="relative navbar py-2 bg-base-200 rounded-b-3xl shadow-xl shadow-purple-800/50">
         <div className="navbar-start flex px-1">
           <div className="flex h-10 w-10 mask mask-squircle">
             <Link href="/">

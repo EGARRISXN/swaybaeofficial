@@ -47,7 +47,7 @@ export default function ContactSocials({ mobileStyle }) {
         mobileStyle ? "py-4" : "py-8"
       } px-6`}
     >
-      <h3 className="text-2xl mb-4 text-center hover:text-primary">
+      <h3 className="text-2xl mb-4 text-center">
         Let&apos; s Connect!
       </h3>
       <hr className="my-4 border-secondary" />

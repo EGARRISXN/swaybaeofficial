@@ -10,7 +10,7 @@ export default function Subathon2023() {
           </h1>
         </div>
         <br />
-        <div className="text-center xs:px-0 sm:px-0 pb-4">
+        <div className="text-center sm:px-0 pb-4">
           <h5 className="xs:text-7xl sm:text-9xl font-bold text-primary">
             Thank You!
           </h5>
