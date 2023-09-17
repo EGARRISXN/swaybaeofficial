@@ -44,10 +44,7 @@ export default function SubPoster() {
     { src: Ten, alt: "10", link: "https://www.twitch.tv/videos/1899225322" },
     { src: Eleven, alt: "11" },
 
-    {
-      src: Thirteen,
-      alt: "13",
-    },
+    { src: Thirteen, alt: "13", link: "https://youtu.be/MfC_SIoPL5g" },
     {
       src: Fourteen,
       alt: "14",
