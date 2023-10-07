@@ -66,6 +66,7 @@ export default function ContactForm() {
       <h1 className="text-4xl lg:text-5xl mt-4 lg:mt-2 xl:mt-0 mb-4">
         Contact Me!
       </h1>
+      
       <hr className="hr-lines border-secondary my-2" />
       <div className="w-full flex flex-col my-4">
         <label className="font-bold" htmlFor="name">
