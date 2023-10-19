@@ -4,7 +4,7 @@ import Link from "next/link";
 
 export default function MediaKitPhoto() {
   return (
-    <div className="x pt-12">
+    <div className="pt-12">
       <Link href="https://beacons.ai/sway_bae/mediakit" passHref>
       <Image
         src={MediaKit}
@@ -12,7 +12,7 @@ export default function MediaKitPhoto() {
         alt="Media Kit"
         width="100%"
         height="100%"
-        className="x"
+        className="animate-wiggle"
         priority
       />
       </Link>

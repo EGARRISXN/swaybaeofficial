@@ -78,7 +78,7 @@ export default function SocialCarousel() {
 
   return (
     <div className="relative mx-auto">
-      <div className="absolute top-0 left-0">
+      <div className="absolute top-0 right-0">
         <button
           onClick={scrollLeft}
           className="p-2 m-2 rounded-full bg-transparent border-primary border-4"

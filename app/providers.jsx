@@ -13,5 +13,5 @@ export default function Providers({ children }) {
     return <>{children}</>
   }
 
-  return <ThemeProvider>{children}</ThemeProvider>
+  return <ThemeProvider defaultTheme="myDark">{children}</ThemeProvider>
 }
