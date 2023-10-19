@@ -1,18 +1,21 @@
-import Link from "next/link"
-import UniversalButton from "../../utils/UniversalButton"
+import Image from "next/image";
+import MediaKit from "../../public/images/mediakit.png";
+import Link from "next/link";
 
-export default function MediaKitContainer() {
+export default function MediaKitPhoto() {
   return (
-    <div className="card-body rounded-xl bg-base-200 border-info border-[10px] mx-auto shadow-xl shadow-purple-800/50">
-      <hr className="hr-lines border-secondary my-2" />
-      <h2 className="card-title font-bold text-2xl">Page will be up soon!</h2>
-      <p>In the meantime, go checkout the rest of the site!</p>
-      <hr className="hr-lines border-secondary my-2" />
-      <div className="card-actions justify-end">
-        <Link href="/inquiries">
-          <UniversalButton>Let&#39;s Go!</UniversalButton>
-        </Link>
-      </div>
+    <div className="x pt-12">
+      <Link href="https://beacons.ai/sway_bae/mediakit" passHref>
+      <Image
+        src={MediaKit}
+        quality={100}
+        alt="Media Kit"
+        width="100%"
+        height="100%"
+        className="x"
+        priority
+      />
+      </Link>
     </div>
-  )
+  );
 }

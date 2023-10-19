@@ -9,7 +9,7 @@ export default function AboutCard() {
   }
 
   return (
-    <div className="bg-base-content border-info text-base-200 xs:mt-12 sm:mt-0 p-6 md:p-8 lg:p-10 2xl:p-12 3xl:p-16 border-[8px] rounded-3xl shadow-xl shadow-purple-800/50">
+    <div className="bg-base-200 border-info text-base-content xs:mt-12 sm:mt-0 p-6 md:p-8 lg:p-10 2xl:p-12 3xl:p-16 border-[8px] rounded-3xl shadow-xl shadow-purple-800/50">
       <h1 className="text-4xl lg:text-5xl text-primary mb-4">I&apos;m Sway!</h1>
       <hr className="hr-lines border-secondary my-2" />
       <p className="my-4">

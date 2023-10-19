@@ -10,7 +10,7 @@ export default function SocialCard({
   linkUrl,
 }) {
   return (
-    <div className="card flex mx-auto text-center p-4 h-full w-full mt-16 bg-base-content border-[8px] text-base-200 border-info rounded-2xl">
+    <div className="card flex mx-auto text-center h-full w-full mt-16 bg-base-200 border-8 text-base-content border-info rounded-xl">
       <figure>
         <Link href={linkUrl}>
           <Image
@@ -18,19 +18,18 @@ export default function SocialCard({
             alt={alt}
             width="100%"
             height="100%"
-            className="hover:scale-125 ease-in duration-300 rounded-t-sm"
+            className="hover:scale-110 ease-in duration-300"
           />
         </Link>
       </figure>
       <div className="card-body">
-        <h1 className="card-title text-xl text-center justify-center">
+        <h1 className="card-title text-2xl text-center justify-center pb-2">
           {title}
         </h1>
-        <p>{username}</p>
         <div className="card-actions justify-center">
           <Link href={linkUrl}>
-            <button className="btn btn-secondary w-32 h-10 hover:scale-110 ease-in duration-300 shadow-xl shadow-gray-400 rounded-xl bg-gradient-to-r from-purple-400 to-pink-600 text-white">
-              {linkText}
+            <button className="btn-sm btn-secondary w-32 hover:scale-110 ease-in duration-300 shadow-xl shadow-gray-400 rounded-xl bg-gradient-to-r from-purple-400 to-pink-600 text-white">
+              {username}
             </button>
           </Link>
         </div>

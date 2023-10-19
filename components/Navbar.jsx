@@ -8,10 +8,9 @@ import Image from "next/image"
 import Ava from "../public/images/avatar.png"
 
 const links = [
-  { href: "/about", label: "About" },
-  { href: "/socials", label: "Socials" },
-  // { href: "/merch", label: "Merch" },
+  { href: "/calendar", label: "Calendar" },
   { href: "/inquiries", label: "Business Inquiries" },
+  { href: "https://beacons.ai/sway_bae/mediakit", label: "Media Kit" },
 ]
 
 const Nav = () => {
@@ -58,7 +57,7 @@ const Nav = () => {
     <header className="absolute w-full top-0 z-[100]">
       <nav className="relative navbar">
         <div className="navbar-start flex p-2">
-          <div className="flex h-10 w-10 mask mask-squircle">
+          <div className="flex h-10 w-10 mask mask-circle">
             <Link href="/">
               <Image
                 src={Ava}
@@ -71,7 +70,7 @@ const Nav = () => {
             </Link>
           </div>
         </div>
-        {/* <div className="navbar-center hidden lg:flex mx-auto px-1">
+        <div className="navbar-center hidden lg:flex mx-auto px-1">
           <ul className="menu menu-horizontal text-lg xl:space-x-8 2xl:space-x-10 3xl:space-x-12 4xl:space-x-14">
             {links.map((link) => (
               <li key={link.href}>
@@ -84,7 +83,7 @@ const Nav = () => {
               </li>
             ))}
           </ul>
-        </div> */}
+        </div>
         <div className="dropdown" style={{ position: "relative" }}>
           <button
             tabIndex={0}
@@ -100,7 +99,7 @@ const Nav = () => {
           {isOpen && (
             <ul
               tabIndex={0}
-              className="dropdown-content menu menu-sm p-1 z-[100] w-60 bg-base-200 text-base-content rounded-b-2xl shadow-xl shadow-purple-800/50"
+              className="dropdown-content menu menu-sm p-1 z-[100] w-60 text-base-content rounded-b-2xl shadow-xl shadow-purple-800/50"
               onKeyDown={(e) => {
                 if (e.key === "Escape") {
                   closeDropdown();
@@ -121,7 +120,7 @@ const Nav = () => {
                 <li key={link.href}>
                   <Link
                     href={link.href}
-                    className="relative justify-center bg-base-200 text-lg text-primary bg-clip-text hover:underline hover:text-secondary"
+                    className="relative justify-center text-lg text-primary bg-clip-text hover:underline hover:text-secondary"
                     onClick={handleLinkClick}
                   >
                     {link.label}
