@@ -2,7 +2,6 @@ import Image from "next/image";
 import Link from "next/link";
 import HypeGoals from "../public/images/hypegoals.png";
 import HypeLogo from "../public/images/hypelogo.png";
-import HypeTicker from "./(hypechallenge)/HypeTicker";
 import HypeCard from "./(hypechallenge)/HypeCard";
 
 export default function HypeChallenge() {
@@ -22,10 +21,6 @@ export default function HypeChallenge() {
                 priority
               />
             </Link>
-          </div>
-
-          <div className="hidden lg:block mt-[-64px]">
-            <HypeTicker />
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
