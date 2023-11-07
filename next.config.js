@@ -4,5 +4,4 @@ const nextConfig = {
     NEXT_PUBLIC_EMAIL_PASS: "jhbniwvadgmhsdyk",
   },
 };
-
 module.exports = nextConfig;

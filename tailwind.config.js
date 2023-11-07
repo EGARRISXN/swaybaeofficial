@@ -17,9 +17,9 @@ module.exports = {
       "4xl": "1920px",
     },
     aspectRatio: {
-      auto: 'auto',
-      square: '1 / 1',
-      video: '16 / 9',
+      auto: "auto",
+      square: "1 / 1",
+      video: "16 / 9",
       1: "1",
       2: "2",
       3: "3",
@@ -51,15 +51,6 @@ module.exports = {
       fontFamily: {
         poppins: ["Poppins", "sans-serif"],
         lobster: ["Lobster", "cursive"],
-      },
-      keyframes: {
-        wiggle: {
-          '0%, 100%': { transform: 'rotate(-3deg)' },
-          '50%': { transform: 'rotate(3deg)' },
-        },
-      },
-      animation: {
-        wiggle: 'wiggle 1s ease-in-out infinite',
       },
     },
   },

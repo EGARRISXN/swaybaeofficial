@@ -24,35 +24,41 @@ export default function AboutCard() {
         <br />
       </h4>
       <p className="x">
-        Level 1 - 10,000 EXP || Unlock Theme Weekend
+        <b>
+          <i>Level 1 - 10,000 EXP || Unlock Theme Weekend</i>
+        </b>
         <br />
-        Friday: Puppy Char-sub-arie Board - Every 10k EXP, Chat gets to feed an
-        item off of the Puppy Charcuterie Board to Biff and Waffles for the
+        <b>Friday:</b> Puppy Char-sub-arie Board - Every 10k EXP, Chat gets to
+        feed an item off of the Puppy Charcuterie Board to Biff and Waffles for
+        the whole stream.
+        <br />
+        <b>Saturday:</b> Wheel of Sub-Tunes - Every 10,000 EXP, the wheel is
+        spun with one of the following outcomes: 1 hour of 10 channel point song
+        requests, 3 random country songs added to the queue, 3 random Holiday
+        songs added to the queue, or 3 random meme songs added to queue for the
         whole stream.
         <br />
-        Saturday: Wheel of Sub-Tunes - Every 10,000 EXP, the wheel is spun with
-        one of the following outcomes: 1 hour of 10 channel point song requests,
-        3 random country songs added to the queue, 3 random Holiday songs added
-        to the queue, or 3 random meme songs added to queue for the whole
-        stream.
-        <br />
-        Sunday: Community Sub-otage Day - Every 500 EXP = 1 sabotage for Sway
-        for her current game. Sabotages include selling whole board immediately,
-        leveling no matter what (if she can't level she has to concede), selling
-        rightmost minion, selling leftmost minion, selling highest tier minion
-        (if multiple then highest value), Only using last 10 seconds to play
-        turn for rest of game, Ethan plays the rest of this turn for Sway, order
-        board in attack order from left to right.
+        <b>Sunday:</b> Community Sub-otage Day - Every 500 EXP = 1 sabotage for
+        Sway for her current game. Sabotages include selling whole board
+        immediately, leveling no matter what (if she can't level she has to
+        concede), selling rightmost minion, selling leftmost minion, selling
+        highest tier minion (if multiple then highest value), Only using last 10
+        seconds to play turn for rest of game, Ethan plays the rest of this turn
+        for Sway, order board in attack order from left to right.
         <br />
         <br />
-        Level 2 - 25,000 EXP || 1 Hour Hearthstone Coaching with Ethan
+        <b>
+          <i> Level 2 - 25,000 EXP || 1 Hour Hearthstone Coaching with Ethan</i>
+        </b>
         <br />
         Ethan has NO experience with TCGs, let alone Hearthstone. Sway will
         coach Ethan through one hour of games on her account, NO TUTORIAL - NO
         BABYSTEPS!
         <br />
         <br />
-        Level 3 - 50,000 EXP || Personal Sound Clip Raffle
+        <b>
+          <i>Level 3 - 50,000 EXP || Personal Sound Clip Raffle</i>
+        </b>
         <br />
         If you haven't used soundwaves before on Sway's stream, these are used
         to trigger the Sway soundboard with funny quips from stream. Anyone in
@@ -64,7 +70,9 @@ export default function AboutCard() {
         {/* Rest of the content */}
         {isShowMore && (
           <p className="x">
-            Level 4 - 100,000 EXP || Spicy Dinner Surprise
+            <b>
+              <i> Level 4 - 100,000 EXP || Spicy Dinner Surprise</i>
+            </b>
             <br />
             Sway will do a cooking stream, she will make a drink, appetizer,
             dinner, and dessert. One of each will be spiked with HOT hot sauce.
@@ -73,7 +81,9 @@ export default function AboutCard() {
             no winners (except chat).
             <br />
             <br />
-            Level 5 - 200,000 EXP || 3v3 Hearthstone
+            <b>
+              <i> Level 5 - 200,000 EXP || 3v3 Hearthstone</i>
+            </b>
             <br />
             Battlegrounds Community Tourney Sway will host a 3v3 Hearthstone
             Battlegrounds Tourney! This is teams of 3 vs teams of 3, INSANITY!
@@ -81,25 +91,33 @@ export default function AboutCard() {
             that needs to find a partner!**
             <br />
             <br />
-            Level 6 - 300,000 EXP || Dinner Date
+            <b>
+              <i> Level 6 - 300,000 EXP || Dinner Date</i>
+            </b>
             <br />
             with Chat Sway will take chat out on a livestream to a fun dining
             experience!
             <br />
             <br />
-            Level 7 - 500,000 EXP || Merch Giveaway x 3
+            <b>
+              <i> Level 7 - 500,000 EXP || Merch Giveaway x 3</i>
+            </b>
             <br />
             Sway will giveaway 3 t-shirts from her re-done merch store!
             <br />
             <br />
-            Level 8 - 650,000 EXP || IRL Arcade Stream
+            <b>
+              <i> Level 8 - 650,000 EXP || IRL Arcade Stream</i>
+            </b>
             <br />
             Sway will livestream from an arcade, and show off her arcade
             basketball skills and how she's basically the next pro pacman
             player.
             <br />
             <br />
-            Level 9 - 800,000 EXP || Evil Sway at Nite
+            <b>
+              <i> Level 9 - 800,000 EXP || Evil Sway at Nite</i>
+            </b>
             <br />
             It's the moment everyone has been waiting for! This stream will
             begin with family friendly Evil Sway, then transition to Evil Sway
@@ -107,19 +125,25 @@ export default function AboutCard() {
             (content warning: language). The best of all three worlds.
             <br />
             <br />
-            Level 10 - 1,000,000 EXP || Vacation Stream
+            <b>
+              <i> Level 10 - 1,000,000 EXP || Vacation Stream</i>
+            </b>
             <br />
             Sway will take chat on a two day vacation and stream the ENTIRE
             thing (except sleeping).
             <br />
             <br />
-            Level 11 - 1,500,000 EXP || Extreme Sway Makeover
+            <b>
+              <i> Level 11 - 1,500,000 EXP || Extreme Sway Makeover</i>
+            </b>
             <br />
             Sway will dye her hair the color of chat's choice, build custom
             crocs with chat, and Ethan will give her his best makeover yet.
             <br />
             <br />
-            Level 12 - 3,000,000 EXP || Live Tattoo
+            <b>
+              <i> Level 12 - 3,000,000 EXP || Live Tattoo</i>
+            </b>
             <br />
             Sway will get tattooed and livestream the process. Chat will vote
             between 3 choices.

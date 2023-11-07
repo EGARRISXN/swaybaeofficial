@@ -2,7 +2,7 @@ import Image from "next/image";
 import Link from "next/link";
 import HypeGoals from "../public/images/hypegoals.png";
 import HypeLogo from "../public/images/hypelogo.png";
-import HypeCard from "./(hypechallenge)/HypeCard";
+import HypeCard from "../components/(hypechallenge)/HypeCard";
 
 export default function HypeChallenge() {
   return (
