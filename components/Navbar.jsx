@@ -1,64 +1,63 @@
-"use client"
-import { useState, useEffect } from "react"
-import { usePathname } from "next/navigation"
-import { Sling as Hamburger } from "hamburger-react"
-import { useTheme, ThemeProvider } from "next-themes"
-import Link from "next/link"
-import Image from "next/image"
-import Ava from "../public/images/avatar.png"
+"use client";
+import { useState, useEffect } from "react";
+import { usePathname } from "next/navigation";
+import { Sling as Hamburger } from "hamburger-react";
+import { useTheme, ThemeProvider } from "next-themes";
+import Link from "next/link";
+import Image from "next/image";
+import Ava from "../public/images/avatar.png";
 
 const links = [
   { href: "/", label: "Home" },
   { href: "/calendar", label: "Calendar" },
-  { href: "/inquiries", label: "Business Inquiries" },
-  { href: "https://beacons.ai/sway_bae/mediakit", label: "Media Kit" },
-]
+  { href: "/hypechallenge", label: "Hype Challenge" },
+];
 
 const Nav = () => {
-  const path = usePathname()
-  const [isOpen, setOpen] = useState(false)
-  const [clickedOutside, setClickedOutside] = useState(false)
-  const { resolvedTheme, setTheme } = useTheme()
-  const isDarkMode = resolvedTheme === "myDark"
+  const path = usePathname();
+  const [isOpen, setOpen] = useState(false);
+  const [clickedOutside, setClickedOutside] = useState(false);
+  const { resolvedTheme, setTheme } = useTheme();
+  const isDarkMode = resolvedTheme === "myDark";
 
   const closeDropdownOnOutsideClick = (event) => {
     if (isOpen && !event.target.closest(".dropdown")) {
-      closeDropdown()
-      setClickedOutside(true)
+      closeDropdown();
+      setClickedOutside(true);
     }
-  }
+  };
 
   useEffect(() => {
-    document.addEventListener("click", closeDropdownOnOutsideClick)
+    document.addEventListener("click", closeDropdownOnOutsideClick);
     return () => {
-      document.removeEventListener("click", closeDropdownOnOutsideClick)
-    }
+      document.removeEventListener("click", closeDropdownOnOutsideClick);
+    };
     // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [isOpen])
+  }, [isOpen]);
 
   const toggleDropdown = () => {
-    setOpen(!isOpen)
-    setClickedOutside(false)
-  }
+    setOpen(!isOpen);
+    setClickedOutside(false);
+  };
 
   const closeDropdown = () => {
-    setOpen(false)
-    setClickedOutside(false)
-  }
+    setOpen(false);
+    setClickedOutside(false);
+  };
 
   const handleLinkClick = () => {
-    closeDropdown()
-  }
+    closeDropdown();
+  };
 
   const toggleTheme = () => {
-    setTheme(isDarkMode ? "myLight" : "myDark")
-  }
+    setTheme(isDarkMode ? "myLight" : "myDark");
+  };
 
   return (
-    <header className="absolute w-full top-0 z-50">
-      <nav className="relative navbar z-50">
-        <div className="navbar-start flex p-2 z-50">
-          <div className="flex h-10 w-10 mask mask-heart">
+    <header className="absolute w-full bg-base-100 lg:bg-transparent top-0 z-[100]">
+      <nav className="relative navbar  z-[100]">
+        <div className="navbar-start px-2  z-[100]">
+          <div className="hidden lg:flex h-10 w-10 mask mask-heart">
             <Link href="/">
               <Image
                 src={Ava}
@@ -70,70 +69,92 @@ const Nav = () => {
               />
             </Link>
           </div>
-          <p className="font-bold bg-gradient-to-tr from-primary via-info to-secondary bg-clip-text text-transparent px-1">Creator<br/>of Chaos</p>
+          <p className="font-bold hidden lg:block bg-gradient-to-tr from-primary via-info to-secondary bg-clip-text text-transparent px-1 text-sm">
+            Creator
+            <br />
+            of Chaos
+          </p>
+          <div className="dropdown z-[100]" style={{ position: "relative" }}>
+            <button
+              tabIndex={0}
+              className="lg:hidden"
+              onClick={toggleDropdown}
+              aria-label="Toggle Menu"
+              style={{
+                paddingTop: "0.5rem",
+              }}
+            >
+              <Hamburger size={24} toggled={!clickedOutside && isOpen} />
+            </button>
+            {isOpen && (
+              <ul
+                tabIndex={0}
+                className="dropdown-content menu menu-sm p-1 z-[100] w-60 text-base-content bg-base-100 rounded-b-2xl shadow-xl shadow-purple-800/50"
+                onKeyDown={(e) => {
+                  if (e.key === "Escape") {
+                    closeDropdown();
+                  }
+                }}
+                onBlur={() => {
+                  closeDropdown();
+                }}
+                style={{
+                  position: "absolute",
+                  top: "100%",
+                  left: "50%",
+                  transform: "translateX(-50%)",
+                  minWidth: "100%",
+                }}
+              >
+                {links.map((link) => (
+                  <li key={link.href}>
+                    <Link
+                      href={link.href}
+                      className="relative justify-center text-lg text-primary bg-clip-text hover:underline hover:text-secondary z-[100]"
+                      onClick={handleLinkClick}
+                    >
+                      {link.label}
+                    </Link>
+                  </li>
+                ))}
+              </ul>
+            )}
+          </div>
         </div>
-        <div className="navbar-center hidden lg:flex mx-auto px-1 z-50">
-          <ul className="menu menu-horizontal text-lg xl:space-x-8 2xl:space-x-10 3xl:space-x-12 4xl:space-x-14">
+
+        <div className="navbar-center px-2  z-[100]">
+          <ul className="hidden lg:flex menu menu-horizontal text-lg xl:space-x-8 2xl:space-x-10 3xl:space-x-12 4xl:space-x-14 z-[100]">
             {links.map((link) => (
               <li key={link.href}>
                 <Link
                   href={link.href}
-                  className="relative bg-base-200 bg-clip-text hover:text-primary hover:underline"
+                  className="relative bg-base-200 bg-clip-text hover:text-primary hover:underline z-[100]"
                 >
                   {link.label}
                 </Link>
               </li>
             ))}
           </ul>
+
+          <div className="flex lg:hidden h-10 w-10 mask mask-heart">
+            <Link href="/">
+              <Image
+                src={Ava}
+                quality={100}
+                alt="Logo"
+                height="100%"
+                width="100%"
+                priority
+              />
+            </Link>
+          </div>
+          <p className="font-bold lg:hidden bg-gradient-to-tr from-primary via-info to-secondary bg-clip-text text-transparent px-1 text-sm">
+            Creator
+            <br />
+            of Chaos
+          </p>
         </div>
-        <div className="dropdown z-50" style={{ position: "relative" }}>
-          <button
-            tabIndex={0}
-            className="lg:hidden"
-            onClick={toggleDropdown}
-            aria-label="Toggle Menu"
-            style={{
-              paddingTop: "0.5rem",
-            }}
-          >
-            <Hamburger size={24} toggled={!clickedOutside && isOpen} />
-          </button>
-          {isOpen && (
-            <ul
-              tabIndex={0}
-              className="dropdown-content menu menu-sm p-1 z-50 w-60 text-base-content rounded-b-2xl shadow-xl shadow-purple-800/50"
-              onKeyDown={(e) => {
-                if (e.key === "Escape") {
-                  closeDropdown();
-                }
-              }}
-              onBlur={() => {
-                closeDropdown();
-              }}
-              style={{
-                position: "absolute",
-                top: "100%",
-                left: "50%",
-                transform: "translateX(-50%)",
-                minWidth: "100%",
-              }}
-            >
-              {links.map((link) => (
-                <li key={link.href}>
-                  <Link
-                    href={link.href}
-                    className="relative justify-center text-lg text-primary bg-clip-text hover:underline hover:text-secondary z-50"
-                    onClick={handleLinkClick}
-                  >
-                    {link.label}
-                  </Link>
-                </li>
-              ))}
-            </ul>
-            
-          )}
-        </div>
-        <div className="navbar-end flex">
+        <div className="navbar-end px-2  z-[100]">
           <label
             tabIndex={0}
             className={`swap swap-rotate btn-xs ${
@@ -169,13 +190,13 @@ const Nav = () => {
         </div>
       </nav>
     </header>
-  )
-}
+  );
+};
 
 const Navbar = () => (
   <ThemeProvider defaultTheme="myDark">
     <Nav />
   </ThemeProvider>
-)
+);
 
-export default Navbar
+export default Navbar;
