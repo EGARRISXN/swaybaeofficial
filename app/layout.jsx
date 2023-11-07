@@ -4,7 +4,6 @@ import Providers from "./providers";
 import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
 import UseScrollToTop from "../utils/useScrollToTop";
-import ToastNotifications from "../utils/ToastNotifications";
 import "./globals.css";
 
 const lobster = Lobster({
@@ -73,7 +72,6 @@ export default function RootLayout({ children }) {
             <Analytics />
             {children}
             <UseScrollToTop />
-            <ToastNotifications />
           </main>
           <Footer />
         </Providers>
