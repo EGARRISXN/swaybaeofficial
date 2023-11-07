@@ -10,34 +10,33 @@ html,
 body {
   margin: 0;
   font-family: var(--font-poppins);
-  font: 1rem var(--font-poppins);
+  font-size: 1rem;
   scroll-behavior: smooth;
 }
 
 h1 {
   font-family: var(--font-lobster);
-  font: 5rem var(--font-lobster);
+  font-size: 5rem;
 }
 h2 {
   font-family: var(--font-poppins);
-  font: 4rem var(--font-poppins);
+  font-size: 4rem;
 }
 h3 {
   font-family: var(--font-lobster);
-  font: 3rem var(--font-lobster);
+  font-size: 3rem;
 }
 h4 {
   font-family: var(--font-poppins);
-  font-size: clamp(1.3rem, 1.3vw, 1.7rem);
-  line-height: 1.2rem;
+  font-size: 1.3rem;
 }
 h5 {
   font-family: var(--font-lobster);
-  font: 1rem var(--font-lobster);
+  font-size: 1rem;
 }
 p {
   font-family: var(--font-poppins);
-  font-size: clamp(1rem, 1vw, 1.3rem);
+  font-size: 1rem;
   line-height: 1.2rem;
 }
 
@@ -56,8 +55,8 @@ main {
 
 /* Firefox */
 * {
-  scrollbar-width: thin !important;
-  scrollbar-color: #ff2fea #d1d1d1 !important;
+  scrollbar-width: thin;
+  scrollbar-color: #ff2fea #d1d1d1;
 }
 /* Chrome & Others */
 ::-webkit-scrollbar {

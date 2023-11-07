@@ -69,7 +69,7 @@ export default function RootLayout({ children }) {
       <body className="relative bg-gradient-to-b from-base-100 to-base-300 bg-cover bg-fixed bg-no-repeat">
         <Providers>
           <Navbar />
-          <main className="backdrop-brightness-100 antialiased">
+          <main className="backdrop-brightness-100">
             <Analytics />
             {children}
             <UseScrollToTop />

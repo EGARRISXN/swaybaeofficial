@@ -19,7 +19,7 @@ export default function Socials() {
         <div className="mx-auto xs:px-2 sm:px-6 md:px-12 lg:px-16">
           <SocialCarousel />
           <br />
-          <div className="flex mx-auto lg:space-x-8 mt-6 sm:mt-10">
+          <div className="mx-auto">
             <div>
               <p className="text-center font-semibold text-accent bg-gradient-to-tr from-primary via-info to-secondary bg-clip-text text-transparent">
                 Latest Youtube Video

@@ -10,7 +10,7 @@ export default function HypeChallenge() {
       <div className="max-w-[1420px] mx-auto py-16">
         <div className="flex flex-col items-center mt-4 xs:px-2 sm:px-6 md:px-12 lg:px-16">
           <div className="x">
-            <Link href="https://twitch.tv/sway_bae" passHref>
+            <Link href="https://twitch.tv/sway_bae">
               <Image
                 src={HypeLogo}
                 quality={100}
