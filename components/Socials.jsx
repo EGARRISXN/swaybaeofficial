@@ -1,8 +1,6 @@
 "use client";
 import SpotifyEmbed from "../components/(socials)/SpotifyEmbed";
 import SocialCarousel from "../components/(socials)/SocialCarousel";
-import GoogleCalendarEmbed from "../components/(socials)/GoogleCalendarEmbed";
-import TwitchEmbed from "../components/(socials)/TwitchEmbed";
 import YoutubeEmbed from "../components/(socials)/YouTubeEmbed";
 
 export default function Socials() {
@@ -20,23 +18,14 @@ export default function Socials() {
         <br />
         <div className="mx-auto xs:px-2 sm:px-6 md:px-12 lg:px-16">
           <SocialCarousel />
-
           <br />
-          <div className="grid grid-col lg:grid-cols-2 mx-auto lg:space-x-8 mt-6 sm:mt-10">
+          <div className="flex mx-auto lg:space-x-8 mt-6 sm:mt-10">
             <div>
               <p className="text-center font-semibold text-accent bg-gradient-to-tr from-primary via-info to-secondary bg-clip-text text-transparent">
                 Latest Youtube Video
               </p>
               <div className="rounded-2xl shadow-xl shadow-purple-800/50">
                 <YoutubeEmbed vnum={0} />
-              </div>
-            </div>
-            <div>
-              <p className="hidden lg:block text-center font-semibold text-accent bg-gradient-to-tr from-primary via-info to-secondary bg-clip-text text-transparent">
-                Live Twitch Stream
-              </p>
-              <div className="hidden lg:block rounded-2xl shadow-xl shadow-purple-800/50">
-                <TwitchEmbed />
               </div>
             </div>
           </div>

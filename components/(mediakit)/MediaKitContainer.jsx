@@ -6,15 +6,15 @@ export default function MediaKitPhoto() {
   return (
     <div className="pt-12">
       <Link href="https://beacons.ai/sway_bae/mediakit" passHref>
-      <Image
-        src={MediaKit}
-        quality={100}
-        alt="Media Kit"
-        width="100%"
-        height="100%"
-        className="animate-wiggle"
-        priority
-      />
+        <Image
+          src={MediaKit}
+          quality={100}
+          alt="Media Kit"
+          width="100%"
+          height="100%"
+          className="x"
+          priority
+        />
       </Link>
     </div>
   );

@@ -1,13 +1,4 @@
-"use client";
-import { useState } from "react";
-
 export default function AboutCard() {
-  const [isShowMore, setIsShowMore] = useState(false);
-
-  const toggleReadMoreLess = () => {
-    setIsShowMore(!isShowMore);
-  };
-
   return (
     <div className="text-base-content">
       <h4 className="font-bold">
@@ -67,98 +58,83 @@ export default function AboutCard() {
         TOS-acceptable).
         <br />
         <br />
-        {/* Rest of the content */}
-        {isShowMore && (
-          <p className="x">
-            <b>
-              <i> Level 4 - 100,000 EXP || Spicy Dinner Surprise</i>
-            </b>
-            <br />
-            Sway will do a cooking stream, she will make a drink, appetizer,
-            dinner, and dessert. One of each will be spiked with HOT hot sauce.
-            Ethan and Sway will then eat dinner, who will have to suffer through
-            the ridiculously spicy meal!? It's like a horrible roulette that has
-            no winners (except chat).
-            <br />
-            <br />
-            <b>
-              <i> Level 5 - 200,000 EXP || 3v3 Hearthstone</i>
-            </b>
-            <br />
-            Battlegrounds Community Tourney Sway will host a 3v3 Hearthstone
-            Battlegrounds Tourney! This is teams of 3 vs teams of 3, INSANITY!
-            **There will be a partner finder channel in discord to assist anyone
-            that needs to find a partner!**
-            <br />
-            <br />
-            <b>
-              <i> Level 6 - 300,000 EXP || Dinner Date</i>
-            </b>
-            <br />
-            with Chat Sway will take chat out on a livestream to a fun dining
-            experience!
-            <br />
-            <br />
-            <b>
-              <i> Level 7 - 500,000 EXP || Merch Giveaway x 3</i>
-            </b>
-            <br />
-            Sway will giveaway 3 t-shirts from her re-done merch store!
-            <br />
-            <br />
-            <b>
-              <i> Level 8 - 650,000 EXP || IRL Arcade Stream</i>
-            </b>
-            <br />
-            Sway will livestream from an arcade, and show off her arcade
-            basketball skills and how she's basically the next pro pacman
-            player.
-            <br />
-            <br />
-            <b>
-              <i> Level 9 - 800,000 EXP || Evil Sway at Nite</i>
-            </b>
-            <br />
-            It's the moment everyone has been waiting for! This stream will
-            begin with family friendly Evil Sway, then transition to Evil Sway
-            at Nite (content warning: language), and finally Sway at Nite
-            (content warning: language). The best of all three worlds.
-            <br />
-            <br />
-            <b>
-              <i> Level 10 - 1,000,000 EXP || Vacation Stream</i>
-            </b>
-            <br />
-            Sway will take chat on a two day vacation and stream the ENTIRE
-            thing (except sleeping).
-            <br />
-            <br />
-            <b>
-              <i> Level 11 - 1,500,000 EXP || Extreme Sway Makeover</i>
-            </b>
-            <br />
-            Sway will dye her hair the color of chat's choice, build custom
-            crocs with chat, and Ethan will give her his best makeover yet.
-            <br />
-            <br />
-            <b>
-              <i> Level 12 - 3,000,000 EXP || Live Tattoo</i>
-            </b>
-            <br />
-            Sway will get tattooed and livestream the process. Chat will vote
-            between 3 choices.
-          </p>
-        )}
+        <b>
+          <i> Level 4 - 100,000 EXP || Spicy Dinner Surprise</i>
+        </b>
+        <br />
+        Sway will do a cooking stream, she will make a drink, appetizer, dinner,
+        and dessert. One of each will be spiked with HOT hot sauce. Ethan and
+        Sway will then eat dinner, who will have to suffer through the
+        ridiculously spicy meal!? It's like a horrible roulette that has no
+        winners (except chat).
+        <br />
+        <br />
+        <b>
+          <i> Level 5 - 200,000 EXP || 3v3 Hearthstone</i>
+        </b>
+        <br />
+        Battlegrounds Community Tourney Sway will host a 3v3 Hearthstone
+        Battlegrounds Tourney! This is teams of 3 vs teams of 3, INSANITY!
+        **There will be a partner finder channel in discord to assist anyone
+        that needs to find a partner!**
+        <br />
+        <br />
+        <b>
+          <i> Level 6 - 300,000 EXP || Dinner Date</i>
+        </b>
+        <br />
+        with Chat Sway will take chat out on a livestream to a fun dining
+        experience!
+        <br />
+        <br />
+        <b>
+          <i> Level 7 - 500,000 EXP || Merch Giveaway x 3</i>
+        </b>
+        <br />
+        Sway will giveaway 3 t-shirts from her re-done merch store!
+        <br />
+        <br />
+        <b>
+          <i> Level 8 - 650,000 EXP || IRL Arcade Stream</i>
+        </b>
+        <br />
+        Sway will livestream from an arcade, and show off her arcade basketball
+        skills and how she's basically the next pro pacman player.
+        <br />
+        <br />
+        <b>
+          <i> Level 9 - 800,000 EXP || Evil Sway at Nite</i>
+        </b>
+        <br />
+        It's the moment everyone has been waiting for! This stream will begin
+        with family friendly Evil Sway, then transition to Evil Sway at Nite
+        (content warning: language), and finally Sway at Nite (content warning:
+        language). The best of all three worlds.
+        <br />
+        <br />
+        <b>
+          <i> Level 10 - 1,000,000 EXP || Vacation Stream</i>
+        </b>
+        <br />
+        Sway will take chat on a two day vacation and stream the ENTIRE thing
+        (except sleeping).
+        <br />
+        <br />
+        <b>
+          <i> Level 11 - 1,500,000 EXP || Extreme Sway Makeover</i>
+        </b>
+        <br />
+        Sway will dye her hair the color of chat's choice, build custom crocs
+        with chat, and Ethan will give her his best makeover yet.
+        <br />
+        <br />
+        <b>
+          <i> Level 12 - 3,000,000 EXP || Live Tattoo</i>
+        </b>
+        <br />
+        Sway will get tattooed and livestream the process. Chat will vote
+        between 3 choices.
       </p>
-      <br />
-      <div className="flex justify-center">
-        <button
-          className="btn btn-md btn-secondary w-36 hover:scale-110 ease-in duration-500 shadow-xl shadow-gray-400 rounded-xl bg-gradient-to-r from-purple-400 to-pink-600 text-white"
-          onClick={toggleReadMoreLess}
-        >
-          {isShowMore ? "Read Less" : "Read More"}
-        </button>
-      </div>
     </div>
   );
 }

@@ -17,7 +17,7 @@ export default function HypeChallenge() {
                 width={830}
                 height={448}
                 alt="HypeLogo"
-                className="hover:animate-wiggle h-[80%] w-[80%] mx-auto"
+                className=" h-[80%] w-[80%] mx-auto"
                 priority
               />
             </Link>
