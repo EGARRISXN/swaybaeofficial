@@ -1,4 +1,4 @@
-export default function AboutCard() {
+export default function HypeCard() {
   return (
     <div className="text-base-content">
       <h4 className="font-bold">
