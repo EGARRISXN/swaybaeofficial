@@ -19,10 +19,10 @@ export default function HypeChallenge() {
           <div className="x">
             <div className="border-[8px] lg:border-[10px] border-info rounded-xl shadow-xl shadow-purple-800/50">
               <Image
-                src="/images/hypegoals.png"
+                src="/images/hypegoals.PNG"
                 quality={100}
-                width={1080}
-                height={1080}
+                width={2000}
+                height={2000}
                 alt="HypeGoals"
                 className="x"
               />

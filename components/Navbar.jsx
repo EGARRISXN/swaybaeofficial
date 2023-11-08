@@ -10,8 +10,7 @@ import Ava from "../public/images/avatar.png";
 const links = [
   { href: "/", label: "Home" },
   { href: "/calendar", label: "Calendar" },
-  { href: "/inquiries", label: "Business Inquiries" },
-  { href: "https://beacons.ai/sway_bae/mediakit", label: "Media Kit" },
+  { href: "/hypechallenge", label: "Hype Challenge" },
 ];
 
 const Nav = () => {
