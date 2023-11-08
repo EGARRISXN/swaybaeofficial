@@ -13,7 +13,6 @@ export default function HypeChallenge() {
               height={448}
               alt="HypeLogo"
               className="x"
-              priority
             />
           </div>
 
@@ -26,7 +25,6 @@ export default function HypeChallenge() {
                 height={1080}
                 alt="HypeGoals"
                 className="x"
-                priority
               />
             </div>
           </div>
