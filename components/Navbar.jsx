@@ -10,7 +10,8 @@ import Ava from "../public/images/avatar.png";
 const links = [
   { href: "/", label: "Home" },
   { href: "/calendar", label: "Calendar" },
-  { href: "/hypechallenge", label: "Hype Challenge" },
+  { href: "/inquiries", label: "Business Inquiries" },
+  { href: "https://beacons.ai/sway_bae/mediakit", label: "Media Kit" },
 ];
 
 const Nav = () => {
@@ -54,10 +55,10 @@ const Nav = () => {
   };
 
   return (
-    <header className="absolute w-full bg-base-100 lg:bg-transparent top-0 z-[100]">
-      <nav className="relative navbar  z-[100]">
-        <div className="navbar-start px-2  z-[100]">
-          <div className="hidden lg:flex h-10 w-10 mask mask-heart">
+    <header className="absolute w-full top-0 z-50">
+      <nav className="relative navbar z-50">
+        <div className="navbar-start flex p-2 z-50">
+          <div className="flex h-10 w-10 mask mask-heart">
             <Link href="/">
               <Image
                 src={Ava}
@@ -69,92 +70,73 @@ const Nav = () => {
               />
             </Link>
           </div>
-          <p className="font-bold hidden lg:block bg-gradient-to-tr from-primary via-info to-secondary bg-clip-text text-transparent px-1 text-sm">
+          <p className="font-bold bg-gradient-to-tr from-primary via-info to-secondary bg-clip-text text-transparent px-1">
             Creator
             <br />
             of Chaos
           </p>
-          <div className="dropdown z-[100]" style={{ position: "relative" }}>
-            <button
-              tabIndex={0}
-              className="lg:hidden"
-              onClick={toggleDropdown}
-              aria-label="Toggle Menu"
-              style={{
-                paddingTop: "0.5rem",
-              }}
-            >
-              <Hamburger size={24} toggled={!clickedOutside && isOpen} />
-            </button>
-            {isOpen && (
-              <ul
-                tabIndex={0}
-                className="dropdown-content menu menu-sm p-1 z-[100] w-60 text-base-content bg-base-100 rounded-b-2xl shadow-xl shadow-purple-800/50"
-                onKeyDown={(e) => {
-                  if (e.key === "Escape") {
-                    closeDropdown();
-                  }
-                }}
-                onBlur={() => {
-                  closeDropdown();
-                }}
-                style={{
-                  position: "absolute",
-                  top: "100%",
-                  left: "50%",
-                  transform: "translateX(-50%)",
-                  minWidth: "100%",
-                }}
-              >
-                {links.map((link) => (
-                  <li key={link.href}>
-                    <Link
-                      href={link.href}
-                      className="relative justify-center text-lg text-primary bg-clip-text hover:underline hover:text-secondary z-[100]"
-                      onClick={handleLinkClick}
-                    >
-                      {link.label}
-                    </Link>
-                  </li>
-                ))}
-              </ul>
-            )}
-          </div>
         </div>
-
-        <div className="navbar-center px-2  z-[100]">
-          <ul className="hidden lg:flex menu menu-horizontal text-lg xl:space-x-8 2xl:space-x-10 3xl:space-x-12 4xl:space-x-14 z-[100]">
+        <div className="navbar-center hidden lg:flex mx-auto px-1 z-50">
+          <ul className="menu menu-horizontal text-lg xl:space-x-8 2xl:space-x-10 3xl:space-x-12 4xl:space-x-14">
             {links.map((link) => (
               <li key={link.href}>
                 <Link
                   href={link.href}
-                  className="relative bg-base-200 bg-clip-text hover:text-primary hover:underline z-[100]"
+                  className="relative bg-base-200 bg-clip-text hover:text-primary hover:underline"
                 >
                   {link.label}
                 </Link>
               </li>
             ))}
           </ul>
-
-          <div className="flex lg:hidden h-10 w-10 mask mask-heart">
-            <Link href="/">
-              <Image
-                src={Ava}
-                quality={100}
-                alt="Logo"
-                height="100%"
-                width="100%"
-                priority
-              />
-            </Link>
-          </div>
-          <p className="font-bold lg:hidden bg-gradient-to-tr from-primary via-info to-secondary bg-clip-text text-transparent px-1 text-sm">
-            Creator
-            <br />
-            of Chaos
-          </p>
         </div>
-        <div className="navbar-end px-2  z-[100]">
+        <div className="dropdown z-50" style={{ position: "relative" }}>
+          <button
+            tabIndex={0}
+            className="lg:hidden"
+            onClick={toggleDropdown}
+            aria-label="Toggle Menu"
+            style={{
+              paddingTop: "0.5rem",
+            }}
+          >
+            <Hamburger size={24} toggled={!clickedOutside && isOpen} />
+          </button>
+          {isOpen && (
+            <ul
+              tabIndex={0}
+              className="dropdown-content menu menu-sm p-1 z-50 w-60 text-base-content rounded-b-2xl shadow-xl shadow-purple-800/50"
+              onKeyDown={(e) => {
+                if (e.key === "Escape") {
+                  closeDropdown();
+                }
+              }}
+              onBlur={() => {
+                closeDropdown();
+              }}
+              style={{
+                position: "absolute",
+                top: "100%",
+                left: "50%",
+                transform: "translateX(-50%)",
+                minWidth: "100%",
+              }}
+            >
+              {links.map((link) => (
+                <li key={link.href}>
+                  <Link
+                    href={link.href}
+                    className="relative justify-center text-lg text-primary bg-clip-text hover:underline hover:text-secondary z-50"
+                    onClick={handleLinkClick}
+                  >
+                    {link.label}
+                  </Link>
+                </li>
+              ))}
+            </ul>
+          )}
+        </div>
+        <div className="navbar-end flex">
           <label
             tabIndex={0}
             className={`swap swap-rotate btn-xs ${

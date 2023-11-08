@@ -1,5 +1,5 @@
-import AboutPhoto from "../components/(about)/AboutPhoto"
-import AboutCard from "../components/(about)/AboutCard"
+import AboutPhoto from "../components/(about)/AboutPhoto";
+import AboutCard from "../components/(about)/AboutCard";
 
 export default function About() {
   return (
@@ -22,5 +22,5 @@ export default function About() {
         </div>
       </div>
     </div>
-  )
+  );
 }

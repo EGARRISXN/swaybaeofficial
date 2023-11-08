@@ -4,7 +4,8 @@ import Providers from "./providers";
 import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
 import UseScrollToTop from "../utils/useScrollToTop";
-import "./globals.css";
+import ToastNotifications from "../utils/ToastNotifications";
+import "../styles/globals.css";
 
 const lobster = Lobster({
   subsets: ["latin"],
@@ -72,6 +73,7 @@ export default function RootLayout({ children }) {
             <Analytics />
             {children}
             <UseScrollToTop />
+            <ToastNotifications />
           </main>
           <Footer />
         </Providers>

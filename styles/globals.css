@@ -10,36 +10,33 @@ html,
 body {
   margin: 0;
   font-family: var(--font-poppins);
-  font-size: 1rem;
-  scroll-behavior: smooth;
+  font: 1rem var(--font-poppins);
 }
 
 h1 {
   font-family: var(--font-lobster);
-  font-size: 5rem;
+  font: 5rem var(--font-lobster);
 }
 h2 {
   font-family: var(--font-poppins);
-  font-size: 4rem;
+  font: 4rem var(--font-poppins);
 }
 h3 {
   font-family: var(--font-lobster);
-  font-size: 3rem;
+  font: 3rem var(--font-lobster);
 }
 h4 {
   font-family: var(--font-poppins);
-  font-size: 1.3rem;
+  font: 2rem var(--font-poppins);
 }
 h5 {
   font-family: var(--font-lobster);
-  font-size: 1rem;
+  font: 1rem var(--font-lobster);
 }
 p {
   font-family: var(--font-poppins);
-  font-size: 1rem;
-  line-height: 1.2rem;
+  font: 1rem var(--font-poppins);
 }
-
 main {
   flex: auto;
   justify-content: center;
@@ -56,7 +53,7 @@ main {
 /* Firefox */
 * {
   scrollbar-width: thin;
-  scrollbar-color: #ff2fea #d1d1d1;
+  scrollbar-color: #888 #555;
 }
 /* Chrome & Others */
 ::-webkit-scrollbar {
@@ -64,12 +61,13 @@ main {
 }
 /* Handle */
 ::-webkit-scrollbar-thumb {
-  border-radius: 10px;
+  background: #888;
+  border-radius: 5px;
 }
 
 /* Handle on hover */
 ::-webkit-scrollbar-thumb:hover {
-  background: #ff2fea;
+  background: #555;
 }
 
 /* ------------ */
