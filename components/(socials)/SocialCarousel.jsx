@@ -94,7 +94,7 @@ export default function SocialCarousel() {
       </div>
       <div
         id="content"
-        className="carousel flex sm:justify-start overflow-x-hidden gap-8 sm:gap-16"
+        className="carousel flex sm:justify-start overflow-x-hidden gap-8 sm:gap-16 px-6"
       >
         {socialMediaData.map((data, index) => (
           <SocialCard key={index} {...data} />

@@ -1,9 +1,9 @@
-import Image from "next/image"
-import CalendarHeader from "../../public/images/calendarhead.png"
+import Image from "next/image";
+import CalendarHeader from "../../public/images/calendarhead.png";
 
 export default function GoogleCalendarEmbed() {
   return (
-    <div className="border-[10px] border-info rounded-xl shadow-xl shadow-purple-800/50">
+    <div className="border-[12px] border-info shadow-xl shadow-purple-800/50">
       <Image
         src={CalendarHeader}
         quality={100}
@@ -21,5 +21,5 @@ export default function GoogleCalendarEmbed() {
         ></iframe>
       </div>
     </div>
-  )
+  );
 }

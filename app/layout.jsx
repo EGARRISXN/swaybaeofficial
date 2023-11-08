@@ -66,10 +66,10 @@ export default function RootLayout({ children }) {
       className={` ${lobster.variable} ${poppins.variable} `}
       suppressHydrationWarning={true}
     >
-      <body className="relative bg-gradient-to-b from-base-100 to-base-300 bg-cover bg-fixed bg-no-repeat">
+      <body className="relative bg-gradient-to-br from-base-100 via-base-100 to-base-300 bg-cover bg-fixed bg-no-repeat">
         <Providers>
           <Navbar />
-          <main className="backdrop-brightness-100">
+          <main className="x">
             <Analytics />
             {children}
             <UseScrollToTop />

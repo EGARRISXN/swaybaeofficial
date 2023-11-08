@@ -69,11 +69,13 @@ const Nav = () => {
               />
             </Link>
           </div>
-          <p className="font-bold hidden lg:block bg-gradient-to-tr from-primary via-info to-secondary bg-clip-text text-transparent px-1">
-            Creator
-            <br />
-            of Chaos
-          </p>
+          <Link href="/">
+            <p className="font-bold hidden text-sm lg:block bg-gradient-to-tr from-primary via-info to-secondary bg-clip-text text-transparent px-1">
+              Creator
+              <br />
+              of Chaos
+            </p>
+          </Link>
           <div className="dropdown z-50" style={{ position: "relative" }}>
             <button
               tabIndex={0}
@@ -89,7 +91,7 @@ const Nav = () => {
             {isOpen && (
               <ul
                 tabIndex={0}
-                className="dropdown-content bg-base-100 menu menu-sm p-1 z-50 w-60 text-base-content rounded-b-2xl shadow-xl shadow-purple-800/50"
+                className="dropdown-content mx-[-12px] bg-base-100 menu menu-lg z-50 text-base-content shadow-xl shadow-purple-800/50"
                 onKeyDown={(e) => {
                   if (e.key === "Escape") {
                     closeDropdown();
@@ -101,16 +103,14 @@ const Nav = () => {
                 style={{
                   position: "absolute",
                   top: "100%",
-                  left: "50%",
-                  transform: "translateX(-50%)",
-                  minWidth: "100%",
+                  width: "100vw",
                 }}
               >
                 {links.map((link) => (
                   <li key={link.href}>
                     <Link
                       href={link.href}
-                      className="relative justify-center text-lg text-primary bg-clip-text hover:underline hover:text-secondary z-50"
+                      className="relative text-xl text-primary bg-clip-text hover:underline hover:text-secondary z-50"
                       onClick={handleLinkClick}
                     >
                       {link.label}
@@ -147,11 +147,13 @@ const Nav = () => {
               />
             </Link>
           </div>
-          <p className="font-bold block lg:hidden bg-gradient-to-tr from-primary via-info to-secondary bg-clip-text text-transparent px-1">
-            Creator
-            <br />
-            of Chaos
-          </p>
+          <Link href="/">
+            <p className="font-bold block lg:hidden text-sm bg-gradient-to-tr from-primary via-info to-secondary bg-clip-text text-transparent px-1">
+              Creator
+              <br />
+              of Chaos
+            </p>
+          </Link>
         </div>
 
         <div className="navbar-end px-1 z-50">

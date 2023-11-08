@@ -12,7 +12,7 @@ export default function MediaKitPhoto() {
           alt="Media Kit"
           width="100%"
           height="100%"
-          className="x"
+          className="animate-wiggle"
           priority
         />
       </Link>

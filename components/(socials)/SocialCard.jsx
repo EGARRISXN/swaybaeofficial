@@ -1,5 +1,5 @@
-import Link from "next/link"
-import Image from "next/image"
+import Link from "next/link";
+import Image from "next/image";
 
 export default function SocialCard({
   imageSrc,
@@ -10,7 +10,7 @@ export default function SocialCard({
   linkUrl,
 }) {
   return (
-    <div className="card flex mx-auto text-center h-full w-full mt-16 bg-base-200 border-8 text-base-content border-info rounded-xl">
+    <div className="card flex h-full w-full shadow-lg shadow-purple-800/50 mb-8 mt-16">
       <figure>
         <Link href={linkUrl}>
           <Image
@@ -22,7 +22,7 @@ export default function SocialCard({
           />
         </Link>
       </figure>
-      <div className="card-body">
+      <div className="card-body text-base-content bg-base-100 rounded-b-xl border-2 ">
         <h1 className="card-title text-2xl text-center justify-center pb-2">
           {title}
         </h1>
@@ -35,5 +35,5 @@ export default function SocialCard({
         </div>
       </div>
     </div>
-  )
+  );
 }
