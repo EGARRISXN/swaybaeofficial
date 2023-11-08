@@ -123,7 +123,7 @@ const Nav = () => {
         </div>
 
         <div className="navbar-center px-1 z-50">
-          <ul className="menu menu-horizontal hidden lg:flex text-lg xl:space-x-8 2xl:space-x-10 3xl:space-x-12 4xl:space-x-14">
+          <ul className="menu menu-horizontal hidden lg:flex justify-center items-center mx-auto text-lg xl:space-x-8 2xl:space-x-10 3xl:space-x-14">
             {links.map((link) => (
               <li key={link.href}>
                 <Link
