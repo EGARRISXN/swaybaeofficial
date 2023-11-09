@@ -140,10 +140,8 @@ export default function HypeChallenge() {
                   <div className="collapse-content text-base-content">
                     Battlegrounds Community Tourney Sway will host a 3v3
                     Hearthstone Battlegrounds Tourney! This is teams of 3 vs.
-                    teams of 3, INSANITY! There{" "}
-                    <span className="font-bold">will</span> be a partner finder
-                    channel in Discord to assist anyone that needs to find a
-                    partner!
+                    teams of 3, INSANITY! There will be a partner finder channel
+                    in Discord to assist anyone that needs to find a partner!
                   </div>
                 </div>
 
@@ -192,7 +190,7 @@ export default function HypeChallenge() {
                     at Nite. The best *or worst* of all three worlds.
                     <br />
                     <br />
-                    **PARENTIAL ADVISORY: EXPLICIT CONTENT**
+                    **Content Warning: Language**
                   </div>
                 </div>
 
