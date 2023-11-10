@@ -62,13 +62,13 @@ export default function HypeChallenge() {
                   <div className="collapse-content text-base-content">
                     <span className="font-bold">Friday: </span>
                     <span className="italic">Puppy Char-sub-arie Board</span> -
-                    Every 10,000 EXP, Chat feeds an item off of the Puppy
+                    Every 5,000 EXP, Chat feeds an item off of the Puppy
                     Charcuterie Board to Biff and Waffles.
                     <br />
                     <br />
                     <span className="font-bold">Saturday: </span>
                     <span className="italic">Wheel of Sub-Tunes</span> - Every
-                    10,000 EXP, the wheel is spun with one of the following
+                    5,000 EXP, the wheel is spun with one of the following
                     outcomes: 1 hour of 10 channel point song requests, 3 random
                     Country songs added to queue, 3 random Holiday songs added
                     to queue, or 3 random Meme songs added to queue.
