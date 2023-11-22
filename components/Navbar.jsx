@@ -10,7 +10,6 @@ import Ava from "../public/images/avatar.png";
 const links = [
   { href: "/", label: "Home" },
   { href: "/calendar", label: "Calendar" },
-  { href: "/hypechallenge", label: "Hype Challenge" },
 ];
 
 const Nav = () => {
