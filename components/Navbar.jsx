@@ -10,6 +10,7 @@ import Ava from "../public/images/avatar.png";
 const links = [
   { href: "/", label: "Home" },
   { href: "/calendar", label: "Calendar" },
+  { href: "https://sway-bae-shop.fourthwall.com/", label: "Store" },
 ];
 
 const Nav = () => {
