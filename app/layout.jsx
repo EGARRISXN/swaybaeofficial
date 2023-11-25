@@ -3,6 +3,7 @@ import { Poppins, Lobster } from "next/font/google";
 import Providers from "./providers";
 import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
+import CyberMondayModal from "../components/CyberMondayModal";
 import UseScrollToTop from "../utils/useScrollToTop";
 import ToastNotifications from "../utils/ToastNotifications";
 import "../styles/globals.css";
@@ -68,6 +69,7 @@ export default function RootLayout({ children }) {
     >
       <body className="relative bg-gradient-to-br from-base-100 via-base-100 to-base-300 bg-cover bg-fixed bg-no-repeat">
         <Providers>
+          <CyberMondayModal />
           <Navbar />
           <main className="x">
             <Analytics />
