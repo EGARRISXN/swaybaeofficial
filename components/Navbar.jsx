@@ -5,7 +5,7 @@ import { Sling as Hamburger } from "hamburger-react";
 import { useTheme, ThemeProvider } from "next-themes";
 import Link from "next/link";
 import Image from "next/image";
-import Ava from "../public/images/avatar.png";
+import Avatar from "../public/images/avatar.png";
 
 const links = [
   { href: "/", label: "Home" },
@@ -60,7 +60,7 @@ const Nav = () => {
           <div className="hidden lg:block h-10 w-10 mask mask-heart">
             <Link href="/">
               <Image
-                src={Ava}
+                src={Avatar}
                 quality={100}
                 alt="Logo"
                 height="100%"
@@ -140,7 +140,7 @@ const Nav = () => {
           <div className="block lg:hidden h-10 w-10 mask mask-heart">
             <Link href="/">
               <Image
-                src={Ava}
+                src={Avatar}
                 quality={100}
                 alt="Logo"
                 height="100%"

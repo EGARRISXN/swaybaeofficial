@@ -2,7 +2,7 @@
 import { useState, useEffect } from "react";
 import { FiChevronUp } from "react-icons/fi";
 
-export default function useScrollToTop() {
+export default function ScrollToTop() {
   const [showScroll, setShowScroll] = useState(false);
 
   function backToTop() {
@@ -31,7 +31,7 @@ export default function useScrollToTop() {
   return (
     <>
       <FiChevronUp
-        className="scrollToTop border-2 bg-base-200 border-base-content rounded-full"
+        className="scrollToTop border-2 bg-base-200 border-base-content rounded-full z-[200]"
         onClick={backToTop}
         style={{
           height: 40,

@@ -4,8 +4,8 @@ import Providers from "./providers";
 import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
 import CyberMondayModal from "../components/CyberMondayModal";
-import UseScrollToTop from "../utils/useScrollToTop";
-import ToastNotifications from "../utils/ToastNotifications";
+import ScrollToTop from "../components/ScrollToTop";
+import ToastNotifications from "../components/ToastNotifications";
 import "../styles/globals.css";
 
 const lobster = Lobster({
@@ -73,7 +73,7 @@ export default function RootLayout({ children }) {
           <Navbar />
           <Analytics />
           {children}
-          <UseScrollToTop />
+          <ScrollToTop />
           <ToastNotifications />
           <Footer />
         </Providers>

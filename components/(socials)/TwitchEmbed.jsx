@@ -31,7 +31,7 @@ export default function TwitchEmbed() {
   }, []);
 
   return (
-    <div className="aspect-h-9 aspect-w-16 border-4 rounded border-base-100 shadow-lg shadow-purple-800/50">
+    <div className="aspect-h-9 aspect-w-16 shadow-lg">
       <div id="TwitchPlayerDivID"></div>
     </div>
   );

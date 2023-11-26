@@ -11,7 +11,7 @@ export default function About() {
           </h1>
         </div>
         <br />
-        <div className="flex flex-col-reverse mx-auto justify-center mt-16 px-2 sm:px-6 md:px-12 lg:px-16 sm:gap-y-12 md:flex-row md:space-x-8">
+        <div className="flex flex-col-reverse mx-auto justify-center mt-16 px-4 sm:px-8 md:px-12 lg:px-16 xl:px-20 2xl:px-24 sm:gap-y-12 md:flex-row md:space-x-8 lg:space-x-12 xl:space-x-16 2xl:space-x-20">
           <div className="md:w-3/5 lg:w-2/3 2xl:w-3/4">
             <AboutCard />
           </div>

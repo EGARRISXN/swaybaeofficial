@@ -26,7 +26,7 @@ export default function VideoPlayer({ vnum }) {
   }, [vnum]);
 
   return (
-    <div className="aspect-h-9 aspect-w-16 border-4 border-base-100 rounded shadow-lg shadow-purple-800/50">
+    <div className="aspect-h-9 aspect-w-16 shadow-lg">
       <iframe
         src={videoSrc}
         allowFullScreen={true}

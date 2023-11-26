@@ -77,29 +77,27 @@ export default function SocialCarousel() {
   ];
 
   return (
-    <div className="relative mx-auto">
-      <div className="absolute top-0 right-0">
-        <button
-          onClick={scrollLeft}
-          className="p-2 m-2 rounded-full bg-transparent border-primary border-4"
-        >
-          <FiChevronLeft />
-        </button>
-        <button
-          onClick={scrollRight}
-          className="p-2 m-2 rounded-full bg-transparent border-primary border-4"
-        >
-          <FiChevronRight />
-        </button>
-      </div>
+    <div className="flex flex-row justify-center items-center text-center py-8">
+      <button
+        onClick={scrollLeft}
+        className="flex justify-start p-2 rounded-full bg-base-200 border-base-content border-2"
+      >
+        <FiChevronLeft />
+      </button>
       <div
         id="content"
-        className="carousel flex sm:justify-start overflow-x-hidden gap-8 sm:gap-16 px-6"
+        className="carousel flex overscroll-auto border-1 rounded-2xl shadow-md"
       >
         {socialMediaData.map((data, index) => (
           <SocialCard key={index} {...data} />
         ))}
       </div>
+      <button
+        onClick={scrollRight}
+        className="flex justify-end p-2 rounded-full bg-base-200 border-base-content border-2"
+      >
+        <FiChevronRight />
+      </button>
     </div>
   );
 }

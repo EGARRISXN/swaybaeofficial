@@ -3,7 +3,7 @@ import Sway from "../../public/images/biff.jpg";
 
 export default function AboutPhoto() {
   return (
-    <div className="w-full h-full p-4">
+    <div className="w-full h-full py-1">
       <Image
         src={Sway}
         quality={100}

@@ -1,7 +1,7 @@
 "use client";
 import ContactForm from "../components/(inquiries)/ContactForm";
 import ContactSocials from "./(inquiries)/ContactSocials";
-import MediaKitContainer from "./(mediakit)/MediaKitContainer";
+import MediaKitContainer from "./(inquiries)/MediaKitContainer";
 
 export default function Inquiries() {
   return (
@@ -13,7 +13,7 @@ export default function Inquiries() {
           </p>
         </div>
         <br />
-        <div className="flex flex-col md:flex-row mx-auto justify-center mt-16 px-4 sm:px-6 md:px-12 lg:px-16 md:space-x-8">
+        <div className="flex flex-col md:flex-row mx-auto justify-center mt-16 px-4 sm:px-8 md:px-12 lg:px-16 xl:px-20 2xl:px-24 lg:space-x-12 xl:space-x-16 2xl:space-x-20 md:space-x-8">
           <div className="md:w-3/5 lg:w-2/3 2xl:w-3/4 rounded-xl">
             <ContactForm />
           </div>

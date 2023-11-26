@@ -13,7 +13,7 @@ export default function CyberMondayModal() {
     >
       <div className="fixed inset-0 flex w-screen justify-center p-8">
         <Dialog.Overlay className="fixed inset-0 bg-black opacity-80 z-[200]" />
-        <Dialog.Panel className="w-fit max-w-sm z-[500] bg-base-content border-blue-400 bg-opacity-53 rounded p-4 border-4">
+        <Dialog.Panel className="w-fit max-w-sm z-[500] bg-black border-blue-400 bg-opacity-53 rounded p-4 border-4">
           <video
             autoPlay
             muted
