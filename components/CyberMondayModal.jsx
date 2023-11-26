@@ -27,7 +27,7 @@ export default function CyberMondayModal() {
         </Transition.Child>
 
         <div className="fixed inset-0 overflow-y-auto">
-          <div className="flex min-h-full items-center justify-center p-4 text-center">
+          <div className="flex min-h-full justify-center items-center p-4">
             <Transition.Child
               as={Fragment}
               enter="ease-out duration-300"
@@ -37,25 +37,25 @@ export default function CyberMondayModal() {
               leaveFrom="opacity-100 scale-100"
               leaveTo="opacity-0 scale-95"
             >
-              <Dialog.Panel className="flex flex-col w-full max-w-[320px] transform overflow-hidden rounded-2xl px-6 py-6 pb-7 bg-base-100 shadow-md shadow-base-content/10 transition-all z-[300]">
+              <Dialog.Panel className="flex flex-col transform overflow-hidden rounded-2xl p-6 bg-white shadow-xl transition-all z-[300]">
                 <Image
                   src="/images/cybermonday.png"
-                  width={415}
-                  height={737}
-                  className="w-full flex justify-center rounded-2xl p-1 border-2 border-blue-400 shadow-2xl mx-auto z-[500]"
+                  width={540}
+                  height={960}
+                  className="flex justify-center rounded-2xl p-2 saturate-[1.25] border-2 border-blue-400 shadow-xl mx-auto z-[500]"
                   priority
                 />
                 <button
                   type="button"
                   onClick={closeModal}
-                  className="flex justify-center items-center absolute top-[7px] right-[7px] border-2 text-blue-400 border-blue-400 w-10 h-10 bg-base-100 rounded-full shadow-2xl hover:bg-pink-200 transition duration-300 ease-in-out z-[600]"
+                  className="flex justify-center items-center absolute top-[8px] right-[8px] border-2 text-blue-400 border-blue-400 w-12 h-12 bg-white rounded-full shadow-xl hover:bg-pink-200 transition duration-300 ease-in-out z-[600]"
                 >
                   X
                 </button>
                 <Link href="https://sway-bae-shop.fourthwall.com/">
                   <button
                     type="button"
-                    className="flex justify-center items-center mx-auto border-2 absolute bottom-2 right-[90px] rounded-xl shadow-2xl hover:bg-pink-200 transition duration-300 ease-in-out border-blue-400 bg-base-100 w-36 h-10 text-blue-400 z-[600]"
+                    className="flex justify-center items-center mx-auto border-2 rounded-xl mt-2 w-full shadow-2xl hover:bg-pink-200 transition duration-300 ease-in-out border-blue-400 bg-white btn h-10 text-blue-400"
                   >
                     Shop Now!
                   </button>
