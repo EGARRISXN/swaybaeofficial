@@ -67,16 +67,14 @@ export default function RootLayout({ children }) {
       className={` ${lobster.variable} ${poppins.variable} `}
       suppressHydrationWarning={true}
     >
-      <body className="relative bg-gradient-to-br from-base-100 via-base-100 to-base-300 bg-cover bg-fixed bg-no-repeat">
+      <body className="bg-gradient-to-br from-base-100 via-base-100 to-base-300 bg-cover bg-fixed bg-no-repeat">
         <Providers>
           <CyberMondayModal />
           <Navbar />
-          <main className="x">
-            <Analytics />
-            {children}
-            <UseScrollToTop />
-            <ToastNotifications />
-          </main>
+          <Analytics />
+          {children}
+          <UseScrollToTop />
+          <ToastNotifications />
           <Footer />
         </Providers>
       </body>

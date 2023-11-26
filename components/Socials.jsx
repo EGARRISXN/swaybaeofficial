@@ -1,9 +1,10 @@
 "use client";
+import Link from "next/link";
 import SpotifyEmbed from "../components/(socials)/SpotifyEmbed";
 import SocialCarousel from "../components/(socials)/SocialCarousel";
-import GoogleCalendarEmbed from "../components/(socials)/GoogleCalendarEmbed";
 import TwitchEmbed from "../components/(socials)/TwitchEmbed";
 import YoutubeEmbed from "../components/(socials)/YouTubeEmbed";
+import { FiTwitch, FiYoutube } from "react-icons/fi";
 
 export default function Socials() {
   return (
@@ -18,26 +19,50 @@ export default function Socials() {
           </div>
         </div>
         <br />
-        <div className="mx-auto xs:px-2 sm:px-6 md:px-12 lg:px-16">
+        <div className="mx-auto  px-2 sm:px-6 md:px-12 lg:px-16">
           <SocialCarousel />
 
           <br />
-          <div className="grid grid-col lg:grid-cols-2 mx-auto lg:space-x-8 mt-6 sm:mt-10">
-            <div>
-              <p className="text-center font-semibold text-accent bg-gradient-to-tr from-primary via-info to-secondary bg-clip-text text-transparent">
-                Latest Youtube Video
-              </p>
-              <div className=" shadow-xl shadow-purple-800/50">
-                <YoutubeEmbed vnum={0} />
-              </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 px-4 md:px-8 py-8 rounded-xl bg-pink-100/10">
+            <div className="flex justify-center md:text-3xl items-center text-center text-accent bg-gradient-to-tr from-primary via-info to-secondary bg-clip-text text-transparent">
+              Latest
+              <Link
+                target="_blank"
+                href="https://www.youtube.com/sway_baetv/"
+                className="mx-2 text-primary underline hover:font-bold hover:text-warning"
+              >
+                YoutTube
+              </Link>
+              Video |
+              <span className="text-base-content ml-2">
+                <FiYoutube />
+              </span>
             </div>
-            <div>
-              <p className="hidden lg:block text-center font-semibold mt-[10px] text-accent bg-gradient-to-tr from-primary via-info to-secondary bg-clip-text text-transparent">
-                Live Twitch Stream
-              </p>
-              <div className="hidden lg:block shadow-xl mb-[10px] shadow-purple-800/50">
-                <TwitchEmbed />
-              </div>
+            <div className="shadow-lg shadow-purple-800/50">
+              <YoutubeEmbed vnum={0} />
+            </div>
+          </div>
+
+          <br />
+
+          <div className="hidden lg:grid grid-cols-1 md:grid-cols-2 px-4 md:px-8 py-8 rounded-xl bg-pink-100/10">
+            <div className="shadow-lg shadow-purple-800/50">
+              <TwitchEmbed />
+            </div>
+            <div className="flex text-3xl justify-center items-center text-center text-accent bg-gradient-to-tr from-primary via-info to-secondary bg-clip-text text-transparent">
+              <span className="text-base-content mr-1">
+                <FiTwitch />
+              </span>
+              | Live
+              <Link
+                className="mx-2 text-primary underline hover:font-bold hover:text-warning"
+                target="_blank"
+                href="https://www.twitch.tv/sway_bae/"
+              >
+                Twitch
+              </Link>
+              Stream
             </div>
           </div>
         </div>

@@ -5,7 +5,7 @@ import {
   BsDiscord,
   BsTiktok,
   BsInstagram,
-} from "react-icons/bs"
+} from "react-icons/bs";
 export default function ContactSocials({ mobileStyle }) {
   const contactList = [
     {
@@ -38,18 +38,16 @@ export default function ContactSocials({ mobileStyle }) {
       icon: <BsDiscord size="1.3rem" />,
       href: "https://discord.com/invite/K73uN9k",
     },
-  ]
+  ];
   return (
     <div
-      className={`bg-base-200 border-info text-base-content ${
+      className={`bg-base-200 border-base-content text-base-content ${
         mobileStyle ? "mt-12" : ""
-      } border-[8px] rounded-3xl shadow-xl shadow-purple-800/50 ${
+      } border-4 rounded-3xl shadow-xl shadow-purple-800/50 ${
         mobileStyle ? "py-4" : "py-8"
       } px-6`}
     >
-      <h3 className="text-2xl text-center">
-        Let&apos;s Connect!
-      </h3>
+      <h3 className="text-2xl text-primary text-center">Let&apos;s Connect!</h3>
       <hr className="my-4 border-secondary" />
       {mobileStyle ? (
         <div className="flex justify-center space-x-6">
@@ -86,4 +84,5 @@ export default function ContactSocials({ mobileStyle }) {
         </span>
       </p>
     </div>
-  )}
+  );
+}

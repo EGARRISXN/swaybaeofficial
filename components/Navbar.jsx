@@ -54,9 +54,9 @@ const Nav = () => {
   };
 
   return (
-    <header className="absolute w-full top-0 z-50">
-      <nav className="relative navbar bg-base-100 z-50">
-        <div className="navbar-start px-1 z-50">
+    <header className=" w-full top-0 z-[100]">
+      <nav className="relative navbar bg-base-100 z-[100]">
+        <div className="navbar-start px-1 z-[100]">
           <div className="hidden lg:block h-10 w-10 mask mask-heart">
             <Link href="/">
               <Image
@@ -76,7 +76,7 @@ const Nav = () => {
               of Chaos
             </p>
           </Link>
-          <div className="dropdown z-50" style={{ position: "relative" }}>
+          <div className="dropdown z-[100]" style={{ position: "relative" }}>
             <button
               tabIndex={0}
               className="lg:hidden"
@@ -91,7 +91,7 @@ const Nav = () => {
             {isOpen && (
               <ul
                 tabIndex={0}
-                className="dropdown-content mx-[-12px] bg-base-100 menu menu-lg z-50 text-base-content shadow-xl shadow-purple-800/50"
+                className="dropdown-content mx-[-12px] bg-base-100 flex menu z-[100] text-base-content"
                 onKeyDown={(e) => {
                   if (e.key === "Escape") {
                     closeDropdown();
@@ -104,13 +104,15 @@ const Nav = () => {
                   position: "absolute",
                   top: "100%",
                   width: "100vw",
+                  height: "100vh",
+                  left: "0",
                 }}
               >
                 {links.map((link) => (
                   <li key={link.href}>
                     <Link
                       href={link.href}
-                      className="relative text-xl text-primary bg-clip-text hover:underline hover:text-secondary z-50"
+                      className="relative text-6xl p-4 text-primary bg-clip-text hover:underline hover:text-secondary z-[100]"
                       onClick={handleLinkClick}
                     >
                       {link.label}
@@ -122,7 +124,7 @@ const Nav = () => {
           </div>
         </div>
 
-        <div className="navbar-center px-1 z-50">
+        <div className="navbar-center px-1 z-[100]">
           <ul className="menu menu-horizontal hidden lg:flex justify-center items-center mx-auto text-lg xl:space-x-8 2xl:space-x-10 3xl:space-x-14">
             {links.map((link) => (
               <li key={link.href}>
@@ -156,7 +158,7 @@ const Nav = () => {
           </Link>
         </div>
 
-        <div className="navbar-end px-1 z-50">
+        <div className="navbar-end px-1 z-[100]">
           <label
             tabIndex={0}
             className={`swap swap-rotate btn-xs ${

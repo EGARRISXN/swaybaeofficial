@@ -1,15 +1,15 @@
-"use client"
-import { useState } from "react"
+"use client";
+import { useState } from "react";
 
 export default function AboutCard() {
-  const [isShowMore, setIsShowMore] = useState(false)
+  const [isShowMore, setIsShowMore] = useState(false);
 
   const toggleReadMoreLess = () => {
-    setIsShowMore(!isShowMore)
-  }
+    setIsShowMore(!isShowMore);
+  };
 
   return (
-    <div className="bg-base-200 border-info text-base-content xs:mt-12 sm:mt-0 p-6 md:p-8 lg:p-10 2xl:p-12 3xl:p-16 border-[8px] rounded-3xl shadow-xl shadow-purple-800/50">
+    <div className="bg-base-200 border-base-content text-base-content mt-12 sm:mt-0 p-8 md:p-10 lg:p-12 2xl:p-14 3xl:p-16 border-4 rounded-3xl shadow-lg shadow-purple-800/50">
       <h1 className="text-4xl lg:text-5xl text-primary mb-4">I&apos;m Sway!</h1>
       <hr className="hr-lines border-secondary my-2" />
       <p className="my-4">
@@ -90,7 +90,7 @@ export default function AboutCard() {
       <br />
       <div className="flex justify-end">
         <button
-          className="btn btn-md btn-secondary mb-4 w-36 2xl:w-44 3xl:w-48 3xl:btn-lg p-3 hover:scale-125 ease-in duration-300 shadow-xl shadow-gray-400 rounded-xl bg-gradient-to-r from-purple-400 to-pink-600 text-white"
+          className="btn btn-md btn-secondary mb-4 w-36 2xl:w-44 3xl:w-48 3xl:btn-lg p-3 hover:scale-125 ease-in duration-300 shadow-md shadow-gray-400 rounded-xl bg-gradient-to-r from-purple-400 to-pink-600 text-white"
           onClick={toggleReadMoreLess}
         >
           {isShowMore ? "Read Less" : "Read More"}
@@ -98,5 +98,5 @@ export default function AboutCard() {
       </div>
       <hr className="my-4 border-secondary" />
     </div>
-  )
+  );
 }

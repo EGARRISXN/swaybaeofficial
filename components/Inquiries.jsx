@@ -13,7 +13,7 @@ export default function Inquiries() {
           </p>
         </div>
         <br />
-        <div className="flex flex-col md:flex-row mx-auto justify-center mt-16 xs:px-2 sm:px-6 md:px-12 lg:px-16 md:space-x-8">
+        <div className="flex flex-col md:flex-row mx-auto justify-center mt-16 px-4 sm:px-6 md:px-12 lg:px-16 md:space-x-8">
           <div className="md:w-3/5 lg:w-2/3 2xl:w-3/4 rounded-xl">
             <ContactForm />
           </div>

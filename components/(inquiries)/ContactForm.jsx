@@ -1,6 +1,5 @@
 "use client";
 import { useState } from "react";
-import UniversalButton from "../../utils/UniversalButton";
 
 export default function ContactForm() {
   const [formData, setFormData] = useState({
@@ -59,10 +58,10 @@ export default function ContactForm() {
 
   return (
     <form
-      className="bg-base-200 border-info text-base-content px-4 sm:px-10 pt-4 pb-4 lg:px-12 lg:pt-8 xl:px-16 xl:pt-12 2xl:px-20 border-[8px] rounded-3xl shadow-xl shadow-purple-800/50"
+      className="bg-base-200 border-base-content text-base-content px-4 sm:px-10 pt-4 pb-4 lg:px-12 lg:pt-8 xl:px-16 xl:pt-12 2xl:px-20 border-4 rounded-3xl shadow-lg shadow-purple-800/50"
       onSubmit={handleSubmit}
     >
-      <h1 className="text-4xl lg:text-6xl mt-4 lg:mt-2 xl:mt-0 mb-4">
+      <h1 className="text-4xl text-primary lg:text-6xl mt-4 lg:mt-2 xl:mt-0 mb-4">
         Contact Me
       </h1>
 
@@ -79,7 +78,7 @@ export default function ContactForm() {
           value={formData.name}
           onChange={handleInputChange}
           placeholder="Name"
-          className="p-3 text-neutral-900 rounded-xl border-2 shadow-xl shadow-purple-800/50 "
+          className="p-3 text-neutral-900 rounded-xl border-2 shadow-lg shadow-purple-800/50 "
           autoComplete="on"
           name="name"
           id="name"
@@ -97,7 +96,7 @@ export default function ContactForm() {
           value={formData.email}
           onChange={handleInputChange}
           placeholder="Email"
-          className="p-3 text-neutral-900 rounded-xl border-2 shadow-xl shadow-purple-800/50 disabled:bg-slate-50 disabled:text-slate-500 disabled:border-slate-200 disabled:shadow-none
+          className="p-3 text-neutral-900 rounded-xl border-2 shadow-lg shadow-purple-800/50 disabled:bg-slate-50 disabled:text-slate-500 disabled:border-slate-200 disabled:shadow-none
            invalid:text-pink-600
           focus:invalid:border-pink-500 focus:invalid:ring-pink-500"
           autoComplete="on"
@@ -117,7 +116,7 @@ export default function ContactForm() {
           value={formData.subject}
           onChange={handleInputChange}
           placeholder="Subject"
-          className="p-3 text-neutral-900 rounded-xl border-2 shadow-xl shadow-purple-800/50 "
+          className="p-3 text-neutral-900 rounded-xl border-2 shadow-lg shadow-purple-800/50 "
           autoComplete="on"
           name="subject"
           id="subject"
@@ -136,16 +135,21 @@ export default function ContactForm() {
           value={formData.message}
           onChange={handleInputChange}
           placeholder="Message"
-          className="w-full p-3 text-neutral-900 rounded-xl border-2 shadow-xl shadow-purple-800/50 "
+          className="w-full p-3 text-neutral-900 rounded-xl border-2 shadow-lg shadow-purple-800/50 "
           name="message"
           id="message"
         />
       </div>
       <hr className="my-6 border-secondary" />
       <div className="flex justify-end">
-        <UniversalButton type="submit" onClick={notify} disabled={loading}>
+        <button
+          type="submit"
+          onClick={notify}
+          disabled={loading}
+          className="btn btn-md btn-secondary mb-4 w-36 2xl:w-44 3xl:w-48 3xl:btn-lg p-3 hover:scale-110 ease-in duration-300 shadow-md shadow-gray-400 rounded-xl bg-gradient-to-r from-purple-400 to-pink-600 text-white"
+        >
           Send Message
-        </UniversalButton>
+        </button>
       </div>
     </form>
   );
