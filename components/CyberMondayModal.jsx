@@ -14,7 +14,7 @@ export default function CyberMondayModal() {
     >
       <div className="fixed inset-0 flex w-screen justify-center p-8">
         <Dialog.Overlay className="fixed inset-0 bg-black opacity-80 z-[200]" />
-        <Dialog.Panel className="w-fit max-w-sm z-[500] bg-black border-blue-400 bg-opacity-53 rounded p-4 border-4">
+        <Dialog.Panel className="w-fit max-w-sm max-h-[500px] flex flex-col items-center bg-black border-blue-400 bg-opacity-53 rounded p-4 border-4 z-[300]">
           <video
             autoPlay
             muted
@@ -23,7 +23,7 @@ export default function CyberMondayModal() {
             src="videos/CyberMondayVideo.mov"
             type="video/mp4"
             title="Cyber Monday Sale"
-            className="w-full h-full rounded z-[300]"
+            className="w-full h-full rounded z-[500]"
           ></video>
           <Link href="https://sway-bae-shop.fourthwall.com/">
             <button className="flex justify-center mx-auto border-4 rounded border-blue-400 bg-base-content px-2 font-bold text-blue-400">
