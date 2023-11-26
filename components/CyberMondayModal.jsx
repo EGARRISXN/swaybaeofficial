@@ -48,7 +48,7 @@ export default function CyberMondayModal() {
                 <button
                   type="button"
                   onClick={closeModal}
-                  className="flex justify-center items-center absolute top-[7px] right-[7px] border-2 text-blue-400 border-blue-400 w-10 h-10 bg-base-100 rounded-full shadow-2xl hover:bg-pink-200 transition duration-300 ease-in-out z-[500]"
+                  className="flex justify-center items-center absolute top-[7px] right-[7px] border-2 text-blue-400 border-blue-400 w-10 h-10 bg-base-100 rounded-full shadow-2xl hover:bg-pink-200 transition duration-300 ease-in-out z-[600]"
                 >
                   X
                 </button>
