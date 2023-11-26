@@ -1,40 +1,70 @@
 "use client";
-import { useState } from "react";
+import { useState, Fragment } from "react";
+import { Dialog, Transition } from "@headlessui/react";
 import Image from "next/image";
 import Link from "next/link";
-import { Dialog } from "@headlessui/react";
 
 export default function CyberMondayModal() {
   let [isOpen, setIsOpen] = useState(true);
 
+  function closeModal() {
+    setIsOpen(false);
+  }
+
   return (
-    <Dialog
-      open={isOpen}
-      onClose={() => setIsOpen(false)}
-      className="relative z-[200]"
-    >
-      <div className="fixed inset-0 flex w-screen justify-center p-8 z-[200]">
-        <Dialog.Overlay className="fixed inset-0 bg-black opacity-80 z-[200]" />
-        <Dialog.Panel className="w-fit h-fit max-w-sm max-h-[600px] bg-black border-blue-400 bg-opacity-50 rounded p-4 border-4 z-[300]">
-          <Image
-            src="/images/cybermonday.png"
-            width={415}
-            height={737}
-            className="w-fit max-h-[500px] object-cover object-center z-[500]"
-          />
-          <button
-            onClick={() => setIsOpen(false)}
-            className="flex justify-center items-center absolute top-3 right-3 border-4 text-blue-400 border-blue-400 w-10 h-10 bg-black rounded-full shadow-xl hover:bg-pink-200 transition duration-300 ease-in-out z-[500]"
-          >
-            X
-          </button>
-          <Link href="https://sway-bae-shop.fourthwall.com/">
-            <button className="flex justify-center items-center mx-auto border-4 rounded border-blue-400 bg-black px-2 mt-4 font-bold text-blue-400 z-[500]">
-              Shop Now!
-            </button>
-          </Link>
-        </Dialog.Panel>
-      </div>
-    </Dialog>
+    <Transition appear show={isOpen} as={Fragment}>
+      <Dialog as="div" onClose={closeModal} className="relative z-[200]">
+        <Transition.Child
+          as={Fragment}
+          enter="ease-out duration-300"
+          enterFrom="opacity-0"
+          enterTo="opacity-100"
+          leave="ease-in duration-200"
+          leaveFrom="opacity-100"
+          leaveTo="opacity-0"
+        >
+          <div className="fixed inset-0 bg-black/75" />
+        </Transition.Child>
+
+        <div className="fixed inset-0 overflow-y-auto">
+          <div className="flex min-h-full items-center justify-center p-4 text-center">
+            <Transition.Child
+              as={Fragment}
+              enter="ease-out duration-300"
+              enterFrom="opacity-0 scale-95"
+              enterTo="opacity-100 scale-100"
+              leave="ease-in duration-200"
+              leaveFrom="opacity-100 scale-100"
+              leaveTo="opacity-0 scale-95"
+            >
+              <Dialog.Panel className="flex flex-col w-full max-w-[320px] transform overflow-hidden rounded-2xl px-6 py-6 pb-7 bg-base-100 shadow-md shadow-base-content/10 transition-all z-[300]">
+                <Image
+                  src="/images/cybermonday.png"
+                  width={415}
+                  height={737}
+                  className="w-full flex justify-center rounded-2xl p-1 border-2 border-blue-400 shadow-2xl mx-auto z-[500]"
+                  priority
+                />
+                <button
+                  type="button"
+                  onClick={closeModal}
+                  className="flex justify-center items-center absolute top-[7px] right-[7px] border-2 text-blue-400 border-blue-400 w-10 h-10 bg-base-100 rounded-full shadow-2xl hover:bg-pink-200 transition duration-300 ease-in-out z-[500]"
+                >
+                  X
+                </button>
+                <Link href="https://sway-bae-shop.fourthwall.com/">
+                  <button
+                    type="button"
+                    className="flex justify-center items-center mx-auto border-2 absolute bottom-2 right-[90px] rounded-xl shadow-2xl hover:bg-pink-200 transition duration-300 ease-in-out border-blue-400 bg-base-100 w-36 h-10 text-blue-400 z-[600]"
+                  >
+                    Shop Now!
+                  </button>
+                </Link>
+              </Dialog.Panel>
+            </Transition.Child>
+          </div>
+        </div>
+      </Dialog>
+    </Transition>
   );
 }

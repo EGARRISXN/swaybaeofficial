@@ -69,10 +69,10 @@ export default function RootLayout({ children }) {
     >
       <body className="bg-gradient-to-br from-base-100 via-base-100 to-base-300 bg-cover bg-fixed bg-no-repeat">
         <Providers>
-          <CyberMondayModal />
           <Navbar />
           <Analytics />
           {children}
+          <CyberMondayModal />
           <ScrollToTop />
           <ToastNotifications />
           <Footer />
