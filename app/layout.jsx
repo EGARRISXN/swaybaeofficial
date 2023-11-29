@@ -3,7 +3,6 @@ import { Poppins, Lobster } from "next/font/google";
 import Providers from "./providers";
 import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
-import CyberMondayModal from "../components/CyberMondayModal";
 import ScrollToTop from "../components/ScrollToTop";
 import ToastNotifications from "../components/ToastNotifications";
 import "../styles/globals.css";
@@ -72,7 +71,6 @@ export default function RootLayout({ children }) {
           <Navbar />
           <Analytics />
           {children}
-          <CyberMondayModal />
           <ScrollToTop />
           <ToastNotifications />
           <Footer />
