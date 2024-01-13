@@ -13,6 +13,7 @@
     "@headlessui/react": "^1.7.17",
     "@tailwindcss/aspect-ratio": "^0.4.2",
     "@vercel/analytics": "^1.0.2",
+    "@vercel/speed-insights": "^1.0.3",
     "autoprefixer": "10.4.14",
     "classnames": "^2.3.2",
     "daisyui": "3.2.1",
