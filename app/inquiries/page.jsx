@@ -1,4 +1,4 @@
-import Inquiries from "../../components/Inquiries";
+import Inquiries from "@/components/Inquiries";
 
 export default function InquiriesPage() {
   return (

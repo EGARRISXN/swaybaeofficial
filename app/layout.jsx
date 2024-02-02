@@ -1,12 +1,11 @@
+import "./globals.css";
+import { Lobster, Poppins } from "next/font/google";
 import { Analytics } from "@vercel/analytics/react";
 import { SpeedInsights } from "@vercel/speed-insights/next";
-import { Poppins, Lobster } from "next/font/google";
-import Providers from "./providers";
-import Navbar from "../components/Navbar";
-import Footer from "../components/Footer";
-import ScrollToTop from "../components/ScrollToTop";
-import ToastNotifications from "../components/ToastNotifications";
-import "../styles/globals.css";
+import Provider from "@/components/(ui)/ThemeProvider";
+import ScrollToTop from "@/components/(ui)/ScrollToTop";
+import Navbar from "@/components/Navbar";
+import Footer from "@/components/Footer";
 
 const lobster = Lobster({
   subsets: ["latin"],
@@ -28,7 +27,7 @@ export const metadata = {
   description: "The Official Website for Sway Bae & The Bae Squad!",
   referrer: "origin-when-cross-origin",
   keywords: [
-    "sway bae, swaybae, sway_bae, swaybaetv, sway, bae, swaybae.net, swaybae.com, thebaesquad, the bae squad, baesquad, bae_squad, sway bae twitch, sway bae twitter, sway bae youtube, sway bae discord, sway bae instagram, sway bae tiktok, sway bae merch, sway bae store, sway bae shop, sway bae gaming, hearthstone, blizzard, streamer, stream, twitch, twitch streamer, twitch.tv, twitch.tv/sway_bae",
+    "sway bae, swaybae, sway_bae, swaybaetv, sway, bae, swaybae.net, swaybae.com, thebaesquad, the bae squad, baesquad, bae_squad, sway bae twitch, sway bae twitter, sway bae youtube, sway bae discord, sway bae instagram, sway bae tiktok, sway bae merch, sway bae store, sway bae shop, sway bae gaming, hearthstone, blizzard, streamer, stream, twitch, twitch streamer, twitch.tv, twitch.tv/sway_bae, blog, sway bae blog, sway blog",
   ],
   creator: { name: "Ethan Garrison", url: "https://github.com/EGARRISXN" },
   robots: {
@@ -64,19 +63,18 @@ export default function RootLayout({ children }) {
     <html
       lang="en"
       data-theme="myDark"
-      className={` ${lobster.variable} ${poppins.variable} `}
-      suppressHydrationWarning={true}
+      suppressHydrationWarning
+      className={`${lobster.variable} ${poppins.variable} antialiased scroll-smooth`}
     >
       <body className="bg-gradient-to-br from-base-100 via-base-100 to-base-300 bg-cover bg-fixed bg-no-repeat">
-        <Providers>
+        <Provider>
           <Navbar />
-          <Analytics />
           {children}
-          <SpeedInsights />
           <ScrollToTop />
-          <ToastNotifications />
           <Footer />
-        </Providers>
+        </Provider>
+        <Analytics />
+        <SpeedInsights />
       </body>
     </html>
   );

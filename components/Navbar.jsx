@@ -1,20 +1,18 @@
 "use client";
 import { useState, useEffect } from "react";
-import { usePathname } from "next/navigation";
 import { Sling as Hamburger } from "hamburger-react";
 import { useTheme, ThemeProvider } from "next-themes";
 import Link from "next/link";
 import Image from "next/image";
-import Avatar from "../public/images/avatar.png";
 
 const links = [
   { href: "/", label: "Home" },
   { href: "/calendar", label: "Calendar" },
   { href: "https://sway-bae-shop.fourthwall.com/", label: "Store" },
+  // { href: "/blog", label: "New Blog!" },
 ];
 
 const Nav = () => {
-  const path = usePathname();
   const [isOpen, setOpen] = useState(false);
   const [clickedOutside, setClickedOutside] = useState(false);
   const { resolvedTheme, setTheme } = useTheme();
@@ -59,14 +57,7 @@ const Nav = () => {
         <div className="navbar-start px-1 z-[100]">
           <div className="hidden lg:block h-10 w-10 mask mask-heart">
             <Link href="/">
-              <Image
-                src={Avatar}
-                quality={100}
-                alt="Logo"
-                height="100%"
-                width="100%"
-                priority
-              />
+              <Image src="/avatar.png" alt="Logo" height={40} width={40} />
             </Link>
           </div>
           <Link href="/">
@@ -112,8 +103,12 @@ const Nav = () => {
                   <li key={link.href}>
                     <Link
                       href={link.href}
-                      className="relative text-6xl p-4 text-primary bg-clip-text hover:underline hover:text-secondary z-[100]"
                       onClick={handleLinkClick}
+                      className={`${
+                        link.label === "New Blog!"
+                          ? "text-primary hover:text-secondary"
+                          : ""
+                      } relative bg-base-200 bg-clip-text text-6xl p-4 hover:text-secondary hover:underline hover:underline-offset-4 z-[100] `}
                     >
                       {link.label}
                     </Link>
@@ -130,7 +125,11 @@ const Nav = () => {
               <li key={link.href}>
                 <Link
                   href={link.href}
-                  className="relative bg-base-200 bg-clip-text hover:text-primary hover:underline"
+                  className={`${
+                    link.label === "New Blog!"
+                      ? "text-primary hover:text-secondary"
+                      : ""
+                  } relative bg-base-200 bg-clip-text hover:text-secondary hover:underline hover:underline-offset-4 `}
                 >
                   {link.label}
                 </Link>
@@ -139,14 +138,7 @@ const Nav = () => {
           </ul>
           <div className="block lg:hidden h-10 w-10 mask mask-heart">
             <Link href="/">
-              <Image
-                src={Avatar}
-                quality={100}
-                alt="Logo"
-                height="100%"
-                width="100%"
-                priority
-              />
+              <Image src="/avatar.png" alt="Logo" height={40} width={40} />
             </Link>
           </div>
           <Link href="/">

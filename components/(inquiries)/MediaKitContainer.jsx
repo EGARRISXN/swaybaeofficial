@@ -1,18 +1,22 @@
 import Image from "next/image";
-import MediaKit from "../../public/images/mediakit.png";
 import Link from "next/link";
 
 export default function MediaKitPhoto() {
   return (
     <div className="pt-12">
-      <Link href="https://beacons.ai/sway_bae/mediakit" passHref>
+      <Link
+        href="https://beacons.ai/sway_bae/mediakit"
+        target="_blank"
+        rel="noopener noreferrer"
+        passHref
+      >
         <Image
-          src={MediaKit}
-          quality={100}
+          className="hover:scale-105 ease-in duration-200"
+          src="/mediakit.png"
           alt="Media Kit"
-          width="100%"
-          height="100%"
-          className=" x"
+          width={600}
+          height={350}
+          quality={100}
           priority
         />
       </Link>

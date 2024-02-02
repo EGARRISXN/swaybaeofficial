@@ -1,5 +1,6 @@
 "use client";
 import { useState } from "react";
+import MyButton from "@/components/(ui)/MyButton";
 
 export default function ContactForm() {
   const [formData, setFormData] = useState({
@@ -11,7 +12,7 @@ export default function ContactForm() {
   const [loading, setLoading] = useState(false);
 
   const handleSubmit = async (event) => {
-    event.preventDefault(); // Prevent default form submission
+    event.preventDefault();
 
     setLoading(true);
 
@@ -41,13 +42,6 @@ export default function ContactForm() {
   const resolveAfter2Seconds = new Promise((resolve) =>
     setTimeout(resolve, 2000)
   );
-  const notify = () =>
-    toast.promise(resolveAfter2Seconds, {
-      pending: "Sending message...",
-      success: "Message sent successfully!",
-      error: "Thee was an error sending your message.",
-    });
-
   const handleInputChange = (event) => {
     const { id, value } = event.target;
     setFormData((prevFormData) => ({
@@ -61,9 +55,9 @@ export default function ContactForm() {
       className="bg-base-200 border-base-content text-base-content px-4 sm:px-10 pt-4 pb-4 lg:px-12 lg:pt-8 xl:px-16 xl:pt-12 2xl:px-20 border-4 rounded-3xl shadow-lg shadow-purple-800/50"
       onSubmit={handleSubmit}
     >
-      <h1 className="text-4xl text-primary lg:text-6xl mt-4 lg:mt-2 xl:mt-0 mb-4">
+      <div className="lobster text-4xl text-primary lg:text-6xl mt-4 lg:mt-2 xl:mt-0 mb-4">
         Contact Me
-      </h1>
+      </div>
 
       <hr className="hr-lines border-secondary my-2" />
       <div className="w-full flex flex-col my-4">
@@ -142,14 +136,9 @@ export default function ContactForm() {
       </div>
       <hr className="my-6 border-secondary" />
       <div className="flex justify-end">
-        <button
-          type="submit"
-          onClick={notify}
-          disabled={loading}
-          className="btn btn-md btn-secondary mb-4 w-36 2xl:w-44 3xl:w-48 3xl:btn-lg p-3 hover:scale-110 ease-in duration-300 shadow-md shadow-gray-400 rounded-xl bg-gradient-to-r from-purple-400 to-pink-600 text-white"
-        >
+        <MyButton type="submit" disabled={loading}>
           Send Message
-        </button>
+        </MyButton>
       </div>
     </form>
   );

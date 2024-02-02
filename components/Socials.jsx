@@ -1,31 +1,29 @@
 "use client";
 import Link from "next/link";
-import SpotifyEmbed from "../components/(socials)/SpotifyEmbed";
-import SocialCarousel from "../components/(socials)/SocialCarousel";
-import TwitchEmbed from "../components/(socials)/TwitchEmbed";
-import YoutubeEmbed from "../components/(socials)/YouTubeEmbed";
 import { FiTwitch, FiYoutube } from "react-icons/fi";
+import SpotifyEmbed from "@/components/(socials)/SpotifyEmbed";
+import SocialCarousel from "@/components/(socials)/SocialCarousel";
+import TwitchEmbed from "@/components/(socials)/TwitchEmbed";
+import YoutubeEmbed from "@/components/(socials)/YouTubeEmbed";
 
 export default function Socials() {
   return (
     <div id="socials" className="w-full">
-      <div className="max-w-[1420px] mx-auto py-16">
+      <div className="max-w-[1420px] mx-auto pt-4 pb-16 lg:pt-16">
         <div className="flex flex-col sm:flex-row px-2 sm:px-6 md:pl-16 md:pr-16 justify-between mt-2">
-          <h1 className="font-poppins uppercase text-xl tracking-widest font-bold-200 text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-pink-600">
+          <p className="font-poppins uppercase text-xl tracking-widest font-bold-200 text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-pink-600">
             Socials
-          </h1>
-          <div className="mt-16 sm:mt-0">
+          </p>
+          <div className="mt-12 lg:mt-16">
             <SpotifyEmbed />
           </div>
         </div>
         <br />
         <div className="mx-auto px-2 sm:px-6 md:px-12 lg:px-16">
           <SocialCarousel />
-
           <br />
-
           <div className="grid grid-cols-1 md:grid-cols-2 p-4 md:p-8">
-            <div className="flex justify-center md:text-3xl items-center text-center text-accent bg-gradient-to-tr from-primary via-info to-secondary bg-clip-text text-transparent">
+            <div className="flex justify-center md:text-xl lg:text-3xl items-center text-center text-accent bg-gradient-to-tr from-primary via-info to-secondary bg-clip-text text-transparent">
               Latest
               <Link
                 target="_blank"
@@ -43,9 +41,7 @@ export default function Socials() {
               <YoutubeEmbed vnum={0} />
             </div>
           </div>
-
           <br />
-
           <div className="hidden lg:grid grid-cols-1 md:grid-cols-2 p-4 md:p-8">
             <div className="shadow-lg rounded-xl p-4 shadow-purple-800/50">
               <TwitchEmbed />

@@ -1,7 +1,7 @@
 export default function Loading() {
   return (
-    <div className="flex flex-cols items-center justify-center h-screen ">
+    <main className="flex flex-col mx-auto items-center h-screen mt-32">
       <div className="loader"></div>
-    </div>
-  )
+    </main>
+  );
 }

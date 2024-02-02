@@ -1,0 +1,84 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/*! App */
+main {
+  padding: 0;
+  width: 100%;
+}
+
+/*! Fonts */
+:root {
+  --font-poppins: "Poppins", sans-serif;
+  --font-lobster: "Lobster", cursive;
+}
+html,
+body {
+  margin: 0;
+  overflow-x: hidden;
+  font-family: var(--font-poppins);
+}
+h1 {
+  font: 6rem;
+}
+h2 {
+  font: 5rem;
+}
+h3 {
+  font: 4rem;
+}
+h4 {
+  font: 3rem;
+}
+h5 {
+  font: 2rem;
+}
+h6,
+p {
+  font: 1rem;
+}
+.lobster {
+  font-family: var(--font-lobster);
+  font: 1rem;
+}
+
+/*! Scrollbar */
+/* Firefox */
+* {
+  scrollbar-width: thin;
+  scrollbar-color: #888 #555;
+}
+/* Chrome & Others */
+::-webkit-scrollbar {
+  width: 10px;
+}
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #888;
+  border-radius: 5px;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
+
+/*! Loader */
+.loader {
+  opacity: 100%;
+  border: 16px dotted rgb(242, 97, 255);
+  border-top: 16px dotted #3498db;
+  border-radius: 50%;
+  width: 10rem;
+  height: 10rem;
+  animation: spin 2s linear infinite;
+}
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
