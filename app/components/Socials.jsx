@@ -1,9 +1,8 @@
 'use client'
 import Link from 'next/link'
-import {FiTwitch, FiYoutube} from 'react-icons/fi'
+import {FiYoutube} from 'react-icons/fi'
 import SpotifyEmbed from '@components/(socials)/SpotifyEmbed'
 import SocialCarousel from '@components/(socials)/SocialCarousel'
-import TwitchEmbed from '@components/(socials)/TwitchEmbed'
 import YoutubeEmbed from '@components/(socials)/YouTubeEmbed'
 
 export default function Socials() {
@@ -32,7 +31,7 @@ export default function Socials() {
               >
                 YoutTube
               </Link>
-              Video |
+              Videos |
               <span className='ml-2 text-base-content'>
                 <FiYoutube />
               </span>
@@ -42,23 +41,23 @@ export default function Socials() {
             </div>
           </div>
           <br />
-          <div className='hidden grid-cols-1 p-4 md:grid-cols-2 md:p-8 lg:grid'>
+          <div className='grid grid-cols-1 p-4 md:grid-cols-2 md:p-8'>
             <div className='rounded-xl p-4 shadow-lg shadow-purple-800/50'>
-              <TwitchEmbed />
+              <YoutubeEmbed vnum={1} />
             </div>
-            <div className='flex items-center justify-center bg-gradient-to-tr from-primary via-info to-secondary bg-clip-text text-center text-3xl text-accent text-transparent'>
-              <span className='mr-1 text-base-content'>
-                <FiTwitch />
+            <div className='hidden items-center justify-center bg-gradient-to-tr from-primary via-info to-secondary bg-clip-text text-center text-accent text-transparent md:flex md:text-xl lg:text-3xl'>
+              <span className='mr-2 text-base-content'>
+                <FiYoutube />
               </span>
-              | Live
+              | Latest
               <Link
-                className='mx-2 text-primary underline hover:font-bold hover:text-warning'
                 target='_blank'
-                href='https://www.twitch.tv/sway_bae/'
+                href='https://www.youtube.com/sway_baetv/'
+                className='mx-2 text-primary underline hover:font-bold hover:text-warning'
               >
-                Twitch
+                YoutTube
               </Link>
-              Stream
+              Videos
             </div>
           </div>
         </div>
