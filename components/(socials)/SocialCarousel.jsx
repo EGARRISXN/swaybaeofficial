@@ -1,7 +1,7 @@
 'use client'
 import {FiChevronRight, FiChevronLeft} from 'react-icons/fi'
-import SocialCard from '@components/(socials)/SocialCard'
-import {socialMediaData} from '@utils/socialMediaData'
+import SocialCard from '@/components/(socials)/SocialCard'
+import {socialMediaData} from '@/utils/socialMediaData'
 
 export default function SocialCarousel() {
   const scrollLeft = () => {

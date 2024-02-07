@@ -1,9 +1,9 @@
 import Image from 'next/image'
 import Link from 'next/link'
-import {client, urlFor} from '@lib/sanityClient'
+import {client, urlFor} from '@/utils//sanityClient'
 import {PortableText} from '@portabletext/react'
-import PageName from '@components/(ui)/PageName'
-import MyButton from '@components/(ui)/MyButton'
+import PageName from '@/components/(ui)/PageName'
+import MyButton from '@/components/(ui)/MyButton'
 
 export const revalidate = 60
 

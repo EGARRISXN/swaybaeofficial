@@ -1,7 +1,7 @@
 'use client'
 import {useEffect} from 'react'
 import Image from 'next/image'
-import MyButton from '@components/(ui)/MyButton'
+import MyButton from '@/components/(ui)/MyButton'
 
 export default function Error({error, reset}) {
   useEffect(() => {

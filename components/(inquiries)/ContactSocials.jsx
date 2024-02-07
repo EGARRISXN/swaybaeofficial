@@ -1,5 +1,5 @@
 import Link from 'next/link'
-import {socialMediaData} from '@app/utils/socialMediaData'
+import {socialMediaData} from '@/utils/socialMediaData'
 
 export default function ContactSocials({mobileStyle}) {
   return (

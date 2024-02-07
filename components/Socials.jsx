@@ -1,9 +1,9 @@
 'use client'
 import Link from 'next/link'
 import {FiYoutube} from 'react-icons/fi'
-import SpotifyEmbed from '@components/(socials)/SpotifyEmbed'
-import SocialCarousel from '@components/(socials)/SocialCarousel'
-import YoutubeEmbed from '@components/(socials)/YouTubeEmbed'
+import SpotifyEmbed from '@/components/(socials)/SpotifyEmbed'
+import SocialCarousel from '@/components/(socials)/SocialCarousel'
+import YoutubeEmbed from '@/components/(socials)/YouTubeEmbed'
 
 export default function Socials() {
   return (

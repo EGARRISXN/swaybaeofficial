@@ -1,6 +1,6 @@
-import AboutPhoto from '@components/(about)/AboutPhoto'
-import AboutCard from '@components/(about)/AboutCard'
-import PageName from '@components/(ui)/PageName'
+import AboutPhoto from '@/components/(about)/AboutPhoto'
+import AboutCard from '@/components/(about)/AboutCard'
+import PageName from '@/components/(ui)/PageName'
 
 export default function About() {
   return (

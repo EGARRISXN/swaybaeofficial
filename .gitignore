@@ -27,6 +27,11 @@ yarn-error.log*
 
 # dotenv and similar local-only files
 *.local
+.env
+.env*
+.env.local
+.env*.local
+.env.development
 
 # vercel
 .vercel

@@ -2,10 +2,10 @@ import './globals.css'
 import {Lobster, Poppins} from 'next/font/google'
 import {Analytics} from '@vercel/analytics/react'
 import {SpeedInsights} from '@vercel/speed-insights/next'
-import Provider from '@components/(ui)/ThemeProvider'
-import ScrollToTop from '@components/(ui)/ScrollToTop'
-import Navbar from '@components/Navbar'
-import Footer from '@components/Footer'
+import Provider from '@/components/(ui)/ThemeProvider'
+import ScrollToTop from '@/components/(ui)/ScrollToTop'
+import Navbar from '@/components/Navbar'
+import Footer from '@/components/Footer'
 
 const lobster = Lobster({
   subsets: ['latin'],

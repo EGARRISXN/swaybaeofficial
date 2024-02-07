@@ -1,8 +1,8 @@
 'use client'
-import ContactForm from '@components/(inquiries)/ContactForm'
-import ContactSocials from '@components/(inquiries)/ContactSocials'
-import MediaKitContainer from '@components/(inquiries)/MediaKitContainer'
-import PageName from '@components/(ui)/PageName'
+import ContactForm from '@/components/(inquiries)/ContactForm'
+import ContactSocials from '@/components/(inquiries)/ContactSocials'
+import MediaKitContainer from '@/components/(inquiries)/MediaKitContainer'
+import PageName from '@/components/(ui)/PageName'
 
 export default function Inquiries() {
   return (

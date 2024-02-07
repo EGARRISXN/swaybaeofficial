@@ -1,19 +1,7 @@
 {
   "compilerOptions": {
-    "baseUrl": ".",
     "paths": {
-      "@*": ["*"],
-      "@app/*": ["app/*"],
-      "@sanity/*": ["sanity/*"],
-      "@pages/*": ["pages/*"],
-      "@components/*": ["app/components/*"],
-      "@utils/*": ["app/utils/*"],
-      "@blog/*": ["app/(site)/blog/*"],
-      "@inquiries/*": ["app/(site)/inquiries/*"],
-      "@calendar/*": ["app/(site)/calendar/*"],
-      "@studio/*": ["app/(studio)/studio/*"],
-      "@schemas/*": ["sanity/schemas/*"],
-      "@lib/*": ["sanity/lib/*"],
+      "@/*": ["./*"],
     },
   },
 }

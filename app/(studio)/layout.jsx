@@ -5,7 +5,7 @@ export const metadata = {
   description: 'Studio for editing Sanity.io content',
 }
 
-export default function RootLayout({children}) {
+export default function StudioLayout({children}) {
   return (
     <html lang='en'>
       <body>{children}</body>

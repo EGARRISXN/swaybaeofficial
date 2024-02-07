@@ -1,6 +1,3 @@
-// components/SpotifyPlaylist.js
-import React from 'react'
-
 const SpotifyPlaylist = () => {
   return (
     <div className='mx-auto mt-8 max-w-screen-md'>

@@ -1,6 +1,6 @@
 import Link from 'next/link'
 import Image from 'next/image'
-import MyButton from '@components/(ui)/MyButton'
+import MyButton from '@/components/(ui)/MyButton'
 
 export default function SocialCard({imageSrc, alt, label, username, href}) {
   return (
