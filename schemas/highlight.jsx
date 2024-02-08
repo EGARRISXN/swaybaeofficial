@@ -1,5 +1,4 @@
 import {PiHighlighterCircle} from 'react-icons/pi'
-import HighlightDecorator from '../components/highlightDecorator'
 
 const HighlightIcon = () => <PiHighlighterCircle />
 
@@ -8,7 +7,6 @@ export default {
   name: 'highlight',
   type: 'object',
   icon: HighlightIcon,
-  component: HighlightDecorator,
   fields: [
     {
       title: 'Highlight Color',
