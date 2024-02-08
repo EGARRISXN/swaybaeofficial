@@ -1,18 +1,11 @@
 import nodemailer from 'nodemailer'
-import {userEmail, userPass} from '@/utils/env'
+import {userEmail, userPass} from '../../utils/env.js'
 
 export default async function ContactAPI(req, res) {
   const {name, email, subject, message} = req.body
 
   const User = userEmail || process.env.EMAIL_USER
   const Pass = userPass || process.env.EMAIL_PASS
-
-  const data = {
-    name,
-    email,
-    subject,
-    message,
-  }
 
   const transporter = nodemailer.createTransport({
     host: 'smtp.gmail.com',
@@ -24,9 +17,17 @@ export default async function ContactAPI(req, res) {
     },
   })
 
+  const data = {
+    name,
+    email,
+    subject,
+    message,
+  }
+  console.log(data)
+
   try {
     const mail = await transporter.sendMail({
-      from: User,
+      from: name,
       to: 'sway.bae9000@gmail.com',
       replyTo: email,
       subject: `${name}: ${subject}`,

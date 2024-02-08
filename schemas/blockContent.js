@@ -100,7 +100,7 @@ export default {
     {
       title: 'YouTube',
       name: 'youtubeEmbed',
-      type: 'youtubeEmbed',
+      type: 'object',
       description:
         'Add a YouTube video to the post. Paste the URL of the video in the field below.',
       fields: [
