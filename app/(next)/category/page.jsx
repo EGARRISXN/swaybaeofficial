@@ -27,15 +27,15 @@ export default async function Category() {
         <div className='mx-auto max-w-[1420px] pb-16 pt-4 lg:pt-16'>
           <PageName>Category</PageName>
           <br />
-          <div className='mx-auto flex justify-center gap-3'>
+          <div className='my-4 flex'>
             {data.map((category, idx) => (
-              <div key={idx}>
-                <div className={`mx-auto h-32 w-32 rounded-full bg-${category.color}`}>
-                  <h4 className='prose prose-lg line-clamp-1 font-bold tracking-tight dark:prose-invert'>
-                    <Link href={`/category/${category.currentSlug}`}>{category.title}</Link>
-                  </h4>
-                </div>
-              </div>
+              <span key={idx} className='mb-2 mr-2 inline-block'>
+                <Link href={`/category/${category.slug}`}>
+                  <div className='mx-auto cursor-pointer justify-center rounded-full bg-gray-200 px-3 py-1 text-center text-xs font-semibold text-gray-800 transition duration-300 hover:bg-gray-300 dark:bg-gray-800 dark:text-gray-200 dark:hover:bg-gray-700'>
+                    {category.title}
+                  </div>
+                </Link>
+              </span>
             ))}
           </div>
 
