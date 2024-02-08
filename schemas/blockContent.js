@@ -13,10 +13,13 @@ export default {
   title: 'Block Content',
   name: 'blockContent',
   type: 'array',
+  description: 'Block content for the blog',
   of: [
     {
       title: 'Block',
+      name: 'block',
       type: 'block',
+      description: 'Add, edit, and reorder content blocks',
       // Styles let you set what your user can mark up blocks with. These
       // correspond with HTML tags, but you can set any title or value
       // you want and decide how you want to deal with it where you want to
@@ -44,31 +47,32 @@ export default {
           {title: 'Emphasis', value: 'em'},
           {title: 'Code', value: 'code'},
           {title: 'Underline', value: 'underline'},
+          {title: 'Strike', value: 'strike-through'},
+          {title: 'Highlight', value: 'highlight'},
         ],
         // Annotations can be any object structure – e.g. a link or a footnote.
         annotations: [
           {
-            name: 'internalLink',
-            type: 'object',
             title: 'Internal link',
-            fields: [
-              {
-                name: 'reference',
-                type: 'reference',
-                title: 'Reference',
-                to: [{type: 'blog'}, {type: 'category'}],
-              },
-            ],
+            name: 'internalLink',
+            type: 'internalLink',
+            description: 'Reference an internal page, category, or blog post',
           },
           {
             title: 'URL',
             name: 'link',
             type: 'object',
+            description: 'Add a link to the blog',
             fields: [
               {
                 title: 'URL',
                 name: 'href',
                 type: 'url',
+              },
+              {
+                title: 'Open in new tab',
+                name: 'blank',
+                type: 'boolean',
               },
             ],
           },
@@ -82,13 +86,21 @@ export default {
       title: 'Image',
       name: 'image',
       type: 'image',
-      description: 'Add an image to your content',
-      options: {hotspot: true},
+      description:
+        "Add an image to the blog. It's important for accessibility and SEO to add a good description of the image.",
+      options: {
+        hotspot: true,
+      },
       fields: [
         {
-          title: 'Alternative Text',
+          title: 'Alternative text',
           name: 'alt',
-          type: 'string',
+          type: 'text',
+          description:
+            'Some of your visitors cannot see images, be they blind, colorblind, lowlighted. alternative text is of great help for those people that can rely on it to have a good idea of whats on your page',
+          options: {
+            isHighlighted: true,
+          },
         },
       ],
     },
@@ -96,24 +108,13 @@ export default {
       title: 'YouTube',
       name: 'youtubeEmbed',
       type: 'object',
-      description: 'Add a YouTube video to your content',
+      description:
+        'Add a YouTube video to the post. Paste the URL of the video in the field below.',
       fields: [
         {
-          name: 'video',
           title: 'Video',
+          name: 'video',
           type: 'youtubeVideo',
-        },
-        {
-          name: 'autoplay',
-          title: 'Autoplay',
-          type: 'boolean',
-          initialValue: false,
-        },
-        {
-          name: 'controls',
-          title: 'Controls',
-          type: 'boolean',
-          initialValue: true,
         },
       ],
     },

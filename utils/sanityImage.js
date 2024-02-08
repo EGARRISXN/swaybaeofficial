@@ -1,29 +1,14 @@
-import urlBuilder from '@sanity/image-url'
-import {getImageDimensions} from '@sanity/asset-utils'
+import imageUrlBuilder from '@sanity/image-url'
+import {client} from './sanityClient'
 
-// Barebones lazy-loaded image component
-const SampleImageComponent = ({value}) => {
-  const {width, height} = getImageDimensions(value)
-  return (
-    <img
-      src={urlBuilder().image(value).width(800).fit('max').auto('format').url()}
-      alt={value.alt || ' '}
-      loading='lazy'
-      style={{
-        // Avoid jumping around with aspect-ratio CSS property
-        aspectRatio: width / height,
-      }}
-    />
-  )
+const builder = imageUrlBuilder(client)
+
+function urlFor(source) {
+  return builder.image(source)
 }
-
-// You'll now need to define your own image component
-;<PortableText
-  value={input}
-  components={{
-    // ...
-    types: {
-      image: Image,
-    },
-  }}
-/>
+// Examples of how to use the urlFor function
+{
+  /* <img src={urlFor(author.image).width(200).url()} />
+<img src={urlFor(movie.poster).width(500).height(300).url()}></img>
+<img src={urlFor(mysteryPerson.mugshot).width(200).height(200).blur(50).url()}></img> */
+}
