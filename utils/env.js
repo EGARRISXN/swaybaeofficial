@@ -6,6 +6,6 @@ export const apiVersion = process.env.NEXT_PUBLIC_SANITY_API_VERSION
 
 export const googleYoutubeApiKey = process.env.GOOGLE_YOUTUBE_API_KEY
 
-export const emailUser = process.env.EMAIL_USER
+export const userEmail = process.env.EMAIL_USER
 
-export const emailPass = process.env.EMAIL_PASS
+export const userPass = process.env.EMAIL_PASS

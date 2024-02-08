@@ -1,5 +1,3 @@
-import {MdLaunch} from 'react-icons/md'
-
 const ExternalLinkRenderer = (props) => (
   <span>
     {props.renderDefault(props)}

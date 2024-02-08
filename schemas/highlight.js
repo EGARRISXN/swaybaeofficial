@@ -1,12 +1,7 @@
-import {PiHighlighterCircle} from 'react-icons/pi'
-
-const HighlightIcon = () => <PiHighlighterCircle />
-
 export default {
   title: 'Highlight',
   name: 'highlight',
   type: 'object',
-  icon: HighlightIcon,
   fields: [
     {
       title: 'Highlight Color',

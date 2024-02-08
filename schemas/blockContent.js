@@ -56,7 +56,6 @@ export default {
             title: 'Internal link',
             name: 'internalLink',
             type: 'internalLink',
-            description: 'Reference an internal page, category, or blog post',
           },
           {
             title: 'URL',
@@ -88,9 +87,6 @@ export default {
       type: 'image',
       description:
         "Add an image to the blog. It's important for accessibility and SEO to add a good description of the image.",
-      options: {
-        hotspot: true,
-      },
       fields: [
         {
           title: 'Alternative text',
@@ -98,16 +94,13 @@ export default {
           type: 'text',
           description:
             'Some of your visitors cannot see images, be they blind, colorblind, lowlighted. alternative text is of great help for those people that can rely on it to have a good idea of whats on your page',
-          options: {
-            isHighlighted: true,
-          },
         },
       ],
     },
     {
       title: 'YouTube',
       name: 'youtubeEmbed',
-      type: 'object',
+      type: 'youtubeEmbed',
       description:
         'Add a YouTube video to the post. Paste the URL of the video in the field below.',
       fields: [

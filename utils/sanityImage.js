@@ -1,11 +1,12 @@
-import imageUrlBuilder from '@sanity/image-url'
-import {client} from './sanityClient'
+// import imageUrlBuilder from '@sanity/image-url'
+// import {client} from './sanityClient'
 
-const builder = imageUrlBuilder(client)
+// const builder = imageUrlBuilder(client)
 
-function urlFor(source) {
-  return builder.image(source)
-}
+// function urlFor(source) {
+//   return builder.image(source)
+// }
+
 // Examples of how to use the urlFor function
 {
   /* <img src={urlFor(author.image).width(200).url()} />
