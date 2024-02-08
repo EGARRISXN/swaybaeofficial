@@ -3,6 +3,7 @@ import {Lobster, Poppins} from 'next/font/google'
 import {Analytics} from '@vercel/analytics/react'
 import {SpeedInsights} from '@vercel/speed-insights/next'
 import Provider from '@/components/(ui)/ThemeProvider'
+import ScrollProgressIndicator from '@/components/(ui)/ScrollProgressIndicator'
 import ScrollToTop from '@/components/(ui)/ScrollToTop'
 import Navbar from '@/components/Navbar'
 import Footer from '@/components/Footer'
@@ -66,11 +67,13 @@ export default function RootLayout({children}) {
       suppressHydrationWarning
       className={`${lobster.variable} ${poppins.variable} scroll-smooth antialiased`}
     >
-      <body className='bg-gradient-to-br from-base-100 via-base-100 to-base-300 bg-cover bg-fixed bg-no-repeat'>
+      <body className='min-h-screen bg-gradient-to-br from-base-100 via-base-100 to-base-300 bg-cover bg-fixed bg-no-repeat'>
         <Provider>
+          <ScrollProgressIndicator />
+          <ScrollToTop />
           <Navbar />
           {children}
-          <ScrollToTop />
+
           <Footer />
         </Provider>
         <Analytics />

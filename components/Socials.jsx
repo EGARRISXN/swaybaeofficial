@@ -21,7 +21,7 @@ export default function Socials() {
         <div className='mx-auto px-2 sm:px-6 md:px-12 lg:px-16'>
           <SocialCarousel />
           <br />
-          <div className='grid grid-cols-1 p-4 md:grid-cols-2 md:p-8'>
+          <div className='mx-auto p-4 md:p-8'>
             <div className='flex items-center justify-center bg-gradient-to-tr from-primary via-info to-secondary bg-clip-text text-center text-accent text-transparent md:text-xl lg:text-3xl'>
               Latest
               <Link
@@ -36,30 +36,17 @@ export default function Socials() {
                 <FiYoutube />
               </span>
             </div>
-            <div className='rounded-xl p-4 shadow-lg shadow-purple-800/50'>
-              <YoutubeEmbed vnum={0} />
+            <div className='grid grid-cols-1 gap-8 p-4 md:p-8 xl:grid-cols-2'>
+              <div className='rounded-xl p-4 shadow-lg shadow-purple-800/50'>
+                <YoutubeEmbed vnum={0} />
+              </div>
+              <div className='rounded-xl p-4 shadow-lg shadow-purple-800/50'>
+                <YoutubeEmbed vnum={1} />
+              </div>
             </div>
           </div>
-          <br />
-          <div className='grid grid-cols-1 p-4 md:grid-cols-2 md:p-8'>
-            <div className='rounded-xl p-4 shadow-lg shadow-purple-800/50'>
-              <YoutubeEmbed vnum={1} />
-            </div>
-            <div className='hidden items-center justify-center bg-gradient-to-tr from-primary via-info to-secondary bg-clip-text text-center text-accent text-transparent md:flex md:text-xl lg:text-3xl'>
-              <span className='mr-2 text-base-content'>
-                <FiYoutube />
-              </span>
-              | Latest
-              <Link
-                target='_blank'
-                href='https://www.youtube.com/sway_baetv/'
-                className='mx-2 text-primary underline hover:font-bold hover:text-warning'
-              >
-                YoutTube
-              </Link>
-              Videos
-            </div>
-          </div>
+
+          <div className='grid grid-cols-1 p-4 md:grid-cols-2 md:p-8'></div>
         </div>
       </div>
     </div>

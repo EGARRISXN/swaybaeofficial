@@ -1,0 +1,13 @@
+/* RootLayout.module.css */
+.scrollSmooth {
+  scroll-behavior: smooth;
+}
+
+.antialiased {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.minHSreen {
+  min-height: 100vh;
+}

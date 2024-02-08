@@ -1,42 +1,76 @@
 export default {
-  name: "blog",
-  title: "Blog",
-  type: "document",
+  name: 'blog',
+  title: 'Blog',
+  type: 'document',
   fields: [
     {
-      name: "title",
-      title: "Blog Title",
-      type: "string",
-      description: "Title of the blog post",
+      name: 'title',
+      title: 'Title',
+      type: 'string',
+      description: 'Title of blog post',
     },
     {
-      name: "slug",
-      title: "Blog Slug",
-      type: "slug",
+      name: 'slug',
+      title: 'Slug',
+      type: 'slug',
+      description: 'Slug for blog post',
       options: {
-        source: "title",
+        source: 'title',
         maxLength: 96,
       },
-      description: "Slug for the blog post",
     },
     {
-      name: "coverImage",
-      title: "Cover Image",
-      type: "image",
-      description: "Cover Image for the blog post",
+      name: 'description',
+      title: 'Description',
+      type: 'text',
+      description: 'Description of blog post',
     },
     {
-      name: "smallDescription",
-      title: "Small Description",
-      type: "text",
-      description: "Small Description of the blog post",
+      name: 'coverImage',
+      title: 'Cover Image',
+      type: 'image',
+      description: 'Cover Image for blog post',
+      options: {
+        hotspot: true,
+      },
+      fields: [
+        {
+          name: 'alt',
+          title: 'Alternative Text',
+          type: 'string',
+          description: 'Important for SEO and accessibility.',
+        },
+      ],
     },
     {
-      name: "content",
-      title: "Blog Content",
-      type: "array",
-      of: [{ type: "block" }],
-      description: "Content of the blog post",
+      name: 'category',
+      title: 'Category',
+      type: 'array',
+      of: [{type: 'reference', to: {type: 'category'}}],
+    },
+    {
+      name: 'publishedAt',
+      title: 'Published at',
+      type: 'datetime',
+    },
+    {
+      name: 'body',
+      title: 'Body',
+      type: 'blockContent',
+      description: 'Body of blog post',
     },
   ],
-};
+
+  preview: {
+    select: {
+      title: 'title',
+      media: 'coverImage',
+    },
+    prepare({title, media}) {
+      return {
+        title,
+        media,
+      }
+    },
+  },
+}

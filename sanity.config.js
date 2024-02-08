@@ -6,10 +6,11 @@ import {structureTool} from 'sanity/structure'
 import {media} from 'sanity-plugin-media'
 import {youtubeInput} from 'sanity-plugin-youtube-input'
 import {unsplashImageAsset} from 'sanity-plugin-asset-source-unsplash'
-import {projectId, dataset, apiVersion, googleYoutubeApiKey} from '@/utils/env'
-import {schemaTypes} from '@/schemas/index'
+import {projectId, dataset, apiVersion, googleYoutubeApiKey} from './utils/env.js'
+import {schemaTypes} from './schemas/index.js'
 
 export default defineConfig({
+  name: 'default',
   basePath: '/studio',
   projectId: projectId || 'i9qt6ktn',
   dataset: dataset || 'production',
