@@ -4,10 +4,9 @@ import {visionTool} from '@sanity/vision'
 import {defineConfig} from 'sanity'
 import {structureTool} from 'sanity/structure'
 import {media} from 'sanity-plugin-media'
-import {youtubeInput} from 'sanity-plugin-youtube-input'
 import {unsplashImageAsset} from 'sanity-plugin-asset-source-unsplash'
-import {projectId, dataset, apiVersion, googleYoutubeApiKey} from './utils/env.js'
-import {schemaTypes} from './schemas/index.js'
+import {projectId, dataset, apiVersion} from '@/sanity/lib/env'
+import {schemaTypes} from '@/sanity/schemas/index'
 
 export default defineConfig({
   name: 'default',
@@ -19,7 +18,6 @@ export default defineConfig({
     structureTool(),
     media(),
     visionTool({defaultApiVersion: apiVersion || '2024-02-01'}),
-    youtubeInput({apiKey: googleYoutubeApiKey}),
     unsplashImageAsset(),
   ],
 

@@ -1,11 +1,10 @@
 import nodemailer from 'nodemailer'
-import {userEmail, userPass} from '../../utils/env.js'
 
 export default async function ContactAPI(req, res) {
   const {name, email, subject, message} = req.body
 
-  const User = userEmail || process.env.EMAIL_USER
-  const Pass = userPass || process.env.EMAIL_PASS
+  const User = process.env.EMAIL_USER
+  const Pass = process.env.EMAIL_PASS
 
   const transporter = nodemailer.createTransport({
     host: 'smtp.gmail.com',
