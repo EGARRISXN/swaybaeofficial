@@ -1,6 +1,6 @@
-import blockContent from './blockContent'
-import blog from './blog'
-import category from './category'
-import youtube from './youtube'
+import {blockContent} from './content'
+import {youtubeEmbed} from './youtube'
+import {post} from './post'
+import {tag} from './tag'
 
-export const schemaTypes = [blockContent, blog, category, youtube]
+export const schemaTypes = [blockContent, youtubeEmbed, post, tag]

@@ -1,7 +1,7 @@
-import Hero from '@/app/components/Hero'
-import About from '@/app/components/About'
-import Socials from '@/app/components/Socials'
-import Inquiries from '@/app/components/Inquiries'
+import Hero from '@/components/(hero)/Hero'
+import About from '@/components/(about)/About'
+import Socials from '@/components/(socials)/Socials'
+import Inquiries from '@/components/(inquiries)/Inquiries'
 
 export default function Home() {
   return (

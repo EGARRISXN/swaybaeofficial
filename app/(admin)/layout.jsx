@@ -1,13 +1,9 @@
-import './globals.css'
-import StudioNavbar from '@/app/components/StudioNavbar'
+import styles from './studio.module.css'
 
 export default function StudioLayout({children}) {
   return (
-    <html lang='en' className='scroll-smooth antialiased'>
-      <body className='min-h-screen'>
-        <StudioNavbar />
-        {children}
-      </body>
+    <html lang='en' className={styles.scrollSmooth + ' ' + styles.antialiased}>
+      <body className={styles.minHScreen}>{children}</body>
     </html>
   )
 }

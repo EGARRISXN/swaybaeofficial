@@ -2,11 +2,11 @@ import './globals.css'
 import {Lobster, Poppins} from 'next/font/google'
 import {Analytics} from '@vercel/analytics/react'
 import {SpeedInsights} from '@vercel/speed-insights/next'
-import Provider from '@/app/utils/ThemeProvider'
-import ScrollProgressIndicator from '@/app/components/(ui)/ScrollProgressIndicator'
-import ScrollToTop from '@/app/components/(ui)/ScrollToTop'
-import Navbar from '@/app/components/Navbar'
-import Footer from '@/app/components/Footer'
+import {Provider} from './providers'
+import TopProgressBar from '@/components/(ui)/TopProgressBar'
+import ScrollToTop from '@/components/(ui)/ScrollToTop'
+import Navbar from '@/components/(other)/Navbar'
+import Footer from '@/components/(other)/Footer'
 
 const lobster = Lobster({
   subsets: ['latin'],
@@ -63,12 +63,12 @@ export default function RootLayout({children}) {
   return (
     <html
       lang='en'
-      data-theme='myDark'
       className={`${lobster.variable} ${poppins.variable} scroll-smooth antialiased`}
+      suppressHydrationWarning
     >
-      <body className='min-h-screen bg-gradient-to-br from-base-100 via-base-100 to-base-300 bg-cover bg-fixed bg-no-repeat'>
+      <body className='min-h-screen bg-gradient-to-br from-base-100 via-base-100 to-base-200 bg-cover bg-fixed bg-no-repeat'>
         <Provider>
-          <ScrollProgressIndicator />
+          <TopProgressBar />
           <Navbar />
           {children}
           <ScrollToTop />
