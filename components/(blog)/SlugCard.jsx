@@ -1,9 +1,9 @@
 import Image from 'next/image'
 import Link from 'next/link'
 import MyButton from '@/components/(ui)/MyButton'
-import {urlFor} from '@/sanity/lib/image'
 import {PortableText} from '@portabletext/react'
 import {PortableTextComponents} from '@/components/(blog)/PortableTextComponents'
+import {urlFor} from '@/sanity/lib/image'
 
 export default function SlugCard({data}) {
   return (

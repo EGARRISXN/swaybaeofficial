@@ -1,4 +1,4 @@
-// import SearchBar from '@/components/(blog)/SearchBar'
+import SearchBar from '@/components/(blog)/SearchBar'
 import PageName from '@/components/(ui)/PageName'
 import BlogList from '@/components/(blog)/BlogList'
 import {client} from '@/sanity/lib/client'
@@ -30,7 +30,7 @@ export default async function BlogPage() {
       <p className='hidden'>Blog Page</p>
       <div id='BlogPage' className='w-full'>
         <div className='mx-auto max-w-7xl pb-16 pt-4 lg:pt-16'>
-          {/* <SearchBar /> */}
+          <SearchBar />
           <PageName>Blog</PageName>
           <BlogList posts={posts} />
         </div>

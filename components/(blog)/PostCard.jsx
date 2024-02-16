@@ -1,7 +1,7 @@
 import Image from 'next/image'
 import Link from 'next/link'
-import {urlFor} from '@/sanity/lib/image'
 import {CiLocationArrow1} from 'react-icons/ci'
+import {urlFor} from '@/sanity/lib/image'
 
 export default function PostCard({post}) {
   return (

@@ -1,19 +1,17 @@
-/* This configuration is used to for the Sanity Studio that’s mounted on the `\app\studio\[[...index]]\page.jsx` route. Go to https://www.sanity.io/docs/api-versioning to learn how API versioning works. Add and edit the content schema in the "./schemas" folder. Vision is a tool that lets you query your content with GROQ in the studio: https://www.sanity.io/docs/the-vision-plugin */
-
 import {defineConfig} from 'sanity'
 import {structureTool} from 'sanity/structure'
 import {visionTool} from '@sanity/vision'
 import {dashboardTool} from '@sanity/dashboard'
 import {media} from 'sanity-plugin-media'
-import {youtubeInput} from 'sanity-plugin-youtube-input'
 import {unsplashImageAsset} from 'sanity-plugin-asset-source-unsplash'
+import {youtubeInput} from 'sanity-plugin-youtube-input'
 import {simplerColorInput} from 'sanity-plugin-simpler-color-input'
-import {projectId, dataset, apiVersion, googleYouTubeApiKey} from './sanity/lib/env.js'
-import {schemaTypes} from './sanity/schemas/index.js'
+import {schemaTypes} from './schemas/index.js'
+import {projectId, dataset, apiVersion, googleYouTubeApiKey} from './lib/env.js'
 
 export default defineConfig({
   name: 'default',
-  basePath: '/studio',
+  title: 'Sway Bae Studio',
   projectId: projectId || 'i9qt6ktn',
   dataset: dataset || 'production',
 
@@ -22,8 +20,8 @@ export default defineConfig({
     visionTool({defaultApiVersion: apiVersion || '2024-02-01'}),
     dashboardTool({widgets: []}),
     media(),
-    youtubeInput({apiKey: googleYouTubeApiKey || 'AIzaSyAhP427Sqw4WMfOpfKXk4WkhNg4xRWHrQg'}),
     unsplashImageAsset(),
+    youtubeInput({apiKey: googleYouTubeApiKey || 'AIzaSyAhP427Sqw4WMfOpfKXk4WkhNg4xRWHrQg'}),
     simplerColorInput({
       defaultColorFormat: 'rgba',
       defaultColorList: [
