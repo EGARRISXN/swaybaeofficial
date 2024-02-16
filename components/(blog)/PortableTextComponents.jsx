@@ -1,5 +1,5 @@
 import Image from 'next/image'
-import {urlFor} from '@/sanity/lib/image'
+import {urlFor} from '@/utils/image'
 
 const BlockComponent = ({value, children}) => {
   const style = value.style || 'normal'

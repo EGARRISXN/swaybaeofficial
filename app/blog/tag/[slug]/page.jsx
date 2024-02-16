@@ -3,7 +3,7 @@ import Image from 'next/image'
 import PageName from '@/components/(ui)/PageName'
 import MyButton from '@/components/(ui)/MyButton'
 // import SearchBar from '@/components/(blog)/SearchBar'
-import {client} from '@/sanity/lib/client'
+import {client} from '@/utils/client'
 
 async function getData(slug) {
   const query = `

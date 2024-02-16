@@ -4,7 +4,7 @@ import PageName from '@/components/(ui)/PageName'
 // import FunButton from '@/components/(ui)/FunButton'
 // import TableOfContent from '@/components/(blog)/TableOfContent'
 import SlugCard from '@/components/(blog)/SlugCard'
-import {client} from '@/sanity/lib/client'
+import {client} from '@/utils/client'
 
 async function getData(slug) {
   const query = `

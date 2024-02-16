@@ -1,7 +1,7 @@
 import SearchBar from '@/components/(blog)/SearchBar'
 import PageName from '@/components/(ui)/PageName'
 import BlogList from '@/components/(blog)/BlogList'
-import {client} from '@/sanity/lib/client'
+import {client} from '@/utils/client'
 
 const query = `
     *[_type == 'post'] | order(_createdAt desc) {

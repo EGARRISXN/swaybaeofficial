@@ -2,7 +2,7 @@
 import {GiMagnifyingGlass} from 'react-icons/gi'
 import {useSearchParams, usePathname, useRouter} from 'next/navigation'
 import {useDebouncedCallback} from 'use-debounce'
-import {client} from '@/sanity/lib/client'
+import {client} from '@/utils/client'
 
 export default function Search({placeholder}) {
   const searchParams = useSearchParams()

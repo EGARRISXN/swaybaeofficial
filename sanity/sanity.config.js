@@ -7,21 +7,21 @@ import {unsplashImageAsset} from 'sanity-plugin-asset-source-unsplash'
 import {youtubeInput} from 'sanity-plugin-youtube-input'
 import {simplerColorInput} from 'sanity-plugin-simpler-color-input'
 import {schemaTypes} from './schemas/index.js'
-import {projectId, dataset, apiVersion, googleYouTubeApiKey} from './lib/env.js'
+import {projectId, dataset, apiVersion, googleYouTubeApiKey} from './environment.js'
 
 export default defineConfig({
   name: 'default',
   title: 'Sway Bae Studio',
-  projectId: projectId || 'i9qt6ktn',
-  dataset: dataset || 'production',
+  projectId: projectId || '',
+  dataset: dataset || '',
 
   plugins: [
     structureTool(),
-    visionTool({defaultApiVersion: apiVersion || '2024-02-01'}),
+    visionTool({defaultApiVersion: apiVersion || ''}),
     dashboardTool({widgets: []}),
     media(),
     unsplashImageAsset(),
-    youtubeInput({apiKey: googleYouTubeApiKey || 'AIzaSyAhP427Sqw4WMfOpfKXk4WkhNg4xRWHrQg'}),
+    youtubeInput({apiKey: googleYouTubeApiKey || ''}),
     simplerColorInput({
       defaultColorFormat: 'rgba',
       defaultColorList: [
