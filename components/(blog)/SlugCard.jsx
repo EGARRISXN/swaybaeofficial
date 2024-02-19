@@ -7,7 +7,7 @@ import {urlFor} from '@/utils/image'
 
 export default function SlugCard({data}) {
   return (
-    <div className='mx-auto mt-8 flex max-w-5xl flex-col items-center justify-center px-4'>
+    <div className='mx-auto flex flex-col items-center justify-center px-4'>
       <Image
         src={urlFor(data.coverImage.image).fit('max').auto('format').url()}
         alt={data.coverImage.alt}

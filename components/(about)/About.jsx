@@ -1,6 +1,6 @@
 import AboutPhoto from './AboutPhoto'
 import AboutCard from './AboutCard'
-import PageName from '../(ui)/PageName'
+import PageName from '../(blog)/PageName'
 
 export default function About() {
   return (
