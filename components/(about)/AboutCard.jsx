@@ -51,7 +51,7 @@ export default function AboutCard() {
                 -3rd place in Blizzard's Hearthstone Battle of the Boars Tournament (May 2021)
               </li>
               <br />
-              <li>-Casting the Gaming Arena Hearthstone Tournament. (June 2021)</li>
+              <li>-Casting the Gaming Stadium Hearthstone Tournament. (June 2021)</li>
               <br />
               <li>
                 -Casting and Hosting multiple Dreamhack Community Clash tournaments. (2021-2022)

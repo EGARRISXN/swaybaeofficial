@@ -3,10 +3,6 @@ module.exports = {
   content: ['./app/**/*.{js,ts,jsx,tsx,mdx}', './components/**/*.{js,ts,jsx,tsx,mdx}'],
   darkMode: 'class',
   theme: {
-    fontFamily: {
-      poppins: ['Poppins', 'sans-serif'],
-      lobster: ['Lobster', 'cursive'],
-    },
     screens: {
       xs: '360px',
       sm: '640px',
@@ -29,7 +25,12 @@ module.exports = {
     corePlugins: {
       aspectRatio: false,
     },
-    extend: {},
+    extend: {
+      fontFamily: {
+        poppins: ['Poppins', 'sans-serif'],
+        lobster: ['Lobster', 'cursive'],
+      },
+    },
   },
   plugins: [
     require('@tailwindcss/aspect-ratio'),

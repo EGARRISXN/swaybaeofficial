@@ -2,7 +2,7 @@
 import ContactForm from './ContactForm'
 import ContactSocials from './ContactSocials'
 import MediaKitContainer from './MediaKitContainer'
-import PageName from '../(blog)/PageName'
+import PageName from '@/components/(other)/PageName'
 
 export default function Inquiries() {
   return (

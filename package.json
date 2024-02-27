@@ -15,11 +15,6 @@
     "build": "next build",
     "start": "next start",
     "lint": "next lint",
-    "sanity-dev": "sanity dev",
-    "sanity-build": "sanity build",
-    "sanity-start": "sanity start",
-    "sanity-deploy": "sanity deploy",
-    "sanity-graphql-deploy": "sanity graphql deploy",
     "format": "prettier --check --ignore-path .gitignore .",
     "format:fix": "prettier --write --ignore-path .gitignore ."
   },

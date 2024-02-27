@@ -1,5 +1,5 @@
 import GoogleCalendarEmbed from './GoogleCalendarEmbed'
-import PageName from '@/components/(blog)/PageName'
+import PageName from '@/components/(other)/PageName'
 
 export default function Calendar() {
   return (
