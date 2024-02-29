@@ -2,7 +2,7 @@
 import {useState, useEffect} from 'react'
 
 export default function VideoPlayer({vnum}) {
-  const [videoSrc, setVideoSrc] = useState('')
+  const [videoSrc, setVideoSrc] = useState()
 
   useEffect(() => {
     const loadVideo = async () => {
@@ -34,7 +34,7 @@ export default function VideoPlayer({vnum}) {
         loading='lazy'
         width='100%'
         height='100%'
-        allow='accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture'
+        allow='accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope'
       ></iframe>
     </div>
   )

@@ -1,12 +1,11 @@
+import {draftMode} from 'next/headers'
+import LiveVisualEditing from '@/components/(blog)/LiveVisualEditing'
+
 import './globals.css'
 import {Lobster, Poppins} from 'next/font/google'
+import {ThemeProvider} from './providers'
 import {Analytics} from '@vercel/analytics/react'
 import {SpeedInsights} from '@vercel/speed-insights/next'
-import {Provider} from './providers'
-import TopProgressBar from '@/components/(ui)/TopProgressBar'
-import ScrollToTop from '@/components/(ui)/ScrollToTop'
-import Navbar from '@/components/(other)/Navbar'
-import Footer from '@/components/(other)/Footer'
 
 const lobster = Lobster({
   subsets: ['latin'],
@@ -61,19 +60,10 @@ export const metadata = {
 
 export default function RootLayout({children}) {
   return (
-    <html
-      lang='en'
-      className={`${lobster.variable} ${poppins.variable} scroll-smooth antialiased`}
-      suppressHydrationWarning
-    >
-      <body className='min-h-screen bg-gradient-to-br from-base-100 via-base-100 to-base-200 bg-cover bg-fixed bg-no-repeat'>
-        <Provider>
-          <TopProgressBar />
-          <Navbar />
-          {children}
-          <ScrollToTop />
-          <Footer />
-        </Provider>
+    <html lang='en'>
+      <body className={`${lobster.variable} ${poppins.variable}`}>
+        <ThemeProvider>{children}</ThemeProvider>
+        {draftMode().isEnabled && <LiveVisualEditing />}
         <Analytics />
         <SpeedInsights />
       </body>

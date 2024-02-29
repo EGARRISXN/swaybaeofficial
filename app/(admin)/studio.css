@@ -1,0 +1,15 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* * {
+  @apply text-red-600;
+} */
+
+/*! Studio */
+main {
+  height: 100vh;
+  max-height: 100dvh;
+  overscroll-behavior: none;
+  overflow: auto;
+}

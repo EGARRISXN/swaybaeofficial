@@ -3,49 +3,53 @@ import {useState} from 'react'
 import MyButton from '../(ui)/MyButton'
 
 export default function ContactForm() {
+  // State to manage form data
   const [formData, setFormData] = useState({
     name: '',
     email: '',
     subject: '',
     message: '',
   })
-  const [loading, setLoading] = useState(false)
 
-  const handleSubmit = async (event) => {
-    event.preventDefault()
-
-    setLoading(true)
-
-    const response = await fetch('/api/contact', {
-      method: 'POST',
-      headers: {
-        'Content-Type': 'application/json',
-      },
-      body: JSON.stringify(formData),
+  // Update form data state when input fields change
+  const handleInputChange = (event) => {
+    const {name, value} = event.target
+    setFormData({
+      ...formData,
+      [name]: value,
     })
+  }
 
-    if (response.ok) {
-      console.log('Message sent successfully')
-      setLoading(false)
+  async function handleSubmit(event) {
+    event.preventDefault()
+    const data = new FormData(event.target)
+    try {
+      const response = await fetch('/api/contact', {
+        method: 'POST',
+        body: data,
+      })
+
+      if (!response.ok) {
+        console.log('Failed to send message')
+        throw new Error(`response status: ${response.status}`)
+      }
+
+      // Clear form fields on successful message sent
       setFormData({
         name: '',
         email: '',
         subject: '',
         message: '',
       })
-    } else {
-      console.log('Error sending message')
-      setLoading(false)
-    }
-  }
 
-  const resolveAfter2Seconds = new Promise((resolve) => setTimeout(resolve, 2000))
-  const handleInputChange = (event) => {
-    const {id, value} = event.target
-    setFormData((prevFormData) => ({
-      ...prevFormData,
-      [id]: value,
-    }))
+      const responseData = await response.json()
+      console.log(responseData['message'])
+
+      alert('Message successfully sent!')
+    } catch (err) {
+      console.error(err)
+      alert('Error, please try again.')
+    }
   }
 
   return (
@@ -67,13 +71,13 @@ export default function ContactForm() {
           minLength={3}
           maxLength={150}
           required
-          value={formData.name}
-          onChange={handleInputChange}
           placeholder='Name'
           className='rounded-xl border-2 p-3 text-neutral-900 shadow-lg shadow-purple-800/50 '
           autoComplete='on'
           name='name'
           id='name'
+          value={formData.name}
+          onChange={handleInputChange}
         />
       </div>
       <div className='my-4 flex w-full flex-col'>
@@ -85,8 +89,6 @@ export default function ContactForm() {
           minLength={5}
           maxLength={150}
           required
-          value={formData.email}
-          onChange={handleInputChange}
           placeholder='Email'
           className='rounded-xl border-2 p-3 text-neutral-900 shadow-lg shadow-purple-800/50 invalid:text-pink-600 focus:invalid:border-pink-500 focus:invalid:ring-pink-500 disabled:border-slate-200
            disabled:bg-slate-50
@@ -94,6 +96,8 @@ export default function ContactForm() {
           autoComplete='on'
           name='email'
           id='email'
+          value={formData.email}
+          onChange={handleInputChange}
         />
       </div>
       <div className='my-4 flex w-full flex-col'>
@@ -105,13 +109,13 @@ export default function ContactForm() {
           minLength={3}
           maxLength={150}
           required
-          value={formData.subject}
-          onChange={handleInputChange}
           placeholder='Subject'
           className='rounded-xl border-2 p-3 text-neutral-900 shadow-lg shadow-purple-800/50 '
           autoComplete='on'
           name='subject'
           id='subject'
+          value={formData.subject}
+          onChange={handleInputChange}
         />
       </div>
       <div>
@@ -124,17 +128,17 @@ export default function ContactForm() {
           required
           minLength={10}
           maxLength={500}
-          value={formData.message}
-          onChange={handleInputChange}
           placeholder='Message'
           className='w-full rounded-xl border-2 p-3 text-neutral-900 shadow-lg shadow-purple-800/50 '
           name='message'
           id='message'
+          value={formData.message}
+          onChange={handleInputChange}
         />
       </div>
       <hr className='my-6 border-secondary' />
       <div className='my-2 flex justify-center'>
-        <MyButton type='submit' disabled={loading} value={'Send Message'} />
+        <MyButton type='submit' value={'Send Message'} />
       </div>
     </form>
   )

@@ -5,21 +5,6 @@ import {FiChevronUp} from 'react-icons/fi'
 export default function ScrollToTop() {
   const [showScroll, setShowScroll] = useState(false)
 
-  function scrollToTopSmoothly() {
-    const c = document.documentElement.scrollTop || document.body.scrollTop
-    if (c > 0) {
-      window.requestAnimationFrame(scrollToTopSmoothly)
-      window.scrollTo(0, c - c / 8) // You can adjust the divisor to control scrolling speed
-    } else {
-      // Stop animation when scroll position is zero or below
-      window.cancelAnimationFrame(scrollToTopSmoothly)
-    }
-  }
-
-  function backToTop() {
-    scrollToTopSmoothly()
-  }
-
   useEffect(() => {
     const scrollToTop = () => {
       if (!showScroll && window.scrollY > 400) {
@@ -36,11 +21,18 @@ export default function ScrollToTop() {
     }
   }, [showScroll])
 
+  const scrollToTop = () => {
+    window.scrollTo({
+      top: 0,
+      behavior: 'smooth',
+    })
+  }
+
   return (
     <>
       <FiChevronUp
         className='scrollToTop z-[1000] rounded-full border-2 border-base-content bg-base-200'
-        onClick={backToTop}
+        onClick={scrollToTop}
         style={{
           height: 40,
           width: 40,

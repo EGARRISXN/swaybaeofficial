@@ -7,7 +7,7 @@ import PageName from '@/components/(other)/PageName'
 export default function Inquiries() {
   return (
     <div id='inquiries' className='w-full'>
-      <div className='mx-auto max-w-7xl pb-16 pt-4 lg:pt-16'>
+      <div className='mx-auto max-w-7xl px-4 pb-16 pt-4 lg:pt-16'>
         <PageName>Inquiries</PageName>
         <br />
         <div className='mx-auto mt-4 flex flex-col justify-center px-4 sm:px-8 md:flex-row md:space-x-8 md:px-12 lg:mt-16 lg:space-x-12 lg:px-16 xl:space-x-16 xl:px-20 2xl:space-x-20 2xl:px-24'>

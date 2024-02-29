@@ -4,16 +4,17 @@ import {FiYoutube} from 'react-icons/fi'
 import SpotifyEmbed from './SpotifyEmbed'
 import SocialCarousel from './SocialCarousel'
 import YoutubeEmbed from './YouTubeEmbed'
+import PageName from '@/components/(other)/PageName'
 
 export default function Socials() {
   return (
     <div id='socials' className='w-full'>
-      <div className='mx-auto max-w-7xl pb-16 pt-4 lg:pt-16'>
-        <div className='mt-2 flex flex-col justify-between sm:flex-row sm:px-6 md:pl-16 md:pr-16'>
-          <p className='font-bold-200 bg-gradient-to-r from-purple-400 to-pink-600 bg-clip-text px-2 font-poppins text-xl uppercase tracking-widest text-transparent'>
-            Socials
-          </p>
-          <div className='mt-8 lg:mt-16'>
+      <div className='mx-auto max-w-7xl px-4 pb-16 pt-4 lg:pt-16'>
+        <div className='mt-2 flex flex-col justify-between gap-4 sm:flex-row'>
+          <div>
+            <PageName>Socials</PageName>
+          </div>
+          <div>
             <SpotifyEmbed />
           </div>
         </div>

@@ -2,11 +2,14 @@
   "name": "swaybaeofficial",
   "version": "1.0.0",
   "license": "MIT",
-  "description": "The Sway Bae Official Website. Built with Next.js, the Sanity CLI, TailwindCSS, and more.",
+  "description": "The official site for content creator Sway Bae.",
   "keywords": [
     "Sanity.io",
     "NextJS",
-    "TailwindCSS"
+    "React",
+    "TailwindCSS",
+    "DaisyUI",
+    "Vercel"
   ],
   "private": true,
   "homepage": "https://swaybae.net",
@@ -14,46 +17,58 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
+    "sanity-dev": "sanity dev",
+    "sanity-start": "sanity start",
+    "sanity-build": "sanity build",
+    "sanity-deploy": "sanity deploy",
+    "sanity-graphql-deploy": "sanity graphql deploy",
     "lint": "next lint",
     "format": "prettier --check --ignore-path .gitignore .",
     "format:fix": "prettier --write --ignore-path .gitignore ."
   },
   "dependencies": {
+    "@portabletext/react": "^3.0.11",
+    "@sanity/client": "^6.14.0",
+    "@sanity/icons": "^2.10.2",
+    "@sanity/image-url": "^1.0.2",
+    "@sanity/overlays": "^2.3.19",
+    "@sanity/react-loader": "^1.8.5",
+    "@sanity/vision": "^3.30.1",
+    "@sanity/visual-editing": "^1.4.0",
     "@tailwindcss/aspect-ratio": "^0.4.2",
     "@tailwindcss/typography": "^0.5.10",
     "@vercel/analytics": "^1.1.2",
     "@vercel/speed-insights": "^1.0.9",
-    "autoprefixer": "^10.4.17",
+    "@vercel/stega": "^0.1.0",
     "daisyui": "3.2.1",
     "framer-motion": "^10.18.0",
     "hamburger-react": "^2.5.0",
     "next": "^14.1.0",
+    "next-sanity": "^7.1.4",
     "next-themes": "^0.2.1",
     "nodemailer": "^6.9.9",
-    "postcss": "^8.4.33",
     "prop-types": "^15.8.1",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-icons": "^5.0.1",
-    "sharp": "^0.32.6",
-    "tailwindcss": "^3.4.1"
+    "rxjs": "^7.8.1",
+    "sanity": "^3.30.1",
+    "sanity-plugin-media": "^2.2.5",
+    "sanity-plugin-youtube-input": "^0.2.0",
+    "sharp": "^0.33.2",
+    "styled-components": "6.1.8"
   },
   "devDependencies": {
+    "@sanity/eslint-config-studio": "^3.0.1",
+    "@tailwindcss/typography": "^0.5.10",
+    "autoprefixer": "^10.4.17",
+    "daisyui": "^4.7.2",
     "eslint": "^8.56.0",
-    "eslint-config-next": "^13.5.6",
+    "eslint-config-next": "14.1.0",
     "eslint-config-prettier": "^9.1.0",
+    "postcss": "^8.4.33",
     "prettier": "^3.2.4",
-    "prettier-plugin-tailwindcss": "^0.5.11"
-  },
-  "prettier": {
-    "semi": false,
-    "tabWidth": 2,
-    "printWidth": 100,
-    "bracketSpacing": false,
-    "singleQuote": true,
-    "jsxSingleQuote": true,
-    "plugins": [
-      "prettier-plugin-tailwindcss"
-    ]
+    "prettier-plugin-tailwindcss": "^0.5.11",
+    "tailwindcss": "^3.4.1"
   }
 }

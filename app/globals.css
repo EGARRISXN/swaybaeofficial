@@ -8,86 +8,45 @@
   }
 }
 
-/*! App */
-main {
-  padding: 0;
-  width: 100%;
+* {
+  @apply transition-colors duration-200;
 }
 
-/*! Fonts */
-:root {
-  --font-poppins: 'Poppins', sans-serif;
-  --font-lobster: 'Lobster', cursive;
-}
+/*! Root */
 html,
 body {
-  margin: 0;
-  overflow-x: hidden;
   font-family: var(--font-poppins);
-}
-h1 {
-  font: 6rem;
-}
-h2 {
-  font: 5rem;
-}
-h3 {
-  font: 4rem;
-}
-h4 {
-  font: 3rem;
-}
-h5 {
-  font: 2rem;
-}
-h6,
-p {
-  font: 1rem;
-}
-.lobster {
-  font-family: var(--font-lobster);
-  font: 1rem;
+  margin: 0;
+  padding: 0;
+  scroll-behavior: smooth;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 
 /*! Scrollbar */
-/* Firefox */
-* {
-  scrollbar-width: thin;
-  scrollbar-color: #000000 #ffffff;
-  border-radius: 5px;
-}
-/* Chrome & Others */
+
+/* Width */
 ::-webkit-scrollbar {
   width: 10px;
-  border-radius: 5px;
 }
+
 /* Handle */
 ::-webkit-scrollbar-thumb {
-  background: #000000;
+  background: #00ceff;
   border-radius: 5px;
 }
 
 /* Handle on hover */
 ::-webkit-scrollbar-thumb:hover {
-  background: #ffffff;
-  border-radius: 5px;
+  background: #00ceff;
 }
 
-/*! Loader */
-.loader {
-  opacity: 100%;
-  border: 16px dotted rgb(242, 97, 255);
-  border-top: 16px dotted #3498db;
-  border-radius: 50%;
-  width: 10rem;
-  height: 10rem;
-  animation: spin 2s linear infinite;
+/* Light mode track */
+.myLight ::-webkit-scrollbar-track {
+  background: #ffffff;
 }
-@keyframes spin {
-  0% {
-    transform: rotate(0deg);
-  }
-  100% {
-    transform: rotate(360deg);
-  }
+
+/* Dark mode track */
+.myDark ::-webkit-scrollbar-track {
+  background: #000000;
 }
