@@ -1,8 +1,9 @@
 export default function SpotifyEmbed() {
   return (
-    <div className='mx-8 flex rounded-3xl border-4 bg-base-100 p-2 shadow-lg shadow-purple-800/50 md:mx-auto md:w-full'>
+    <div className='mx-2 flex rounded-2xl border-2 p-1 shadow-lg shadow-purple-800/50 sm:mx-8 md:mx-auto md:w-full'>
+      <label className='sr-only'>Spotify playlist by Sway Bae</label>
       <iframe
-        className='rounded-2xl'
+        className='rounded-xl'
         title='Spotify playlist by Sway Bae'
         src='https://open.spotify.com/embed/playlist/1O1V3UK6rqXvaC3FYvOpJw?utm_source=generator&theme=0'
         loading='lazy'

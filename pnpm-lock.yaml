@@ -47,6 +47,12 @@ dependencies:
   daisyui:
     specifier: 3.2.1
     version: 3.2.1
+  embla-carousel-class-names:
+    specifier: ^8.0.0
+    version: 8.0.0(embla-carousel@8.0.0)
+  embla-carousel-react:
+    specifier: ^8.0.0
+    version: 8.0.0(react@18.2.0)
   framer-motion:
     specifier: ^10.18.0
     version: 10.18.0(react-dom@18.2.0)(react@18.2.0)
@@ -95,6 +101,9 @@ dependencies:
   styled-components:
     specifier: 6.1.8
     version: 6.1.8(react-dom@18.2.0)(react@18.2.0)
+  use-debounce:
+    specifier: ^10.0.0
+    version: 10.0.0(react@18.2.0)
 
 devDependencies:
   '@sanity/eslint-config-studio':
@@ -4735,6 +4744,36 @@ packages:
   /electron-to-chromium@1.4.653:
     resolution: {integrity: sha512-wA2A2LQCqnEwQAvwADQq3KpMpNwgAUBnRmrFgRzHnPhbQUFArTR32Ab46f4p0MovDLcg4uqd4nCsN2hTltslpA==}
 
+  /embla-carousel-class-names@8.0.0(embla-carousel@8.0.0):
+    resolution: {integrity: sha512-A9GKID8gdZ7sEDawOcJ5zsTg4jU0uoneARYIHQLvW3WP9AfuNLt/73PGYqbeeidLNddVTWWHa2nVSFzYshrfDg==}
+    peerDependencies:
+      embla-carousel: 8.0.0
+    dependencies:
+      embla-carousel: 8.0.0
+    dev: false
+
+  /embla-carousel-react@8.0.0(react@18.2.0):
+    resolution: {integrity: sha512-qT0dii8ZwoCtEIBE6ogjqU2+5IwnGfdt2teKjCzW88JRErflhlCpz8KjWnW8xoRZOP8g0clRtsMEFoAgS/elfA==}
+    peerDependencies:
+      react: ^16.8.0 || ^17.0.1 || ^18.0.0
+    dependencies:
+      embla-carousel: 8.0.0
+      embla-carousel-reactive-utils: 8.0.0(embla-carousel@8.0.0)
+      react: 18.2.0
+    dev: false
+
+  /embla-carousel-reactive-utils@8.0.0(embla-carousel@8.0.0):
+    resolution: {integrity: sha512-JCw0CqCXI7tbHDRogBb9PoeMLyjEC1vpN0lDOzUjmlfVgtfF+ffLaOK8bVtXVUEbNs/3guGe3NSzA5J5aYzLzw==}
+    peerDependencies:
+      embla-carousel: 8.0.0
+    dependencies:
+      embla-carousel: 8.0.0
+    dev: false
+
+  /embla-carousel@8.0.0:
+    resolution: {integrity: sha512-ecixcyqS6oKD2nh5Nj5MObcgoSILWNI/GtBxkidn5ytFaCCmwVHo2SecksaQZHcARMMpIR2dWOlSIdA1LkZFUA==}
+    dev: false
+
   /emoji-regex@8.0.0:
     resolution: {integrity: sha512-MSjYzcWNOA0ewAHpz0MxpYFvwg6yjy1NG3xteoqz644VCo/RPgnr1/GGt+ic3iJTzQ8Eu3TdM14SawnVUmGE6A==}
 
@@ -8941,6 +8980,15 @@ packages:
     dependencies:
       react: 18.2.0
       tslib: 2.6.2
+    dev: false
+
+  /use-debounce@10.0.0(react@18.2.0):
+    resolution: {integrity: sha512-XRjvlvCB46bah9IBXVnq/ACP2lxqXyZj0D9hj4K5OzNroMDpTEBg8Anuh1/UfRTRs7pLhQ+RiNxxwZu9+MVl1A==}
+    engines: {node: '>= 16.0.0'}
+    peerDependencies:
+      react: '>=16.8.0'
+    dependencies:
+      react: 18.2.0
     dev: false
 
   /use-device-pixel-ratio@1.1.2(react@18.2.0):

@@ -9,6 +9,7 @@ const links = [
   {href: '/', label: 'Home'},
   {href: '/calendar', label: 'Calendar'},
   {href: 'https://sway-bae-shop.fourthwall.com/', label: 'Store'},
+  // {href: '/blog', label: 'New Blog!'},
 ]
 
 export default function Navbar() {
@@ -60,7 +61,7 @@ export default function Navbar() {
               of Chaos
             </p>
           </Link>
-          <div className='dropdown z-[100]' style={{position: 'relative'}}>
+          <div className='dropdown z-[1000]' style={{position: 'relative'}}>
             <button
               tabIndex={0}
               className='lg:hidden'
@@ -75,7 +76,7 @@ export default function Navbar() {
             {isOpen && (
               <ul
                 tabIndex={0}
-                className='menu dropdown-content z-[100] mx-[-12px] flex bg-base-100 text-base-content'
+                className='menu dropdown-content z-[1000] mx-[-12px] flex bg-base-100 text-base-content'
                 onKeyDown={(e) => {
                   if (e.key === 'Escape') {
                     closeDropdown()
@@ -99,7 +100,7 @@ export default function Navbar() {
                       onClick={handleLinkClick}
                       className={`${
                         link.label === 'New Blog!' ? 'text-primary hover:text-secondary' : ''
-                      } relative z-[100] bg-base-200 bg-clip-text p-4 text-6xl hover:text-secondary hover:underline hover:underline-offset-4 `}
+                      } relative z-[1000] bg-base-200 bg-clip-text p-4 text-6xl hover:text-secondary hover:underline hover:underline-offset-4 `}
                     >
                       {link.label}
                     </Link>
@@ -110,7 +111,7 @@ export default function Navbar() {
           </div>
         </div>
 
-        <div className='navbar-center z-[100] px-1'>
+        <div className='navbar-center z-[1000] px-1'>
           <ul className='menu menu-horizontal mx-auto hidden items-center justify-center text-lg lg:flex xl:space-x-8 2xl:space-x-10 3xl:space-x-14'>
             {links.map((link) => (
               <li key={link.href}>
@@ -139,7 +140,7 @@ export default function Navbar() {
           </Link>
         </div>
 
-        <div className='navbar-end z-[100] px-1'>
+        <div className='navbar-end z-[1000] px-1'>
           <ThemeSwitch />
         </div>
       </nav>

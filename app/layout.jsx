@@ -1,5 +1,5 @@
 import {draftMode} from 'next/headers'
-import LiveVisualEditing from '@/components/(blog)/LiveVisualEditing'
+import LiveVisualEditing from '@/components/(other)/LiveVisualEditing'
 
 import './globals.css'
 import {Lobster, Poppins} from 'next/font/google'
@@ -61,7 +61,7 @@ export const metadata = {
 export default function RootLayout({children}) {
   return (
     <html lang='en'>
-      <body className={`${lobster.variable} ${poppins.variable}`}>
+      <body className={`${lobster.variable} ${poppins.variable} m-0 scroll-smooth p-0 antialiased`}>
         <ThemeProvider>{children}</ThemeProvider>
         {draftMode().isEnabled && <LiveVisualEditing />}
         <Analytics />

@@ -1,29 +1,31 @@
 'use client'
 import Link from 'next/link'
-import {FiYoutube} from 'react-icons/fi'
 import SpotifyEmbed from './SpotifyEmbed'
-import SocialCarousel from './SocialCarousel'
 import YoutubeEmbed from './YouTubeEmbed'
-import PageName from '@/components/(other)/PageName'
+import SocialsCarousel from './SocialsCarousel'
+import {FiYoutube} from 'react-icons/fi'
 
 export default function Socials() {
   return (
-    <div id='socials' className='w-full'>
-      <div className='mx-auto max-w-7xl px-4 pb-16 pt-4 lg:pt-16'>
-        <div className='mt-2 flex flex-col justify-between gap-4 sm:flex-row'>
+    <main className='w-full'>
+      <label className='sr-only'>Socials</label>
+      <div className='mx-auto max-w-7xl px-2 pb-12 pt-4 lg:px-4 lg:pt-16'>
+        <header className='mt-2 flex flex-col justify-between gap-4 sm:flex-row'>
           <div>
-            <PageName>Socials</PageName>
+            <h1 className='font-bold-200 bg-gradient-to-r from-purple-400 to-pink-600 bg-clip-text font-poppins text-xl uppercase tracking-widest text-transparent'>
+              Socials
+            </h1>
           </div>
-          <div>
+          <div className='pt-8 sm:pt-0 lg:pr-12'>
             <SpotifyEmbed />
           </div>
-        </div>
+        </header>
         <br />
-        <div className='px-2 pb-4'>
-          <SocialCarousel />
-        </div>
-        <div className='mx-auto px-4 sm:px-6 md:px-12 lg:px-16'>
-          <div className='my-4 flex items-center justify-center bg-gradient-to-tr from-primary via-info to-secondary bg-clip-text text-center text-lg text-accent text-transparent md:text-xl lg:my-8 lg:text-3xl'>
+        <section className='mx-auto my-4 px-2 sm:px-4 md:px-8 lg:mb-24 lg:mt-16 lg:px-12 '>
+          <SocialsCarousel />
+        </section>
+        <section className='mx-auto my-8 px-2 sm:px-4 md:px-8 lg:mb-16 lg:mt-24 lg:px-12'>
+          <div className='mb-4 mt-8 flex items-center justify-center bg-gradient-to-tr from-primary via-info to-secondary bg-clip-text text-center text-lg text-accent text-transparent md:text-2xl xl:text-3xl'>
             Latest
             <Link
               target='_blank'
@@ -37,16 +39,22 @@ export default function Socials() {
               <FiYoutube />
             </span>
           </div>
-          <div className='grid grid-cols-1 gap-8 lg:grid-cols-2'>
-            <div className='rounded-xl border-4 bg-base-100 p-2 shadow-lg shadow-purple-800/50'>
+          <div className=' my-4 grid grid-cols-1 gap-4 md:grid-cols-2 lg:gap-8'>
+            <div className='rounded-xl border-2 p-2 shadow-lg shadow-purple-800/50 lg:rounded-2xl'>
               <YoutubeEmbed vnum={0} />
             </div>
-            <div className='rounded-xl border-4 bg-base-100 p-2 shadow-lg shadow-purple-800/50'>
+            <div className='rounded-xl border-2 p-2 shadow-lg shadow-purple-800/50 lg:rounded-2xl'>
               <YoutubeEmbed vnum={1} />
             </div>
+            <div className='rounded-xl border-2 p-2 shadow-lg shadow-purple-800/50 lg:rounded-2xl'>
+              <YoutubeEmbed vnum={2} />
+            </div>
+            <div className='rounded-xl border-2 p-2 shadow-lg shadow-purple-800/50 lg:rounded-2xl'>
+              <YoutubeEmbed vnum={3} />
+            </div>
           </div>
-        </div>
+        </section>
       </div>
-    </div>
+    </main>
   )
 }

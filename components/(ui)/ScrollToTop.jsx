@@ -1,6 +1,6 @@
 'use client'
 import {useState, useEffect} from 'react'
-import {FiChevronUp} from 'react-icons/fi'
+import {TiArrowUpOutline} from 'react-icons/ti'
 
 export default function ScrollToTop() {
   const [showScroll, setShowScroll] = useState(false)
@@ -29,9 +29,10 @@ export default function ScrollToTop() {
   }
 
   return (
-    <>
-      <FiChevronUp
-        className='scrollToTop z-[1000] rounded-full border-2 border-base-content bg-base-200'
+    <div>
+      <label className='sr-only'>Scroll To Top</label>
+      <TiArrowUpOutline
+        className='scrollToTop z-[1000] rounded-full border-2 border-[#00ceff] bg-base-100 font-bold text-[#00ceff] transition-colors duration-100 ease-out hover:border-transparent hover:bg-[#00ceff] hover:text-base-100 lg:shadow-lg'
         onClick={scrollToTop}
         style={{
           height: 40,
@@ -40,10 +41,10 @@ export default function ScrollToTop() {
           right: 20,
           bottom: 20,
           display: showScroll ? 'flex' : 'none',
-          padding: 10,
+          padding: 5,
           cursor: 'pointer',
         }}
       />
-    </>
+    </div>
   )
 }

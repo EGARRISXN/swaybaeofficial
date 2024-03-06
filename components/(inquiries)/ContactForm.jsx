@@ -1,9 +1,8 @@
 'use client'
 import {useState} from 'react'
-import MyButton from '../(ui)/MyButton'
+import MyButton from '@/components/(ui)/MyButton'
 
 export default function ContactForm() {
-  // State to manage form data
   const [formData, setFormData] = useState({
     name: '',
     email: '',
@@ -11,7 +10,6 @@ export default function ContactForm() {
     message: '',
   })
 
-  // Update form data state when input fields change
   const handleInputChange = (event) => {
     const {name, value} = event.target
     setFormData({
@@ -34,7 +32,6 @@ export default function ContactForm() {
         throw new Error(`response status: ${response.status}`)
       }
 
-      // Clear form fields on successful message sent
       setFormData({
         name: '',
         email: '',
@@ -54,10 +51,10 @@ export default function ContactForm() {
 
   return (
     <form
-      className='rounded-3xl border-4 bg-base-100 p-4 text-base-content shadow-lg shadow-purple-800/50 sm:px-10 lg:px-12 lg:pt-8 xl:px-16 xl:pt-12 2xl:px-20'
+      className='border-0 bg-base-100 p-2 text-base-content sm:shadow-lg sm:shadow-purple-800/50 md:rounded-xl md:border-2 md:p-4 md:px-10 lg:rounded-2xl lg:px-12 lg:pt-8 xl:px-16 xl:pt-12 2xl:px-20'
       onSubmit={handleSubmit}
     >
-      <div className='lobster mb-4 mt-4 text-center text-4xl text-primary md:text-left lg:mt-2 lg:text-6xl xl:mt-0'>
+      <div className='lobster mb-4 mt-4 text-5xl text-primary lg:mt-2 lg:text-6xl xl:mt-0'>
         Contact Me
       </div>
 
@@ -72,7 +69,7 @@ export default function ContactForm() {
           maxLength={150}
           required
           placeholder='Name'
-          className='rounded-xl border-2 p-3 text-neutral-900 shadow-lg shadow-purple-800/50 '
+          className='rounded-xl border-2 bg-white p-3 text-neutral-900 shadow-lg shadow-purple-800/50 '
           autoComplete='on'
           name='name'
           id='name'
@@ -90,7 +87,7 @@ export default function ContactForm() {
           maxLength={150}
           required
           placeholder='Email'
-          className='rounded-xl border-2 p-3 text-neutral-900 shadow-lg shadow-purple-800/50 invalid:text-pink-600 focus:invalid:border-pink-500 focus:invalid:ring-pink-500 disabled:border-slate-200
+          className='rounded-xl border-2 bg-white p-3 text-neutral-900 shadow-lg shadow-purple-800/50 invalid:text-pink-600 focus:invalid:border-pink-500 focus:invalid:ring-pink-500 disabled:border-slate-200
            disabled:bg-slate-50
           disabled:text-slate-500 disabled:shadow-none'
           autoComplete='on'
@@ -110,7 +107,7 @@ export default function ContactForm() {
           maxLength={150}
           required
           placeholder='Subject'
-          className='rounded-xl border-2 p-3 text-neutral-900 shadow-lg shadow-purple-800/50 '
+          className='rounded-xl border-2 bg-white p-3 text-neutral-900 shadow-lg shadow-purple-800/50 '
           autoComplete='on'
           name='subject'
           id='subject'
@@ -129,15 +126,15 @@ export default function ContactForm() {
           minLength={10}
           maxLength={500}
           placeholder='Message'
-          className='w-full rounded-xl border-2 p-3 text-neutral-900 shadow-lg shadow-purple-800/50 '
+          className='w-full rounded-xl border-2 bg-white p-3 text-neutral-900 shadow-lg shadow-purple-800/50 '
           name='message'
           id='message'
           value={formData.message}
           onChange={handleInputChange}
         />
       </div>
-      <hr className='my-6 border-secondary' />
-      <div className='my-2 flex justify-center'>
+      <hr className='my-4 border-secondary lg:my-6' />
+      <div className='my-6 flex justify-center'>
         <MyButton type='submit' value={'Send Message'} />
       </div>
     </form>

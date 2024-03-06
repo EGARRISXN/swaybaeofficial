@@ -1,9 +1,34 @@
+'use client'
+import {useEffect} from 'react'
 import Link from 'next/link'
 import Image from 'next/image'
 import {PortableText} from '@portabletext/react'
 import {urlFor} from '@/sanity/lib/image'
 
-export default function BlogBody({value, className, content}) {
+export default function PortableTextComponents({value, className, content}) {
+  useEffect(() => {
+    const observer = new IntersectionObserver((entries) => {
+      console.log('Observer Entries:', entries)
+      entries.forEach((entry) => {
+        const id = entry.target.getAttribute('id')
+        console.log('Header ID:', id)
+        const tocLink = document.querySelector(`.table-of-content-link[href="#${id}"]`)
+        console.log('Table of Content Link:', tocLink)
+        if (tocLink) {
+          if (entry.intersectionRatio > 0) {
+            tocLink.classList.add('active')
+          } else {
+            tocLink.classList.remove('active')
+          }
+        }
+      })
+    })
+    document.querySelectorAll('h1[id], h2[id], h3[id], h4[id], h5[id]').forEach((header) => {
+      observer.observe(header)
+    })
+    return () => observer.disconnect()
+  }, [])
+
   const RichComponents = {
     block: ({value, children}) => {
       const style = value.style || 'normal'
@@ -14,8 +39,10 @@ export default function BlogBody({value, className, content}) {
             {value.children.map((child) => (
               <span key={child._key}>{child.text}</span>
             ))}
-            <a href={`#${value._key}`} className='pl-1 text-xs no-underline'>
-              x
+            <a href={`#${value._key}`}>
+              <span aria-hidden className='hidden'>
+                #
+              </span>
             </a>
           </HeadingTag>
         )
@@ -23,14 +50,14 @@ export default function BlogBody({value, className, content}) {
         return <p>{children}</p>
       }
     },
-    normal: ({children}) => <p className='my-4 text-base'>{children}</p>,
-    h1: ({children}) => <h1 className='my-4 text-4xl font-bold'>{children}</h1>,
+    normal: ({children}) => <p className='mx-8 text-base'>{children}</p>,
+    h1: ({children}) => <h1 className='text my-4 text-4xl font-extrabold'>{children}</h1>,
     h2: ({children}) => <h2 className='my-4 text-3xl font-bold'>{children}</h2>,
     h3: ({children}) => <h3 className='my-4 text-2xl font-bold'>{children}</h3>,
     h4: ({children}) => <h4 className='my-4 text-xl font-bold'>{children}</h4>,
-    h5: ({children}) => <h5 className='my-4 text-lg font-bold'>{children}</h5>,
+    h5: ({children}) => <h5 className='mx-8 text-lg font-bold'>{children}</h5>,
     blockquote: ({children}) => (
-      <blockquote className='my-4 border-l-4 border-gray-300 pl-4 italic text-gray-700'>
+      <blockquote className='my-4 border-l-4 border-gray-500 pl-4 font-light italic text-gray-500'>
         {children}
       </blockquote>
     ),
@@ -51,7 +78,7 @@ export default function BlogBody({value, className, content}) {
       em: ({children}) => <em className='italic'>{children}</em>,
       code: ({children}) => <code className='p-1'>{children}</code>,
       underline: ({children}) => <u>{children}</u>,
-      highlight: ({children}) => <span className='bg-yellow-200'>{children}</span>,
+      highlight: ({children}) => <span className='bg-yellow-200 px-1 text-black'>{children}</span>,
     },
     types: {
       image: ({value, isInline}) => (

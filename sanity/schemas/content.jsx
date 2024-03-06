@@ -3,7 +3,7 @@ import {ImageIcon, DocumentVideoIcon, LaunchIcon, UserIcon} from '@sanity/icons'
 const HighlightIcon = () => <span style={{fontWeight: 'bold'}}>H</span>
 
 const HighlightDecorator = (props) => {
-  return <span style={{backgroundColor: 'yellow'}}>{props.children}</span>
+  return <span style={{backgroundColor: 'yellow', color: 'black'}}>{props.children}</span>
 }
 
 export const blockContent = {
@@ -15,7 +15,7 @@ export const blockContent = {
       type: 'block',
       styles: [
         {title: 'Normal', value: 'normal'},
-        {title: 'Title', value: 'h1'},
+        {title: 'H1', value: 'h1'},
         {title: 'H2', value: 'h2'},
         {title: 'H3', value: 'h3'},
         {title: 'H4', value: 'h4'},

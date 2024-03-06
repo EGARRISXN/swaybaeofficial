@@ -5,16 +5,16 @@ import Inquiries from '@/components/(inquiries)/Inquiries'
 
 export default function Home() {
   return (
-    <main className='flex flex-col px-1'>
-      <h1 className='hidden'>Main Page</h1>
+    <main className='flex flex-col px-2'>
+      <label className='sr-only'>Home Page</label>
       <Hero />
-      <hr className='container mx-auto border-2 border-purple-800/50' />
+      <hr className='m-2 mx-auto w-full border-2 border-purple-800/50 sm:container' />
       <About />
-      <hr className='container mx-auto border-2 border-purple-800/50' />
+      <hr className='m-2 mx-auto w-full border-2 border-purple-800/50 sm:container' />
       <Socials />
-      <hr className='container mx-auto border-2 border-purple-800/50' />
+      <hr className='m-2 mx-auto w-full border-2 border-purple-800/50 sm:container' />
       <Inquiries />
-      <hr className='container mx-auto border-2 border-purple-800/50' />
+      <hr className='m-2 mx-auto w-full border-2 border-purple-800/50 sm:container' />
     </main>
   )
 }

@@ -7,30 +7,12 @@
   --font-poppins: 'Poppins', sans-serif;
   --font-lobster: 'Lobster', cursive;
 }
-h1 {
-  font-size: 5rem;
-}
-h2 {
-  font-size: 4rem;
-}
-h3 {
-  font-size: 3rem;
-}
-h4 {
-  font-size: 2rem;
-}
-h5,
-p {
-  font-size: 1rem;
-}
 .lobster {
   font-family: var(--font-lobster);
-  font-size: 1rem;
 }
 
 /*! App */
 main {
-  overflow-x: hidden;
   min-height: 100vh;
   width: 100%;
   padding: 0;
@@ -39,11 +21,11 @@ main {
 /*! Loader */
 .loader {
   opacity: 100%;
-  border: 16px dotted rgb(242, 97, 255);
-  border-top: 16px dotted #3498db;
+  border: 8px dotted rgb(242, 97, 255);
+  border-top: 8px dotted #3498db;
   border-radius: 50%;
-  width: 10rem;
-  height: 10rem;
+  width: 5rem;
+  height: 5rem;
   animation: spin 2s linear infinite;
 }
 @keyframes spin {

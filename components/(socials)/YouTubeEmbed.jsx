@@ -11,7 +11,6 @@ export default function VideoPlayer({vnum}) {
         `https://www.youtube.com/feeds/videos.xml?channel_id=${cid}`,
       )
       const reqURL = `https://api.rss2json.com/v1/api.json?rss_url=${channelURL}`
-
       try {
         const response = await fetch(reqURL)
         const result = await response.json()
@@ -22,12 +21,12 @@ export default function VideoPlayer({vnum}) {
         console.log('error', error)
       }
     }
-
     loadVideo()
   }, [vnum])
 
   return (
-    <div className='aspect-h-9 aspect-w-16'>
+    <div className='aspect-h-9 aspect-w-16 rounded-lg'>
+      <label className='sr-only'>YouTube video by Sway Bae</label>
       <iframe
         src={videoSrc}
         allowFullScreen={true}
@@ -35,6 +34,7 @@ export default function VideoPlayer({vnum}) {
         width='100%'
         height='100%'
         allow='accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope'
+        className='rounded-lg'
       ></iframe>
     </div>
   )

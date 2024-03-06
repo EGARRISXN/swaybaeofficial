@@ -24,7 +24,7 @@ export default function TopProgressBar() {
   return (
     <div
       id='progress-bar'
-      className='fixed left-0 top-0 z-[500] h-3 w-0 scroll-smooth rounded-r-lg bg-[#00ceff] shadow-lg shadow-purple-800/50 '
+      className='fixed left-0 top-0 z-[500] h-2 scroll-smooth rounded-r-lg bg-[#00ceff] shadow-lg shadow-purple-800/50 '
     ></div>
   )
 }
