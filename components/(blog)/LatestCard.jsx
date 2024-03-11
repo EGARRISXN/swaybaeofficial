@@ -10,7 +10,7 @@ export default function LatestCard({post}) {
       <label className='sr-only'>Latest Card</label>
       <div className='grid grid-cols-1 gap-2 md:gap-3'>
         <section className='mb-1 md:mb-0'>
-          <p className='prose prose-sm line-clamp-1 w-fit rounded-md bg-slate-700 px-2 tracking-tight text-white drop-shadow-lg  dark:prose-invert'>
+          <p className='prose prose-sm line-clamp-1 w-fit rounded-md bg-slate-800 px-2 tracking-tight text-white drop-shadow-md dark:prose-invert'>
             {new Date(post.publishedAt).toLocaleDateString('en-US', {
               day: 'numeric',
               month: 'long',
@@ -18,10 +18,10 @@ export default function LatestCard({post}) {
             })}
           </p>
         </section>
-        <section className='drop-shadow-xl transition-transform duration-200 ease-out hover:scale-105'>
+        <section className='drop-shadow-md transition-all ease-in-out hover:scale-105'>
           <Link href={`/blog/post/${post.postSlug}`}>
             <Image
-              className='rounded border bg-white object-cover object-center p-2 shadow-xl'
+              className='rounded border bg-light object-cover object-center p-2 shadow-md'
               src={urlFor(coverImage.image).fit('max').auto('format').url()}
               alt={coverImage.alt}
               width={800}
@@ -51,7 +51,7 @@ export default function LatestCard({post}) {
             {excerpt}
           </h4>
           <Link href={`/blog/post/${post.postSlug}`}>
-            <p className='mt-4 font-bold text-[#00ceff] hover:font-extrabold'>Read Post&#8594;</p>
+            <p className='mt-4 font-bold text-primary hover:font-extrabold'>Read Post&#8594;</p>
           </Link>
         </section>
       </div>

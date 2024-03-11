@@ -6,9 +6,9 @@ export default function Hero() {
   return (
     <main className='w=full'>
       <label className='sr-only'>Hero</label>
-      <section className='z-[50] mx-auto flex min-h-[calc(100vh-12rem)] max-w-7xl items-center justify-center'>
+      <section className='z-30 mx-auto flex min-h-[calc(100vh-12rem)] max-w-7xl items-center justify-center'>
         <motion.div
-          className='z-[50] flex max-w-[900px] items-center justify-center'
+          className='z-30 flex max-w-[900px] items-center justify-center'
           initial={{opacity: 0, scale: 0.5}}
           animate={{opacity: 1, scale: 1}}
           transition={{duration: 0.5}}

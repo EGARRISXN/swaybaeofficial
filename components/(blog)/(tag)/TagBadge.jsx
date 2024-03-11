@@ -5,8 +5,10 @@ export default function TagBadge({tag, clickable = true}) {
 
   const tagContent = (
     <span
-      className='line-clamp-1 inline-flex items-center rounded-full border-transparent px-1.5 py-1 text-xs font-semibold tracking-tight text-slate-800 shadow-md transition-all duration-300 ease-out hover:scale-105 hover:text-slate-900 focus:outline-none '
-      style={{backgroundColor: color}}
+      className='line-clamp-1 inline-flex items-center rounded-full border-transparent px-2 py-1 text-xs font-semibold tracking-tight text-dark shadow-md  ease-in focus:outline-none'
+      style={{
+        backgroundColor: color,
+      }}
     >
       {title}
     </span>

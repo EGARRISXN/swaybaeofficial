@@ -26,22 +26,18 @@ export default function ContactForm() {
         method: 'POST',
         body: data,
       })
-
       if (!response.ok) {
         console.log('Failed to send message')
         throw new Error(`response status: ${response.status}`)
       }
-
       setFormData({
         name: '',
         email: '',
         subject: '',
         message: '',
       })
-
       const responseData = await response.json()
       console.log(responseData['message'])
-
       alert('Message successfully sent!')
     } catch (err) {
       console.error(err)
@@ -51,13 +47,12 @@ export default function ContactForm() {
 
   return (
     <form
-      className='border-0 bg-base-100 p-2 text-base-content sm:shadow-lg sm:shadow-purple-800/50 md:rounded-xl md:border-2 md:p-4 md:px-10 lg:rounded-2xl lg:px-12 lg:pt-8 xl:px-16 xl:pt-12 2xl:px-20'
+      className='p-2 sm:shadow-md sm:shadow-purple-500/80 md:rounded-xl md:border-2 md:p-4 md:px-10 lg:rounded-2xl lg:px-12 lg:pt-8 xl:px-16 xl:pt-12 2xl:px-20'
       onSubmit={handleSubmit}
     >
       <div className='lobster mb-4 mt-4 text-5xl text-primary lg:mt-2 lg:text-6xl xl:mt-0'>
         Contact Me
       </div>
-
       <hr className='hr-lines my-2 border-secondary' />
       <div className='my-4 flex w-full flex-col'>
         <label className='font-bold' htmlFor='name'>
@@ -69,7 +64,7 @@ export default function ContactForm() {
           maxLength={150}
           required
           placeholder='Name'
-          className='rounded-xl border-2 bg-white p-3 text-neutral-900 shadow-lg shadow-purple-800/50 '
+          className='rounded-xl border-2 bg-light p-3 text-gray-500 shadow-md shadow-purple-500/80 dark:bg-dark dark:text-gray-200 '
           autoComplete='on'
           name='name'
           id='name'
@@ -87,9 +82,7 @@ export default function ContactForm() {
           maxLength={150}
           required
           placeholder='Email'
-          className='rounded-xl border-2 bg-white p-3 text-neutral-900 shadow-lg shadow-purple-800/50 invalid:text-pink-600 focus:invalid:border-pink-500 focus:invalid:ring-pink-500 disabled:border-slate-200
-           disabled:bg-slate-50
-          disabled:text-slate-500 disabled:shadow-none'
+          className='invalid:text-pink-600 focus:invalid:border-pink-500 focus:invalid:ring-pink-500 rounded-xl border-2 bg-light p-3 text-gray-500 shadow-md shadow-purple-500/80 disabled:border-slate-200 disabled:bg-slate-50 disabled:text-slate-500 disabled:shadow-none dark:bg-dark dark:text-gray-200'
           autoComplete='on'
           name='email'
           id='email'
@@ -107,7 +100,7 @@ export default function ContactForm() {
           maxLength={150}
           required
           placeholder='Subject'
-          className='rounded-xl border-2 bg-white p-3 text-neutral-900 shadow-lg shadow-purple-800/50 '
+          className='rounded-xl border-2 bg-light p-3 text-gray-500 shadow-md shadow-purple-500/80 dark:bg-dark dark:text-gray-200 '
           autoComplete='on'
           name='subject'
           id='subject'
@@ -126,7 +119,7 @@ export default function ContactForm() {
           minLength={10}
           maxLength={500}
           placeholder='Message'
-          className='w-full rounded-xl border-2 bg-white p-3 text-neutral-900 shadow-lg shadow-purple-800/50 '
+          className='w-full rounded-xl border-2 bg-light p-3 text-gray-500 shadow-md shadow-purple-500/80 dark:bg-dark dark:text-gray-200 '
           name='message'
           id='message'
           value={formData.message}

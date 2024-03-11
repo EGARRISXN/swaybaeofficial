@@ -1,34 +1,9 @@
-'use client'
-import {useEffect} from 'react'
 import Link from 'next/link'
 import Image from 'next/image'
 import {PortableText} from '@portabletext/react'
 import {urlFor} from '@/sanity/lib/image'
 
 export default function PortableTextComponents({value, className, content}) {
-  useEffect(() => {
-    const observer = new IntersectionObserver((entries) => {
-      console.log('Observer Entries:', entries)
-      entries.forEach((entry) => {
-        const id = entry.target.getAttribute('id')
-        console.log('Header ID:', id)
-        const tocLink = document.querySelector(`.table-of-content-link[href="#${id}"]`)
-        console.log('Table of Content Link:', tocLink)
-        if (tocLink) {
-          if (entry.intersectionRatio > 0) {
-            tocLink.classList.add('active')
-          } else {
-            tocLink.classList.remove('active')
-          }
-        }
-      })
-    })
-    document.querySelectorAll('h1[id], h2[id], h3[id], h4[id], h5[id]').forEach((header) => {
-      observer.observe(header)
-    })
-    return () => observer.disconnect()
-  }, [])
-
   const RichComponents = {
     block: ({value, children}) => {
       const style = value.style || 'normal'
@@ -83,7 +58,7 @@ export default function PortableTextComponents({value, className, content}) {
     types: {
       image: ({value, isInline}) => (
         <Image
-          className='rounded border bg-white object-cover object-center p-2 shadow-xl'
+          className='rounded border bg-white object-cover object-center p-2 shadow-md'
           src={urlFor(value)
             .width(isInline ? 100 : 800)
             .fit('max')
@@ -105,7 +80,7 @@ export default function PortableTextComponents({value, className, content}) {
           src={`https://www.youtube.com/embed/${value.video.id}`}
           allow='accelerometer; autoplay; fullscreen; clipboard-write; encrypted-media; gyroscope; picture-in-picture'
           style={{flex: 1, aspectRatio: '16 / 9'}}
-          className='h-full w-full rounded-lg shadow-lg'
+          className='h-full w-full rounded-lg shadow-md'
         ></iframe>
       ),
     },

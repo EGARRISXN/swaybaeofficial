@@ -1,4 +1,4 @@
-import {ImageIcon, DocumentVideoIcon, LaunchIcon, UserIcon} from '@sanity/icons'
+import {ImageIcon, DocumentVideoIcon, UserIcon} from '@sanity/icons'
 
 const HighlightIcon = () => <span style={{fontWeight: 'bold'}}>H</span>
 
@@ -87,8 +87,15 @@ export const blockContent = {
       options: {hotspot: true},
     },
     {
-      type: 'youtube',
+      name: 'youtube',
+      type: 'object',
       icon: DocumentVideoIcon,
+      fields: [
+        {
+          name: 'video',
+          type: 'youtubeVideo',
+        },
+      ],
     },
   ],
 }

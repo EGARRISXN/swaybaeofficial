@@ -1,21 +1,20 @@
 'use client'
-import {useState, useEffect} from 'react'
-import {Sling as Hamburger} from 'hamburger-react'
 import Link from 'next/link'
 import Image from 'next/image'
+import {useState, useEffect} from 'react'
+import {Sling as Hamburger} from 'hamburger-react'
 import ThemeSwitch from '../(ui)/ThemeSwitch'
 
 const links = [
   {href: '/', label: 'Home'},
   {href: '/calendar', label: 'Calendar'},
-  {href: 'https://sway-bae-shop.fourthwall.com/', label: 'Store'},
-  // {href: '/blog', label: 'New Blog!'},
+  // {href: 'https://sway-bae-shop.fourthwall.com/', label: 'Store'},
+  {href: '/blog', label: 'New Blog!'},
 ]
 
 export default function Navbar() {
   const [isOpen, setOpen] = useState(false)
   const [clickedOutside, setClickedOutside] = useState(false)
-
   const closeDropdownOnOutsideClick = (event) => {
     if (isOpen && !event.target.closest('.dropdown')) {
       closeDropdown()
@@ -35,12 +34,10 @@ export default function Navbar() {
     setOpen(!isOpen)
     setClickedOutside(false)
   }
-
   const closeDropdown = () => {
     setOpen(false)
     setClickedOutside(false)
   }
-
   const handleLinkClick = () => {
     closeDropdown()
   }
@@ -48,20 +45,20 @@ export default function Navbar() {
   return (
     <header className='top-0 w-full'>
       <nav className='navbar relative'>
-        <div className='navbar-start px-1'>
-          <div className='mask mask-heart hidden h-10 w-10 lg:block'>
+        <div className='navbar-start ml-1 lg:ml-2'>
+          <div className='mask mask-heart hidden size-9 lg:block'>
             <Link href='/'>
-              <Image src='/avatar.png' alt='Logo' height={40} width={40} />
+              <Image src='/avatar.png' alt='Logo' height={36} width={36} />
             </Link>
           </div>
           <Link href='/'>
-            <p className='hidden bg-gradient-to-tr from-primary via-info to-secondary bg-clip-text px-1 text-sm font-bold text-transparent lg:block'>
+            <p className='ml-1 hidden bg-gradient-to-tr from-secondary via-secondary to-primary bg-clip-text text-sm font-bold text-transparent lg:block'>
               Creator
               <br />
               of Chaos
             </p>
           </Link>
-          <div className='dropdown z-[1000]' style={{position: 'relative'}}>
+          <div className='dropdown z-50' style={{position: 'relative'}}>
             <button
               tabIndex={0}
               className='lg:hidden'
@@ -76,7 +73,7 @@ export default function Navbar() {
             {isOpen && (
               <ul
                 tabIndex={0}
-                className='menu dropdown-content z-[1000] mx-[-12px] flex bg-base-100 text-base-content'
+                className=' menu dropdown-content z-50 mx-[-12px] flex bg-light dark:bg-dark'
                 onKeyDown={(e) => {
                   if (e.key === 'Escape') {
                     closeDropdown()
@@ -100,7 +97,7 @@ export default function Navbar() {
                       onClick={handleLinkClick}
                       className={`${
                         link.label === 'New Blog!' ? 'text-primary hover:text-secondary' : ''
-                      } relative z-[1000] bg-base-200 bg-clip-text p-4 text-6xl hover:text-secondary hover:underline hover:underline-offset-4 `}
+                      } relative z-50 bg-clip-text p-4 text-5xl hover:text-secondary hover:underline hover:underline-offset-4`}
                     >
                       {link.label}
                     </Link>
@@ -110,37 +107,35 @@ export default function Navbar() {
             )}
           </div>
         </div>
-
-        <div className='navbar-center z-[1000] px-1'>
-          <ul className='menu menu-horizontal mx-auto hidden items-center justify-center text-lg lg:flex xl:space-x-8 2xl:space-x-10 3xl:space-x-14'>
+        <div className='navbar-center z-50 mx-auto'>
+          <ul className='menu menu-horizontal mx-auto hidden items-center justify-center text-lg lg:flex xl:space-x-8 2xl:space-x-12'>
             {links.map((link) => (
               <li key={link.href}>
                 <Link
                   href={link.href}
                   className={`${
                     link.label === 'New Blog!' ? 'text-primary hover:text-secondary' : ''
-                  } relative bg-base-200 bg-clip-text hover:text-secondary hover:underline hover:underline-offset-4 `}
+                  } relative border-none bg-clip-text transition duration-200 hover:text-secondary hover:underline hover:underline-offset-4 `}
                 >
                   {link.label}
                 </Link>
               </li>
             ))}
           </ul>
-          <div className='mask mask-heart block h-10 w-10 lg:hidden'>
+          <div className='mask mask-heart block size-8 lg:hidden'>
             <Link href='/'>
-              <Image src='/avatar.png' alt='Logo' height={40} width={40} />
+              <Image src='/avatar.png' alt='Logo' height={32} width={32} />
             </Link>
           </div>
           <Link href='/'>
-            <p className='block bg-gradient-to-tr from-primary via-info to-secondary bg-clip-text px-1 text-sm font-bold text-transparent lg:hidden'>
+            <p className='ml-1  block bg-gradient-to-tr from-secondary via-secondary to-primary bg-clip-text text-sm font-bold text-transparent lg:hidden'>
               Creator
               <br />
               of Chaos
             </p>
           </Link>
         </div>
-
-        <div className='navbar-end z-[1000] px-1'>
+        <div className='navbar-end z-50 mr-1 lg:mr-2'>
           <ThemeSwitch />
         </div>
       </nav>

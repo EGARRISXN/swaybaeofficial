@@ -1,20 +1,26 @@
 'use client'
-import Link from 'next/link'
-import {useState} from 'react'
+import {useRef, useState} from 'react'
 import MyButton from '@/components/(ui)/MyButton'
 
 export default function AboutCard() {
   const [isShowMore, setIsShowMore] = useState(false)
-
+  const contentRef = useRef(null)
   const toggleReadMoreLess = () => {
     setIsShowMore(!isShowMore)
+    // Scroll to the content section when toggling content visibility
+    if (contentRef.current && isShowMore) {
+      contentRef.current.scrollIntoView({behavior: 'smooth'})
+    }
   }
 
   return (
-    <section className='mx-auto mt-12 max-w-4xl rounded-3xl border-0 bg-base-100 p-2 md:mt-0 md:border-2 md:p-8 md:shadow-lg md:shadow-purple-800/50 lg:p-16'>
-      <div className='prose prose-base prose-slate lg:prose-lg dark:prose-invert prose-h1:font-medium prose-h1:leading-10 prose-h1:tracking-tight prose-h1:text-primary prose-h3:leading-snug prose-h3:tracking-tight prose-h4:tracking-tight prose-p:font-medium prose-p:leading-snug prose-p:tracking-tight prose-blockquote:border-primary prose-blockquote:leading-snug prose-blockquote:tracking-tight prose-blockquote:text-secondary prose-ul:list-outside prose-li:leading-normal prose-li:tracking-tight prose-li:marker:text-secondary'>
+    <section
+      ref={contentRef}
+      className='mx-auto mt-12 max-w-4xl rounded-3xl border-0 p-2 md:mt-0 md:border-2 md:p-8 md:shadow-md md:shadow-purple-500/80 lg:p-16'
+    >
+      <div className='myProse'>
         <h1 className='lobster ml-1 text-[3rem] xl:text-[4rem]'>Hello, I'm Sway!</h1>
-        <h3 className='font-medium'>
+        <h3>
           I am a Full-Time Content Creator since June of 2021. Currently, I'm partnered with both
           Twitch and YouTube, streaming and releasing videos multiple times per week.
         </h3>
@@ -38,7 +44,7 @@ export default function AboutCard() {
               also enjoy Strategy games in general, Survival games, Indie games, Simulator games,
               Roguelike games, Platformers, and many more!
             </p>
-            <h4 className='text-primary'>A few notable accolades include:</h4>
+            <p className='text-secondary'>A few notable accolades include:</p>
             <ul className='mb-4 ml-8 list-disc'>
               <li>
                 3rd place in Blizzard's Hearthstone Battle of the Boars Tournament{' '}
@@ -63,10 +69,12 @@ export default function AboutCard() {
               <li>
                 Producing, hosting, and casting one of the earliest AND largest grassroots
                 tournaments for Hearthstone Battlegrounds, with close to{' '}
-                <span className='underline underline-offset-2'>100 participants!</span>
+                <span className='font-semibold underline underline-offset-2'>
+                  100 participants!
+                </span>
               </li>
             </ul>
-            <p className='font-semibold'>
+            <p className='text-secondary'>
               If you'd like to work with me, I'd love to hear from you! You can use the contact form
               in the business inquiries section below!
             </p>
@@ -74,11 +82,11 @@ export default function AboutCard() {
               As I often say, thank you for being a part of my journey, and allowing me to be a part
               of yours!
             </p>
-            <h3>
-              <span className='text-secondary'>XOXO,</span>
+            <p className='text-2xl font-semibold'>
+              <span className='font-medium text-primary'>XOXO,</span>
               <br />
               Sway Bae
-            </h3>
+            </p>
           </>
         )}
       </div>

@@ -32,7 +32,7 @@ export default function ScrollToTop() {
     <div>
       <label className='sr-only'>Scroll To Top</label>
       <TiArrowUpOutline
-        className='scrollToTop z-[1000] rounded-full border-2 border-[#00ceff] bg-base-100 font-bold text-[#00ceff] transition-colors duration-100 ease-out hover:border-transparent hover:bg-[#00ceff] hover:text-base-100 lg:shadow-lg'
+        className='scrollToTop z-40 rounded-full border-2 border-primary bg-light font-bold text-primary transition-all duration-200 ease-in hover:border-transparent hover:bg-primary hover:text-light lg:shadow-md dark:bg-dark dark:hover:text-dark'
         onClick={scrollToTop}
         style={{
           height: 40,

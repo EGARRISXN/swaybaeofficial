@@ -13,6 +13,9 @@ export const post = {
       type: 'string',
       title: 'Title',
       validation: (Rule) => Rule.required().error('Required'),
+      options: {
+        indexing: true,
+      },
     },
     {
       name: 'slug',

@@ -1,7 +1,7 @@
 export default function Loading() {
   return (
-    <main className="flex flex-col mx-auto items-center h-screen mt-32">
-      <div className="loader"></div>
+    <main className='mx-auto flex flex-col items-center justify-center text-center'>
+      <span className='loading loading-spinner loading-lg text-primary'></span>
     </main>
-  );
+  )
 }

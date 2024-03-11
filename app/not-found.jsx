@@ -12,7 +12,7 @@ export default function NotFound() {
         height={300}
         quality={100}
       />
-      <p className='py-2 text-2xl font-semibold'>
+      <p className='py-2 text-center text-xl font-semibold max-[300px]:text-base md:text-2xl'>
         <span className='text-primary'>404</span> | PAGE NOT FOUND
       </p>
       <MyButton>

@@ -21,18 +21,16 @@ export default function AllTags({tags}) {
 
   return (
     <>
-      <div className='my-4 flex'>
-        {allTags.map((tag) => (
-          <div key={tag._id} className='mb-2 mr-2 inline-block'>
-            <div
-              style={{backgroundColor: tag.color}}
-              className='mx-auto line-clamp-1 cursor-pointer justify-center rounded-full px-3 py-1 text-center text-xs font-semibold dark:prose-invert'
-            >
-              <Link href={`/blog/tag/${tag.tagSlug}`}>{tag.title}</Link>
-            </div>
+      {allTags.map((tag) => (
+        <div key={tag._id}>
+          <div
+            style={{backgroundColor: tag.color}}
+            className='line-clamp-1 inline-flex items-center rounded-full border-transparent px-2 py-1 text-xs font-semibold tracking-tight text-dark shadow-md  ease-in focus:outline-none'
+          >
+            <Link href={`/blog/tag/${tag.tagSlug}`}>{tag.title}</Link>
           </div>
-        ))}
-      </div>
+        </div>
+      ))}
     </>
   )
 }

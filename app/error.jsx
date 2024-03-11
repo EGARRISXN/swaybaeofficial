@@ -17,7 +17,7 @@ export default function Error({error, reset}) {
         height={300}
         quality={100}
       />
-      <p className='py-2 text-2xl font-semibold'>
+      <p className='py-2 text-center text-lg font-semibold max-[300px]:text-base md:text-xl'>
         <span className='text-primary'>Oh no!</span> Something went wrong.
       </p>
       <MyButton onClick={reset}>Refresh</MyButton>

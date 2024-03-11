@@ -34,10 +34,18 @@ module.exports = {
         poppins: ['Poppins', 'sans-serif'],
         lobster: ['Lobster', 'cursive'],
       },
+      colors: {
+        light: '#f8fafc',
+        dark: '#0d1117',
+        primary: '#00ceff',
+        secondary: '#b567ad',
+        neutral: '#d4d4d8',
+        cyan: '#418192',
+        navy: '#330f5f',
+        pink: '#fd509d',
+        lavender: '#c085df',
+      },
     },
-  },
-  variants: {
-    extend: {},
   },
   plugins: [
     require('@tailwindcss/aspect-ratio'),
@@ -45,28 +53,6 @@ module.exports = {
     require('daisyui'),
   ],
   daisyui: {
-    themes: [
-      {
-        myDark: {
-          primary: '#00ceff',
-          secondary: '#b567ad',
-          accent: '#418192',
-          neutral: '#444442',
-          info: '#330f5f',
-          'base-100': '#fff',
-          'base-content': '#000',
-        },
-        myLight: {
-          primary: '#b567ad',
-          secondary: '#00ceff',
-          accent: '#ffd801',
-          neutral: '#ffffff',
-          info: '#c085df',
-          'base-100': '#000',
-          'base-content': '#fff',
-        },
-      },
-    ],
-    darkTheme: 'myDark',
+    themes: [],
   },
 }

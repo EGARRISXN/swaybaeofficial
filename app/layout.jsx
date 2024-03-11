@@ -1,7 +1,6 @@
+import './globals.css'
 import {draftMode} from 'next/headers'
 import LiveVisualEditing from '@/components/(other)/LiveVisualEditing'
-
-import './globals.css'
 import {Lobster, Poppins} from 'next/font/google'
 import {ThemeProvider} from './providers'
 import {Analytics} from '@vercel/analytics/react'
@@ -61,8 +60,10 @@ export const metadata = {
 export default function RootLayout({children}) {
   return (
     <html lang='en'>
-      <body className={`${lobster.variable} ${poppins.variable} m-0 scroll-smooth p-0 antialiased`}>
-        <ThemeProvider>{children}</ThemeProvider>
+      <body className={`${lobster.variable} ${poppins.variable}`}>
+        <ThemeProvider attribute='class' defaultTheme='system'>
+          {children}
+        </ThemeProvider>
         {draftMode().isEnabled && <LiveVisualEditing />}
         <Analytics />
         <SpeedInsights />

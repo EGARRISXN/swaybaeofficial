@@ -58,13 +58,13 @@ export const TAG_QUERY = groq`
 `
 
 export const SEARCH_QUERY = groq`
-  *[_type == "post" && (
-    title match $term ||
-    tags[]->title match $term
-  )]{
+  *[(_type == "post" && !(_id in path("drafts.**")) && (pt::text(content) match $term || excerpt match $term || title match $term || tags[]->title match $term))]
+  {
     _id,
     title,
     slug,
+    excerpt,
+    content,
     tags,
   }
 `

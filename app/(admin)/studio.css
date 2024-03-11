@@ -2,10 +2,6 @@
 @tailwind components;
 @tailwind utilities;
 
-/* * {
-  @apply text-red-600;
-} */
-
 /*! Studio */
 main {
   height: 100vh;
