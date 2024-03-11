@@ -8,8 +8,8 @@ import ThemeSwitch from '../(ui)/ThemeSwitch'
 const links = [
   {href: '/', label: 'Home'},
   {href: '/calendar', label: 'Calendar'},
-  // {href: 'https://sway-bae-shop.fourthwall.com/', label: 'Store'},
-  {href: '/blog', label: 'New Blog!'},
+  {href: 'https://sway-bae-shop.fourthwall.com/', label: 'Store'},
+  // {href: '/blog', label: 'New Blog!'},
 ]
 
 export default function Navbar() {
