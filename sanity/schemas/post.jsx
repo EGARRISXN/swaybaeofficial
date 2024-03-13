@@ -1,21 +1,19 @@
 import {BookIcon} from '@sanity/icons'
 
-const postIcon = () => <BookIcon />
-
 export const post = {
   name: 'post',
   type: 'document',
   title: 'Post',
-  icon: postIcon,
+  icon: BookIcon,
   fields: [
     {
       name: 'title',
       type: 'string',
       title: 'Title',
-      validation: (Rule) => Rule.required().error('Required'),
       options: {
         indexing: true,
       },
+      validation: (Rule) => Rule.required(),
     },
     {
       name: 'slug',
@@ -26,7 +24,7 @@ export const post = {
         maxLength: 96,
         isUnique: (value, context) => context.defaultIsUnique(value, context),
       },
-      validation: (Rule) => Rule.required().error('Required'),
+      validation: (Rule) => Rule.required(),
     },
     {
       name: 'coverImage',
@@ -41,13 +39,13 @@ export const post = {
         },
       ],
       options: {hotspot: true},
-      validation: (Rule) => Rule.required().error('Required'),
+      validation: (Rule) => Rule.required(),
     },
     {
       name: 'excerpt',
       type: 'text',
       title: 'Excerpt',
-      validation: (Rule) => Rule.required().max(200).error('No more than 200 characters.'),
+      validation: (Rule) => Rule.required(),
     },
     {
       name: 'content',
@@ -64,13 +62,13 @@ export const post = {
         min: 1,
         max: 3,
       },
-      validation: (Rule) => Rule.required().error('Required'),
+      validation: (Rule) => Rule.required(),
     },
     {
       name: 'featured',
       type: 'boolean',
       title: 'Featured',
-      description: 'Mark this post as featured',
+      description: 'Make this a featured post.',
     },
     {
       name: 'publishedAt',
@@ -88,7 +86,7 @@ export const post = {
     prepare(selection) {
       const {coverImage, title, publishedAt} = selection
       return {
-        title,
+        title: `${title}`,
         subtitle: new Date(publishedAt).toLocaleDateString(),
         media: coverImage,
       }

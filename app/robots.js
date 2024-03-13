@@ -1,9 +1,9 @@
 export default function robots() {
   return {
     rules: {
-      userAgent: "*",
-      allow: "/",
+      userAgent: '*',
+      allow: ['/', '/about', '/blog', '/contact', '/calendar'],
     },
-    sitemap: "https://swaybae.net/sitemap.xml",
-  };
+    sitemap: 'https://swaybae.net/sitemap.xml',
+  }
 }

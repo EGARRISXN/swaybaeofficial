@@ -28,7 +28,6 @@ export const metadata = {
   keywords: [
     'sway bae, swaybae, sway_bae, swaybaetv, sway, bae, swaybae.net, swaybae.com, thebaesquad, the bae squad, baesquad, bae_squad, sway bae twitch, sway bae twitter, sway bae youtube, sway bae discord, sway bae instagram, sway bae tiktok, sway bae merch, sway bae store, sway bae shop, sway bae gaming, hearthstone, blizzard, streamer, stream, twitch, twitch streamer, twitch.tv, twitch.tv/sway_bae, blog, sway bae blog, sway blog',
   ],
-  creator: {name: 'Ethan Garrison', url: 'https://github.com/EGARRISXN'},
   robots: {
     index: true,
     follow: true,
@@ -48,13 +47,21 @@ export const metadata = {
     url: 'https://swaybae.net',
     siteName: 'Swaybae.net',
   },
-  twitter: {
-    cardType: 'summary_large_image',
-    handle: '@sway_baeTV',
-    site: '@sway_baeTV',
-    title: 'Sway Bae | Streaming, Gaming, & So Much More!',
-    description: 'The Official Website for Sway Bae & The Bae Squad!',
-  },
+  // openGraph: {
+  //   type: 'website',
+  //   locale: 'en_US',
+  //   title: 'Sway Bae | Streaming, Gaming, & So Much More!',
+  //   description: 'The Official Website for Sway Bae & The Bae Squad!',
+  //   url: 'https://swaybae.net',
+  //   siteName: 'Swaybae.net',
+  // },
+  // twitter: {
+  //   cardType: 'summary_large_image',
+  //   handle: '@sway_baeTV',
+  //   site: '@sway_baeTV',
+  //   title: 'Sway Bae | Streaming, Gaming, & So Much More!',
+  //   description: 'The Official Website for Sway Bae & The Bae Squad!',
+  // },
 }
 
 export default function RootLayout({children}) {

@@ -1,18 +1,16 @@
 import {TagIcon} from '@sanity/icons'
 
-const tagIcon = () => <TagIcon />
-
 export const tag = {
   name: 'tag',
   type: 'document',
   title: 'Tag',
-  icon: tagIcon,
+  icon: TagIcon,
   fields: [
     {
       name: 'title',
       type: 'string',
       title: 'Title',
-      validation: (Rule) => Rule.required().error('Required'),
+      validation: (Rule) => Rule.required(),
       options: {
         indexing: true,
       },
@@ -26,7 +24,7 @@ export const tag = {
         maxLength: 96,
         isUnique: (value, context) => context.defaultIsUnique(value, context),
       },
-      validation: (Rule) => Rule.required().error('Required'),
+      validation: (Rule) => Rule.required(),
     },
     {
       name: 'color',
@@ -44,7 +42,7 @@ export const tag = {
           {title: 'Muted Grey', value: 'lightgrey'},
         ],
       },
-      validation: (Rule) => Rule.required().error('Required'),
+      validation: (Rule) => Rule.required(),
     },
   ],
   preview: {

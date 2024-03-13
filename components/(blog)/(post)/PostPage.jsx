@@ -9,7 +9,7 @@ import SocialButtons from '@/components/(ui)/SocialButtons'
 import {urlFor} from '@/sanity/lib/image'
 
 export default function PostPage({post}) {
-  const {title, coverImage, tags, content, headings} = post
+  const {title, coverImage, tags, content, headings, meta} = post
 
   return (
     <main className='mt-5'>
@@ -48,7 +48,7 @@ export default function PostPage({post}) {
             </section>
             <section className='mt-1 flex max-[300px]:max-w-60 min-[300px]:mx-auto'>
               <Image
-                className='borderbg-white rounded object-cover object-center p-2 shadow-md'
+                className='rounded border bg-white object-cover object-center p-2 shadow-md'
                 src={urlFor(coverImage.image).fit('max').auto('format').url()}
                 alt={coverImage.alt}
                 width={1000}

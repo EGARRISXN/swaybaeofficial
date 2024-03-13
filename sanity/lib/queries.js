@@ -17,14 +17,12 @@ const commonPostQuery = `
     color,
   },
 `
-
 const commonTagQuery = `
   _id,
   _createdAt,
   title,
   color,
 `
-
 export const POSTS_QUERY = groq`
   *[_type == 'post'] | order(_createdAt desc) {
     ${commonPostQuery}
@@ -32,7 +30,6 @@ export const POSTS_QUERY = groq`
     featured,
   }
 `
-
 export const POST_QUERY = groq`
   *[_type == 'post' && slug.current == $slug] {
     ${commonPostQuery}
@@ -40,13 +37,12 @@ export const POST_QUERY = groq`
     "headings": content[length(style) == 2 && string::startsWith(style, "h")],
   }[0]
 `
-
 export const TAGS_QUERY = groq`
   *[_type == 'tag'] | order(_createdAt desc) {
     ${commonTagQuery}
     'tagSlug': slug.current,
-  }`
-
+  }
+`
 export const TAG_QUERY = groq`
   *[_type == 'tag' && slug.current == $slug] {
     ${commonTagQuery}
@@ -56,7 +52,6 @@ export const TAG_QUERY = groq`
     },
   }[0]
 `
-
 export const SEARCH_QUERY = groq`
   *[(_type == "post" && !(_id in path("drafts.**")) && (pt::text(content) match $term || excerpt match $term || title match $term || tags[]->title match $term))]
   {

@@ -24,8 +24,8 @@ export const locate = (params, context) => {
               href: `/${doc.slug.current}`,
             },
             {
-              title: 'Posts',
-              href: '/',
+              title: 'Blog',
+              href: '/blog',
             },
           ],
         }
